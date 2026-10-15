@@ -1,0 +1,8 @@
+2 paper(s) to adjudicate with claude-opus-5-5, 2 workers
+OK  10.1037--h0091247: negative 0 effects, +0 after candidates, $1.58, 39s, errors=0
+OK  10.7554--elife.18173: positive 3 effects, +0 after candidates, $2.26, 132s, errors=0
+{
+  "done": 2,
+  "cost_usd": 3.84,
+  "with_errors": 0
+}

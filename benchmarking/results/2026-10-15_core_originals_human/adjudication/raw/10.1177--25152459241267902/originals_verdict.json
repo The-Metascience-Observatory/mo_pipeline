@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Turri, Buckwalter & Blouw (2015) Knowledge and luck (Experiment 1)",
+   "doi": "10.3758/s13423-014-0683-5"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "Turri's 'Knowledge and Assertion in Gettier Cases' does not appear in the reference list or body text; the only Turri SSRN item cited is 'A Conspicuous Art: Putting Gettier to the Test' (10.2139/ssrn.3643930), cited as background."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The title and abstract describe this Registered Replication Report as a large multilab cross-cultural conceptual replication of Turri, Buckwalter & Blouw (2015) Experiment 1 (ref 56, Psychonomic Bulletin & Review 22(2):378-390)."
+  }
+ },
+ "notes": "This is a conceptual replication with a within-participants design, three vignettes, and 19 regions. Other experiments of the 2015 paper (e.g., Experiment 4) are cited only for comparison."
+}

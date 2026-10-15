@@ -1,13 +1,28 @@
 {
   "packet_sha256": "4560fd4d380c92a177ae87b974b78bd06ccbfc8f834db1baff88d6626a4c72cb",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "negative",
+  "eligibility_reason": "Labelled 'REVIEW ARTICLE' (Educational Psychology Review): Rohrer summarizes nine published studies of distributed practice that met his inclusion criteria and critiques the foreign-language literature, but collects no new data and runs no replication experiment (codebook genre: review/commentary).",
+  "sources_checked": true,
+  "enumeration_complete": true,
   "effects": [],
-  "candidate_resolutions": {}
+  "candidate_resolutions": {
+    "ling26:10.1007--s10648-015-9332-4#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal on a paper judged negative. It agrees with the final call: the paper is a narrative review with no new data, so there is no effect to map it to."
+    },
+    "luna56:10.1007--s10648-015-9332-4#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal on a paper judged negative. It agrees with the final call: the paper is a narrative review with no new data, so there is no effect to map it to."
+    }
+  },
+  "revision_notes": "",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 0.9642,
+  "adjudication_session": "37362d2f-cff3-4ac7-bc35-21e4394fc73e"
 }

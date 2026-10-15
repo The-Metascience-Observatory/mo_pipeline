@@ -1,0 +1,15 @@
+{
+  "kind": "ai_adjudicator",
+  "rows": 207,
+  "negatives": 19,
+  "skipped": {
+    "unreviewed": 146
+  },
+  "papers": 60,
+  "codebook": "codebook_v2",
+  "split": "dev: previously inspected; not a fresh holdout",
+  "files_local": {
+    "gold_rows.csv": "437783179bef150cb7d98d821173b39beaac509014cad21b14d1f6c57a105aa5",
+    "gold_negatives.csv": "9df48012c426cdb8a5c12b3a40a2337e84cbca21321ac26ae8069579806a64a5"
+  }
+}

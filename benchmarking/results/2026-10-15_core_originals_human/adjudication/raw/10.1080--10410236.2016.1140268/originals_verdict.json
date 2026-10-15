@@ -1,0 +1,26 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Tian, Y., & Robinson, J. D. (2013/2014) Media complementarity and health information seeking in Puerto Rico",
+   "doi": "10.1080/10810730.2013.821558"
+  },
+  {
+   "reference": "Dutta-Bergman, M. J. (2004a) Complementarity in consumption of news types across traditional and new media",
+   "doi": "10.1207/s15506878jobem4801_3"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The paper, titled 'A Replication of Channel Complementarity Theory', tests H1 (channels used complementarily) and names Dutta-Bergman (2004a) as the theory's early conceptualization. The complementarity finding is re-tested in a new domain (health) and population (India), so this is a conceptual or extension replication of the originating finding."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "This is the closest prior study: same design (frequency of use of multiple health-information channels in a non-US setting), with measures based on it. The paper explicitly re-tests its findings of channel complementarity and of the Internet as the first health source (H2, not supported in India). The 2014 vs 2013 year is online-first vs volume year (vol. 19), not a metadata error."
+  }
+ },
+ "notes": "This is a theory-level replication. Tian & Robinson is the most direct original (health information seeking, cross-cultural, Internet as primary source, contrasted in the discussion). Dutta-Bergman 2004a is the originating complementarity study. A stricter coder might keep only Tian & Robinson as the original and treat Dutta-Bergman as theory background. The age-moderation hypothesis (H3) is a new extension, not a replication."
+}

@@ -1,13 +1,86 @@
 {
   "packet_sha256": "71bf41e80bd355b273cf580a6f8b1a3663e991064914d6dfdf6b659a00252a34",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
-  "effects": [],
-  "candidate_resolutions": {}
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "positive",
+  "eligibility_reason": "Besides a narrow replication (reproduction/robustness reanalysis of FRT's original THBS 2000 data), the paper reports a 'wide replication' that re-tests Field, Robles and Torero (2009)'s claim with new data: four additional Tanzanian household surveys (DHS 1999, DHS 2004 cohorts not used by FRT, NPS 2008, DHS 2010) pooled with THBS 2000, nearly four times FRT's sample, and finds no effect.",
+  "sources_checked": true,
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "wide:attainment_all",
+      "original_reference": "Field et al. (2009)",
+      "original_url": "",
+      "original_title": "Iodine Deficiency and Schooling Attainment in Tanzania",
+      "original_authors": "Field, Erica; Robles, Omar; Torero, Maximo",
+      "original_year": "2009",
+      "original_journal": "American Economic Journal: Applied Economics",
+      "replication_study": "Wide replication (Section IV; pooled five-survey sample plus survey-by-survey estimates, Tables 3-5)",
+      "outcome": "Educational attainment (number of completed grades) of children, full sample (both genders)",
+      "contrast": "Estimated probability of in utero protection from iodine deficiency via IOC programs (staggered district roll-out; district and birth-cohort fixed effects), protected vs unprotected",
+      "timepoint": "not applicable: outcome measured once at school-going age in each cross-sectional survey (surveys 1999-2010, so respondents are older than in FRT's main analysis)",
+      "result": "failure",
+      "replication_type": "close extension",
+      "description": "Being protected from iodine deficiency in utero by Tanzania's iodized oil capsule programs increased children's educational attainment (intent-to-treat about 0.35 years of schooling).",
+      "citation_sentence": "Field, Robles, and Torero (2009, American Economic Journal: Applied Economics 1, 140-169) find large increases in educational attainment caused by a reduction of fetal iodine deficiency following a set of iodine supplementation programs in Tanzania. We revisit the Tanzanian iodine programs with a narrow and wide replication of the study by Field et al.",
+      "evidence": "Section IV, Tables 3-5 and Concluding Remarks: 'We conclude that FRT's specification applied to the pooled dataset and separately to the four additional surveys does not provide evidence of an effect of the IOC programs on educational attainment.'; Table 4: 'In sum, the analysis provides no evidence for a positive effect.'; Section V: 'Despite these efforts, the estimates remain small and do not support the conclusion of a positive effect.' (pooled multi-comp. 1 estimate -0.052, n.s.)",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Result: authors say 'no effect is found' / 'no empirical support', but also stress 'we cannot conclude that no effect exists' and that 'The available data simply do not allow an answer to the substantive question' (measurement error, low power), so a second coder could choose inconclusive; coded failure because the original claimed a significant positive effect and the replication with new data finds small, non-significant (often negative) estimates that the authors say do not support it. Type: same fixed-effects/IOC roll-out paradigm, but new datasets/older respondents (context) plus a new multi-compartment treatment model, broader sample and parsimonious controls (method) -> close extension (both context and method changed); close experiment (luna56) or conceptual are competing readings. The narrow replication (Section III, Tables 1-2) re-uses FRT's original THBS 2000 data (exact reproduction succeeded; robustness changes shrink the effect to ~0.08 n.s.) and is a same-data reanalysis, so it gets no entry per the codebook. original_url left blank: the paper and references.json give no DOI.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "wide:attainment_girls",
+      "original_reference": "Field et al. (2009)",
+      "original_url": "",
+      "original_title": "Iodine Deficiency and Schooling Attainment in Tanzania",
+      "original_authors": "Field, Erica; Robles, Omar; Torero, Maximo",
+      "original_year": "2009",
+      "original_journal": "American Economic Journal: Applied Economics",
+      "replication_study": "Wide replication (Section IV; pooled five-survey sample plus survey-by-survey estimates, Tables 3-5)",
+      "outcome": "Educational attainment (number of completed grades) of girls (the original's larger, girl-specific effect)",
+      "contrast": "Estimated probability of in utero protection from iodine deficiency via IOC programs, protected vs unprotected, among females",
+      "timepoint": "not applicable: outcome measured once at school-going age in each cross-sectional survey",
+      "result": "failure",
+      "replication_type": "close extension",
+      "description": "The effect of in utero iodine protection on schooling was considerably larger for girls (about 0.59 years, statistically significant) than for boys (0.19 years, not significant).",
+      "citation_sentence": "Second, FRT find considerably stronger effects for girls (point estimate of 0.59 years) than for boys (0.19 years). In fact, the effect is only statistically significant for girls.",
+      "evidence": "Section IV, Table 3: pooled females 0.141 (0.192), n.s., 'The estimates are occasionally large, but none is statistically significant at conventional levels'; Table 4: females estimates 0.002 to 0.150, n.s., 'The effect is higher for girls than for boys, but the estimated effects are zero or negative for both groups.'; Table 5: females never significant.",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Coded as a separate claim because FRT highlight the girl-specific effect as a distinct result (the paper says 'FRT highlight two aspects of their results ... Second, FRT find considerably stronger effects for girls'); a second coder could fold it into the overall entry (neither candidate coder split it out; luna56 folds it into one description). Girls' point estimates remain somewhat higher than boys' in Table 4, and Online Appendix Table S16 finds a 10%-level effect only for girls aged 10-13 (FRT's age range), which could push a coder toward inconclusive; authors' overall reading is no support. FRT's other highlighted claim (no effect on health outcomes) is explicitly not replicated ('we did not replicate the sickness variables'), so no entry. original_url blank: no DOI given in the paper or references.json.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.1111--sjoe.12341#ling26:e470bc7504500065:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Narrow replication is a computational reproduction of FRT's own THBS 2000 data ('We attempt to exactly reproduce their results using the original data'); a same-data reanalysis with no new participants is a codebook negative genre, not a replication entry. Its 'success' label also ignores that the paper's robustness analysis of the same data shrinks the effect to non-significance."
+    },
+    "ling26:10.1111--sjoe.12341#ling26:0233ff9f436912a4:1": {
+      "action": "map",
+      "effect_ids": [
+        "wide:attainment_all"
+      ],
+      "reason": "Same study (wide replication with five pooled surveys) and same overall educational-attainment claim; labels (failure, close extension) agree."
+    },
+    "luna56:10.1111--sjoe.12341#luna56:a48ac0f62e4096ae:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Narrow replication re-uses FRT's original THBS 2000 data (exact reproduction); same-data reanalysis is a codebook negative genre and yields no entry."
+    },
+    "luna56:10.1111--sjoe.12341#luna56:a1dad44f3fa176bd:1": {
+      "action": "map",
+      "effect_ids": [
+        "wide:attainment_all",
+        "wide:attainment_girls"
+      ],
+      "reason": "Wide replication; its description combines the overall effect and the 'particularly large effects for girls' claim, which this decision codes as two entries. Result failure agrees; its 'close experiment' type differs (context also changed: new surveys, older cohorts), kept as close extension."
+    }
+  },
+  "revision_notes": "No changes from pass 1. Candidates proposing a 'success/direct' entry for the narrow replication were rejected because it re-analyses the original dataset; noted luna56's close-experiment type as a competing reading.",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 1.768,
+  "adjudication_session": "bce0e6e4-aaf3-4027-92ee-6cea874aae7a"
 }

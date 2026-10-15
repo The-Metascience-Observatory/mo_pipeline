@@ -1,13 +1,93 @@
 {
   "packet_sha256": "df0c9ea6b1c3e3b6807d5a4a911413c994afa75435330749809353392904102d",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
-  "effects": [],
-  "candidate_resolutions": {}
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "positive",
+  "eligibility_reason": "A completed replication with new data (N = 120 undergraduates) of Study 4a of Janiszewski & Uy (2008, Psychological Science), with confirmatory 2x2 ANOVA results and a discussion that says which original findings were and were not replicated.",
+  "sources_checked": true,
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "s4a:precision_main_effect",
+      "original_reference": "Janiszewski and Uy (2008)",
+      "original_url": "",
+      "original_title": "Anchor precision influences the amount of adjustment",
+      "original_authors": "Janiszewski, Chris; Uy, Dan",
+      "original_year": "2008",
+      "original_journal": "Psychological Science",
+      "replication_study": "single study (replication of original Study 4a)",
+      "outcome": "amount of adjustment away from the anchor in hypothetical price estimates (standardized summed difference scores)",
+      "contrast": "round vs precise anchor",
+      "timepoint": "not applicable: single-session estimation task",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "In Study 4a, people adjust less from a precise anchor (e.g., $9.99) than from a round anchor (e.g., $10) when estimating prices, because precise numbers imply a finer-resolution scale.",
+      "citation_sentence": "Study 4a was selected for replication (rather than 4b) because it manipulated precision of the anchor directly (Study 4b manipulated the coarseness of the scale on which prices were estimated), and thus most directly captured the central contribution of the paper.",
+      "evidence": "Results, Confirmatory analysis (p. 2): \"There was also a main effect of anchor precision, F(1,116) = 6.283, p = .014, ηp2 = .05, indicating that people given the round anchor adjusted more ... than people given the precise anchor\"; Discussion (p. 3): \"The central claim of their paper – that anchor precision influences the degree of adjustment was supported.\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "The effect was about a third of the original size, but it was significant in the same direction and the authors say this claim was supported. The paper-level verdict 'partial replication' reflects the failed interaction, not this claim, so per the codebook (one entry per claim; partial support as an aggregate characterization) this claim is coded success. Both candidate coders collapsed the paper into a single entry labeled inconclusive from the 'partial replication' sentence, which is why gt_ambiguity is now ambiguous. The original DOI is not given in the paper (references.json is empty), so original_url is left blank. The paper gives the authors as 'Janiszewski, C., D. Uy'; the full first names come from general knowledge, so an auditor may prefer 'Janiszewski, C.; Uy, D.'. The paper's title says 'Study 4b', but the text says Study 4a was replicated. Replication type: the authors give no label. They used the original materials from the first author, but recruited at an elite private university instead of a state university, ran the survey in dining halls instead of the lab, and dropped one of the ten items (Hummer). Direct was chosen by the direct-vs-close tiebreaker; close extension (setting/population changed, as candidate luna56 proposed) is a plausible alternative."
+    },
+    {
+      "effect_id": "s4a:precision_x_motivation",
+      "original_reference": "Janiszewski and Uy (2008)",
+      "original_url": "",
+      "original_title": "Anchor precision influences the amount of adjustment",
+      "original_authors": "Janiszewski, Chris; Uy, Dan",
+      "original_year": "2008",
+      "original_journal": "Psychological Science",
+      "replication_study": "single study (replication of original Study 4a)",
+      "outcome": "amount of adjustment away from the anchor in hypothetical price estimates",
+      "contrast": "precision (round vs precise) x motivation to adjust (told to adjust by a large vs small amount) interaction",
+      "timepoint": "not applicable: single-session estimation task",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "In Study 4a, the anchor-precision effect on adjustment was stronger when people had more motivation to adjust (e.g., were told the anchor substantially overestimated the price): a precision x motivation interaction.",
+      "citation_sentence": "Two additional studies (4a and b) found that this effect was especially strong when people were explicitly given more motivation to adjust their estimates (e.g., by implying that the initial anchor substantially overestimated the price).",
+      "evidence": "Results, Confirmatory analysis (p. 2): \"There was no interaction between motivation and precision, F < 1.\"; Discussion (p. 3): \"There was no evidence of the reported interaction.\" ... \"We did not observe any evidence of an interaction between motivation and anchor precision, despite having sufficient experimental power.\"",
+      "gt_ambiguity": "clear",
+      "notes": "This was the distinctive finding of the original Study 4a, though the replicator calls it 'not central to the paper'. It was a pre-registered prediction, and the result was null with adequate power (planned N = 120 against 107 needed for 95% power), so it is coded failure. Replication type is coded as for the precision entry. Neither candidate coded this claim separately."
+    },
+    {
+      "effect_id": "s4a:motivation_main_effect",
+      "original_reference": "Janiszewski and Uy (2008)",
+      "original_url": "",
+      "original_title": "Anchor precision influences the amount of adjustment",
+      "original_authors": "Janiszewski, Chris; Uy, Dan",
+      "original_year": "2008",
+      "original_journal": "Psychological Science",
+      "replication_study": "single study (replication of original Study 4a)",
+      "outcome": "amount of adjustment away from the anchor in hypothetical price estimates",
+      "contrast": "told to adjust by a large amount vs a small amount (motivation to adjust)",
+      "timepoint": "not applicable: single-session estimation task",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "In Study 4a, people adjusted more from the anchor when told to adjust by a large amount than when told to adjust by a small amount (main effect of motivation).",
+      "citation_sentence": "Additionally, these data replicated the main effect of motivation observed in their study.",
+      "evidence": "Results, Confirmatory analysis (p. 2): \"A 2 X 2 ANOVA revealed a main effect of motivation, F(1,116) = 71.06, p < .001, ηp2 = .38, indicating that people told to adjust by a large amount adjusted more\"; Discussion (p. 3): \"these data replicated the main effect of motivation observed in their study.\"",
+      "gt_ambiguity": "clear",
+      "notes": "The result label is clear, since the authors explicitly say it was replicated. Whether this entry exists at all is uncertain. The replicator calls it 'a theoretically uninteresting main effect of motivation' (Power Analysis), so it works mainly as a manipulation check, and a second coder might treat it as a non-claim and drop it. It is kept because the original reported it as a result, the replication pre-registered it as a prediction, and the Discussion reports it as one of three replicated or non-replicated findings. The citation sentence does not repeat author and year; the preceding sentence of the same Discussion paragraph names 'Janiszewski and Uy (2008)'."
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.17605--osf.io--ehjdm#ling26:460cd4dc128531a2:1": {
+      "action": "map",
+      "effect_ids": [
+        "s4a:precision_main_effect"
+      ],
+      "reason": "Its description ('Anchor precision influences the degree of adjustment') is the central precision claim of original Study 4a. Its 'inconclusive' label comes from the paper-level 'partial replication' verdict, which aggregates three claims. Under the codebook the claims are coded separately, and the authors say this one was supported (significant, same direction), so it is coded success."
+    },
+    "luna56:10.17605--osf.io--ehjdm#luna56:4a490145d99046e2:1": {
+      "action": "map",
+      "effect_ids": [
+        "s4a:precision_main_effect"
+      ],
+      "reason": "Its description (greater anchor precision causes less adjustment than a round anchor) is the precision main-effect claim of Study 4a. 'Inconclusive' is a paper-level aggregation of the three findings, and this candidate's own notes say the precision effect was supported. Its 'close extension' type is recorded as a plausible alternative in the entry's notes."
+    }
+  },
+  "revision_notes": "Entries and labels are unchanged from pass 1. gt_ambiguity for s4a:precision_main_effect changed from clear to ambiguous, because both candidates labeled the paper-level entry inconclusive from 'partial replication', so a second coder could plausibly choose differently. Notes were updated to record the candidates' readings, including close extension as an alternative replication type.",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 1.3392,
+  "adjudication_session": "a6a497dd-fecc-4c35-8eca-3d407ee26b03"
 }

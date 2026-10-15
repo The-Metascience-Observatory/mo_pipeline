@@ -1,0 +1,112 @@
+{
+  "overall": {
+    "n_papers": 458,
+    "micro_recall": 0.724202626641651,
+    "micro_precision_lb": 0.660958904109589,
+    "macro_recall": 0.8005822416302766,
+    "hit_rate": 0.8078602620087336,
+    "hit_rate_lenient": 0.8078602620087336,
+    "exact_rate": 0.7161572052401747,
+    "hit_rate_when_extracted": 0.8428246013667426,
+    "extracted_none": 19,
+    "ext_rows_without_doi": 14
+  },
+  "ci95": {
+    "micro_recall": [
+      0.5868544600938967,
+      0.8315565031982942
+    ],
+    "micro_precision_lb": [
+      0.5607476635514018,
+      0.7621951219512195
+    ],
+    "macro_recall": [
+      0.7638282387190684,
+      0.8351528384279476
+    ],
+    "hit_rate": [
+      0.7707423580786026,
+      0.8427947598253275
+    ],
+    "exact_rate": [
+      0.6724890829694323,
+      0.7554585152838428
+    ]
+  },
+  "by_set": {
+    "flora": {
+      "n_papers": 277,
+      "micro_recall": 0.6328358208955224,
+      "micro_precision_lb": 0.7285223367697594,
+      "macro_recall": 0.7490974729241877,
+      "hit_rate": 0.7581227436823105,
+      "hit_rate_lenient": 0.7581227436823105,
+      "exact_rate": 0.6823104693140795,
+      "hit_rate_when_extracted": 0.7984790874524715,
+      "extracted_none": 14,
+      "ext_rows_without_doi": 7
+    },
+    "fred_v242": {
+      "n_papers": 45,
+      "micro_recall": 0.45871559633027525,
+      "micro_precision_lb": 0.4065040650406504,
+      "macro_recall": 0.8814814814814814,
+      "hit_rate": 0.9111111111111111,
+      "hit_rate_lenient": 0.9111111111111111,
+      "exact_rate": 0.7333333333333333,
+      "hit_rate_when_extracted": 0.9318181818181818,
+      "extracted_none": 1,
+      "ext_rows_without_doi": 2
+    },
+    "main_gt_fred_api": {
+      "n_papers": 120,
+      "micro_recall": 0.8880597014925373,
+      "micro_precision_lb": 0.7391304347826086,
+      "macro_recall": 0.8791666666666667,
+      "hit_rate": 0.8833333333333333,
+      "hit_rate_lenient": 0.8833333333333333,
+      "exact_rate": 0.775,
+      "hit_rate_when_extracted": 0.9137931034482759,
+      "extracted_none": 4,
+      "ext_rows_without_doi": 5
+    },
+    "main_gt_human": {
+      "n_papers": 27,
+      "micro_recall": 0.7931034482758621,
+      "micro_precision_lb": 0.71875,
+      "macro_recall": 0.8148148148148148,
+      "hit_rate": 0.8518518518518519,
+      "hit_rate_lenient": 0.8518518518518519,
+      "exact_rate": 0.6666666666666666,
+      "hit_rate_when_extracted": 0.8846153846153846,
+      "extracted_none": 1,
+      "ext_rows_without_doi": 0
+    }
+  },
+  "funnel": {
+    "ok": 458,
+    "wrong_document_on_disk": 6,
+    "not_extracted": 2
+  },
+  "provenance": {
+    "harness_version": "1.6",
+    "tags": [
+      "core_eval_20261015_doifix"
+    ],
+    "gt_sets": [
+      "flora",
+      "fred_v242",
+      "main_gt_fred_api",
+      "main_gt_human"
+    ],
+    "run": "core_orig_20261015",
+    "models": {
+      "claude-sonnet-5-5": 458
+    },
+    "ai_versions": {
+      "8.10-core": 458
+    },
+    "git_commit": "705bb8fdca12ca6a7e3b23efdc029c73c916248c",
+    "created": "2026-10-15T18:11:35"
+  }
+}

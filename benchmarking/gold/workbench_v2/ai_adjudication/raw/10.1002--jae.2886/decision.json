@@ -1,0 +1,139 @@
+{
+  "eligibility": "positive",
+  "eligibility_reason": "Rose (2022) replicates Goyal et al. (2006, JPE) with an independently compiled database (Scopus, different coverage and author disambiguation) for 1970-1999 and with new data on the 2000s and 2010s; beyond a pure reproduction on the original EconLit data, these are replications of the original network findings with new data.",
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "wide:small_world",
+      "original_reference": "Goyal et al. (2006)",
+      "original_url": "https://doi.org/10.1086/500990",
+      "original_title": "Economics: An emerging small world",
+      "original_authors": "Goyal, S.; van der Leij, M. J.; Moraga-González, J. L.",
+      "original_year": "2006",
+      "original_journal": "Journal of Political Economy",
+      "replication_study": "Wide replication (Section 3.2; Scopus data, 1970s-1990s)",
+      "outcome": "Co-authorship network satisfies the four small-world criteria (small average degree, sizeable giant component, short distance in giant component, high clustering) by the 1990s",
+      "contrast": "1970s vs 1980s vs 1990s co-author networks (emergence over decades)",
+      "timepoint": "1990s network (decade by which the original claims the small world emerged)",
+      "result": "success",
+      "replication_type": "close experiment",
+      "description": "The co-authorship network of economists (EconLit, 1970-1999) became a small world only by the 1990s, satisfying all four small-world criteria: Economics is an emerging small world.",
+      "citation_sentence": "This paper both narrowly and widely replicates Goyal et al. (2006). The authors analyze the economics profession in the 1970–1999 period and find that by the 1990s, Economics has become a small world.",
+      "evidence": "Section 3.2, p. 824 and Table 4: \"As expected, the networks differ. ... Despite these differences, by the 1990s, the network satisfies all criteria of a small world.\" Conclusion: \"I replicate all main results of Goyal et al. (2006) thrice: ... and using another dataset and a different network definition.\"",
+      "gt_ambiguity": "clear",
+      "notes": "Result label is clear; the eligibility of this entry is the doubt. Footnote 2 concedes that both databases \"cover in principle the same publications\", so a second coder might treat the Scopus analysis as a robustness reanalysis rather than new data. I count it because Scopus is an independently compiled dataset with different coverage (52% of EconLit volumes), author-profile disambiguation, and papers with 4+ authors included. Typed close experiment because the data source and network definition changed while population/period (economics, 1970-1999) and analysis stayed the same; close extension (ling26's call) is a defensible alternative. The 1970s Scopus giant component is much smaller (5.6% vs ~15%), but the claim concerns the 1990s. Not coded: the narrow replication (Section 3.1) re-runs the original EconLit data (a pure reproduction: Table 1) and a June 2020 re-extract of the same EconLit database for the same years (Table 2, Table 3, Figure 3). Both succeed, but I treat them as reproductions of the same data, not new data; both candidate coders proposed them as entries (see candidate_resolutions).",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "wide:stars_clustering",
+      "original_reference": "Goyal et al. (2006)",
+      "original_url": "https://doi.org/10.1086/500990",
+      "original_title": "Economics: An emerging small world",
+      "original_authors": "Goyal, S.; van der Leij, M. J.; Moraga-González, J. L.",
+      "original_year": "2006",
+      "original_journal": "Journal of Political Economy",
+      "replication_study": "Wide replication (Section 3.2; Scopus data, 1970s-1990s)",
+      "outcome": "Most-connected economists (\"stars\") have many co-authors but low clustering; negative relationship between degree and clustering",
+      "contrast": "high-degree vs low-degree authors (clustering as a function of degree)",
+      "timepoint": "1990s for the top-linked table; all three decades for the clustering-degree figure",
+      "result": "success",
+      "replication_type": "close experiment",
+      "description": "Highly interlinked economists (\"stars\") with many co-authors who do not co-author with each other (low clustering) account for the network's short and falling average distance and growing connectedness, shown as a negative degree-clustering relationship.",
+      "citation_sentence": "The second main result of Goyal et al. (2006) is that highly interlinked Economists are the reason for the low (and decreasing) average distance and the high (and increasing) connectedness.",
+      "evidence": "Section 3.2, p. 825, Table 5, Figure 4: \"The five Economists with highest degree have fewer publications and higher clustering (Table 5) than in Goyal et al. (2006). Also, in this network, I find a strong negative correlation between the number of co-authors and clustering of a researcher (Figure 4a), but it is not as negative as in the EconLit networks.\" Conclusion: \"I replicate all main results of Goyal et al. (2006) thrice\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "The author counts this among \"all main results\" replicated with another dataset, hence success. A second coder could call it inconclusive: the Scopus top-5 economists have higher clustering than the original's (Table 5: top-100 average clustering .884 vs .522 for all, the reverse of the original pattern), and the negative degree-clustering relationship is weaker. Kept as a separate claim from the small world because the paper names it explicitly as \"the second main result\" of the original; neither candidate coder split it out (luna56's wide candidate folds it into its description). Same eligibility caveat as wide:small_world.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "long:small_world",
+      "original_reference": "Goyal et al. (2006)",
+      "original_url": "https://doi.org/10.1086/500990",
+      "original_title": "Economics: An emerging small world",
+      "original_authors": "Goyal, S.; van der Leij, M. J.; Moraga-González, J. L.",
+      "original_year": "2006",
+      "original_journal": "Journal of Political Economy",
+      "replication_study": "Long replication (Section 3.3; EconLit and Scopus data, 2000s and 2010s)",
+      "outcome": "Small-world properties of the economics co-author network (giant component, clustering, short distance) and their trend over decades",
+      "contrast": "2000s and 2010s networks compared with the 1990s small world",
+      "timepoint": "2000s and 2010s",
+      "result": "success",
+      "replication_type": "close extension",
+      "description": "The co-authorship network of economists became a small world by the 1990s, with the giant component and clustering growing and distance falling over the decades (an emerging small world).",
+      "citation_sentence": "With the benefit of nearly two decades that passed since the publication of Goyal et al. (2006), we can undertake a long replication. I repeat the exact same analysis as above using all publications from the 2000s and 2010s.",
+      "evidence": "Section 3.3, pp. 826-827, Tables 6-7: \"Importantly, the giant components and the clustering components grow, while average distance in the giant component decreases. The world of Economists, which has been small since the 1990s, became even smaller.\" and \"Table 7, which uses the Scopus networks, paints a very similar picture. The only difference is that the small world of Economists is somewhat less small\"",
+      "gt_ambiguity": "clear",
+      "notes": "EconLit (Table 6) and Scopus (Table 7) analyses are one entry: one claim, two data sources in the same long replication, and both agree. Close extension because the same analysis is applied to new decades (WHEN changed). The conclusion's \"thrice\" refers to narrow original data, narrow recent EconLit, and wide Scopus, not to the long replication, but the Section 3.3 text clearly reports the small-world pattern continuing.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "long:stars_clustering",
+      "original_reference": "Goyal et al. (2006)",
+      "original_url": "https://doi.org/10.1086/500990",
+      "original_title": "Economics: An emerging small world",
+      "original_authors": "Goyal, S.; van der Leij, M. J.; Moraga-González, J. L.",
+      "original_year": "2006",
+      "original_journal": "Journal of Political Economy",
+      "replication_study": "Long replication (Section 3.3; EconLit and Scopus data, 2000s and 2010s)",
+      "outcome": "Relationship between degree and clustering (stars: high-degree authors have low clustering)",
+      "contrast": "clustering as a function of degree (high- vs low-degree authors)",
+      "timepoint": "2000s and 2010s",
+      "result": "inconclusive",
+      "replication_type": "close extension",
+      "description": "Highly interlinked \"star\" economists have many co-authors who do not co-author with each other, giving a negative (roughly exponential) relationship between degree and clustering that underlies the small world.",
+      "citation_sentence": "A remaining question is that of the clustering–degree relationship in the 2000s and 2010s. Figure 5 tackles this question.",
+      "evidence": "Section 3.3, p. 827, Figure 5 (\"Long replication of Figure 1 of Goyal et al. (2006)\"): \"With EconLit (Figure 5a), the relationship of clustering to degree is not following closely an exponential relationship anymore.\" and \"Using Scopus data (Figure 5b), we see the same pattern as with EconLit data up until a degree of 20, after which however the pattern becomes nontrivial. There are high-degree individuals with high clustering, and there are high-degree individuals with low clustering.\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Mixed: clustering still declines with degree for low and middle degrees (Figure 5a shows a decreasing curve), but the author says it no longer follows the original's exponential shape (EconLit) and becomes \"nontrivial\" above degree 20 (Scopus). The author attributes the divergence partly to EconLit name disambiguation and many-author papers and makes no replication claim for this part; the conclusion's \"thrice\" excludes the long replication. Only Figure 1 of the original is long-replicated (no top-linked table for 2000s/2010s). A second coder might code success (the negative relation persists) or decline to code an entry because the long replication only partly tests the stars claim. No candidate proposed this entry; the source supports it, so it is kept.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.1002--jae.2886#ling26:50919cce07c0babc:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Narrow replication on the original authors' exact EconLit data (Section 3.1, Table 1: 'I use the exact same publications data'); differs only in software (Python vs C++). This reproduces the analysis on the same data, with no new data, so it gets no entry under the codebook's reanalysis/reproducibility genre."
+    },
+    "ling26:10.1002--jae.2886#ling26:17e2a0e0c7d34362:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Narrow replication on a June 2020 re-extract of the same EconLit database for the same 1970-1999 publications (Section 3.1, Table 2). It re-gathers the same data and adds no new observations, so it is a reproducibility check. Borderline: a coder who counts the re-extract as new data would make it a success entry."
+    },
+    "ling26:10.1002--jae.2886#ling26:fc3b385f04c0c30b:1": {
+      "action": "map",
+      "effect_ids": ["wide:small_world"],
+      "reason": "Scopus wide replication of the small-world claim (Section 3.2, Table 4); same claim and study. Its type (close extension) differs from mine (close experiment)."
+    },
+    "ling26:10.1002--jae.2886#ling26:d761f2270b8cd751:1": {
+      "action": "map",
+      "effect_ids": ["long:small_world"],
+      "reason": "Long replication (2000s-2010s) of the small-world claim using EconLit (Table 6); same claim and study as long:small_world."
+    },
+    "ling26:10.1002--jae.2886#ling26:d761f2270b8cd751:2": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "The Scopus arm (Table 7) of the same long replication and the same small-world claim as ling26:d761f2270b8cd751:1. Under the codebook, two data sources or measures of one claim within one study are one entry, so this duplicates long:small_world at a finer grain."
+    },
+    "luna56:10.1002--jae.2886#luna56:afe98fa6105c838b:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Narrow replication on the original authors' exact data (Section 3.1, Table 1), reproduced in Python. This reproduces the analysis on the same data, with no new data."
+    },
+    "luna56:10.1002--jae.2886#luna56:815044e63a0251f6:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Narrow replication on a June 2020 re-extract of the same EconLit database for the same period (Section 3.1, Tables 2-3). It re-gathers the same data, so it is a reproducibility check, not new data. Borderline, as noted for the ling26 counterpart."
+    },
+    "luna56:10.1002--jae.2886#luna56:4fac62c7a5e215ab:1": {
+      "action": "map",
+      "effect_ids": ["wide:small_world", "wide:stars_clustering"],
+      "reason": "Scopus wide replication (Section 3.2). Its description covers both the small-world claim and the 'highly connected researchers linking otherwise distant groups' (stars) claim, which I code as separate entries."
+    },
+    "luna56:10.1002--jae.2886#luna56:833e9493575ca1b0:1": {
+      "action": "map",
+      "effect_ids": ["long:small_world"],
+      "reason": "Long replication (2000s-2010s, EconLit and Scopus) of the small-world claim (Section 3.3, Tables 6-7); same claim and study."
+    }
+  },
+  "revision_notes": "No changes to eligibility, entries or labels from pass 1. The candidates' narrow-replication entries (original data, and a re-extract of the same EconLit) stay rejected as reproductions of the same data; both coders proposed them, but agreement is not evidence and the codebook excludes reanalyses of the same data. The finer-grain duplicate (separate EconLit/Scopus long-replication entries) is collapsed. The two stars-claim entries have no candidate counterpart except luna56's combined wide description, and are kept because the source names the stars result as the original's 'second main result'."
+}

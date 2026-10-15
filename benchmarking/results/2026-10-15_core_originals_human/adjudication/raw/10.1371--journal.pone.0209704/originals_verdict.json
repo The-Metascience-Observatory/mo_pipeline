@@ -1,0 +1,26 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Milgram (1963) Behavioral study of obedience. Journal of Abnormal and Social Psychology 67:371-378",
+   "doi": "10.1037/h0040525"
+  },
+  {
+   "reference": "Milgram (1974) Obedience to authority: An experimental view (Harper & Row) -- proximity variant and 'agentic state' account",
+   "doi": ""
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": true,
+   "reason": "Ref [4] (Milgram 1974) is the source of the 'proximity' variant the VR study explicitly re-stages ('a modified version of Milgram's classic proximity study variant (see [4])') and of the agentic-state account it tests; the title/year match, but a JSTOR 10.2307 DOI for a Harper & Row book likely resolves to a journal book review, not the book."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Ref [1] (Milgram 1963, JASP 67:371-378) is the Yale obedience study whose paradigm and baseline script the paper re-stages in VR (titled 'a Virtual Reality replication of the Milgram obedience study'), reporting obedience (34/40 gave all shocks) and stress/hesitation; DOI 10.1037/h0040525 is the correct one for this article."
+  }
+ },
+ "notes": "Borderline/ambiguous: the paper calls itself a VR replication of the Milgram obedience study but uses a modified procedure (VR Learner, only one prod, 20 shock levels) and its hypotheses (helping via emphasis, identification-with-science manipulation) are new; obedience is reported only descriptively. Best coded as a conceptual replication of the Milgram obedience paradigm. The paradigm's canonical finding is from Milgram 1963 (B); the specific proximity variant and the agentic-state explanation being challenged come from the 1974 book (A). A second coder might code only one of them, or treat the paper as a novel paradigm-based study rather than a replication."
+}

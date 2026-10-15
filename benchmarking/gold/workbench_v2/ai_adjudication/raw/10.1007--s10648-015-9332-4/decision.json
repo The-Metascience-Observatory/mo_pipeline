@@ -1,0 +1,19 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "Labelled 'REVIEW ARTICLE' (Educational Psychology Review): Rohrer summarizes nine published studies of distributed practice that met his inclusion criteria and critiques the foreign-language literature, but collects no new data and runs no replication experiment (codebook genre: review/commentary).",
+  "enumeration_complete": true,
+  "effects": [],
+  "candidate_resolutions": {
+    "ling26:10.1007--s10648-015-9332-4#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal on a paper judged negative. It agrees with the final call: the paper is a narrative review with no new data, so there is no effect to map it to."
+    },
+    "luna56:10.1007--s10648-015-9332-4#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal on a paper judged negative. It agrees with the final call: the paper is a narrative review with no new data, so there is no effect to map it to."
+    }
+  },
+  "revision_notes": ""
+}

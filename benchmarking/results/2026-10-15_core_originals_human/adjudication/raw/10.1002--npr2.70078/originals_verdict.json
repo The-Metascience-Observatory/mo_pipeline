@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Yasuda, Ito, Matsumoto et al. (2025) Proposal for a Novel Classification of Patients With Enlarged Ventricles and Cognitive Impairment Based on Data-Driven Analysis of Neuroimaging Results in Patients With Psychiatric Disorders, Neuropsychopharmacology Reports 45(1): e70010",
+   "doi": "10.1002/npr2.70010"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "This is ref [6], the authors' previous study, which found the EVCI subtype (EVCI in 27% of EV individuals, mostly schizophrenia, mostly male) in the Osaka cohort. The present paper, titled 'A Replication Study', re-tests that finding in the remaining 146 EV individuals from 13 other COCORO cohorts and concludes it 'validated the existence of the EVCI subgroup in independent cohorts' (a self-replication, which the codebook includes)."
+  },
+  "B": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "This is a correction notice for the EVCI case series (ref [19], e70029). The paper cites the case series itself only as background on the clinical features of EVCI. It never cites the correction, and neither notice is a replicated finding."
+  }
+ },
+ "notes": "Self-replication of Yasuda et al. 2025 (ref 6) using new cohorts. Okada et al. 2023 (ref 10) is the source of the ventricular-volume data and method, not a replicated original."
+}

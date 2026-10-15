@@ -1,13 +1,208 @@
 {
   "packet_sha256": "4b05315341d3a9431d9eadcbd89787ea8b3534ebe1edea83e8b1140b9b92ebc9",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
-  "effects": [],
-  "candidate_resolutions": {}
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "positive",
+  "eligibility_reason": "The paper replicates Poole (2013, REStat) on Brazilian data using new, comprehensive matched employer-employee register data for Norway and Ireland. It re-estimates Poole's Tables 2-9 and reports whether each finding is confirmed.",
+  "sources_checked": true,
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "main:mne_wage_spillover",
+      "original_reference": "Poole (2013)",
+      "original_url": "https://doi.org/10.1162/REST_a_00258",
+      "original_title": "Knowledge Transfers from Multinational to Domestic Firms: Evidence from Worker Mobility",
+      "original_authors": "Poole, Jennifer P.",
+      "original_year": "2013",
+      "original_journal": "The Review of Economics and Statistics",
+      "replication_study": "single study (Norway 1996/98-2007; Ireland 2005-10 and 2011-16)",
+      "outcome": "log annual wages of incumbent workers in domestic establishments/firms",
+      "contrast": "share of workforce formerly employed at multinationals vs share hired from other domestic establishments (gamma_M - gamma_D)",
+      "timepoint": "not applicable: panel regression over the sample period",
+      "result": "success",
+      "replication_type": "close extension",
+      "description": "Poole (2013) claims that when workers leave multinationals and are rehired by domestic establishments, the wages of incumbent workers at those domestic establishments rise (gamma_M - gamma_D > 0), and the estimate holds across fixed-effect specifications (Tables 2 and 4), for males only, and with controls for omitted productivity shocks such as export status (Table 5).",
+      "citation_sentence": "In this paper we perform a replication study of the robustness-extension type as defined by Clemens (2017) of the analysis in Poole (2013) on comprehensive matched employer-employee data for Norway and Ireland.",
+      "evidence": "Abstract: \"Our results largely confirm the evidence documented in Poole for Brazil which suggests that when workers leave multinationals and are rehired at domestic establishments, the wages of their new coworkers who have already been present in the establishment increase.\" Results p.12 (Table/Figure 5): \"The coefficient estimates are significantly different from zero in all specifications, indicating the presence of wage spillovers from workers formerly employed in multinational establishments/firms.\" Section 5: \"by and large our results confirm the findings in the reference paper.\"",
+      "gt_ambiguity": "clear",
+      "notes": "One entry for the main claim covers Poole's Table 2 FE build-up, Table 4 (industry-year/region-year FE, males only) and Table 5 (export status controls), because all are robustness checks of the same claim. The authors' own extra checks (movers in the last 3 years, firm growth) are not replications of Poole's findings. In those extra checks, the Ireland 2011-16 estimate loses significance once lagged firm growth is added. GRANULARITY: both candidate coders split this claim into three rows (Norway, Ireland 2005-10, Ireland 2011-16). I keep one row. The countries are analysed with one design and reported side by side as a single replication exercise. The Ireland split into two periods is the authors' device to match Poole's six-year window, not a separate study. If a scorer prefers per-country rows, every split row is a success and a close extension (all three samples show a positive, significant gamma_M - gamma_D in Table A2 col 4 and Table A4 col 1). The authors call this a 'Robustness - Extension' (Clemens 2017): different countries and periods, with the specification kept where variables allow. That is coded as close extension.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "het:unionisation",
+      "original_reference": "Poole (2013)",
+      "original_url": "https://doi.org/10.1162/REST_a_00258",
+      "original_title": "Knowledge Transfers from Multinational to Domestic Firms: Evidence from Worker Mobility",
+      "original_authors": "Poole, Jennifer P.",
+      "original_year": "2013",
+      "original_journal": "The Review of Economics and Statistics",
+      "replication_study": "single study (Norway; Ireland 2005-10 and 2011-16)",
+      "outcome": "multinational wage spillover (gamma_M - gamma_D) on incumbent log annual wages, by sector unionisation",
+      "contrast": "low-union vs high-union sectors",
+      "timepoint": "not applicable: panel regression over the sample period",
+      "result": "failure",
+      "replication_type": "close extension",
+      "description": "Poole (2013, Table 3) claims that wage spillovers from former multinational workers are significant only in low-unionised sectors and are larger there, which supports a direct worker-interaction (social interaction) channel over profit-sharing.",
+      "citation_sentence": "As reported in the figure, Poole (2013) finds that for Brazil only the coefficient in the low union sectors is statistically significant.",
+      "evidence": "Results p.13 (Table/Figure 6): \"For Norway, the coefficients for both splits are significantly different from zero. And while the difference goes in the same direction as for Brazil, coefficient sizes are very similar and confidence bands for the two sectors overlap ... In the later period in Ireland (2011-16) the coefficient estimates for the two sectors are nearly identical.\" Introduction: \"Thus we do not confirm differential effects of wage spillovers for workers in sectors with different levels of unionisation or skill intensity.\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "The authors say explicitly that they do not confirm the claim, so this is coded failure. A second coder might choose inconclusive for three reasons. First, the authors also write of 'broadly similar tendencies in terms of heterogeneity'. Second, in Norway and Ireland 2005-10 the direction matches (only the low-union estimate is significant in Ireland 2005-10). Third, the authors note that the original's own confidence bands overlap. Neither candidate coder proposed the heterogeneity claims; one only mentions them in notes ('mostly not statistically significant ... a divergence from the original').",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "het:skill_intensity",
+      "original_reference": "Poole (2013)",
+      "original_url": "https://doi.org/10.1162/REST_a_00258",
+      "original_title": "Knowledge Transfers from Multinational to Domestic Firms: Evidence from Worker Mobility",
+      "original_authors": "Poole, Jennifer P.",
+      "original_year": "2013",
+      "original_journal": "The Review of Economics and Statistics",
+      "replication_study": "single study (Norway; Ireland 2005-10 and 2011-16)",
+      "outcome": "multinational wage spillover (gamma_M - gamma_D) on incumbent log annual wages, by industry skill intensity",
+      "contrast": "high-skill vs low-skill industries",
+      "timepoint": "not applicable: panel regression over the sample period",
+      "result": "failure",
+      "replication_type": "close extension",
+      "description": "Poole (2013, Table 3) claims that multinational wage spillovers are larger, and significant only, in high-skill-intensive industries, consistent with workplace-interaction theory.",
+      "citation_sentence": "Columns 3 and 4 of Table /Figure 6 examine whether workers in more high-skilled industries experience larger multinational wage spillovers.",
+      "evidence": "Results p.14: \"For Brazil, Norway and Ireland in the 2005-11 period coefficient estimates are higher in high-skilled industries and more substantially so in Brazil and Ireland. However, in all four instances, the confidence bands overlap between the two types of industries.\" Introduction: \"Thus we do not confirm differential effects of wage spillovers for workers in sectors with different levels of unionisation or skill intensity.\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "The direction replicates in Norway and Ireland 2005-10 but not in Ireland 2011-16, where the low-skill estimate is larger. The authors explicitly do not confirm a significant difference, so this is coded failure. Inconclusive is a plausible alternative, given the directional agreement. The citation sentence names no author and year, because the passage refers to Poole (2013, Table 3) from the preceding paragraphs.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "screening:job_tenure",
+      "original_reference": "Poole (2013)",
+      "original_url": "https://doi.org/10.1162/REST_a_00258",
+      "original_title": "Knowledge Transfers from Multinational to Domestic Firms: Evidence from Worker Mobility",
+      "original_authors": "Poole, Jennifer P.",
+      "original_year": "2013",
+      "original_journal": "The Review of Economics and Statistics",
+      "replication_study": "single study (Norway; Ireland 2005-10 and 2011-16)",
+      "outcome": "multinational wage spillover on incumbent log annual wages, by the switcher's tenure at the multinational",
+      "contrast": "high-tenure vs low-tenure former MNE workers",
+      "timepoint": "not applicable: panel regression over the sample period",
+      "result": "failure",
+      "replication_type": "close extension",
+      "description": "Poole (2013, Table 6 col. 1) claims that wage spillovers are larger from MNE switchers with longer tenure at the multinational, which supports knowledge transfer over MNE screening of worker quality.",
+      "citation_sentence": "To test for this, Poole (2013) includes the MNE-switcher worker's tenure at the multinational establishment.",
+      "evidence": "Results p.16: \"We obtain similar differences for Norway and Ireland. However, for all countries including Brazil, the confidence bands around the high and low-tenure differences in shares overlap.\" Introduction: \"We also do not confirm significant differences between workers with high versus low job tenure or high versus low waged workers\".",
+      "gt_ambiguity": "ambiguous",
+      "notes": "The point estimates show a similar difference in Norway and Ireland 2005-10, while in Ireland 2011-16 both estimates are about -0.02. The authors explicitly do not confirm a significant difference, so this is coded failure; inconclusive is plausible given 'similar differences'. Poole's Table 6 col. 2 (laid-off workers vs quits) could not be replicated because the data are unavailable, so it has no entry.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "productivity:high_wage_sender",
+      "original_reference": "Poole (2013)",
+      "original_url": "https://doi.org/10.1162/REST_a_00258",
+      "original_title": "Knowledge Transfers from Multinational to Domestic Firms: Evidence from Worker Mobility",
+      "original_authors": "Poole, Jennifer P.",
+      "original_year": "2013",
+      "original_journal": "The Review of Economics and Statistics",
+      "replication_study": "single study (Norway; Ireland 2005-10 and 2011-16)",
+      "outcome": "multinational wage spillover on incumbent log annual wages, by sending-establishment wage premium",
+      "contrast": "switchers from high-wage vs low-wage (establishment fixed effect above/below median) MNE establishments",
+      "timepoint": "not applicable: panel regression over the sample period",
+      "result": "inconclusive",
+      "replication_type": "close extension",
+      "description": "Poole (2013, Table 7 col. 2) claims that significant wage spillovers come only from workers formerly at high-wage (high-productivity) multinational establishments.",
+      "citation_sentence": "We replicate the results of Poole's 2013 specification in the second column of her Table 7 in column 2 of our Table/Figure 9. Poole interprets her results as suggesting that for Brazil there are significant spillovers only from high-wage establishments.",
+      "evidence": "Results p.17: \"Our results confirm this for Norway and Ireland in the 2011-2016 period. In the 2005-2010 period the coefficient estimates are very similar for both high-and low-wage sending firms in Ireland. Yet, here again, the confidence bands around the high vs low-wage coefficients overlap in all cases except the latter period in Ireland.\" Introduction: \"We also do not confirm significant differences between workers with high versus low job tenure or high versus low waged workers\".",
+      "gt_ambiguity": "ambiguous",
+      "notes": "The evidence is mixed. The authors confirm the 'only from high-wage' pattern for Norway and Ireland 2011-16, but not for Ireland 2005-10, and they say the high-low difference is significant only in Ireland 2011-16. The conclusion lists high- vs low-wage among the differences that are not statistically significant. Failure is a competing reading. Poole's Table 7 col. 1 (MNE exporters vs non-exporters) could not be replicated because all MNEs export in Norway and Ireland, so it has no entry.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "skill:switcher_skill",
+      "original_reference": "Poole (2013)",
+      "original_url": "https://doi.org/10.1162/REST_a_00258",
+      "original_title": "Knowledge Transfers from Multinational to Domestic Firms: Evidence from Worker Mobility",
+      "original_authors": "Poole, Jennifer P.",
+      "original_year": "2013",
+      "original_journal": "The Review of Economics and Statistics",
+      "replication_study": "single study (Norway; Ireland 2005-10 and 2011-16)",
+      "outcome": "multinational wage spillover on incumbent log annual wages, by switcher skill (education, occupation, ability)",
+      "contrast": "high-skill vs low-skill former MNE switchers",
+      "timepoint": "not applicable: panel regression over the sample period",
+      "result": "inconclusive",
+      "replication_type": "close extension",
+      "description": "Poole (2013, Table 8) claims that wage spillovers are larger from high-skill former multinational workers than from low-skill ones, with skill proxied by education, occupation and estimated ability.",
+      "citation_sentence": "The results for switcher skill level (Poole's 2013 Table 8) are replicated in Table/Figure 10 (estimates are reported in Table A7 in the Appendix).",
+      "evidence": "Results p.18: \"These results indicate for all three countries that wage spillovers tend to be higher from former high-skill MNE workers. Again, the confidence bands on the coefficient estimates for high and low-skill workers overlap for Brazil, Norway, and Ireland in the 2011-2016 period.\" Section 5: differences \"in the levels of high- versus low-skill MNE switchers ... are, with some few exceptions for Ireland, not statistically significant.\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "The direction replicates in all countries. Norway's education and occupation splits actually show low-skill at or above high-skill, while the authors' summary says 'tend to be higher'. The difference is not significant in Norway or Ireland 2011-16, but it apparently is in Ireland 2005-10 (ability split). This is coded inconclusive because the support is directional only and the results are mixed across samples. Failure is plausible, given the explicit statement that the authors 'do not confirm' differences by switcher education, occupation or ability. Ireland has only the ability proxy.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "skill:incumbent_skill",
+      "original_reference": "Poole (2013)",
+      "original_url": "https://doi.org/10.1162/REST_a_00258",
+      "original_title": "Knowledge Transfers from Multinational to Domestic Firms: Evidence from Worker Mobility",
+      "original_authors": "Poole, Jennifer P.",
+      "original_year": "2013",
+      "original_journal": "The Review of Economics and Statistics",
+      "replication_study": "single study (Norway; Ireland 2005-10 and 2011-16)",
+      "outcome": "multinational wage spillover on incumbent log annual wages, by incumbent skill (education, occupation, ability)",
+      "contrast": "high-skill vs low-skill incumbent workers",
+      "timepoint": "not applicable: panel regression over the sample period",
+      "result": "inconclusive",
+      "replication_type": "close extension",
+      "description": "Poole (2013, Table 9) claims that multinational wage spillovers are larger for high-skill incumbent domestic workers than for low-skill incumbents.",
+      "citation_sentence": "The split into high- and low-wage incumbents (cf. Poole (2013), Table 9) is replicated in Table/Figure 11 (estimates are reported in Tables A8 and A9 in the Appendix).",
+      "evidence": "Results p.18: \"As in the reference paper, higher incumbent worker skill also does seem to make a greater difference in terms of the size of former multinational worker wage spillovers for all three countries. Also, here the confidence bands around the coefficients are wide enough with the exception of Ireland to call into question whether these differences are significant.\" Introduction: \"we do not confirm significant differences ... between newly hired workers/incumbent workers with high versus low education, occupation and ability.\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "The direction matches in all countries, and the difference is significant in Ireland (ability split only) but not in Norway, so the result is mixed. The authors confirm the direction but doubt significance, so this is coded inconclusive. The introduction's 'we do not confirm' supports failure as an alternative.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.18718--81781.29#ling26:445a3218fd2c1b5d:1": {
+      "action": "map",
+      "effect_ids": [
+        "main:mne_wage_spillover"
+      ],
+      "reason": "This is the main wage-spillover claim of Poole (2013), restricted to the Norway sample. It matches main:mne_wage_spillover (success, close extension), which covers all samples in one row."
+    },
+    "ling26:10.18718--81781.29#ling26:e2f84cc29f646f47:1": {
+      "action": "map",
+      "effect_ids": [
+        "main:mne_wage_spillover"
+      ],
+      "reason": "This is the main wage-spillover claim, restricted to the Ireland 2005-10 sample. The period split is the authors' device for comparability with Poole's six-year window, not a separate study. Its labels match."
+    },
+    "ling26:10.18718--81781.29#ling26:7fc99ac1c1a18ddd:1": {
+      "action": "map",
+      "effect_ids": [
+        "main:mne_wage_spillover"
+      ],
+      "reason": "This is the main wage-spillover claim, restricted to the Ireland 2011-16 sample. It is the same claim and labels as main:mne_wage_spillover."
+    },
+    "luna56:10.18718--81781.29#luna56:49118a48993283ef:1": {
+      "action": "map",
+      "effect_ids": [
+        "main:mne_wage_spillover"
+      ],
+      "reason": "This is the main wage-spillover claim for the Norway sample. It is the same claim and labels (success, close extension) as main:mne_wage_spillover."
+    },
+    "luna56:10.18718--81781.29#luna56:f91f6e50e02cbb88:1": {
+      "action": "map",
+      "effect_ids": [
+        "main:mne_wage_spillover"
+      ],
+      "reason": "This is the main wage-spillover claim for the Ireland 2005-10 sample. It is the same claim and labels as main:mne_wage_spillover."
+    },
+    "luna56:10.18718--81781.29#luna56:7e0e76e8de6a97ce:1": {
+      "action": "map",
+      "effect_ids": [
+        "main:mne_wage_spillover"
+      ],
+      "reason": "This is the main wage-spillover claim for the Ireland 2011-16 sample. It is the same claim and labels as main:mne_wage_spillover."
+    }
+  },
+  "revision_notes": "No label, eligibility or enumeration changes from pass 1. Both candidate coders split the main claim into three rows by country/period (Norway, Ireland 2005-10, Ireland 2011-16). I mapped all six to the single main:mne_wage_spillover entry and recorded the granularity choice in its notes. Every per-sample reading also gives success and close extension, so labels are unaffected. Neither coder enumerated the six heterogeneity claims (Poole Tables 3, 6, 7, 8, 9). I re-checked them against pp.13-20 and keep them: the paper explicitly replicates each table, and the abstract and conclusion stress that these differences are not confirmed.",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 2.3886,
+  "adjudication_session": "1236700a-2a7b-40cd-bf49-2c8f01cc5097"
 }

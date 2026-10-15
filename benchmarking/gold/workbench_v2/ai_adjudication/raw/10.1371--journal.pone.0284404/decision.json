@@ -1,0 +1,88 @@
+{
+  "eligibility": "positive",
+  "eligibility_reason": "Self-described replication study: the authors 'repeated the same set-up as Guo et al.' (cytokine-driven Th17 polarization of CD4+ T cells with recombinant VSTM1-v2) with new donor cells, and additionally tested Guo's claim in DC-driven co-cultures; no effect of VSTM1-v2 was found.",
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "cytokine:vstm1v2_th17",
+      "original_reference": "Guo et al. (2012) [ref 6]",
+      "original_url": "https://doi.org/10.1016/j.cellimm.2012.07.009",
+      "original_title": "VSTM1-v2, a novel soluble glycoprotein, promotes the differentiation and activation of Th17 cells",
+      "original_authors": "Guo, X; Zhang, Y; Wang, P; Li, T; Fu, W; Mo, X",
+      "original_year": "2012",
+      "original_journal": "Cellular Immunology",
+      "replication_study": "Cytokine-driven Th17 differentiation experiment (Fig 1D; total CD4+ T cells, n = 3 donors)",
+      "outcome": "Percentage of IL-17+ CD4+ T cells (intracellular IL-17A by flow cytometry)",
+      "contrast": "VSTM1-v2 (10 or 100 ng/mL) vs medium control, under anti-CD3/anti-CD28 + Th17 polarizing cytokine mix",
+      "timepoint": "10-12 days of culture, after PMA/ionomycin restimulation",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Recombinant VSTM1-v2 promotes Th17 cell differentiation and activation of purified CD4+ T cells stimulated with anti-CD3/anti-CD28 and a Th17-polarizing cytokine cocktail, i.e. acts as a Th17-polarizing cytokine.",
+      "citation_sentence": "Finally, we repeated the same set-up as Guo et al. used to show that VSTM1-v2 induced Th17 cell differentiation, by activating total CD4[+] T cells with anti-CD3, anti-CD28, and a Th17 polarizing cytokine mix [6].",
+      "evidence": "Results, final paragraph (Fig 1D): \"The Th17 polarizing mix increased the percentage of IL-17[+] cells, but there was no effect of VSTM1-v2 (Fig 1D). Thus, our data do not support a role for VSTM1-v2 in the differentiation or activation of Th17 cells.\" Discussion: \"we did not find any effect of VSTM1-v2 on Th17 cell differentiation and activation, unlike the results by Guo et al. [6].\"",
+      "gt_ambiguity": "clear",
+      "notes": "Authors say they used the same set-up, polarizing mix and VSTM1-v2 concentrations as Guo, but they read out % intracellular IL-17+ cells after 10-12 days whereas Guo measured IL-17 release already at 72 h (Discussion notes this difference). That is a readout/timepoint change, so 'close experiment' is a plausible alternative; coded direct per the authors' 'repeated the same set-up' and the direct-vs-close tiebreaker. Small n (3 donors). Original author first names not given in the paper (initials only). Not coded: the neutrophil-dependence of DC-driven Th17 differentiation, which the authors say they 'confirmed' from their own prior work (Souwer et al., ref 8, 'Human TH17 cell development requires processing of dendritic cell-derived CXCL8 by neutrophil elastase') - here it functions as the positive control of the co-culture system, so it gets no row under 'controls are not claims'; a second coder might code it as a self-replication success (one candidate did).",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "dc_naive:vstm1v2_th17_differentiation",
+      "original_reference": "Guo et al. (2012) [ref 6]",
+      "original_url": "https://doi.org/10.1016/j.cellimm.2012.07.009",
+      "original_title": "VSTM1-v2, a novel soluble glycoprotein, promotes the differentiation and activation of Th17 cells",
+      "original_authors": "Guo, X; Zhang, Y; Wang, P; Li, T; Fu, W; Mo, X",
+      "original_year": "2012",
+      "original_journal": "Cellular Immunology",
+      "replication_study": "DC-driven Th17 differentiation of naive CD4+ T cells (C. albicans-activated moDCs +/- neutrophils; Fig 1B-C left, n = 10 donors)",
+      "outcome": "Percentage of IL-17+ T cells differentiated from naive CD4+ T cells",
+      "contrast": "100 ng/mL VSTM1-v2 vs no VSTM1-v2 in moDC co-cultures (with and without neutrophils)",
+      "timepoint": "10-12 days of culture, after PMA/ionomycin restimulation",
+      "result": "failure",
+      "replication_type": "conceptual",
+      "description": "VSTM1-v2 promotes the differentiation of human CD4+ T cells into Th17 cells (proposed Th17-polarizing cytokine).",
+      "citation_sentence": "Moreover, recombinant VSTM1-v2 has been shown to induce Th17 cell differentiation and activation, using purified CD4[+] T cells that were stimulated with a Th17 cell inducing cytokine cocktail and/or anti-CD3 and anti-CD28 stimulation [6], suggesting that VSTM1-v2 acts as a polarizing cytokine on CD4[+] T cells. ... It is unclear whether VSTM1-v2 also affects DC-driven differentiation into Th17 cells.",
+      "evidence": "Results, para 1: \"However, VSTM1-v2 did not consistently change the percentage of IL-17[+] T cells in these cultures (Fig 1C, left panel).\" Discussion: \"We neither observed effects of VSTM1-v2 on DC-driven nor cytokine-driven T cell outgrowth. It is unclear what caused these differential results with the study by Guo et al..\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Inclusion is the doubt, not the result label: the DC-driven system is the authors' own paradigm (Souwer et al.), not Guo's, and the Introduction frames it as an open question ('It is unclear whether VSTM1-v2 also affects DC-driven differentiation'), so a second coder may treat it as a new experiment rather than a replication. Neither candidate coder proposed it. Coded as a conceptual replication because the Discussion explicitly contrasts the DC-driven null with Guo's finding. If included, the result is clearly failure. Guo's citation in the paper (ref 6) has no inline author-year in this sentence; the author-year link is in the Discussion sentence quoted in evidence.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "dc_memory:vstm1v2_th17_activation",
+      "original_reference": "Guo et al. (2012) [ref 6]",
+      "original_url": "https://doi.org/10.1016/j.cellimm.2012.07.009",
+      "original_title": "VSTM1-v2, a novel soluble glycoprotein, promotes the differentiation and activation of Th17 cells",
+      "original_authors": "Guo, X; Zhang, Y; Wang, P; Li, T; Fu, W; Mo, X",
+      "original_year": "2012",
+      "original_journal": "Cellular Immunology",
+      "replication_study": "DC-driven Th17 activation of memory CD4+ T cells (C. albicans-activated moDCs; Fig 1C right, n = 3 donors)",
+      "outcome": "Percentage of IL-17+ T cells from memory CD4+ T cells",
+      "contrast": "100 ng/mL VSTM1-v2 vs no VSTM1-v2 in moDC co-cultures",
+      "timepoint": "10-12 days of culture, after PMA/ionomycin restimulation",
+      "result": "failure",
+      "replication_type": "conceptual",
+      "description": "VSTM1-v2 promotes the activation of Th17 cells (enhancing IL-17 production by CD4+ T cells).",
+      "citation_sentence": "Moreover, recombinant VSTM1-v2 has been shown to induce Th17 cell differentiation and activation, using purified CD4[+] T cells that were stimulated with a Th17 cell inducing cytokine cocktail and/or anti-CD3 and anti-CD28 stimulation [6], suggesting that VSTM1-v2 acts as a polarizing cytokine on CD4[+] T cells. ... More importantly, we did not find any effect of VSTM1-v2 on Th17 cell differentiation and activation, unlike the results by Guo et al. [6].",
+      "evidence": "Results, para 2: \"co-culture of memory CD4[+] T cells with C. albicans-activated moDCs induced up to 30% of IL-17[+] cells, but this was not increased by addition of VSTM1-v2 (Fig 1C, right panel). Taken together, we found no effect of VSTM1-v2 on DC-driven Th17 cell differentiation nor activation.\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Same inclusion doubt as the naive DC-driven entry (authors' own DC co-culture paradigm, framed as an open question); neither candidate coder proposed it. Kept separate from the naive-cell experiment because it uses different cells (memory CD4+ T cells, n = 3) and tests the 'activation' half of Guo's title claim. An alternative coding collapses both DC-driven experiments into one row, or drops them and keeps only the cytokine-driven direct replication. Result is clearly failure if included.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.1371--journal.pone.0284404#ling26:cf4c6b667446e8cb:1": {
+      "action": "map",
+      "effect_ids": ["cytokine:vstm1v2_th17"],
+      "reason": "Same original (Guo et al. 2012), same citation sentence ('we repeated the same set-up as Guo et al.'), same labels (failure, direct): the cytokine-driven experiment of Fig 1D."
+    },
+    "ling26:10.1371--journal.pone.0284404#ling26:df6990c81973c946:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Control, not a claim: the neutrophil effect (Souwer et al. 2018, ref 8) is the positive control that shows the DC co-culture system works ('In line with our previous data, presence of neutrophils promoted the differentiation...'). It is the baseline against which VSTM1-v2 is tested, not a finding under test, so under codebook v2's 'controls are not claims' it gets no row. Borderline: the Discussion opens 'We confirmed our previous observations that neutrophils are required...', so a self-replication reading is plausible; flagged in the notes of cytokine:vstm1v2_th17."
+    },
+    "luna56:10.1371--journal.pone.0284404#luna56:3b57498326d7aca6:1": {
+      "action": "map",
+      "effect_ids": ["cytokine:vstm1v2_th17"],
+      "reason": "Same original (Guo et al. 2012), same citation sentence and same experiment (anti-CD3/anti-CD28 + Th17 polarizing mix, Fig 1D); labels match (failure, direct)."
+    }
+  },
+  "revision_notes": "No changes to effects or labels from pass 1. The neutrophil self-replication candidate was considered and rejected again as a positive control (the borderline was already noted in pass 1). The two DC-driven conceptual entries were kept although no candidate proposed them, and they stay marked ambiguous for inclusion."
+}

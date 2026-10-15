@@ -1,0 +1,145 @@
+{
+  "eligibility": "positive",
+  "eligibility_reason": "The paper reports a new-data 'partial replication' of Rosenkrantz et al. (1968): 248 new community-college students completed the original Sex Role Stereotypes Questionnaire and another 103 completed a Social Desirability Questionnaire. Its results are compared claim by claim with the 1968 findings.",
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "s1:male-female-agreement-on-typical-traits",
+      "original_reference": "Rosenkrantz, et al. (1968)",
+      "original_url": "",
+      "original_title": "Sex-role stereotypes and self-concepts in college students",
+      "original_authors": "Rosenkrantz, P. S.; Vogel, S. R.; Bee, H.; Broverman, I. K.; Broverman, D. M.",
+      "original_year": "1968",
+      "original_journal": "Journal of Consulting and Clinical Psychology",
+      "replication_study": "single study (SRSQ sample, analysed as Younger and Older groups)",
+      "outcome": "Agreement between male and female raters on the traits characterising the Typical Man and the Typical Woman (correlation of rating profiles across the 122 items; number of items on which both sexes agreed about direction)",
+      "contrast": "ratings by male vs female respondents of the same target (Typical Man; Typical Woman)",
+      "timepoint": "not applicable: single cross-sectional questionnaire administration",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "Male and female college students agree about which traits typify men and which typify women (cross-sex correlations of .96 for the Typical Man and .95 for the Typical Woman; agreement on direction for 113 of 122 items).",
+      "citation_sentence": "The 1968 study by Rosenkrantz, et a/. on the gender stereotypes of college students showed that: (1) male and female college students agreed about what traits typify men and women in general; (2) male and female students generally agreed about which of the traits were socially desirable and whch not; ( 3 ) regardless of gender, students attributed more socially desirable traits to men than to women; and (4) both male and female students rated themselves as less different from the opposite sex than the typical man and woman are different.",
+      "evidence": "Results, Gender Stereotypes, and Table 1: \"Men and women rated the traits characteristic of the Typical Man and the Typical Woman as similarly now as they did 30 years ago. ... In our data (see Table I), these correlations were similar to those observed by Rosenkrantz, et al., ranging from .89 to .95\"; Older groups agreed on 106 and Younger on 110 of the 122 items. Abstract: \"Like the students studied 30 years ago, male and female participants in this study showed very high agreement about the typical characteristics of men and women.\"",
+      "gt_ambiguity": "clear",
+      "notes": "The original's DOI is not given in the paper and is left blank. Authors are listed with the initials the reference list gives. Revised in pass 2 from close extension to direct. This entry uses the original's own SRSQ, with the same instructions and the same rated targets. The authors also matched the original's age range by analysing a Younger group. The remaining differences are sample characteristics: San Diego community colleges, a more ethnically diverse sample, and 30 years later. The codebook treats different participants, a different lab and a different time period as minor, and its tiebreaker sends doubt between direct and close to direct. Close extension remains a plausible alternative label for the type.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:number-of-stereotypic-items",
+      "original_reference": "Rosenkrantz, et al. (1968)",
+      "original_url": "",
+      "original_title": "Sex-role stereotypes and self-concepts in college students",
+      "original_authors": "Rosenkrantz, P. S.; Vogel, S. R.; Bee, H.; Broverman, I. K.; Broverman, D. M.",
+      "original_year": "1968",
+      "original_journal": "Journal of Consulting and Clinical Psychology",
+      "replication_study": "single study (SRSQ sample, analysed as Younger and Older groups)",
+      "outcome": "Extent and content of strongly held gender stereotypes: the number of items meeting the 75%-agreement criterion in both sexes (Stereotypic items), plus Differentiating items",
+      "contrast": "Typical Man vs Typical Woman ratings, with at least 75% agreement among both male and female raters",
+      "timepoint": "not applicable: single cross-sectional questionnaire administration",
+      "result": "inconclusive",
+      "replication_type": "direct",
+      "description": "College students hold strong, consensual sex-role stereotypes: 41 of the 122 SRSQ items met the 75% agreement criterion for both sexes. These covered both a competence cluster attributed to men and an emotional-expressiveness cluster attributed to women.",
+      "citation_sentence": "They found that 53 items met the criterion of 75% or more agreement for male respondents, that 50 items met this criterion for female respondents, and that 41 items met the criterion for both groups of respondents and thus qualified as stereotypes by their definition. Applying the same criterion (75% of men and 75% of women agree) to our data, we found that for our Younger group (comparable to the 1968 sample) only 19 items met the criterion of Rosenkrantz, et al. (1968) for Stereotypic items.",
+      "evidence": "Results, Gender Stereotypes, Tables 2-3: Younger group 19 and Older group 17 Stereotypic items, against 41 in 1968. Discussion: \"Results of this study suggest that the contents of gender stereotypes have changed to some extent ... Twenty-six of the 41 traits which met the criterion for Stereotypic items in the original study did not meet that same criterion in this study.\" Emotional-expressiveness items \"continue to be seen as differentiating\", but competence items (logical, direct, ambitious, objective) no longer do. Abstract: \"current participants identified significantly fewer gender stereotypes than did those in the earlier study.\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "The paper's introduction does not list this as one of the original's four numbered findings, but the original reported it and the replication treats it as its headline result, so it is coded as a separate claim. Candidate luna56 also proposed it as its own entry. The result is mixed: stereotypes still exist and the emotional-expressiveness cluster persists, but the count falls by more than half and the competence cluster is gone. The authors say stereotype content changed 'to some extent'. Candidate luna56 coded this as a failure. The codebook's tiebreaker for doubt between failure and inconclusive points to inconclusive, so that label is kept. The type was revised to direct for the same reason as the agreement entry: the same SRSQ and the same 75% criterion were applied. The Table 3 OCR reads '11' for the 1968 Stereotypic count; the text says 41.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:male-female-agreement-on-social-desirability",
+      "original_reference": "Rosenkrantz, et al. (1968)",
+      "original_url": "",
+      "original_title": "Sex-role stereotypes and self-concepts in college students",
+      "original_authors": "Rosenkrantz, P. S.; Vogel, S. R.; Bee, H.; Broverman, I. K.; Broverman, D. M.",
+      "original_year": "1968",
+      "original_journal": "Journal of Consulting and Clinical Psychology",
+      "replication_study": "single study (Social Desirability Questionnaire sample)",
+      "outcome": "Agreement between men and women about which pole of each of the 122 traits is socially desirable",
+      "contrast": "social-desirability ratings by men vs women",
+      "timepoint": "not applicable: single cross-sectional questionnaire administration",
+      "result": "success",
+      "replication_type": "close experiment",
+      "description": "Male and female students agree about which pole of each bipolar trait is the more socially desirable (correlation of .96 between men's and women's choices).",
+      "citation_sentence": "Rosenkrantz, et al. (1968, p. 290) found that men and women agreed about which pole of each of the 122 bipolar items represented the more socially desirable characteristics, with a correlation of .96 between the choices of men and those of women.",
+      "evidence": "Results, Social Desirability: \"Our data are similar, showing a correlation of .95 between the men's and women's ratings of the Social Desirability of traits.\"",
+      "gt_ambiguity": "clear",
+      "notes": "The authors changed the measure on purpose, calling it 'a departure from the methodology of Rosenkrantz, et al.'. Participants marked the point of maximum social desirability on the 60-point scale, where the original had them choose a pole. The authors say the original's small pilot showed the two methods give similar results. Revised in pass 2 from close extension to close experiment: the change is to methodology only, since the sample differences are treated as minor (see the agreement entry). Close extension remains plausible if the community-college population is counted as a change of context.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:male-traits-more-socially-desirable",
+      "original_reference": "Rosenkrantz, et al. (1968)",
+      "original_url": "",
+      "original_title": "Sex-role stereotypes and self-concepts in college students",
+      "original_authors": "Rosenkrantz, P. S.; Vogel, S. R.; Bee, H.; Broverman, I. K.; Broverman, D. M.",
+      "original_year": "1968",
+      "original_journal": "Journal of Consulting and Clinical Psychology",
+      "replication_study": "single study (SRSQ sample ratings related to the Social Desirability sample's ratings)",
+      "outcome": "Relative social desirability of traits associated with the Typical Man vs the Typical Woman",
+      "contrast": "male-associated vs female-associated traits (correlation of Typical Man vs Typical Woman ratings with Social Desirability ratings)",
+      "timepoint": "not applicable: single cross-sectional questionnaire administration",
+      "result": "reversal",
+      "replication_type": "close experiment",
+      "description": "Regardless of their own sex, students attribute more socially desirable traits to men than to women: in about 70% (29) of the 41 Stereotypic items, the socially desirable pole was the masculine one.",
+      "citation_sentence": "Rosenkrantz, et al. (1968) observed a significant tendency for traits associated with the Typical Man to be judged more socially desirable than traits associated with the Typical Woman.",
+      "evidence": "Results, Relationship Between Masculinity and Social Desirability, Table 6: mean correlation with Social Desirability is .74 for Typical Woman ratings and .34 for Typical Man ratings. \"In all eight of the paired correlations ... the correlation between the ratings of traits attributed to the Typical Woman and Social Desirability is significantly greater than the correlation between the ratings of traits assigned to the Typical Man and Social Desirability.\" Abstract: \"In contrast to the participants in the original study, current participants judged the traits they associated with women to be significantly more socially desirable, in general, than the traits they associated with men.\" Discussion: \"the groups of participants in our study indicated significantly less valuation of male-associated characteristics and greater valuation of female-associated characteristics.\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "The effect is significant in the opposite direction in all eight rater-group pairings, and the authors frame it explicitly as contrary to the original ('In contrast to the participants in the original study'). All three of the codebook's reversal conditions hold, although the authors never use the word 'reversal'. Candidate luna56 coded this as a failure, and its notes acknowledge the opposite pattern. Reversal is kept because the reversed effect is significant and consistent across all groups, not confined to a subset. The authors attribute the difference to real change over 30 years. The type was revised to close experiment because this claim depends on the changed social-desirability measure.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:self-concepts-less-differentiated",
+      "original_reference": "Rosenkrantz, et al. (1968)",
+      "original_url": "",
+      "original_title": "Sex-role stereotypes and self-concepts in college students",
+      "original_authors": "Rosenkrantz, P. S.; Vogel, S. R.; Bee, H.; Broverman, I. K.; Broverman, D. M.",
+      "original_year": "1968",
+      "original_journal": "Journal of Consulting and Clinical Psychology",
+      "replication_study": "single study (SRSQ sample self-ratings)",
+      "outcome": "Self-ratings relative to ratings of the Typical Man and Typical Woman: women rate themselves more 'masculine' than the Typical Woman, and men rate themselves more 'feminine' than the Typical Man",
+      "contrast": "self-ratings vs ratings of the same-sex and opposite-sex typical person",
+      "timepoint": "not applicable: single cross-sectional questionnaire administration",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "Male and female students rate themselves as less different from the opposite sex than the typical man and typical woman are: women rate themselves as more masculine than the Typical Woman, and men as more feminine than the Typical Man.",
+      "citation_sentence": "Rosenkrantz, er al. (1968, p. 292) observed that the self-ratings of both male and female students dlffered from their ratings of the Typical Man and the Tvpical Woman, such that female students rated themselves as more \"rnascuhe\" than the Typical Woman, and male students rated themselves as more \"feminine\" than the Typical Man",
+      "evidence": "Results, Self-ratings, Table 8: \"The participants' self-ratings in the current study showed this same pattern, as dustrated in Table 8.\" Also: \"For both age groups, the self-ratings of male participants were significantly more highly correlated with their ratings of the Typical Woman than the self-ratings of female participants were correlated with their ratings of the Typical Man.\"",
+      "gt_ambiguity": "clear",
+      "notes": "The authors state that the same pattern was found. The Older male group is not a counter-example: its self-ratings correlated more with the Typical Woman than with the Typical Man, which goes beyond the predicted pattern. Their description of the Table 8 correlations is partly garbled in the OCR. Revised in pass 2 from close extension to direct, since this entry uses the same SRSQ self-rating procedure (see the agreement entry).",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.2466--pr0.2000.87.2.493#ling26:d7492c13e8b1933e:1": {
+      "action": "map",
+      "effect_ids": ["s1:male-female-agreement-on-typical-traits", "s1:male-traits-more-socially-desirable"],
+      "reason": "This single aggregate row combines two claims of the same original: agreement on typical traits and the higher desirability of male traits. Its notes also mention the fewer-stereotypes finding. Under the codebook, those claims are separate entries with separate results. Its aggregate 'inconclusive' label collapses one success and one reversal, so it is mapped to both entries and its label is not adopted."
+    },
+    "luna56:10.2466--pr0.2000.87.2.493#luna56:ed8f4bfe7ba15a91:1": {
+      "action": "map",
+      "effect_ids": ["s1:male-female-agreement-on-typical-traits"],
+      "reason": "This is the same claim as claim (1) in the original, and its result (success) agrees. Its type (direct) prompted the pass-2 revision of this entry's type to direct."
+    },
+    "luna56:10.2466--pr0.2000.87.2.493#luna56:10a0146a8ddd9fd4:1": {
+      "action": "map",
+      "effect_ids": ["s1:number-of-stereotypic-items"],
+      "reason": "This is the same claim (the number and extent of stereotypic items). Its result is not adopted: it says failure, but stereotypes persist in the emotional-expressiveness items and the authors say content changed 'to some extent'. The doubt between failure and inconclusive resolves to inconclusive."
+    },
+    "luna56:10.2466--pr0.2000.87.2.493#luna56:ac01e91a5a9136eb:1": {
+      "action": "map",
+      "effect_ids": ["s1:male-female-agreement-on-social-desirability"],
+      "reason": "This is the same claim (men and women agree on social desirability, r=.95 vs .96), and its result (success) agrees. Its type is not adopted: it says direct, but the social-desirability measure was deliberately changed, so this entry is a close experiment."
+    },
+    "luna56:10.2466--pr0.2000.87.2.493#luna56:45ce2d1a7cf35168:1": {
+      "action": "map",
+      "effect_ids": ["s1:male-traits-more-socially-desirable"],
+      "reason": "This is the same claim. Its result is not adopted: it says failure, but the effect is significant in the opposite direction in all eight pairings and the authors explicitly contrast it with the original, so this entry is a reversal (marked ambiguous)."
+    },
+    "luna56:10.2466--pr0.2000.87.2.493#luna56:c48cc39fa2de2df2:1": {
+      "action": "map",
+      "effect_ids": ["s1:self-concepts-less-differentiated"],
+      "reason": "This is the same claim (self-ratings less sex-typed than the stereotypes), and its result (success) agrees. Its note calling the Older male group an exception is not supported: that group showed the pattern most strongly."
+    }
+  },
+  "revision_notes": "No entries were added or removed, and no result labels changed. Replication types were revised from close extension, prompted by candidate luna56. The three entries that use only the unchanged SRSQ (agreement on typical traits, number of stereotypic items, self-concepts) are now direct: same instrument and instructions, a Younger subgroup age-matched to the original, and differences limited to the sample (region, college type, ethnicity, era). The codebook treats those as minor and sends doubt between direct and close to direct. The two social-desirability entries are now close experiment, because the authors deliberately changed that measure from pole choice to a scale rating."
+}

@@ -1,0 +1,7 @@
+{
+  "eligibility": "excluded",
+  "eligibility_reason": "The source document is not the article but only its 20-page Supplemental Online Materials for Hulleman et al. (2016), 'Making Connections: Replicating and Extending the Utility Value Intervention in the Classroom' (supplementary analyses, Tables S1-S7, Figure S1, Appendices A-C). It has no introduction, methods, results or discussion text, never names the original study being replicated, and has no reference list (references.json is empty), so no entry can be enumerated or classified from the source.",
+  "enumeration_complete": true,
+  "effects": [],
+  "notes": "Every source file (body.md, abstract.md, the PDF) contains only the supplement; abstract.md is the supplement's first paragraph, not the article abstract. The title shows the main article is very likely a positive replication: probably of the utility-value writing intervention (e.g., Hulleman & Harackiewicz, 2009, Science), with Study 1 (N = 97) and Study 2 (N = 357: control vs utility value vs enhanced utility value). But the original's identity, citation sentence, the authors' own verdict and the discussion cannot be recovered from these files, and the codebook forbids guessing. Re-code once the main article's full text is available. The supplement only hints at results: in Study 2, the UV contrast predicted final exam scores (Table S3, Model 1 beta = .12*), with a Exam1 x UV interaction (benefit larger for students with low initial exam scores), and male students benefited more."
+}

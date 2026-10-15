@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Wichert, Wolf & Schwabe (2013a) Changing memories after reactivation: A one-time opportunity? (Experiment 1)",
+   "doi": "10.1016/j.nlm.2012.11.001"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The paper states 'we attempted to replicate Wichert et al.'s (experiment 1, 2013a) findings', and its reference list gives 2013a as 'Changing memories after reactivation: A one-time opportunity?' (Neurobiology of Learning and Memory, 99, 38-49)."
+  },
+  "B": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Wichert et al. (2013b) supplied the larger 60-picture stimulus set and the small procedural changes (2 s viewing time, ratings at the end). It is cited as the source of materials and methods, not as the finding being replicated."
+  }
+ },
+ "notes": "The paper is a failed replication of Experiment 1 of Wichert et al. 2013a. It reproduces some of the original contrasts (Re+NL vs Re and vs no Re+no NL), but not the key Re+NL vs NL difference. Candidate A gives the first author's first name as 'Sven'. The source only gives the initial 'S.', and the 2013b candidate (B) has 'Sonja'. This is a likely minor first-name error; the title, year and DOI agree."
+}

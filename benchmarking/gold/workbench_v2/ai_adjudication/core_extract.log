@@ -1,0 +1,418 @@
+Found 58 papers; provider=claude_cli model=sonnet workers=10 tag=core_eval_20261015
+[Initial 1/58] OK    10.1001--jamapsychiatry.2015.0554: no replications  (129 tokens, $0.2002, 12.6s)
+[Initial 1/58] 10.1001--jamapsychiatry.2015.0554  tier: grobid; refs: 10.1001--jamapsychiatry.2015.0554.pdf (tail pages); 95,842 chars
+[Initial 1/58] 10.1001--jamapsychiatry.2015.0554  📖  Replication: "Meta-analysis of Genome-wide Association Studies for Neuroti" (2015)
+[Initial 2/58] OK    10.1007--s10648-015-9332-4: no replications  (20 tokens, $0.3846, 16.7s)
+[Initial 2/58] 10.1007--s10648-015-9332-4  tier: grobid; refs: references.json; 37,827 chars
+[Initial 2/58] 10.1007--s10648-015-9332-4  📖  Replication: "Student Instruction Should Be Distributed Over Long Time Per" (2015)
+DBLP returned HTTP 202
+[Initial 3/58] OK    10.1007--s00181-018-1457-0: 2 replication(s)  (851 tokens, $0.4511, 22.6s)
+[Initial 3/58] 10.1007--s00181-018-1457-0  tier: grobid; refs: references.json; 85,238 chars
+[Initial 3/58] 10.1007--s00181-018-1457-0  📖  Replication: "A replication of ‘Entry regulation and entrepreneurship: a n" (2019)
+[Initial 3/58] 10.1007--s00181-018-1457-0  +  Entry 0 original: enriched 1 field(s) from DOI
+[Initial 3/58] 10.1007--s00181-018-1457-0  +  Entry 1 original: enriched 1 field(s) from DOI
+DBLP returned HTTP 202 for title search
+[Initial 4/58] OK    10.1016--j.dcn.2017.12.003: 1 replication(s)  (558 tokens, $0.4269, 19.3s)
+[Initial 4/58] 10.1016--j.dcn.2017.12.003  tier: xml; refs: references.json; 56,045 chars
+[Initial 4/58] 10.1016--j.dcn.2017.12.003  📖  Replication: "Negative affect is related to reduced differential neural re" (2018)
+[Initial 4/58] 10.1016--j.dcn.2017.12.003  +  Entry 0 original: enriched 1 field(s) from DOI
+[Initial 5/58] OK    10.1002--npr2.70078: 1 replication(s)  (463 tokens, $0.3682, 20.2s)
+[Initial 5/58] 10.1002--npr2.70078  tier: xml; refs: references.json; 19,777 chars
+[Initial 5/58] 10.1002--npr2.70078  📖  Replication: "A Data‐Driven Psychiatric Disorder Subtype Defined by Signif" (2026)
+[Initial 5/58] 10.1002--npr2.70078  +  Entry 0: found DOI 10.1002/npr2.70010 from title (1 field(s) enriched)
+[Initial 6/58] OK    10.1007--s00181-005-0242-z: 4 replication(s)  (1,999 tokens, $0.2791, 26.1s)
+[Initial 6/58] 10.1007--s00181-005-0242-z  tier: grobid; refs: references.json; 21,927 chars
+[Initial 6/58] 10.1007--s00181-005-0242-z  ❌  DOI mismatch entry 0 (similarity=0.0) — agent: "On using current information to value hard-rock mineral prop" vs API: "Consistent Covariance Matrix Estimation with Spatially Depen"
+[Initial 6/58] 10.1007--s00181-005-0242-z  ❌  DOI mismatch entry 1 (similarity=0.0) — agent: "On using current information to value hard-rock mineral prop" vs API: "Consistent Covariance Matrix Estimation with Spatially Depen"
+[Initial 6/58] 10.1007--s00181-005-0242-z  ❌  DOI mismatch entry 2 (similarity=0.0) — agent: "On using current information to value hard-rock mineral prop" vs API: "Consistent Covariance Matrix Estimation with Spatially Depen"
+[Initial 6/58] 10.1007--s00181-005-0242-z  ❌  DOI mismatch entry 3 (similarity=0.0) — agent: "On using current information to value hard-rock mineral prop" vs API: "Consistent Covariance Matrix Estimation with Spatially Depen"
+[Initial 6/58] 10.1007--s00181-005-0242-z  📖  Replication: "A test of Hotelling’s Valuation Principle for nonrenewable r" (2005)
+DBLP returned HTTP 202
+DBLP returned HTTP 202
+[Initial 7/58] OK    10.1016--j.jesp.2020.104052: 2 replication(s)  (1,775 tokens, $0.1242, 15.4s)
+[Initial 7/58] 10.1016--j.jesp.2020.104052  tier: grobid; refs: references.json; 78,751 chars
+[Initial 7/58] 10.1016--j.jesp.2020.104052  📖  Replication: "Misprediction of affective outcomes due to different evaluat" (2021)
+[Initial 8/58] OK    10.1002--jae.2886: 7 replication(s)  (3,017 tokens, $0.2028, 35.3s)
+[Initial 8/58] 10.1002--jae.2886  tier: grobid; refs: references.json; 21,495 chars
+[Initial 8/58] 10.1002--jae.2886  📖  Replication: "Small world: Narrow, wide, and long replication of Goyal, va" (2022)
+DBLP returned HTTP 202
+DBLP returned HTTP 429
+DBLP returned HTTP 429
+HTTP 429 from https://api.semanticscholar.org/graph/v1/paper/DOI:10.1027/1864-9335/a000186?fields=title,year,venue,url,authors, retrying in 5s (attempt 1/2)
+[Initial 9/58] OK    10.1007--s10664-025-10739-6: 5 replication(s)  (2,687 tokens, $0.4364, 32.1s)
+[Initial 9/58] 10.1007--s10664-025-10739-6  tier: grobid; refs: references.json; 133,933 chars
+[Initial 9/58] 10.1007--s10664-025-10739-6  ⚠️  SANITY entry 0: subdiscipline="human-computer interaction" not in human-computer interaction list
+[Initial 9/58] 10.1007--s10664-025-10739-6  ⚠️  SANITY entry 1: subdiscipline="human-computer interaction" not in human-computer interaction list
+[Initial 9/58] 10.1007--s10664-025-10739-6  ⚠️  SANITY entry 2: subdiscipline="human-computer interaction" not in human-computer interaction list
+[Initial 9/58] 10.1007--s10664-025-10739-6  ⚠️  SANITY entry 3: subdiscipline="human-computer interaction" not in human-computer interaction list
+[Initial 9/58] 10.1007--s10664-025-10739-6  ⚠️  SANITY entry 4: subdiscipline="human-computer interaction" not in human-computer interaction list
+[Initial 9/58] 10.1007--s10664-025-10739-6  📖  Replication: "Interruptibility of software developers and its prediction u" (2026)
+[Initial 10/58] OK    10.1037--0022-3514.75.6.1411: no replications  (115 tokens, $0.0994, 5.6s)
+[Initial 10/58] 10.1037--0022-3514.75.6.1411  tier: grobid; refs: references.json; 74,495 chars
+[Initial 10/58] 10.1037--0022-3514.75.6.1411  📖  Replication: "The alternative-outcomes effect." (1998)
+[Initial 11/58] OK    10.1017--s0003055405051658: 2 replication(s)  (1,468 tokens, $0.1509, 14.4s)
+[Initial 11/58] 10.1017--s0003055405051658  tier: grobid; refs: references.json; 103,524 chars
+[Initial 11/58] 10.1017--s0003055405051658  📖  Replication: "Do Get-Out-the-Vote Calls Reduce Turnout? The Importance of " (2005)
+[Initial 12/58] OK    10.1016--j.jml.2022.104352: 2 replication(s)  (1,907 tokens, $0.2446, 18.6s)
+[Initial 12/58] 10.1016--j.jml.2022.104352  tier: xml; refs: references.json; 168,539 chars
+[Initial 12/58] 10.1016--j.jml.2022.104352  📖  Replication: "Does high variability training improve the learning of non-n" (2022)
+HTTP 429 from https://dblp.org/search/publ/api?q=Effects%20of%205-hydroxytryptamine%202C%20receptor%20agonist%20MK212%20and%202A%20receptor%20antagonist%20MDL100907%20on%20maternal%20behavior%20in%20postpartum%20female%20rats&format=json&h=5, retrying in 10s (attempt 1/1)
+[Initial 13/58] OK    10.1037--edu0000146: no replications  (101 tokens, $0.0589, 7.1s)
+[Initial 13/58] 10.1037--edu0000146  tier: grobid; refs: 10.1037--edu0000146.pdf (tail pages); 33,598 chars
+[Initial 13/58] 10.1037--edu0000146  📖  Replication: "Making connections: Replicating and extending the utility va" (2017)
+DBLP returned HTTP 429
+[Initial 14/58] OK    10.1037--h0091247: no replications  (184 tokens, $0.0401, 5.1s)
+[Initial 14/58] 10.1037--h0091247  tier: grobid; refs: references.json; 27,489 chars
+[Initial 14/58] 10.1037--h0091247  📖  Replication: "Blame, Badness, and Intentional Action: A Reply to Knobe and" (2004)
+[Initial 15/58] OK    10.1027--1864-9335--a000186: 2 replication(s)  (801 tokens, $0.0557, 10.2s)
+[Initial 15/58] 10.1027--1864-9335--a000186  tier: grobid; refs: references.json; 32,237 chars
+[Initial 15/58] 10.1027--1864-9335--a000186  📖  Replication: "Does Cleanliness Influence Moral Judgments?" (2014)
+DBLP returned HTTP 202
+[Initial 16/58] OK    10.1038--ng.3434: no replications  (202 tokens, $0.1880, 8.0s)
+[Initial 16/58] 10.1038--ng.3434  tier: grobid; refs: references.json; 97,412 chars
+[Initial 16/58] 10.1038--ng.3434  📖  Replication: "Genetic association analyses implicate aberrant regulation o" (2015)
+DBLP returned HTTP 202
+DBLP returned HTTP 429
+DBLP returned HTTP 429
+DBLP returned HTTP 429
+[Initial 17/58] OK    10.1016--j.psyneuen.2016.08.017: 1 replication(s)  (1,103 tokens, $0.1150, 11.2s)
+[Initial 17/58] 10.1016--j.psyneuen.2016.08.017  tier: xml; refs: references.json; 60,468 chars
+[Initial 17/58] 10.1016--j.psyneuen.2016.08.017  📖  Replication: "Behavioral, pharmacological and neuroanatomical analysis of " (2016)
+[Initial 17/58] 10.1016--j.psyneuen.2016.08.017  +  Entry 0: found DOI 10.1016/j.pbb.2013.11.034 from title (1 field(s) enriched)
+[Initial 18/58] OK    10.1038--mp.2011.142: no replications  (198 tokens, $0.4215, 9.3s)
+[Initial 18/58] 10.1038--mp.2011.142  tier: grobid; refs: references.json; 50,916 chars
+[Initial 18/58] 10.1038--mp.2011.142  📖  Replication: "A KATP channel gene effect on sleep duration: from genome-wi" (2013)
+HTTP 429 from https://api.semanticscholar.org/graph/v1/paper/DOI:10.1111/1540-6237.8402002?fields=title,year,venue,url,authors, retrying in 5s (attempt 1/2)
+[Initial 19/58] OK    10.1038--s41598-018-35209-6: 1 replication(s)  (707 tokens, $0.1156, 8.0s)
+[Initial 19/58] 10.1038--s41598-018-35209-6  tier: grobid; refs: references.json; 78,698 chars
+[Initial 19/58] 10.1038--s41598-018-35209-6  📖  Replication: "Replication of Resting State-Task Network Correspondence and" (2018)
+[Initial 19/58] 10.1038--s41598-018-35209-6  +  Entry 0 original: enriched 1 field(s) from DOI
+HTTP 429 from https://api.semanticscholar.org/graph/v1/paper/search?query=Was%20the%20deflation%20during%20the%20Great%20Depression%20anticipated%3F%20Evidence%20from%20the%20commodity%20futures%20market&limit=5&fields=title,year,venue,url,authors,externalIds, retrying in 5s (attempt 1/2)
+[Initial 20/58] OK    10.1080--13803390701550110: no replications  (171 tokens, $0.0762, 8.1s)
+[Initial 20/58] 10.1080--13803390701550110  tier: grobid; refs: references.json; 42,407 chars
+[Initial 20/58] 10.1080--13803390701550110  📖  Replication: "Hemispheric differences in the processing of attachment word" (2008)
+DBLP returned HTTP 429
+HTTP 429 from https://api.semanticscholar.org/graph/v1/paper/DOI:10.1111/1540-6237.8402002?fields=title,year,venue,url,authors, retrying in 10s (attempt 2/2)
+HTTP 429 from https://api.semanticscholar.org/graph/v1/paper/search?query=Was%20the%20deflation%20during%20the%20Great%20Depression%20anticipated%3F%20Evidence%20from%20the%20commodity%20futures%20market&limit=5&fields=title,year,venue,url,authors,externalIds, retrying in 10s (attempt 2/2)
+HTTP 429 from https://api.crossref.org/works?query.title=Memory%20processes%20and%20the%20course%20of%20anxiety%20and%20depression%20in%20cancer%20patients&rows=5&mailto=dan@metascienceobservatory.org&query.author=Brewin, retrying in 5s (attempt 1/3)
+[Initial 21/58] OK    10.1098--rsos.181868: 1 replication(s)  (452 tokens, $0.3262, 11.4s)
+[Initial 21/58] 10.1098--rsos.181868  tier: xml; refs: references.json; 44,414 chars
+[Initial 21/58] 10.1098--rsos.181868  📖  Replication: "Skilled musicians are indeed subject to the McGurk effect" (2019)
+[Initial 21/58] 10.1098--rsos.181868  +  Entry 0 original: enriched 1 field(s) from DOI
+HTTP 429 from https://api.semanticscholar.org/graph/v1/paper/DOI:10.1002/art.27184?fields=title,year,venue,url,authors, retrying in 5s (attempt 1/2)
+HTTP 429 from https://api.semanticscholar.org/graph/v1/paper/DOI:10.1101/2025.04.02.645026?fields=title,year,venue,url,authors, retrying in 5s (attempt 1/2)
+DBLP returned HTTP 202 for title search
+HTTP 429 from https://dblp.org/search/publ/api?q=Memory%20processes%20and%20the%20course%20of%20anxiety%20and%20%0A%0Adepression%20in%20cancer%20patients&format=json&h=5, retrying in 10s (attempt 1/1)
+HTTP 429 from https://api.semanticscholar.org/graph/v1/paper/DOI:10.1037/0022-3514.89.3.277?fields=title,year,venue,url,authors, retrying in 5s (attempt 1/2)
+[Initial 22/58] OK    10.1108--neje-04-2020-0005: 1 replication(s)  (1,000 tokens, $0.1028, 12.7s)
+[Initial 22/58] 10.1108--neje-04-2020-0005  tier: grobid; refs: references.json; 56,914 chars
+[Initial 22/58] 10.1108--neje-04-2020-0005  📖  Replication: "Improving entrepreneurial competencies in the classroom: an " (2020)
+[Initial 23/58] OK    10.1002--art.39932: 11 replication(s)  (5,635 tokens, $0.4482, 45.8s)
+[Initial 23/58] 10.1002--art.39932  tier: xml; refs: references.json; 35,475 chars
+[Initial 23/58] 10.1002--art.39932  📖  Replication: "Genome‐Wide Association Study of Radiographic Knee Osteoarth" (2017)
+[Initial 23/58] 10.1002--art.39932  +  Entry 0 original: enriched 1 field(s) from DOI
+[Initial 23/58] 10.1002--art.39932  +  Entry 1: found DOI 10.1002/art.27184 from title (1 field(s) enriched)
+[Initial 23/58] 10.1002--art.39932  +  Entry 2 original: enriched 1 field(s) from DOI
+[Initial 23/58] 10.1002--art.39932  +  Entry 3 original: enriched 1 field(s) from DOI
+[Initial 23/58] 10.1002--art.39932  +  Entry 4 original: enriched 1 field(s) from DOI
+[Initial 23/58] 10.1002--art.39932  +  Entry 5 original: enriched 1 field(s) from DOI
+[Initial 23/58] 10.1002--art.39932  +  Entry 6 original: enriched 1 field(s) from DOI
+[Initial 23/58] 10.1002--art.39932  +  Entry 7 original: enriched 1 field(s) from DOI
+[Initial 23/58] 10.1002--art.39932  +  Entry 8 original: enriched 1 field(s) from DOI
+[Initial 23/58] 10.1002--art.39932  +  Entry 9 original: enriched 1 field(s) from DOI
+[Initial 23/58] 10.1002--art.39932  +  Entry 10 original: enriched 1 field(s) from DOI
+DBLP returned HTTP 429
+HTTP 429 from https://dblp.org/search/publ/api?q=Was%20the%20deflation%20during%20the%20Great%20Depression%20anticipated%3F%20Evidence%20from%20the%20commodity%20futures%20market&format=json&h=5, retrying in 10s (attempt 1/1)
+DBLP returned HTTP 429
+[Initial 24/58] OK    10.1101--2025.04.02.645026: no replications  (217 tokens, $0.4391, 11.2s)
+[Initial 24/58] 10.1101--2025.04.02.645026  tier: xml; refs: references.json; 80,592 chars
+[Initial 24/58] 10.1101--2025.04.02.645026  📖  Replication: "Estimating the replicability of Brazilian biomedical science" (2025)
+[Initial 25/58] OK    10.1080--00330124.2012.681509: 1 replication(s)  (1,027 tokens, $0.0759, 11.5s)
+[Initial 25/58] 10.1080--00330124.2012.681509  tier: grobid; refs: references.json; 45,406 chars
+[Initial 25/58] 10.1080--00330124.2012.681509  ⚠️  SANITY entry 0: subdiscipline="management" not in environmental science list
+[Initial 25/58] 10.1080--00330124.2012.681509  📖  Replication: "Replicating and Adapting an Index of Social Vulnerability to" (2013)
+DBLP returned HTTP 429
+[Initial 26/58] OK    10.1111--bjso.12217: 2 replication(s)  (1,242 tokens, $0.0690, 11.6s)
+[Initial 26/58] 10.1111--bjso.12217  tier: grobid; refs: references.json; 40,736 chars
+[Initial 26/58] 10.1111--bjso.12217  📖  Replication: "Stress‐testing the affect misattribution procedure: Heteroge" (2018)
+DBLP returned HTTP 429
+DBLP returned HTTP 429
+[Initial 27/58] OK    10.1101--2021.11.30.470372: 4 replication(s)  (2,974 tokens, $0.1217, 23.7s)
+[Initial 27/58] 10.1101--2021.11.30.470372  tier: grobid; refs: references.json; 55,613 chars
+[Initial 27/58] 10.1101--2021.11.30.470372  📖  Replication: "Replication Study: RAF inhibitors prime wild-type RAF to act" (2021)
+[Initial 27/58] 10.1101--2021.11.30.470372  +  Entry 0 original: enriched 1 field(s) from DOI
+[Initial 27/58] 10.1101--2021.11.30.470372  +  Entry 1 original: enriched 1 field(s) from DOI
+[Initial 27/58] 10.1101--2021.11.30.470372  +  Entry 2 original: enriched 1 field(s) from DOI
+[Initial 27/58] 10.1101--2021.11.30.470372  +  Entry 3 original: enriched 1 field(s) from DOI
+HTTP 429 from https://api.semanticscholar.org/graph/v1/paper/DOI:10.1017/s0033291797006028?fields=title,year,venue,url,authors, retrying in 5s (attempt 1/2)
+[Initial 28/58] OK    10.1177--0956797614554955: no replications  (97 tokens, $0.3773, 7.8s)
+[Initial 28/58] 10.1177--0956797614554955  tier: grobid; refs: references.json; 32,237 chars
+[Initial 28/58] 10.1177--0956797614554955  📖  Replication: "What Is Typical Is Good" (2015)
+HTTP 429 from https://dblp.org/search/publ/api?q=Monetary%20factors%20in%20the%20great%20depression&format=json&h=5, retrying in 10s (attempt 1/1)
+DBLP returned HTTP 429
+DBLP returned HTTP 429
+[Initial 29/58] OK    10.1111--famp.12710: 3 replication(s)  (2,008 tokens, $0.1281, 16.5s)
+[Initial 29/58] 10.1111--famp.12710  tier: grobid; refs: references.json; 81,801 chars
+[Initial 29/58] 10.1111--famp.12710  📖  Replication: "Online relationship education for help‐seeking low‐income co" (2022)
+HTTP 429 from https://dblp.org/search/publ/api?q=Memory%20processes%20and%20the%20course%20of%20anxiety%20and%20%0A%0Adepression%20in%20cancer%20patients&format=json&h=5, retrying in 10s (attempt 1/1)
+[Initial 30/58] OK    10.1007--s40279-025-02201-w: 25 replication(s)  (12,733 tokens, $0.5544, 73.3s)
+[Initial 30/58] 10.1007--s40279-025-02201-w  tier: xml; refs: references.json; 67,448 chars
+[Initial 30/58] 10.1007--s40279-025-02201-w  📖  Replication: "Estimating the Replicability of Sports and Exercise Science " (2025)
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 0 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 1 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 2 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 3 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 4 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 5 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 6 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 7 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 8 original: enriched 4 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 9 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 10 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 11 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 12 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 13 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 14 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 15 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 16 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 17 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 18 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 19 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 20 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 21 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 22 original: enriched 1 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 23 original: enriched 2 field(s) from DOI
+[Initial 30/58] 10.1007--s40279-025-02201-w  +  Entry 24 original: enriched 2 field(s) from DOI
+OpenAlex returned HTTP 404 for DOI 10.1257/app.1.1.140
+DBLP returned HTTP 429
+[Initial 31/58] OK    10.1111--sjoe.12341: 3 replication(s)  (1,238 tokens, $0.4822, 20.6s)
+[Initial 31/58] 10.1111--sjoe.12341  tier: grobid; refs: references.json; 106,918 chars
+[Initial 31/58] 10.1111--sjoe.12341  📖  Replication: "Fetal Iodine Deficiency and Schooling: A Replication of Fiel" (2020)
+[Initial 32/58] OK    10.1177--1534508420953894: 2 replication(s)  (919 tokens, $0.1183, 12.5s)
+[Initial 32/58] 10.1177--1534508420953894  tier: grobid; refs: references.json; 70,175 chars
+[Initial 32/58] 10.1177--1534508420953894  📖  Replication: "Using Interval Likelihood Ratios in Gated Screening: A Direc" (2021)
+HTTP 429 from https://dblp.org/search/publ/api?q=Weekday%20and%20Sunday%20Readership%20Seen%20through%20Uses%20and%20Gratifications&format=json&h=5, retrying in 10s (attempt 1/1)
+[Initial 33/58] OK    10.1016--j.strueco.2018.01.002: 2 replication(s)  (1,558 tokens, $0.4583, 24.7s)
+[Initial 33/58] 10.1016--j.strueco.2018.01.002  tier: grobid; refs: references.json; 80,223 chars
+[Initial 33/58] 10.1016--j.strueco.2018.01.002  📖  Replication: "Can inflation expectations be measured using commodity futur" (2018)
+[Initial 33/58] 10.1016--j.strueco.2018.01.002  +  Entry 1: found DOI 10.1016/0304-3932(87)90045-6 from title (0 field(s) enriched)
+[Initial 34/58] OK    10.1177--1745691615605826: 4 replication(s)  (1,599 tokens, $0.4065, 15.5s)
+[Initial 34/58] 10.1177--1745691615605826  tier: grobid; refs: references.json; 43,992 chars
+[Initial 34/58] 10.1177--1745691615605826  ❌  DOI mismatch entry 0 (similarity=0.0) — agent: "Learning about what others were doing: Verb aspect and attri" vs API: "The Tipping Point of Animacy"
+[Initial 34/58] 10.1177--1745691615605826  ❌  DOI mismatch entry 1 (similarity=0.0) — agent: "Learning about what others were doing: Verb aspect and attri" vs API: "The Tipping Point of Animacy"
+[Initial 34/58] 10.1177--1745691615605826  ❌  DOI mismatch entry 2 (similarity=0.0) — agent: "Learning about what others were doing: Verb aspect and attri" vs API: "The Tipping Point of Animacy"
+[Initial 34/58] 10.1177--1745691615605826  ❌  DOI mismatch entry 3 (similarity=0.0) — agent: "Learning about what others were doing: Verb aspect and attri" vs API: "The Tipping Point of Animacy"
+[Initial 34/58] 10.1177--1745691615605826  📖  Replication: "Registered Replication Report" (2016)
+DBLP returned HTTP 429
+[Initial 35/58] OK    10.1080--09658211.2011.590505: 3 replication(s)  (1,877 tokens, $0.0700, 15.7s)
+[Initial 35/58] 10.1080--09658211.2011.590505  tier: grobid; refs: references.json; 33,505 chars
+[Initial 35/58] 10.1080--09658211.2011.590505  📖  Replication: "Do intrusive memory characteristics predict depression at 6 " (2011)
+[Initial 35/58] 10.1080--09658211.2011.590505  +  Entry 1: found DOI 10.1017/s0033291797006028 from title (1 field(s) enriched)
+[Initial 35/58] 10.1080--09658211.2011.590505  +  Entry 2: found DOI 10.1017/s0033291797006028 from title (1 field(s) enriched)
+[Initial 36/58] OK    10.1371--journal.pone.0284404: 1 replication(s)  (582 tokens, $0.0396, 7.4s)
+[Initial 36/58] 10.1371--journal.pone.0284404  tier: xml; refs: references.json; 17,023 chars
+[Initial 36/58] 10.1371--journal.pone.0284404  📖  Replication: "VSTM1-v2 does not drive human Th17 cell differentiation: A r" (2023)
+[Initial 36/58] 10.1371--journal.pone.0284404  +  Entry 0 original: enriched 1 field(s) from DOI
+HTTP 429 from https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/ng.89?fields=title,year,venue,url,authors, retrying in 5s (attempt 1/2)
+DBLP returned HTTP 429
+DBLP returned HTTP 429
+[Initial 37/58] OK    10.1177--1745691616664694: 5 replication(s)  (2,535 tokens, $0.1105, 20.4s)
+[Initial 37/58] 10.1177--1745691616664694  tier: xml; refs: references.json; 50,012 chars
+[Initial 37/58] 10.1177--1745691616664694  📖  Replication: "Registered Replication Report" (2016)
+DBLP returned HTTP 429
+[Initial 38/58] OK    10.1371--journal.pone.0053234: 1 replication(s)  (501 tokens, $0.0735, 10.7s)
+[Initial 38/58] 10.1371--journal.pone.0053234  tier: grobid; refs: references.json; 31,446 chars
+[Initial 38/58] 10.1371--journal.pone.0053234  ❌  DOI mismatch entry 0 (similarity=0.0) — agent: "A genome-wide association study identifies common variants n" vs API: "Genome-wide association analysis identifies new lung cancer "
+[Initial 38/58] 10.1371--journal.pone.0053234  📖  Replication: "Association between Common Variants near LBX1 and Adolescent" (2013)
+[Initial 38/58] 10.1371--journal.pone.0053234  +  Entry 0 original: enriched 2 field(s) from DOI
+HTTP 429 from https://dblp.org/search/publ/api?q=Common%20sequence%20variants%20on%202p15%20and%20Xp11.22%20confer%20susceptibility%20to%20prostate%20cancer&format=json&h=5, retrying in 10s (attempt 1/1)
+HTTP 429 from https://dblp.org/search/publ/api?q=Weekday%20and%20Sunday%20Readership%20Seen%20through%20Uses%20and%20Gratifications&format=json&h=5, retrying in 10s (attempt 1/1)
+[Initial 39/58] OK    10.17705--1atrr.00014: 1 replication(s)  (439 tokens, $0.0410, 7.6s)
+[Initial 39/58] 10.17705--1atrr.00014  tier: grobid; refs: references.json; 25,266 chars
+[Initial 39/58] 10.17705--1atrr.00014  📖  Replication: "Continuance Intention on Using Mobile Banking Applications: " (2016)
+[Initial 40/58] OK    10.21203--rs.3.rs-8351701--v1: 1 replication(s)  (596 tokens, $0.0400, 8.6s)
+[Initial 40/58] 10.21203--rs.3.rs-8351701--v1  tier: grobid; refs: references.json; 19,517 chars
+[Initial 40/58] 10.21203--rs.3.rs-8351701--v1  📖  Replication: "Ambiguity tolerance and resting-state functional connectivit" (2025)
+[Initial 40/58] 10.21203--rs.3.rs-8351701--v1  +  Entry 0 original: enriched 2 field(s) from DOI
+[Initial 41/58] OK    10.1525--mp.2012.30.2.161: 4 replication(s)  (2,272 tokens, $0.1405, 17.1s)
+[Initial 41/58] 10.1525--mp.2012.30.2.161  tier: grobid; refs: references.json; 87,387 chars
+[Initial 41/58] 10.1525--mp.2012.30.2.161  ❌  Citation mismatch entry 2 (author not found in citation, year not found in citation) — citation: "The aim of this study was to investigate the hypothesis that the MUSIC model ref" vs extracted: "Rentfrow, Goldberg, Levitin" (2011)
+[Initial 41/58] 10.1525--mp.2012.30.2.161  ❌  Citation mismatch entry 3 (author not found in citation, year not found in citation) — citation: "We conducted this study as a further test of the hypothesis that the MUSIC model" vs extracted: "Rentfrow, Goldberg, Levitin" (2011)
+[Initial 41/58] 10.1525--mp.2012.30.2.161  📖  Replication: "The Song Remains the Same: A Replication and Extension of th" (2012)
+[Initial 41/58] 10.1525--mp.2012.30.2.161  +  Entry 1 original: enriched 1 field(s) from DOI
+[Initial 41/58] 10.1525--mp.2012.30.2.161  +  Entry 2 original: enriched 1 field(s) from DOI
+[Initial 41/58] 10.1525--mp.2012.30.2.161  +  Entry 3 original: enriched 1 field(s) from DOI
+OpenAlex returned HTTP 404 for DOI 10.17605/osf.io/ehjdm
+DBLP returned HTTP 429
+[Initial 42/58] OK    10.1186--1471-2350-13-27: 4 replication(s)  (2,990 tokens, $0.1187, 25.5s)
+[Initial 42/58] 10.1186--1471-2350-13-27  tier: xml; refs: references.json; 43,188 chars
+[Initial 42/58] 10.1186--1471-2350-13-27  📖  Replication: "Non-replication study of a genome-wide association study for" (2012)
+HTTP 429 from https://dblp.org/search/publ/api?q=Anchor%20precision%20influences%20the%20amount%20of%20adjustment&format=json&h=5, retrying in 10s (attempt 1/1)
+[Initial 43/58] OK    10.23846--rps0002: no replications  (321 tokens, $0.0141, 5.9s)
+[Initial 43/58] 10.23846--rps0002  tier: grobid; refs: references.json; 5,257 chars
+[Initial 43/58] 10.23846--rps0002  📖  Replication: "TV, female empowerment and demographic change in rural India" (2014)
+HTTP 429 from https://dblp.org/search/publ/api?q=Weekday%20and%20Sunday%20Readership%20Seen%20through%20Uses%20and%20Gratifications&format=json&h=5, retrying in 10s (attempt 1/1)
+HTTP 429 from https://dblp.org/search/publ/api?q=A%20common%20variant%20associated%20with%20prostate%20cancer%20in%20European%20and%20African%20populations&format=json&h=5, retrying in 10s (attempt 1/1)
+DBLP returned HTTP 429
+HTTP 429 from https://dblp.org/search/publ/api?q=Sex-role%20stereotypes%20and%20self-concepts%20in%20college%20students.&format=json&h=5, retrying in 10s (attempt 1/1)
+HTTP 429 from https://api.semanticscholar.org/graph/v1/paper/DOI:10.48550/arxiv.1605.00178?fields=title,year,venue,url,authors, retrying in 5s (attempt 1/2)
+[Initial 44/58] OK    10.18718--81781.29: 7 replication(s)  (3,437 tokens, $0.1009, 23.8s)
+[Initial 44/58] 10.18718--81781.29  tier: grobid; refs: references.json; 42,784 chars
+[Initial 44/58] 10.18718--81781.29  📖  Replication: "Knowledge Transfers from Multinational to Domestic Firms: Ev" (2023)
+HTTP 429 from https://dblp.org/search/publ/api?q=Anchor%20precision%20influences%20the%20amount%20of%20adjustment&format=json&h=5, retrying in 10s (attempt 1/1)
+DBLP returned HTTP 429
+HTTP 429 from https://dblp.org/search/publ/api?q=Default%20neglect%20in%20attempts%20at%20social%20influence&format=json&h=5, retrying in 10s (attempt 1/1)
+DBLP returned HTTP 429
+DBLP returned HTTP 429
+[Initial 45/58] OK    10.5018--economics-ejournal.ja.2018-3: 3 replication(s)  (1,298 tokens, $0.0973, 10.3s)
+[Initial 45/58] 10.5018--economics-ejournal.ja.2018-3  tier: grobid; refs: references.json; 65,808 chars
+[Initial 45/58] 10.5018--economics-ejournal.ja.2018-3  📖  Replication: "A replication of ‘Education and catch-up in the Industrial R" (2018)
+DBLP returned HTTP 429
+HTTP 429 from https://dblp.org/search/publ/api?q=Weekday%20and%20Sunday%20Readership%20Seen%20through%20Uses%20and%20Gratifications&format=json&h=5, retrying in 10s (attempt 1/1)
+HTTP 429 from https://dblp.org/search/publ/api?q=Quantification%20and%20ACD%3A%20Evidence%20from%20Real-Time%20Sentence%20Processing&format=json&h=5, retrying in 10s (attempt 1/1)
+HTTP 429 from https://dblp.org/search/publ/api?q=The%20Impact%20of%20the%20Mariel%20Boatlift%20on%20the%20Miami%20Labor%20Market&format=json&h=5, retrying in 10s (attempt 1/1)
+[Initial 46/58] OK    10.3389--fninf.2018.00046: 2 replication(s)  (1,542 tokens, $0.1597, 19.7s)
+[Initial 46/58] 10.3389--fninf.2018.00046  tier: xml; refs: references.json; 98,750 chars
+[Initial 46/58] 10.3389--fninf.2018.00046  📖  Replication: "Reproducing Polychronization: A Guide to Maximizing the Repr" (2018)
+HTTP 429 from https://dblp.org/search/publ/api?q=Multiple%20loci%20identified%20in%20a%20genome-wide%20association%20study%20of%20prostate%20cancer&format=json&h=5, retrying in 10s (attempt 1/1)
+HTTP 429 from https://dblp.org/search/publ/api?q=Sex-role%20stereotypes%20and%20self-concepts%20in%20college%20students.&format=json&h=5, retrying in 10s (attempt 1/1)
+HTTP 429 from https://dblp.org/search/publ/api?q=Anchor%20precision%20influences%20the%20amount%20of%20adjustment&format=json&h=5, retrying in 10s (attempt 1/1)
+HTTP 429 from https://api.semanticscholar.org/graph/v1/paper/DOI:10.1073/pnas.1712757114?fields=title,year,venue,url,authors, retrying in 5s (attempt 1/2)
+HTTP 429 from https://dblp.org/search/publ/api?q=Weekday%20and%20Sunday%20Readership%20Seen%20through%20Uses%20and%20Gratifications&format=json&h=5, retrying in 10s (attempt 1/1)
+HTTP 429 from https://dblp.org/search/publ/api?q=Quantification%20and%20ACD%3A%20Evidence%20from%20Real-Time%20Sentence%20Processing&format=json&h=5, retrying in 10s (attempt 1/1)
+HTTP 429 from https://dblp.org/search/publ/api?q=Default%20neglect%20in%20attempts%20at%20social%20influence&format=json&h=5, retrying in 10s (attempt 1/1)
+HTTP 429 from https://api.semanticscholar.org/graph/v1/paper/DOI:10.1177/0019793917692945?fields=title,year,venue,url,authors, retrying in 5s (attempt 1/2)
+HTTP 429 from https://api.semanticscholar.org/graph/v1/paper/DOI:10.1037/h0025909?fields=title,year,venue,url,authors, retrying in 5s (attempt 1/2)
+DBLP returned HTTP 429
+[Initial 47/58] OK    10.17605--osf.io--ehjdm: 3 replication(s)  (1,385 tokens, $0.0427, 15.2s)
+[Initial 47/58] 10.17605--osf.io--ehjdm  tier: grobid; refs: 10.17605--osf.io--ehjdm.pdf (tail pages); 8,334 chars
+[Initial 47/58] 10.17605--osf.io--ehjdm  ❌  Citation mismatch entry 1 (author not found in citation, year not found in citation) — citation: "Additionally, these data replicated the main effect of motivation observed in th" vs extracted: "Janiszewski, Chris; Uy, Dan" (2008)
+[Initial 47/58] 10.17605--osf.io--ehjdm  📖  Replication: "?" (None)
+HTTP 429 from https://dblp.org/search/publ/api?q=Multiple%20newly%20identified%20loci%20associated%20with%20prostate%20cancer%20susceptibility&format=json&h=5, retrying in 10s (attempt 1/1)
+[Initial 48/58] OK    10.7554--elife.18173: 3 replication(s)  (2,807 tokens, $0.3068, 23.9s)
+[Initial 48/58] 10.7554--elife.18173  tier: xml; refs: references.json; 33,019 chars
+[Initial 48/58] 10.7554--elife.18173  📖  Replication: "Replication Study: The CD47-signal regulatory protein alpha " (2017)
+HTTP 429 from https://dblp.org/search/publ/api?q=The%20Wage%20Impact%20of%20the%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ci%3EMarielitos%3C/i%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20A%20Reappraisal&format=json&h=5, retrying in 10s (attempt 1/1)
+DBLP returned HTTP 429
+HTTP 429 from https://dblp.org/search/publ/api?q=Sex-role%20stereotypes%20and%20self-concepts%20in%20college%20students.&format=json&h=5, retrying in 10s (attempt 1/1)
+[Initial 49/58] OK    10.7554--elife.39944: 2 replication(s)  (1,865 tokens, $0.1686, 17.4s)
+[Initial 49/58] 10.7554--elife.39944  tier: xml; refs: references.json; 77,532 chars
+[Initial 49/58] 10.7554--elife.39944  📖  Replication: "Replication study: Melanoma exosomes educate bone marrow pro" (2018)
+[Initial 49/58] 10.7554--elife.39944  +  Entry 0 original: enriched 1 field(s) from DOI
+[Initial 49/58] 10.7554--elife.39944  +  Entry 1 original: enriched 1 field(s) from DOI
+DBLP returned HTTP 429
+[Initial 50/58] OK    10.48550--arxiv.1605.00178: 2 replication(s)  (936 tokens, $0.0483, 9.6s)
+[Initial 50/58] 10.48550--arxiv.1605.00178  tier: grobid; refs: references.json; 25,735 chars
+[Initial 50/58] 10.48550--arxiv.1605.00178  📖  Replication: "An attempted replication of Hackl, Koster-Hale, Varvoutis (2" (2016)
+[Initial 50/58] 10.48550--arxiv.1605.00178  +  Entry 0: found DOI 10.1093/jos/ffr009 from title (1 field(s) enriched)
+[Initial 50/58] 10.48550--arxiv.1605.00178  +  Entry 1: found DOI 10.1093/jos/ffr009 from title (1 field(s) enriched)
+HTTP 429 from https://dblp.org/search/publ/api?q=Weekday%20and%20Sunday%20Readership%20Seen%20through%20Uses%20and%20Gratifications&format=json&h=5, retrying in 10s (attempt 1/1)
+HTTP 429 from https://dblp.org/search/publ/api?q=Default%20neglect%20in%20attempts%20at%20social%20influence&format=json&h=5, retrying in 10s (attempt 1/1)
+[Initial 51/58] OK    10.7554--elife.34364: 5 replication(s)  (3,552 tokens, $0.1750, 24.5s)
+[Initial 51/58] 10.7554--elife.34364  tier: xml; refs: references.json; 84,609 chars
+[Initial 51/58] 10.7554--elife.34364  📖  Replication: "Replication Study: Intestinal inflammation targets cancer-in" (2018)
+[Initial 51/58] 10.7554--elife.34364  +  Entry 0 original: enriched 1 field(s) from DOI
+[Initial 51/58] 10.7554--elife.34364  +  Entry 1 original: enriched 1 field(s) from DOI
+[Initial 51/58] 10.7554--elife.34364  +  Entry 2 original: enriched 1 field(s) from DOI
+[Initial 51/58] 10.7554--elife.34364  +  Entry 3 original: enriched 1 field(s) from DOI
+[Initial 51/58] 10.7554--elife.34364  +  Entry 4 original: enriched 1 field(s) from DOI
+HTTP 429 from https://dblp.org/search/publ/api?q=%3Ci%3ERNASEL%3C/i%3E%20Gene%20Polymorphisms%20and%20the%20Risk%20of%20Prostate%20Cancer%3A%20a%20Meta-analysis&format=json&h=5, retrying in 10s (attempt 1/1)
+HTTP 429 from https://dblp.org/search/publ/api?q=Sex-role%20stereotypes%20and%20self-concepts%20in%20college%20students.&format=json&h=5, retrying in 10s (attempt 1/1)
+HTTP 429 from https://dblp.org/search/publ/api?q=Empirical%20Strategies%20in%20Labor%20Economics&format=json&h=5, retrying in 10s (attempt 1/1)
+[Initial 52/58] OK    10.3758--s13423-020-01834-4: 3 replication(s)  (1,781 tokens, $0.0665, 15.0s)
+[Initial 52/58] 10.3758--s13423-020-01834-4  tier: grobid; refs: references.json; 34,719 chars
+[Initial 52/58] 10.3758--s13423-020-01834-4  📖  Replication: "Default sensitivity in attempts at social influence" (2021)
+[Initial 52/58] 10.3758--s13423-020-01834-4  +  Entry 0: found DOI 10.1073/pnas.1712757114 from title (1 field(s) enriched)
+[Initial 52/58] 10.3758--s13423-020-01834-4  +  Entry 1: found DOI 10.1073/pnas.1712757114 from title (1 field(s) enriched)
+[Initial 52/58] 10.3758--s13423-020-01834-4  +  Entry 2: found DOI 10.1073/pnas.1712757114 from title (1 field(s) enriched)
+HTTP 429 from https://dblp.org/search/publ/api?q=Weekday%20and%20Sunday%20Readership%20Seen%20through%20Uses%20and%20Gratifications&format=json&h=5, retrying in 10s (attempt 1/1)
+DBLP returned HTTP 429
+HTTP 429 from https://doi.org/10.7554/elife.43511, retrying in 5s (attempt 1/3)
+[Initial 53/58] OK    10.2466--pr0.2000.87.2.493: 4 replication(s)  (2,057 tokens, $0.1228, 15.4s)
+[Initial 53/58] 10.2466--pr0.2000.87.2.493  tier: grobid; refs: references.json; 64,423 chars
+[Initial 53/58] 10.2466--pr0.2000.87.2.493  📖  Replication: "Gender Stereotypes after Thirty Years: A Replication of Rose" (2000)
+[Initial 53/58] 10.2466--pr0.2000.87.2.493  +  Entry 0: found DOI 10.1037/h0025909 from title (0 field(s) enriched)
+[Initial 53/58] 10.2466--pr0.2000.87.2.493  +  Entry 1: found DOI 10.1037/h0025909 from title (0 field(s) enriched)
+[Initial 53/58] 10.2466--pr0.2000.87.2.493  +  Entry 2: found DOI 10.1037/h0025909 from title (0 field(s) enriched)
+[Initial 53/58] 10.2466--pr0.2000.87.2.493  +  Entry 3: found DOI 10.1037/h0025909 from title (0 field(s) enriched)
+[Initial 54/58] OK    10.3386--w21801: 3 replication(s)  (2,409 tokens, $0.1411, 20.6s)
+[Initial 54/58] 10.3386--w21801  tier: grobid; refs: references.json; 80,099 chars
+[Initial 54/58] 10.3386--w21801  📖  Replication: "The Labor Market Effects of a Refugee Wave: Applying the Syn" (2015)
+[Initial 54/58] 10.3386--w21801  +  Entry 0: found DOI 10.1177/001979399004300205 from title (0 field(s) enriched)
+[Initial 54/58] 10.3386--w21801  +  Entry 1: found DOI 10.1177/0019793917692945 from title (3 field(s) enriched)
+[Initial 54/58] 10.3386--w21801  +  Entry 2: found DOI 10.1016/s1573-4463(99)03004-7 from title (0 field(s) enriched)
+HTTP 429 from https://dblp.org/search/publ/api?q=Mutation%20screen%20and%20association%20study%20of%20%3Ci%3EEZH2%3C/i%3E%20as%20a%20susceptibility%20gene%20for%20aggressive%20prostate%20cancer&format=json&h=5, retrying in 10s (attempt 1/1)
+DBLP returned HTTP 429
+[Initial 55/58] OK    10.1177--073953298600700307: 7 replication(s)  (2,720 tokens, $0.3069, 20.0s)
+[Initial 55/58] 10.1177--073953298600700307  tier: grobid; refs: 10.1177--073953298600700307.pdf (tail pages); 40,572 chars
+[Initial 55/58] 10.1177--073953298600700307  ❌  Citation mismatch entry 0 (author not found in citation, year not found in citation) — citation: "To answer these questions, this study was conducted in an attempt to replicate t" vs extracted: "Towers, Wayne M." (1985)
+[Initial 55/58] 10.1177--073953298600700307  ❌  Citation mismatch entry 1 (year not found in citation) — citation: "During Spring 1982, a telephone survey of 557 adults was conducted in the same l" vs extracted: "Towers, Wayne M." (1985)
+[Initial 55/58] 10.1177--073953298600700307  ❌  Citation mismatch entry 2 (author not found in citation, year not found in citation) — citation: "To answer these questions, this study was conducted in an attempt to replicate t" vs extracted: "Towers, Wayne M." (1985)
+[Initial 55/58] 10.1177--073953298600700307  ❌  Citation mismatch entry 3 (author not found in citation, year not found in citation) — citation: "To answer these questions, this study was conducted in an attempt to replicate t" vs extracted: "Towers, Wayne M." (1985)
+[Initial 55/58] 10.1177--073953298600700307  ❌  Citation mismatch entry 4 (author not found in citation, year not found in citation) — citation: "To answer these questions, this study was conducted in an attempt to replicate t" vs extracted: "Towers, Wayne M." (1985)
+[Initial 55/58] 10.1177--073953298600700307  ❌  Citation mismatch entry 5 (author not found in citation, year not found in citation) — citation: "To answer these questions, this study was conducted in an attempt to replicate t" vs extracted: "Towers, Wayne M." (1985)
+[Initial 55/58] 10.1177--073953298600700307  ❌  Citation mismatch entry 6 (author not found in citation, year not found in citation) — citation: "To answer these questions, this study was conducted in an attempt to replicate t" vs extracted: "Towers, Wayne M." (1985)
+[Initial 55/58] 10.1177--073953298600700307  📖  Replication: "Replication of a Study on Uses and Gratifications for Weekda" (1986)
+[Initial 55/58] 10.1177--073953298600700307  +  Entry 0: found DOI 10.1177/073953298500600303 from title (1 field(s) enriched)
+[Initial 55/58] 10.1177--073953298600700307  +  Entry 1: found DOI 10.1177/073953298500600303 from title (1 field(s) enriched)
+[Initial 55/58] 10.1177--073953298600700307  +  Entry 2: found DOI 10.1177/073953298500600303 from title (1 field(s) enriched)
+[Initial 55/58] 10.1177--073953298600700307  +  Entry 3: found DOI 10.1177/073953298500600303 from title (1 field(s) enriched)
+[Initial 55/58] 10.1177--073953298600700307  +  Entry 4: found DOI 10.1177/073953298500600303 from title (1 field(s) enriched)
+[Initial 55/58] 10.1177--073953298600700307  +  Entry 5: found DOI 10.1177/073953298500600303 from title (1 field(s) enriched)
+[Initial 55/58] 10.1177--073953298600700307  +  Entry 6: found DOI 10.1177/073953298500600303 from title (1 field(s) enriched)
+[Initial 56/58] OK    10.7554--elife.43511: 5 replication(s)  (3,583 tokens, $0.1411, 23.0s)
+[Initial 56/58] 10.7554--elife.43511  tier: xml; refs: references.json; 62,154 chars
+[Initial 56/58] 10.7554--elife.43511  📖  Replication: "Replication Study: The microRNA miR-34a inhibits prostate ca" (2019)
+[Initial 56/58] 10.7554--elife.43511  +  Entry 0 original: enriched 1 field(s) from DOI
+[Initial 56/58] 10.7554--elife.43511  +  Entry 1 original: enriched 1 field(s) from DOI
+[Initial 56/58] 10.7554--elife.43511  +  Entry 2 original: enriched 1 field(s) from DOI
+[Initial 56/58] 10.7554--elife.43511  +  Entry 3 original: enriched 1 field(s) from DOI
+[Initial 56/58] 10.7554--elife.43511  +  Entry 4 original: enriched 1 field(s) from DOI
+[Initial 57/58] OK    10.7554--elife.56651: 6 replication(s)  (4,336 tokens, $0.1566, 26.6s)
+[Initial 57/58] 10.7554--elife.56651  tier: xml; refs: references.json; 64,262 chars
+[Initial 57/58] 10.7554--elife.56651  📖  Replication: "Replication Study: Coding-independent regulation of the tumo" (2020)
+HTTP 429 from https://dblp.org/search/publ/api?q=Occurrence%20of%20NKX3.1%20C154T%20polymorphism%20in%20men%20with%20and%20without%20prostate%20cancer%20and%20studies%20of%20its%20effect%20on%20protein%20function.&format=json&h=5, retrying in 10s (attempt 1/1)
+[Initial 58/58] OK    10.1158--1055-9965.epi-08-1223: 8 replication(s)  (3,976 tokens, $0.1013, 26.9s)
+[Initial 58/58] 10.1158--1055-9965.epi-08-1223  tier: xml; refs: references.json; 37,428 chars
+[Initial 58/58] 10.1158--1055-9965.epi-08-1223  📖  Replication: "Genetic Variants and Prostate Cancer Risk: Candidate Replica" (2009)
+[Initial 58/58] 10.1158--1055-9965.epi-08-1223  +  Entry 0: found DOI 10.1038/ng.89 from title (2 field(s) enriched)
+[Initial 58/58] 10.1158--1055-9965.epi-08-1223  +  Entry 1: found DOI 10.1038/ng1808 from title (2 field(s) enriched)
+[Initial 58/58] 10.1158--1055-9965.epi-08-1223  +  Entry 2: found DOI 10.1038/ng.91 from title (2 field(s) enriched)
+[Initial 58/58] 10.1158--1055-9965.epi-08-1223  +  Entry 3: found DOI 10.1038/ng.90 from title (2 field(s) enriched)
+[Initial 58/58] 10.1158--1055-9965.epi-08-1223  +  Entry 4: found DOI 10.1158/1078-0432.ccr-05-2799 from title (2 field(s) enriched)
+[Initial 58/58] 10.1158--1055-9965.epi-08-1223  +  Entry 5 original: enriched 2 field(s) from DOI
+[Initial 58/58] 10.1158--1055-9965.epi-08-1223  +  Entry 6: found DOI 10.1002/pros.20296 from title (2 field(s) enriched)
+[Initial 58/58] 10.1158--1055-9965.epi-08-1223  +  Entry 7: found PMID 11980664 from title (2 field(s) enriched)
+
+============================================================
+Done: 58 extracted, 0 skipped, 0 failed
+  tokens: 116 in / 100,836 out; cost $11.33; mean wall 17.5s/paper
+  tiers: {'grobid': 40, 'xml': 18}
+  reference list source: {'10.1001--jamapsychiatry.2015.0554.pdf (tail pages)': 1, 'references.json': 54, '10.1037--edu0000146.pdf (tail pages)': 1, '10.17605--osf.io--ehjdm.pdf (tail pages)': 1, '10.1177--073953298600700307.pdf (tail pages)': 1}  (none: 0); truncated inputs: 0
+
+Collated 291 rows → /media/dan/data/metascience_observatory_pdfs/papers/collated_results_core_eval_20261015.csv
+  Replications: 276 rows (94 papers)  |  No replications: 15 papers
+  Skipped (no 'core_eval_20261015/' subdir — not extracted under this tag): 15134 papers
+Runtime: 3m 37s
+Found 2 papers; provider=claude_cli model=sonnet workers=4 tag=core_eval_20261015
+DBLP returned HTTP 429
+HTTP 429 from https://dblp.org/search/publ/api?q=MILLIONAIRE%20MIGRATION%20AND%20STATE%20TAXATION%20OF%20TOP%20INCOMES%3A%20EVIDENCE%20FROM%20A%20NATURAL%20EXPERIMENT&format=json&h=5, retrying in 10s (attempt 1/1)
+DBLP returned HTTP 429
+[Initial 1/2] OK    10.1002--ejsp.2748: 2 replication(s)  (1,532 tokens, $0.4391, 19.7s)
+[Initial 1/2] 10.1002--ejsp.2748  tier: grobid; refs: references.json; 56,073 chars
+[Initial 1/2] 10.1002--ejsp.2748  📖  Replication: "Disentangling the intergroup sensitivity effect: Defending t" (2021)
+[Initial 2/2] OK    10.1177--1091142114537893: 1 replication(s)  (1,520 tokens, $0.1134, 22.3s)
+[Initial 2/2] 10.1177--1091142114537893  tier: grobid; refs: references.json; 37,246 chars
+[Initial 2/2] 10.1177--1091142114537893  📖  Replication: "A Replication of “Millionaire Migration and State Taxation o" (2015)
+[Initial 2/2] 10.1177--1091142114537893  +  Entry 0: found DOI 10.17310/ntj.2011.2.02 from title (0 field(s) enriched)
+
+============================================================
+Done: 2 extracted, 0 skipped, 0 failed
+  tokens: 4 in / 3,048 out; cost $0.55; mean wall 21.0s/paper
+  tiers: {'grobid': 2}
+  reference list source: {'references.json': 2}  (none: 0); truncated inputs: 0
+
+Collated 3 rows → benchmarking/ground_truth_data_filtered_PDFs/collated_results_core_eval_20261015.csv
+  Replications: 3 rows (2 papers)  |  No replications: 0 papers
+  Skipped (no 'core_eval_20261015/' subdir — not extracted under this tag): 145 papers
+Runtime: 37.8s

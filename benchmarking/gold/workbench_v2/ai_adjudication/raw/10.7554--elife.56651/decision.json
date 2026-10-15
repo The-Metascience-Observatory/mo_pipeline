@@ -1,0 +1,176 @@
+{
+  "eligibility": "positive",
+  "eligibility_reason": "RP:CB Replication Study reporting new experimental data from pre-registered replications of Figures 3C-D, 3G-H and 5B (and Supp. S3A-B) of Tay et al. (2011, Cell), as specified in the Registered Report (Phelps et al., 2016).",
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "p1:ceRNA-knockdown-luciferase",
+      "original_reference": "Tay et al. (2011)",
+      "original_url": "https://doi.org/10.1016/j.cell.2011.09.029",
+      "original_title": "Coding-independent regulation of the tumor suppressor PTEN by competing endogenous mRNAs",
+      "original_authors": "Tay, Y; Kats, L; Salmena, L; Weiss, D; Tan, SM; Ala, U; Karreth, F; Poliseno, L; Provero, P; Di Cunto, F; Lieberman, J; Rigoutsos, I; Pandolfi, PP",
+      "original_year": "2011",
+      "original_journal": "Cell",
+      "replication_study": "Protocol 1: ceRNA depletion on PTEN-3'UTR luciferase reporter activity in DU145 cells (Figure 1)",
+      "outcome": "Luciferase activity of a reporter carrying the PTEN 3'UTR (Luc-PTEN-3'UTR)",
+      "contrast": "siRNA against putative PTEN ceRNAs (SERINC1, VAPA, CNOT6L) vs non-targeting control siRNA",
+      "timepoint": "72 hr after transfection",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Tay et al. (2011, Fig. 3C/S3A) reported that siRNA depletion of the putative PTEN ceRNAs SERINC1, VAPA and CNOT6L significantly decreased PTEN 3'UTR luciferase reporter activity in DU145 cells (whereas ZNF460 depletion did not).",
+      "citation_sentence": "This is similar to what was reported in Figure 3C and Supplemental Figure S3A of Tay et al., 2011 and described in Protocol 1 in the Registered Report (Phelps et al., 2016).",
+      "evidence": "Results, 'ceRNA depletion on PTEN-3'UTR luciferase reporter activity' and Figure 1 legend: 'luciferase activity when the putative PTEN ceRNAs were targeted for depletion were similar to control siRNA ... All planned comparisons were not statistically significant'; 'we found results that were not statistically significant where predicted, varied in direction relative to the original study for the putative PTEN ceRNAs'. Abstract: 'depletion of putative PTEN competing endogenous mRNAs (ceRNAs) in DU145 cells did not impact PTEN 3'UTR regulation using a reporter'.",
+      "gt_ambiguity": "clear",
+      "notes": "siPTEN is a positive control and gets no row (reduced RLU, uncorrected p=0.029, Bonferroni p=0.143). ZNF460 was the original's non-responsive fourth candidate; replication also found no effect for it (consistent), treated as part of / a control for the ceRNA claim rather than a separate null claim. Authors attribute discrepancy partly to lower knockdown (65% vs >90%) and higher variance. Pass 2: one candidate coded inconclusive; kept failure because every ceRNA comparison was non-significant, directions varied, and the abstract says depletion 'did not impact PTEN 3'UTR regulation' -- no hedged/partial-support language for this experiment.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "p2:ceRNA-3UTR-overexpression-luciferase",
+      "original_reference": "Tay et al. (2011)",
+      "original_url": "https://doi.org/10.1016/j.cell.2011.09.029",
+      "original_title": "Coding-independent regulation of the tumor suppressor PTEN by competing endogenous mRNAs",
+      "original_authors": "Tay, Y; Kats, L; Salmena, L; Weiss, D; Tan, SM; Ala, U; Karreth, F; Poliseno, L; Provero, P; Di Cunto, F; Lieberman, J; Rigoutsos, I; Pandolfi, PP",
+      "original_year": "2011",
+      "original_journal": "Cell",
+      "replication_study": "Protocol 2: ceRNA 3'UTR overexpression on PTEN-3'UTR luciferase reporter activity in DU145 cells (Figure 2)",
+      "outcome": "Luciferase activity of the PTEN 3'UTR reporter",
+      "contrast": "Overexpression of 3'UTRs of SERINC1, VAPA (2 fragments), CNOT6L (2 fragments) or PTEN vs empty vector",
+      "timepoint": "72 hr after transfection",
+      "result": "reversal",
+      "replication_type": "direct",
+      "description": "Tay et al. (2011, Fig. 3D) reported that ectopic overexpression of the 3'UTRs of the putative PTEN ceRNAs (and of PTEN's own 3'UTR) significantly increased PTEN 3'UTR luciferase reporter activity, consistent with relief of microRNA repression by decoy sequestration.",
+      "citation_sentence": "This is similar to what was reported in Figure 3D of Tay et al., 2011 and described in Protocol 2 in the Registered Report (Phelps et al., 2016).",
+      "evidence": "Results, 'ceRNA overexpression on PTEN-3'UTR luciferase reporter activity' and Figure 2 legend: 'cells transfected with 3'UTR of the putative PTEN ceRNA plasmids or the 3'UTR of PTEN had decreased luciferase activity'; 'To summarize, we found results that were statistically significant (with the exception of VAPA 3'UTR1) and in the opposite direction as the original study.' Meta-analysis: 'The direction of all six comparisons were in the opposite direction of the original study with none of the effect size point estimates within the confidence intervals of the other study'. Abstract: 'we found decreased activity when ceRNA 3'UTRs were overexpressed, while the original study reported increased activity'.",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Reversal criteria met: (1) significant opposite-direction effects (5 of 6 Bonferroni-significant; VAPA 3'UTR1 also opposite in direction, uncorrected p=0.011, Bonferroni p=0.064); (2) authors explicitly say 'in the opposite direction as the original study' and the abstract contrasts decreased vs increased activity; (3) all six comparisons, including the non-significant one, point the same (opposite) way and no point estimate falls within the other study's CI. The codebook's 'only some conditions show opposite effects -> inconclusive' rule targets mixed-direction outcomes, not one comparison missing a corrected threshold while still opposite. Pass 2: both candidate coders chose inconclusive on the VAPA 3'UTR1 exception; I re-checked the source and kept reversal, flagged ambiguous.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "p3:ceRNA-knockdown-PTEN-protein-WT",
+      "original_reference": "Tay et al. (2011)",
+      "original_url": "https://doi.org/10.1016/j.cell.2011.09.029",
+      "original_title": "Coding-independent regulation of the tumor suppressor PTEN by competing endogenous mRNAs",
+      "original_authors": "Tay, Y; Kats, L; Salmena, L; Weiss, D; Tan, SM; Ala, U; Karreth, F; Poliseno, L; Provero, P; Di Cunto, F; Lieberman, J; Rigoutsos, I; Pandolfi, PP",
+      "original_year": "2011",
+      "original_journal": "Cell",
+      "replication_study": "Protocol 3: ceRNA depletion on PTEN protein expression in wild-type HCT116 cells (Figure 3)",
+      "outcome": "PTEN protein level (PTEN/HSP90, Western blot)",
+      "contrast": "siRNA against SERINC1, VAPA, CNOT6L vs non-targeting control siRNA in wild-type HCT116 cells",
+      "timepoint": "72 hr after transfection",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "Tay et al. (2011, Fig. 3G-H) reported that siRNA depletion of the putative ceRNAs SERINC1, VAPA and CNOT6L significantly decreased PTEN protein levels in wild-type HCT116 cells.",
+      "citation_sentence": "This experiment is similar to what was reported in Figure 3G–H and Supplemental Figure S3B of Tay et al., 2011 and described in Protocol 3 in the Registered Report (Phelps et al., 2016).",
+      "evidence": "Results, 'ceRNA depletion on PTEN expression' and Figure 3 legend: 'The comparison of PTEN protein levels between control siRNA and siRNA targeting VAPA, CNOT6L, or PTEN were statistically significant, while the comparison of control siRNA and siRNA targeting SERINC1 were not'. Abstract: 'In HCT116 cells, ceRNA depletion resulted in decreased PTEN protein levels, a result similar to the findings reported in the original study'. Meta-analysis: 'In wild-type cells, all effects were consistent when considering the direction of the effect'; meta-analyses for VAPA and CNOT6L significant, 'suggesting ... that these ceRNAs regulate PTEN protein expression in HCT116 cells'.",
+      "gt_ambiguity": "ambiguous",
+      "notes": "All three ceRNAs reduced PTEN in the same direction; VAPA (Bonferroni p=0.0011) and CNOT6L (p=0.017) significant, SERINC1 not (80%, Bonferroni p=0.326). Authors' abstract calls the WT result 'similar to the findings reported in the original study', so success; a coder applying the mixed-signals rule could code inconclusive. siPTEN is a positive control (no row). Coded separately from the Dicer-dependence claim (p4): the original reported these as two findings (knockdown lowers PTEN; this is abrogated in Dicer mutants) and the replication authors evaluate and summarize them separately, with divergent outcomes. Pass 2: both candidate coders merged WT and Dicer into one inconclusive row; both candidates map here and to p4.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "p4:ceRNA-knockdown-PTEN-attenuated-in-DicerEx5",
+      "original_reference": "Tay et al. (2011)",
+      "original_url": "https://doi.org/10.1016/j.cell.2011.09.029",
+      "original_title": "Coding-independent regulation of the tumor suppressor PTEN by competing endogenous mRNAs",
+      "original_authors": "Tay, Y; Kats, L; Salmena, L; Weiss, D; Tan, SM; Ala, U; Karreth, F; Poliseno, L; Provero, P; Di Cunto, F; Lieberman, J; Rigoutsos, I; Pandolfi, PP",
+      "original_year": "2011",
+      "original_journal": "Cell",
+      "replication_study": "Protocol 3: ceRNA depletion on PTEN protein expression in Dicer[Ex5] HCT116 cells (Figure 3)",
+      "outcome": "PTEN protein level (PTEN/HSP90) in microRNA-deficient Dicer[Ex5] HCT116 cells",
+      "contrast": "siRNA against SERINC1, VAPA, CNOT6L vs control siRNA in Dicer[Ex5] cells (attenuation relative to wild-type)",
+      "timepoint": "72 hr after transfection",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Tay et al. (2011, Fig. 3G-H) reported that the PTEN downregulation caused by ceRNA depletion was abrogated in microRNA-deficient Dicer[Ex5] HCT116 cells (PTEN ~100-117% of control), indicating the ceRNA effect is microRNA-dependent.",
+      "citation_sentence": "This experiment is similar to what was reported in Figure 3G–H and Supplemental Figure S3B of Tay et al., 2011 and described in Protocol 3 in the Registered Report (Phelps et al., 2016).",
+      "evidence": "Results, 'ceRNA depletion on PTEN expression': 'For Dicer[Ex5] HCT116 cells, we found depletion of the putative PTEN ceRNAs resulted in higher PTEN protein levels (SERINC1: 290%; VAPA: 144%; CNOT6L: 256%)'; 'This absence of an attenuated ceRNA effect in this replication attempt suggests the null hypothesis that there is no difference in PTEN protein expression when the microRNA machinery is disrupted can be rejected.' Abstract: 'while the original study reported an attenuated ceRNA effect in microRNA deficient (Dicer Ex5) HCT116 cells, we observed increased PTEN protein levels.'",
+      "gt_ambiguity": "clear",
+      "notes": "Original claim is a null/attenuation in Dicer[Ex5] cells; replication found significant changes (SERINC1 increase, Bonferroni p=0.030; meta-analyses SERINC1 and CNOT6L significant) rather than no effect -> failure under the 'original claimed no effect' rule. Not coded reversal: the original claim was an absence of effect, and authors frame it as 'absence of an attenuated ceRNA effect'. Large replication variance (RSD 29-61%) noted by authors. Pass 2: candidate coders merged this with p3 into one inconclusive row; luna56's note itself states 'the expected attenuation in Dicer[Ex5] cells was not observed', which supports failure for this claim.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "p5:ceRNA-knockdown-proliferation",
+      "original_reference": "Tay et al. (2011)",
+      "original_url": "https://doi.org/10.1016/j.cell.2011.09.029",
+      "original_title": "Coding-independent regulation of the tumor suppressor PTEN by competing endogenous mRNAs",
+      "original_authors": "Tay, Y; Kats, L; Salmena, L; Weiss, D; Tan, SM; Ala, U; Karreth, F; Poliseno, L; Provero, P; Di Cunto, F; Lieberman, J; Rigoutsos, I; Pandolfi, PP",
+      "original_year": "2011",
+      "original_journal": "Cell",
+      "replication_study": "Protocol 4: ceRNA depletion on cell proliferation in DU145 and wild-type HCT116 cells (Figure 4)",
+      "outcome": "Cell proliferation (crystal violet assay, area under the growth curve)",
+      "contrast": "siRNA against VAPA or CNOT6L vs non-targeting control siRNA (DU145 and wild-type HCT116 cells)",
+      "timepoint": "not applicable: growth timecourse summarized as AUC over the 4-day assay",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Tay et al. (2011, Fig. 5B) reported that siRNA depletion of the ceRNAs VAPA or CNOT6L significantly increased proliferation of DU145 and wild-type HCT116 cells, similar to PTEN depletion.",
+      "citation_sentence": "This is similar to what was reported in Figure 5B of Tay et al., 2011 and described in Protocol 4 in the Registered Report (Phelps et al., 2016).",
+      "evidence": "Results, 'ceRNA depletion on cell proliferation' and Figure 4 legend: DU145 'depletion of VAPA or PTEN resulted in increased cell proliferation ... while depletion of CNOT6L resulted in decreased cell proliferation ... which were not statistically significant'; WT HCT116 'Depletion of VAPA or CNOT6L did not result in a statistically significant increase in cell proliferation compared to control siRNA'. Abstract: 'we found depletion of the ceRNAs VAPA or CNOT6L did not statistically impact DU145, wild-type HCT116, or Dicer Ex5 HCT116 cell proliferation.'",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Both cell lines coded as one claim (the original's Fig. 5B proliferation claim); both fail, so a per-cell-line split would give two failure rows. In WT HCT116 the direction matched (VAPA uncorrected p=0.054; meta-analysis VAPA p=0.045), so a coder might say inconclusive for HCT116; in DU145 CNOT6L went the opposite direction (n.s.). siPTEN is a positive control (significant in HCT116, not DU145). Authors' abstract frames as 'did not statistically impact' -> failure. Pass 2: candidates coded inconclusive (citing variation in direction/significance); kept failure because no ceRNA comparison reached significance in any cell line and the authors' summary statement is a plain null.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "p6:proliferation-attenuated-in-DicerEx5",
+      "original_reference": "Tay et al. (2011)",
+      "original_url": "https://doi.org/10.1016/j.cell.2011.09.029",
+      "original_title": "Coding-independent regulation of the tumor suppressor PTEN by competing endogenous mRNAs",
+      "original_authors": "Tay, Y; Kats, L; Salmena, L; Weiss, D; Tan, SM; Ala, U; Karreth, F; Poliseno, L; Provero, P; Di Cunto, F; Lieberman, J; Rigoutsos, I; Pandolfi, PP",
+      "original_year": "2011",
+      "original_journal": "Cell",
+      "replication_study": "Protocol 4: ceRNA depletion on cell proliferation in wild-type vs Dicer[Ex5] HCT116 cells (Figure 4)",
+      "outcome": "Cell proliferation (AUC) — attenuation of ceRNA-depletion effect in microRNA-deficient cells",
+      "contrast": "DICER status (wild-type vs Dicer[Ex5]) x siRNA target interaction; siVAPA/siCNOT6L vs siPTEN in Dicer[Ex5] cells",
+      "timepoint": "not applicable: growth timecourse summarized as AUC",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Tay et al. (2011, Fig. 5B) reported that the increased proliferation caused by VAPA or CNOT6L depletion was significantly attenuated in microRNA-deficient Dicer[Ex5] HCT116 cells, whereas PTEN depletion still increased proliferation.",
+      "citation_sentence": "This is similar to what was reported in Figure 5B of Tay et al., 2011 and described in Protocol 4 in the Registered Report (Phelps et al., 2016).",
+      "evidence": "Results, 'ceRNA depletion on cell proliferation': interaction 'F(3,24) = 0.734, p=0.542'; 'These results suggest that while there were differences in cell proliferation when the putative PTEN ceRNAs or PTEN were depleted, it was similar between cell lines suggesting a lack of an attenuated ceRNA effect.' Abstract: 'The original study reported increased DU145 and wild-type HCT116 cell proliferation when these ceRNAs were depleted, which was attenuated in the Dicer Ex5 HCT116 cells'.",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Authors conclude 'a lack of an attenuated ceRNA effect' (non-significant interaction) -> failure. However, the planned contrast siCNOT6L vs siPTEN in Dicer[Ex5] was significant (Bonferroni p=7.48e-4), and VAPA's increase was smaller in Dicer[Ex5] than WT, which partially resembles attenuation; also, since ceRNA depletion did not significantly increase proliferation in WT cells, attenuation is hard to test. A coder could choose inconclusive. Pass 2: only luna56's merged proliferation candidate covers this claim (its description includes 'DICER-dependent mechanism').",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.7554--elife.56651#ling26:d26bea4cb1223342:1": {
+      "action": "map",
+      "effect_ids": ["p1:ceRNA-knockdown-luciferase"],
+      "reason": "Same Fig. 3C/S3A knockdown-luciferase experiment (Protocol 1). Its description wrongly lists ZNF460 and PTEN as ceRNAs whose silencing decreased activity (ZNF460 was null in the original; PTEN is a positive control). Its inconclusive label not adopted: all ceRNA comparisons were non-significant and the authors state depletion 'did not impact' reporter regulation."
+    },
+    "ling26:10.7554--elife.56651#ling26:c93f39891d5aae7c:1": {
+      "action": "map",
+      "effect_ids": ["p2:ceRNA-3UTR-overexpression-luciferase"],
+      "reason": "Same Fig. 3D 3'UTR-overexpression experiment (Protocol 2). Its inconclusive label not adopted: all six comparisons were opposite in direction, five significant after correction, and the authors explicitly say 'opposite direction as the original study' -> reversal (flagged ambiguous)."
+    },
+    "ling26:10.7554--elife.56651#ling26:a4e0227ee03bc896:1": {
+      "action": "map",
+      "effect_ids": ["p3:ceRNA-knockdown-PTEN-protein-WT", "p4:ceRNA-knockdown-PTEN-attenuated-in-DicerEx5"],
+      "reason": "Covers the Fig. 3G-H experiment (Protocol 3), merging the WT PTEN-decrease claim and the Dicer-attenuation claim into one row. I code them as two claims of the original, with divergent results (WT success, Dicer attenuation failure)."
+    },
+    "ling26:10.7554--elife.56651#ling26:97b5bdbc1517224a:1": {
+      "action": "map",
+      "effect_ids": ["p5:ceRNA-knockdown-proliferation"],
+      "reason": "Fig. 5B proliferation experiment (Protocol 4), DU145 portion; p5 covers the proliferation claim in DU145 and WT HCT116. Listing PTEN as a ceRNA is incorrect (positive control). Inconclusive label not adopted: no ceRNA comparison was significant and the authors' abstract says depletion 'did not statistically impact' proliferation."
+    },
+    "luna56:10.7554--elife.56651#luna56:7b9b711d9c8fcfa1:1": {
+      "action": "map",
+      "effect_ids": ["p1:ceRNA-knockdown-luciferase"],
+      "reason": "Same Fig. 3C/S3A knockdown-luciferase experiment; agrees on failure/direct."
+    },
+    "luna56:10.7554--elife.56651#luna56:3717085075cb2145:1": {
+      "action": "map",
+      "effect_ids": ["p2:ceRNA-3UTR-overexpression-luciferase"],
+      "reason": "Same Fig. 3D overexpression experiment. Inconclusive label not adopted for the same reason as the ling26 counterpart: one non-significant comparison that was still in the opposite direction does not make the overall opposite-direction result mixed; authors explicitly report opposite direction."
+    },
+    "luna56:10.7554--elife.56651#luna56:f72f33fb352517cb:1": {
+      "action": "map",
+      "effect_ids": ["p3:ceRNA-knockdown-PTEN-protein-WT", "p4:ceRNA-knockdown-PTEN-attenuated-in-DicerEx5"],
+      "reason": "Same Fig. 3G-H experiment, merging the WT decrease and Dicer-attenuation claims; coded as two claims (WT success; attenuation failure, as the candidate's own note concedes 'expected attenuation ... was not observed')."
+    },
+    "luna56:10.7554--elife.56651#luna56:ac93001ac175c374:1": {
+      "action": "map",
+      "effect_ids": ["p5:ceRNA-knockdown-proliferation", "p6:proliferation-attenuated-in-DicerEx5"],
+      "reason": "Fig. 5B proliferation experiment, merging the proliferation-increase claim and its DICER dependence; coded as two claims, both failure per the authors' 'did not statistically impact' and 'lack of an attenuated ceRNA effect' statements."
+    }
+  },
+  "revision_notes": "No changes to entries or labels from pass 1. I re-checked p2 (reversal versus the candidates' inconclusive), p1 and p5 (failure versus inconclusive), and the p3/p4 and p5/p6 splits against the source, and kept the pass-1 calls. I added pass-2 reasoning to the notes and set added_after_candidates=false on every entry. No candidate revealed a missed entry. The AKT protocol (Fig. 5A) was run but not reported; its results were deemed inconclusive and left out of the manuscript, so it has no entry."
+}

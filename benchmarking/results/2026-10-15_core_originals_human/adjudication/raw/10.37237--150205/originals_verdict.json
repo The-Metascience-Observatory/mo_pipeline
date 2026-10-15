@@ -1,0 +1,26 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Shelton-Strong & Mynard (2021) Promoting positive feelings and motivation for language learning: The role of a confidence-building diary",
+   "doi": "10.1080/17501229.2020.1825445"
+  },
+  {
+   "reference": "Shelton-Strong & Mynard (2018) Affective factors in self-access learning",
+   "doi": "10.37237/relay/010204"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Table 1 names 'Original Study (Shelton-Strong & Mynard, 2021)' and the replication keeps its RQ1-RQ3 and confidence-building diary design with Italian lower-secondary students."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The abstract and text consistently cite the original study as 'Shelton-Strong and Mynard (2018, 2021)'. The 2018 Relay Journal paper is an earlier report of the same confidence-building diary study."
+  }
+ },
+ "notes": "This is a conceptual replication: it reports and discusses the findings of Spricigo's (2023) unpublished master's thesis, which replicated the confidence-building diary study with 13-14-year-olds in Italy. A single original study is reported across two publications: the 2021 article is the primary one (named in Table 1) and the 2018 article is a companion report. Both could be merged into one original entry. The body.md text is truncated partway through the methods; the verdict relies on the abstract, the 'Reason for the Replication Study' section and Table 1."
+}

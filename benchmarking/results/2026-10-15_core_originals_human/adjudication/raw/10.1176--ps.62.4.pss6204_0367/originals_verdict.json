@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Striegel-Moore RH, Wilson GT, DeBar L, et al. (2010) Cognitive behavioral guided self-help for the treatment of recurrent binge eating",
+   "doi": "10.1037/a0018915"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Ref 23 is the authors' earlier CBT-GSH vs usual-care trial; the paper calls itself 'a replication and extension trial' and concludes it 'replicated and extended the findings from our earlier study (23)', comparing abstinence rates and effect sizes."
+  },
+  "B": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Ref 1 (NCS-R eating-disorder prevalence) is cited only as background for the >5% prevalence figure and the target age group; 'Replication' in its title refers to the survey name, not a replicated finding."
+  }
+ },
+ "notes": "Self-replication (same group, same HMO setting, modified recruitment/assessment). Ref 39 (Lynch et al. 2010, cost-effectiveness companion paper) is cited alongside 23 for the original trial's cost-effectiveness, but this replication did not re-test cost-effectiveness; its outcomes (binge abstinence, EDE-Q subscales) replicate ref 23."
+}

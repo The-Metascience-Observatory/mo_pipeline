@@ -1,0 +1,9 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "Reanalysis of the same data: the paper reproduces Becker, Hornung and Woessmann (2011) exactly on their 334-county Prussian dataset ('I was able to reproduce the BHW results exactly') and then re-specifies the models (province dummies, year-of-annexation interactions, general-to-specific selection) on the same observations; no new sample or new data are collected, so there is no qualifying replication entry despite the title 'A replication of ...'.",
+  "why_negative": "Reanalysis/reproducibility check of the same data (BHW's county dataset), not a replication with new data.",
+  "gt_ambiguity": "ambiguous",
+  "notes": "Title calls it 'A replication' and the paper is a robustness/specification reanalysis concluding that education had, if anything, a negative causal effect on Prussian industrialisation (contrary to BHW 2011, AEJ: Macroeconomics). The added regressors (province membership from the ifo Prussian Economic History Database, Becker et al. 2014) are extra covariates for the same 334 counties, not new observations. A coder treating any re-test of a published claim as a replication might code one or more entries (e.g. first-phase 1849 effect: reversal/failure; 1849-82 effect: failure), but under the codebook's 'reanalysis of the same data' negative genre this yields zero entries.",
+  "enumeration_complete": true,
+  "effects": []
+}

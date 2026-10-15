@@ -1,0 +1,44 @@
+{
+  "n": 60,
+  "seed": 20261015,
+  "quotas": {
+    "negative": 8,
+    "reversal": 5,
+    "biomed": 6,
+    "fred": 6,
+    "flora": 12,
+    "main_gt_human": 8,
+    "prod": 6,
+    "other": 9
+  },
+  "excluded": [
+    "10.1073/pnas.2103313118",
+    "10.31234/osf.io/esu9z"
+  ],
+  "made_at": "2026-10-15T16:26:52",
+  "by_group": {
+    "negative": 8,
+    "prod": 6,
+    "main_gt_human": 8,
+    "other": 9,
+    "flora": 12,
+    "biomed": 7,
+    "fred": 5,
+    "reversal": 5
+  },
+  "by_discipline": {
+    "biology": 9,
+    "medical fields": 6,
+    "psychology": 18,
+    "economics": 11,
+    "human-computer interaction": 1,
+    "sports and exercise science": 1,
+    "linguistics": 2,
+    "neuroscience": 7,
+    "political science": 1,
+    "environmental science": 1,
+    "education": 1,
+    "sociology": 1,
+    "business & management": 1
+  }
+}

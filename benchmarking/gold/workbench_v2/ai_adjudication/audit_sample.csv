@@ -1,0 +1,16 @@
+paper_folder,replication_doi,discipline,stratum,prior_label,eligibility,effects,added_after_candidates,why
+10.1002--npr2.70078,10.1002/npr2.70078,medical fields,flora:success,positive,positive,1,0,"positive, discipline spread"
+10.1007--s00181-018-1457-0,10.1007/s00181-018-1457-0,economics,main_gt_human,positive,negative,0,0,eligibility contradicts prior label
+10.1007--s10664-025-10739-6,10.1007/s10664-025-10739-6,human-computer interaction,flora:failure,positive,positive,6,0,"positive, discipline spread"
+10.1007--s40279-025-02201-w,10.1007/s40279-025-02201-w,sports and exercise science,biomed:RSESR,positive,positive,25,0,"positive, discipline spread"
+10.1017--s0003055405051658,10.1017/s0003055405051658,political science,repwiki:econ,positive,negative,0,0,eligibility contradicts prior label
+10.1037--edu0000146,10.1037/edu0000146,psychology,flora:success,positive,excluded,0,0,eligibility contradicts prior label
+10.1038--s41598-018-35209-6,10.1038/s41598-018-35209-6,neuroscience,negative:adversarial,negative,positive,1,0,eligibility contradicts prior label
+10.1080--00330124.2012.681509,10.1080/00330124.2012.681509,environmental science,flora:failure,positive,negative,0,0,eligibility contradicts prior label
+10.1108--neje-04-2020-0005,10.1108/neje-04-2020-0005,education,flora:inconclusive,positive,positive,2,0,"positive, discipline spread"
+10.1177--073953298600700307,10.1177/073953298600700307,sociology,prod:inconclusive_or_reversal,positive,positive,7,0,"positive, discipline spread"
+10.1371--journal.pone.0284404,10.1371/journal.pone.0284404,medical fields,medical:immunology,positive,positive,3,0,"positive, discipline spread"
+10.17705--1atrr.00014,10.17705/1atrr.00014,business & management,flora:success,positive,positive,5,0,"positive, discipline spread"
+10.48550--arxiv.1605.00178,10.48550/arxiv.1605.00178,linguistics,fred:failure,positive,positive,2,0,"positive, discipline spread"
+10.7554--elife.18173,10.7554/elife.18173,biology,biomed:RP:CB,positive,positive,3,0,"positive, discipline spread"
+10.7554--elife.34364,10.7554/elife.34364,biology,biomed:RP:CB,positive,positive,6,0,"positive, discipline spread"

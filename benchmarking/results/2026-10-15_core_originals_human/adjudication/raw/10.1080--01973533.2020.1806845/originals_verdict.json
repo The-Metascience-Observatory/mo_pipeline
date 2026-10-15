@@ -1,0 +1,26 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Blackwell, Trzesniewski & Dweck (2007) Implicit theories of intelligence predict achievement across an adolescent transition: A longitudinal study and an intervention",
+   "doi": "10.1111/j.1467-8624.2007.00995.x"
+  },
+  {
+   "reference": "Yeager, Walton, Brady, et al. (2016) Teaching a lay theory before college narrows achievement gaps at scale",
+   "doi": "10.1073/pnas.1524360113"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The paper (titled 'Failure to Replicate') tests a one-time growth mindset intervention on college grades/GPA/credits for first-time college students and disadvantaged subgroups, explicitly targeting the claims attributed to Yeager, Walton et al. (2016): benefits at the transition to college and larger effects for minority, low-income, first-generation students."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Ref [5] is the intervention model: the treatment article was 'similar in content to previous mindset interventions (e.g., [5])' (brain grows with effort; math), and math was chosen because [5] addressed it; the study tests whether that intervention improves grades (conceptual/close-extension in a college sample)."
+  }
+ },
+ "notes": "The paper never names a single original; it frames itself as a failure to replicate growth-mindset intervention effects generally. Blackwell et al. (2007) is the cited procedural model for the manipulation; Yeager, Walton et al. (2016) is the cited source for the college-transition and disadvantaged-subgroup claims tested. Either could reasonably be judged the sole original; Paunesku et al. (2015, 'Mind-set interventions are a scalable treatment...') is also cited as supporting evidence but not as the model. Replication type is conceptual/close extension (one-time online reading + letter to future student, regional university, math and psychology courses); result: failure (all d near 0)."
+}

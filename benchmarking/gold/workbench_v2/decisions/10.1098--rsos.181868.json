@@ -1,13 +1,54 @@
 {
   "packet_sha256": "4da13fb2d4fbb5cd83ebbacb7eb635f92e0878eb65ebd452b74840721a024f8f",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
-  "effects": [],
-  "candidate_resolutions": {}
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "positive",
+  "eligibility_reason": "A pre-registered Registered Report (Results Blind track) that collects new data from 62 musicians and 62 non-musicians to replicate Proverbio et al. (2016, Sci. Rep.), which claimed skilled musicians are not subject to the McGurk effect; results are reported in full.",
+  "sources_checked": true,
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "s1:musicians_no_mcgurk",
+      "original_reference": "Proverbio et al. (2016)",
+      "original_url": "https://doi.org/10.1038/srep30423",
+      "original_title": "Skilled musicians are not subject to the McGurk effect",
+      "original_authors": "Proverbio, A.; Massetti, G.; Rizzi, E.; Zani, A.",
+      "original_year": "2016",
+      "original_journal": "Scientific Reports",
+      "replication_study": "single study",
+      "outcome": "McGurk effect in skilled musicians: accuracy of consonant identification for audiovisual incongruent (McGurk) stimuli versus audio-only stimuli, and its size relative to non-musicians",
+      "contrast": "audio-only vs audiovisual incongruent stimuli within musicians (and the condition x group interaction, musicians vs non-musicians)",
+      "timepoint": "not applicable: single-session perception experiment",
+      "result": "failure",
+      "replication_type": "close extension",
+      "description": "Skilled musicians (unlike non-musicians) are not subject to the McGurk effect: their consonant identification is not reduced when the auditory syllable is dubbed onto a video of a different articulation.",
+      "citation_sentence": "Proverbio and colleagues [2] argue that the McGurk effect is absent in highly trained musicians. ... For these reasons, it is valuable to conduct a close replication of this study to assess whether skilled musicians really are not subject to the McGurk effect. [ref 2: Proverbio A, Massetti G, Rizzi E, Zani A. 2016. Skilled musicians are not subject to the McGurk effect. Sci. Rep. 6, 30423]",
+      "evidence": "Results 3.1 (replication analysis): 'The statistical analysis confirmed that musicians have a highly significant McGurk effect (b = -2.34, z = -18.37, p < 0.001) ... musicians' McGurk effect was in fact significantly larger than the non-musicians' McGurk effect (b = 0.46, z = 2.72, p = 0.007)'; same in targeted analysis 3.2. Abstract: 'Contrary to the original study's conclusion, we find that musicians do show a large and statistically significant McGurk effect and that their effect is no smaller than that of non-musicians.' Conclusion: 'musicians are subject to the McGurk effect, and to at least as much extent (if not more) as non-musicians are.'",
+      "gt_ambiguity": "clear",
+      "notes": "Original claimed an ABSENCE of the McGurk effect in musicians (a null claim); the replication finds a large significant effect, so per the null-claim rule this is failure. Enumeration: the paper tests two hypotheses (musicians' McGurk effect > 0; musicians' effect smaller than non-musicians') and runs two analyses (replication coding and targeted place-of-articulation coding) on the same participants. I treat these as tests/analysis paths of ONE original claim (the abstract frames them as two readings of the single claim 'skilled musicians are not subject to' the effect); a second coder could split into two entries (no-effect claim -> failure; smaller-than-non-musicians claim -> failure, arguably reversal since musicians' effect was significantly larger, but the original's group difference was non-significant and the authors say the larger effect 'should be interpreted with caution', so not reversal). Both analyses agree, so no inconclusive. Type: authors call it a 'close replication'; methodology changed (within- vs between-participants manipulation, doubled N, GLMM instead of ANOVA, noisier stimuli, extra targeted coding) AND context changed (Mandarin/Cantonese speakers in Hong Kong/Shenzhen vs Italian participants), so close extension per the codebook tiebreaker. Both candidate coders chose close experiment, which is a plausible alternative because the authors list language as a 'minor difference' and did not aim to test cross-cultural generalization; replication_type is the uncertain label here. Original authors' full first names not given in the paper (initials only).",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.1098--rsos.181868#ling26:272ecfe46fd3065a:1": {
+      "action": "map",
+      "effect_ids": [
+        "s1:musicians_no_mcgurk"
+      ],
+      "reason": "Same original (10.1038/srep30423), same single claim and study; result failure agrees. Its replication_type (close experiment) differs from mine (close extension); see effect notes."
+    },
+    "luna56:10.1098--rsos.181868#luna56:6a0cafa424fe84fb:1": {
+      "action": "map",
+      "effect_ids": [
+        "s1:musicians_no_mcgurk"
+      ],
+      "reason": "Same original, same claim (musicians not subject to the McGurk effect), same single study; result failure agrees. Its replication_type (close experiment) differs from mine (close extension); its citation sentence is a weaker locator than the introduction sentence."
+    }
+  },
+  "revision_notes": "No label or enumeration changes. Both candidates map to the single pass-1 entry; their 'close experiment' type was weighed but close extension kept under the codebook tiebreaker (methodology and participant population/language both changed), with the disagreement recorded in notes.",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 1.3245,
+  "adjudication_session": "d624e7be-7477-4d10-9190-a9c663b9e94c"
 }

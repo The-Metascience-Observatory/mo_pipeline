@@ -1,13 +1,326 @@
 {
   "packet_sha256": "13265a4fe1c78cd39709645ffb38c10c01985d6c03311d626fc5bf7d4b11c2f2",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
-  "effects": [],
-  "candidate_resolutions": {}
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "positive",
+  "eligibility_reason": "Registered Replication Report in which 11 labs, an online MTurk study and an additional paper-and-pencil study (Kurby & Kibbe) collected new data replicating Experiment 3 of Hart & Albarracín (2011, Psychological Science); results are reported for each.",
+  "sources_checked": true,
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "rrr_labs:intentionality",
+      "original_reference": "Hart & Albarracín (2011)",
+      "original_url": "",
+      "original_title": "Learning about what others were doing: Verb aspect and attributions of mundane and criminal intent for past actions",
+      "original_authors": "Hart, William; Albarracín, D.",
+      "original_year": "2011",
+      "original_journal": "Psychological Science",
+      "replication_study": "Multilab RRR: 11 preregistered in-lab replications, pooled by random-effects meta-analysis",
+      "outcome": "Perceived intentionality of the perpetrator: criminal intentionality (mean of knowingly/intentionally/deliberately 11-point ratings) and intention attribution (first three Mind Attribution Scale items)",
+      "contrast": "imperfective vs perfective aspect version of the shooting vignette",
+      "timepoint": "not applicable: single-session between-subjects experiment",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Hart & Albarracín (2011) Experiment 3 reported that describing a perpetrator's criminal actions in imperfective rather than perfective aspect led participants to judge the actions as more intentional (higher criminal intentionality and intention attribution ratings).",
+      "citation_sentence": "The results of this large-scale, multilab direct replication of Experiment 3 by Hart and Albarracín (2011) are not consistent with the original result that actions described in imperfective aspect are considered to be more intentional than actions described in perfective aspect.",
+      "evidence": "Results, Figs. 1 and 3 (pp. 163-165): criminal intentionality meta-analytic difference -0.24 [-0.50, 0.02]; intention attribution 0.00 [-0.07, 0.08]. Discussion p. 166: \"are not consistent with the original result that actions described in imperfective aspect are considered to be more intentional\"; p. 165: \"our studies did not provide evidence that describing actions in imperfective aspect resulted in greater perceived intentionality (i.e., criminal intentionality and intention attribution)\".",
+      "gt_ambiguity": "clear",
+      "notes": "Unit choice: the 11 lab studies are coded as one replication study because the paper treats them as implementations of one preregistered protocol pooled in a meta-analysis (per-lab estimates appear only in forest plots; the authors classify only the pooled result and per-lab mediation is not reported in the paper); an alternative coding would give one row per lab per claim (per-lab: Berger -0.98 [-1.72, -0.24] and Knepp -0.95 [-1.58, -0.32] significant in the opposite direction on criminal intentionality, never described as reversals, so each would still be failure). Criminal intentionality and intention attribution were reported by the original as separate ANOVAs; merged here as two measures of one claim (perceived intentionality), as both the abstract ('d between 0.67 and 0.77') and the RRR discussion group them; a second coder could split them into two rows, both of which would be failure. Replication type: authors call it a direct replication; one sentence of the imperfective vignette was altered with the original author's agreement. original_url blank: no DOI given in the paper. Albarracín's first name is not given in the paper.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "rrr_labs:detailed_processing",
+      "original_reference": "Hart & Albarracín (2011)",
+      "original_url": "",
+      "original_title": "Learning about what others were doing: Verb aspect and attributions of mundane and criminal intent for past actions",
+      "original_authors": "Hart, William; Albarracín, D.",
+      "original_year": "2011",
+      "original_journal": "Psychological Science",
+      "replication_study": "Multilab RRR: 11 preregistered in-lab replications, pooled by random-effects meta-analysis",
+      "outcome": "Detailed processing (imagery): ease of imagining the crime unfolding / concrete behaviors / physical movements / details (4 items, 7-point)",
+      "contrast": "imperfective vs perfective aspect version of the vignette",
+      "timepoint": "not applicable: single-session between-subjects experiment",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Hart & Albarracín (2011) Experiment 3 reported that criminal actions described in imperfective aspect were processed in greater detail (easier to imagine) than the same actions described in perfective aspect.",
+      "citation_sentence": "The results of this large-scale, multilab direct replication of Experiment 3 by Hart and Albarracín (2011) are not consistent with the original result that actions described in imperfective aspect are considered to be more intentional than actions described in perfective aspect.",
+      "evidence": "Results, Fig. 2 (p. 164): meta-analytic difference -0.08 [-0.23, 0.07] favoring perfective. Discussion p. 166: \"This RRR also did not find that actions described in imperfective aspect are processed in greater detail than those described in perfective aspect.\"",
+      "gt_ambiguity": "clear",
+      "notes": "Small nonsignificant effect in the opposite direction; authors do not call it a reversal. Same unit-of-coding caveat as rrr_labs:intentionality.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "rrr_labs:mediation",
+      "original_reference": "Hart & Albarracín (2011)",
+      "original_url": "",
+      "original_title": "Learning about what others were doing: Verb aspect and attributions of mundane and criminal intent for past actions",
+      "original_authors": "Hart, William; Albarracín, D.",
+      "original_year": "2011",
+      "original_journal": "Psychological Science",
+      "replication_study": "Multilab RRR: in-lab replications pooled by meta-mediation analysis (10 labs; Knepp excluded)",
+      "outcome": "Indirect effect of aspect on criminal intentionality and on intention attribution via detailed processing",
+      "contrast": "imperfective vs perfective aspect, indirect path through detailed processing",
+      "timepoint": "not applicable: single-session between-subjects experiment",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Hart & Albarracín (2011) Experiment 3 reported that detailed processing mediated (partly explained) the effect of imperfective aspect on criminal intentionality and on intention attribution.",
+      "citation_sentence": "The results of this large-scale, multilab direct replication of Experiment 3 by Hart and Albarracín (2011) are not consistent with the original result that actions described in imperfective aspect are considered to be more intentional than actions described in perfective aspect.",
+      "evidence": "Mediation effects, p. 166: \"our meta-mediation analysis found no evidence that detailed processing mediates this relation (Cohen's d = 0.02 ... -0.12 to 0.15)\"; \"In the meta-mediation, though, detailed processing did not mediate that relation (Cohen's d < 0.001 ... -0.14 to 0.14)\". Discussion: \"none of the replication studies found that detailed processing mediated the relation between grammatical aspect and intentionality.\"",
+      "gt_ambiguity": "clear",
+      "notes": "The two mediation analyses (DV = criminal intentionality, DV = intention attribution) are coded as one claim (same mediator, same mechanism). A second coder might fold mediation into the intentionality row as an analysis path rather than a distinct claim; it is coded separately here because the original reported it as a finding in its own right (the RRR intro: 'Mediation analyses indicated that imperfective aspect resulted in higher intentionality ratings because it promoted more detailed processing'). Neither candidate coder proposed a mediation row. Knepp lab excluded from meta-mediation (identical detailed-processing means).",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "mturk:intentionality",
+      "original_reference": "Hart & Albarracín (2011)",
+      "original_url": "",
+      "original_title": "Learning about what others were doing: Verb aspect and attributions of mundane and criminal intent for past actions",
+      "original_authors": "Hart, William; Albarracín, D.",
+      "original_year": "2011",
+      "original_journal": "Psychological Science",
+      "replication_study": "Online MTurk study (Eerland, Sherrill, Magliano, Zwaan; reported separately, not in the meta-analysis)",
+      "outcome": "Perceived intentionality: criminal intentionality and intention attribution",
+      "contrast": "imperfective vs perfective aspect version of the vignette",
+      "timepoint": "not applicable: single-session between-subjects experiment",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Hart & Albarracín (2011) Experiment 3 reported that describing a perpetrator's criminal actions in imperfective rather than perfective aspect led participants to judge the actions as more intentional.",
+      "citation_sentence": "The top row in each plot shows the original effect reported by Hart and Albarracín, and the row below that shows the effect found in the online MTurk variant of the study.",
+      "evidence": "Fig. 1 (p. 163): ONLINE criminal intentionality difference -0.33 [-0.62, -0.04]; Fig. 3 (p. 165): intention attribution 0.02 [-0.12, 0.16]. Text p. 163-164: \"8 of the 11 lab studies as well as the MTurk study found (nonsignificant) effects that were numerically in the opposite direction of the original finding\"; p. 165: \"the results of the MTurk study closely matched the outcomes of the meta-analyses.\"",
+      "gt_ambiguity": "clear",
+      "notes": "The MTurk criminal-intentionality CI excludes zero in the opposite direction, but the authors call it nonsignificant and never describe a reversal, and intention attribution was null, so reversal criteria are not met; coded failure. Replication type: the abstract counts it among '12 direct replication studies', so direct by the authors'-characterization tiebreaker; the codebook's online/different-population example would make it close extension (online, MTurk adults without the undergraduate age/gender restrictions). Separate N (130 per condition).",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "mturk:detailed_processing",
+      "original_reference": "Hart & Albarracín (2011)",
+      "original_url": "",
+      "original_title": "Learning about what others were doing: Verb aspect and attributions of mundane and criminal intent for past actions",
+      "original_authors": "Hart, William; Albarracín, D.",
+      "original_year": "2011",
+      "original_journal": "Psychological Science",
+      "replication_study": "Online MTurk study (Eerland, Sherrill, Magliano, Zwaan; reported separately, not in the meta-analysis)",
+      "outcome": "Detailed processing (imagery) of the described criminal acts",
+      "contrast": "imperfective vs perfective aspect version of the vignette",
+      "timepoint": "not applicable: single-session between-subjects experiment",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Hart & Albarracín (2011) Experiment 3 reported that criminal actions described in imperfective aspect were processed in greater detail than the same actions described in perfective aspect.",
+      "citation_sentence": "The top row in each plot shows the original effect reported by Hart and Albarracín, and the row below that shows the effect found in the online MTurk variant of the study.",
+      "evidence": "Fig. 2 (p. 164): ONLINE detailed processing difference -0.13 [-0.36, 0.10]. Discussion p. 166: \"with eight lab studies and the MTurk study observing effects that were numerically in the opposite direction of the original study.\"",
+      "gt_ambiguity": "clear",
+      "notes": "Same replication-type caveat as mturk:intentionality (direct per authors vs close extension per online/population change).",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "mturk:mediation",
+      "original_reference": "Hart & Albarracín (2011)",
+      "original_url": "",
+      "original_title": "Learning about what others were doing: Verb aspect and attributions of mundane and criminal intent for past actions",
+      "original_authors": "Hart, William; Albarracín, D.",
+      "original_year": "2011",
+      "original_journal": "Psychological Science",
+      "replication_study": "Online MTurk study (Eerland, Sherrill, Magliano, Zwaan; reported separately, not in the meta-mediation)",
+      "outcome": "Indirect effect of aspect on criminal intentionality and intention attribution via detailed processing",
+      "contrast": "imperfective vs perfective aspect, indirect path through detailed processing",
+      "timepoint": "not applicable: single-session between-subjects experiment",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Hart & Albarracín (2011) Experiment 3 reported that detailed processing mediated the effect of imperfective aspect on criminal intentionality and on intention attribution.",
+      "citation_sentence": "The top row in each plot shows the original effect reported by Hart and Albarracín, and the row below that shows the effect found in the online MTurk variant of the study.",
+      "evidence": "Mediation effects, p. 166: \"Again, the MTurk study found comparable results.\" Discussion: \"none of the replication studies found that detailed processing mediated the relation between grammatical aspect and intentionality.\"",
+      "gt_ambiguity": "clear",
+      "notes": "MTurk mediation estimates are not given individually in the text (only that all estimates including MTurk fell within -0.15 to 0.31 and -0.11 to 0.24, and that MTurk results were comparable to the null meta-mediation). Same enumeration caveat as rrr_labs:mediation and same replication-type caveat as mturk:intentionality.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "kurby_kibbe_followup:intentionality",
+      "original_reference": "Hart & Albarracín (2011)",
+      "original_url": "",
+      "original_title": "Learning about what others were doing: Verb aspect and attributions of mundane and criminal intent for past actions",
+      "original_authors": "Hart, William; Albarracín, D.",
+      "original_year": "2011",
+      "original_journal": "Psychological Science",
+      "replication_study": "Additional direct replication (Kurby & Kibbe paper-and-pencil follow-up with the original, unaltered vignette; not preregistered)",
+      "outcome": "Perceived intentionality: criminal intentionality and intention attribution",
+      "contrast": "imperfective vs perfective aspect, original unaltered vignette",
+      "timepoint": "not applicable: single-session between-subjects experiment",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Hart & Albarracín (2011) Experiment 3 reported that describing a perpetrator's criminal actions in imperfective rather than perfective aspect led participants to judge the actions as more intentional.",
+      "citation_sentence": "In the Kurby and Kibbe study, participants read the original, unaltered vignette used by Hart and Albarracín (2011, see Appendix A), and they also had access to the vignette while making their ratings.",
+      "evidence": "Additional direct replication, p. 166: \"The results of this direct replication showed an effect of grammatical aspect on criminal intentionality close to zero, t(42) = 0.154, p = .879\"; intention attribution \"t(42) = 0.921, p = .362 ... small and in the opposite direction of those observed in the original study.\"",
+      "gt_ambiguity": "clear",
+      "notes": "Separate sample from the Kurby/Kibbe RRR lab study; run to test whether the vignette wording change explained the null. Authors call it a 'direct replication'. Paper-and-pencil format with vignette visible during ratings.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "kurby_kibbe_followup:detailed_processing",
+      "original_reference": "Hart & Albarracín (2011)",
+      "original_url": "",
+      "original_title": "Learning about what others were doing: Verb aspect and attributions of mundane and criminal intent for past actions",
+      "original_authors": "Hart, William; Albarracín, D.",
+      "original_year": "2011",
+      "original_journal": "Psychological Science",
+      "replication_study": "Additional direct replication (Kurby & Kibbe paper-and-pencil follow-up with the original, unaltered vignette; not preregistered)",
+      "outcome": "Detailed processing (imagery) of the described criminal acts",
+      "contrast": "imperfective vs perfective aspect, original unaltered vignette",
+      "timepoint": "not applicable: single-session between-subjects experiment",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Hart & Albarracín (2011) Experiment 3 reported that criminal actions described in imperfective aspect were processed in greater detail than the same actions described in perfective aspect.",
+      "citation_sentence": "In the Kurby and Kibbe study, participants read the original, unaltered vignette used by Hart and Albarracín (2011, see Appendix A), and they also had access to the vignette while making their ratings.",
+      "evidence": "Additional direct replication, p. 166: \"The effects on grammatical aspect on detailed processing, t(42) = 1.093, p = .281, Cohen's d = 0.33 ... were small and in the opposite direction of those observed in the original study.\"",
+      "gt_ambiguity": "clear",
+      "notes": "Nonsignificant, opposite direction; not described as a reversal.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "kurby_kibbe_followup:mediation",
+      "original_reference": "Hart & Albarracín (2011)",
+      "original_url": "",
+      "original_title": "Learning about what others were doing: Verb aspect and attributions of mundane and criminal intent for past actions",
+      "original_authors": "Hart, William; Albarracín, D.",
+      "original_year": "2011",
+      "original_journal": "Psychological Science",
+      "replication_study": "Additional direct replication (Kurby & Kibbe paper-and-pencil follow-up with the original, unaltered vignette; not preregistered)",
+      "outcome": "Indirect effect of aspect on criminal intentionality and intention attribution via detailed processing",
+      "contrast": "imperfective vs perfective aspect, indirect path through detailed processing",
+      "timepoint": "not applicable: single-session between-subjects experiment",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Hart & Albarracín (2011) Experiment 3 reported that detailed processing mediated the effect of imperfective aspect on criminal intentionality and on intention attribution.",
+      "citation_sentence": "In the Kurby and Kibbe study, participants read the original, unaltered vignette used by Hart and Albarracín (2011, see Appendix A), and they also had access to the vignette while making their ratings.",
+      "evidence": "Additional direct replication, p. 166: \"The mediation analyses (10,000 bootstrap samples using PROCESS) showed that detailed processing did not mediate the relation between grammatical aspect and criminal intentionality ... or intention attribution\".",
+      "gt_ambiguity": "clear",
+      "notes": "Same enumeration caveat as rrr_labs:mediation (mediation may be folded into the intentionality claim by another coder).",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.1177--1745691615605826#ling26:752050bb7f80177a:1": {
+      "action": "map",
+      "effect_ids": [
+        "rrr_labs:intentionality"
+      ],
+      "reason": "One of the 11 in-lab RRR replications, criminal-intentionality claim; coded at the pooled multilab level (the authors classify only the meta-analytic result), so this per-lab row maps to the pooled entry. Result failure agrees."
+    },
+    "ling26:10.1177--1745691615605826#ling26:752050bb7f80177a:2": {
+      "action": "map",
+      "effect_ids": [
+        "rrr_labs:intentionality"
+      ],
+      "reason": "Per-lab criminal-intentionality row from the 11-lab RRR; subsumed by the pooled entry. Result failure agrees."
+    },
+    "ling26:10.1177--1745691615605826#ling26:752050bb7f80177a:3": {
+      "action": "map",
+      "effect_ids": [
+        "rrr_labs:intentionality"
+      ],
+      "reason": "Per-lab criminal-intentionality row from the 11-lab RRR; subsumed by the pooled entry. Result failure agrees."
+    },
+    "ling26:10.1177--1745691615605826#ling26:752050bb7f80177a:4": {
+      "action": "map",
+      "effect_ids": [
+        "rrr_labs:intentionality"
+      ],
+      "reason": "Per-lab criminal-intentionality row from the 11-lab RRR; subsumed by the pooled entry. Result failure agrees."
+    },
+    "ling26:10.1177--1745691615605826#ling26:752050bb7f80177a:5": {
+      "action": "map",
+      "effect_ids": [
+        "rrr_labs:intentionality"
+      ],
+      "reason": "Per-lab criminal-intentionality row from the 11-lab RRR; subsumed by the pooled entry. Result failure agrees."
+    },
+    "ling26:10.1177--1745691615605826#ling26:752050bb7f80177a:6": {
+      "action": "map",
+      "effect_ids": [
+        "rrr_labs:intentionality"
+      ],
+      "reason": "Knepp lab (Fig. 1: -0.95 [-1.58, -0.32], a raw mean difference, not d as the candidate says); per-lab row subsumed by the pooled RRR entry. Opposite-direction effect not described by authors as a reversal, so failure agrees."
+    },
+    "ling26:10.1177--1745691615605826#ling26:752050bb7f80177a:7": {
+      "action": "map",
+      "effect_ids": [
+        "rrr_labs:intentionality"
+      ],
+      "reason": "Per-lab criminal-intentionality row from the 11-lab RRR; subsumed by the pooled entry. Result failure agrees."
+    },
+    "ling26:10.1177--1745691615605826#ling26:752050bb7f80177a:8": {
+      "action": "map",
+      "effect_ids": [
+        "rrr_labs:intentionality"
+      ],
+      "reason": "Per-lab criminal-intentionality row from the 11-lab RRR; subsumed by the pooled entry. Result failure agrees."
+    },
+    "ling26:10.1177--1745691615605826#ling26:752050bb7f80177a:9": {
+      "action": "map",
+      "effect_ids": [
+        "rrr_labs:intentionality"
+      ],
+      "reason": "Berger lab (Fig. 1: -0.98 [-1.72, -0.24], a raw mean difference); per-lab row subsumed by the pooled RRR entry. Not described by authors as a reversal, so failure agrees."
+    },
+    "ling26:10.1177--1745691615605826#ling26:752050bb7f80177a:10": {
+      "action": "map",
+      "effect_ids": [
+        "rrr_labs:intentionality"
+      ],
+      "reason": "Per-lab criminal-intentionality row from the 11-lab RRR; subsumed by the pooled entry. Result failure agrees."
+    },
+    "ling26:10.1177--1745691615605826#ling26:752050bb7f80177a:11": {
+      "action": "map",
+      "effect_ids": [
+        "rrr_labs:intentionality"
+      ],
+      "reason": "Per-lab criminal-intentionality row from the 11-lab RRR; subsumed by the pooled entry. Result failure agrees."
+    },
+    "ling26:10.1177--1745691615605826#ling26:752050bb7f80177a:12": {
+      "action": "map",
+      "effect_ids": [
+        "mturk:intentionality"
+      ],
+      "reason": "Online MTurk study, criminal intentionality; same study and claim. Note its CI (-0.33 [-0.62, -0.04]) excludes zero, though authors call it nonsignificant; failure agrees."
+    },
+    "ling26:10.1177--1745691615605826#ling26:752050bb7f80177a:13": {
+      "action": "map",
+      "effect_ids": [
+        "kurby_kibbe_followup:intentionality"
+      ],
+      "reason": "Kurby & Kibbe paper-and-pencil follow-up with the unaltered vignette, criminal intentionality; same study and claim. Failure agrees."
+    },
+    "luna56:10.1177--1745691615605826#luna56:803ad31ab03a7f79:1": {
+      "action": "map",
+      "effect_ids": [
+        "rrr_labs:intentionality",
+        "mturk:intentionality",
+        "kurby_kibbe_followup:intentionality"
+      ],
+      "reason": "Criminal-intentionality claim described across the aggregate RRR (labs + MTurk) and the follow-up; spans the three studies' intentionality entries. Failure agrees."
+    },
+    "luna56:10.1177--1745691615605826#luna56:44d61c2459b481eb:1": {
+      "action": "map",
+      "effect_ids": [
+        "rrr_labs:detailed_processing",
+        "mturk:detailed_processing",
+        "kurby_kibbe_followup:detailed_processing"
+      ],
+      "reason": "Detailed-processing/imagery claim described across the aggregate RRR and the follow-up; spans the three studies' detailed-processing entries. Failure agrees."
+    },
+    "luna56:10.1177--1745691615605826#luna56:1cbe5128cede1eee:1": {
+      "action": "map",
+      "effect_ids": [
+        "rrr_labs:intentionality",
+        "mturk:intentionality",
+        "kurby_kibbe_followup:intentionality"
+      ],
+      "reason": "Intention-attribution measure; coded here as a second measure of the single perceived-intentionality claim (the abstract and Discussion group criminal intentionality and intention attribution as 'intentionality'), so it maps to the intentionality entries rather than a separate row. Failure agrees."
+    }
+  },
+  "revision_notes": "No changes to eligibility, enumeration or labels. The candidates raised two unit-of-coding questions, both already recorded in the pass-1 notes: per-lab rows (ling26) vs the pooled multilab entry kept here, and a separate intention-attribution row (luna56) vs the merged intentionality claim kept here. Re-checking Figs. 1-3 and the Discussion did not change either call, because every alternative granularity also yields failure. The rrr_labs:mediation notes now mention that neither coder proposed a mediation row, and per-lab values were added to the rrr_labs:intentionality notes.",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 2.467,
+  "adjudication_session": "6e8faa57-ba94-4fbf-b395-c49b1867b0d5"
 }

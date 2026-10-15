@@ -1,13 +1,68 @@
 {
   "packet_sha256": "16674f33ed7482541e6570eedd11317d47fa87099b5e9832b6f72c5a62e4083d",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "negative",
+  "eligibility_reason": "Reanalysis of the same data: the paper uses BHW's own dataset for 'the 334 Prussian counties that existed in 1849' (Sec. 2, p. 3), reproduces Becker, Hornung and Woessmann (2011) exactly ('I was able to reproduce the BHW results exactly', p. 4), then re-specifies the models (province dummies, year-of-annexation interactions, general-to-specific selection) on those same observations. No new sample or data are collected, so under the codebook's 'reanalysis or reproducibility check of the same data' genre there is no qualifying entry, despite the title 'A replication of ...'.",
+  "sources_checked": true,
+  "enumeration_complete": true,
   "effects": [],
-  "candidate_resolutions": {}
+  "candidate_resolutions": {
+    "ling26:10.5018--economics-ejournal.ja.2018-3#ling26:04aa99d78fab51c8:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper is a reanalysis of BHW's own 334-county dataset (exact reproduction plus re-specification), not a replication with new data; codebook negative genre. 1849 total-industrialisation re-estimate is not a qualifying entry."
+    },
+    "ling26:10.5018--economics-ejournal.ja.2018-3#ling26:fe2bd1d9ab410c1b:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Same-data reanalysis (BHW dataset); the 1849-82 re-estimate is not a replication with new data."
+    },
+    "luna56:10.5018--economics-ejournal.ja.2018-3#luna56:9cbd61bed54f3445:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Same-data reanalysis (BHW dataset); first-phase total-industrialisation re-estimate is not a qualifying entry."
+    },
+    "luna56:10.5018--economics-ejournal.ja.2018-3#luna56:c731fbfc508dc778:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Same-data reanalysis; first-phase metal-sector re-estimate on the same counties is not a qualifying entry (would also be a sector sub-split of the same claim)."
+    },
+    "luna56:10.5018--economics-ejournal.ja.2018-3#luna56:e6860485d7312a97:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Same-data reanalysis; first-phase textile-sector re-estimate is not a qualifying entry. Also, BHW reported no positive textile effect ('not in textiles'), so the described claim misstates the original."
+    },
+    "luna56:10.5018--economics-ejournal.ja.2018-3#luna56:6786d7061bb3241b:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Same-data reanalysis; second-phase (1849-82) metal-sector re-estimate on BHW's data is not a qualifying entry."
+    },
+    "luna56:10.5018--economics-ejournal.ja.2018-3#luna56:727ee3ca818e59f1:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Same-data reanalysis; first-phase non-metal non-textile sector re-estimate on BHW's data is not a qualifying entry."
+    },
+    "luna56:10.5018--economics-ejournal.ja.2018-3#luna56:bed554d386173bd5:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Same-data reanalysis; second-phase (1849-82) total-industrialisation re-estimate is not a qualifying entry."
+    },
+    "luna56:10.5018--economics-ejournal.ja.2018-3#luna56:409221fa21062c51:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Same-data reanalysis; second-phase textile re-estimate is not a qualifying entry, and BHW claimed no positive textile effect."
+    },
+    "luna56:10.5018--economics-ejournal.ja.2018-3#luna56:9b45c52a2dffe228:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Same-data reanalysis; second-phase non-metal non-textile re-estimate on BHW's data is not a qualifying entry."
+    }
+  },
+  "revision_notes": "No change from pass 1. Re-checked PDF pp. 3-5 (Sec. 2 'The BHW analysis', Table 1 'Reproduction of BHW's main results'): the analysis uses BHW's 334-county dataset and only adds covariates (province membership from the ifo Prussian Economic History Database) for the same observations. All 10 candidates assume a replication with new data and are rejected. Ambiguity flagged: a coder who counts any published-claim re-test as a replication would code roughly 2 entries (1849 total and 1849-82 total; sector splits are sub-measures of BHW's single education-industrialisation claim).",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 1.35,
+  "adjudication_session": "71f34f24-c8b5-4fe8-a55a-52a04f3976c4"
 }

@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Simpson, Vondrová & Žalská (2018) Sources of shifts in pre-service teachers' patterns of attention: the roles of teaching experience and of observational experience",
+   "doi": "10.1007/s10857-017-9370-6"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Cited as [24] (Sherin & van Es, JTE 60(1), 2009; online 2008, so the year variant is benign) as a seminal video-club study and an example of increased interpretation; the paper's design and replication comparison are anchored on Simpson et al. (2018), not on this practising-teacher video club study."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The intervention 'was designed to closely mirror the approach in' [25], used its coding manual and individual-level analysis, and the discussion treats the study as a divergent replication of Simpson et al. (2018), noting its similar sample and design, after failing to reproduce the shift in pre-service teachers' attention."
+  }
+ },
+ "notes": "Self-described 'divergent replication' (title); the authors say it was not designed as a replication but should be considered one. The finding tested (video interventions shift pre-service teachers' professional vision toward students, subject matter and specifics, away from evaluation) is attributed to Simpson et al. (2018) and, more loosely, to the Sherin/van Es literature it builds on. A second coder might also count van Es & Sherin (2010) or Sherin & van Es (2009) as originals, but the paper names Simpson et al. (2018) as the design it closely followed. Star et al. (2011)/Star & Strickland (2008) appear only as an example of an earlier replication in the field."
+}

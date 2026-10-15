@@ -1,0 +1,9 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "Sofer, Dotsch, Wigboldus & Todorov (2014, Psychological Science) is an original research article: three new experiments testing a new hypothesis that distance from the typical face lowers perceived trustworthiness. Nowhere does it present any study as a replication of a prior published finding. Experiments 2 and 3 replicate Experiment 1 within the same paper, which the codebook excludes.",
+  "enumeration_complete": true,
+  "why_negative": "No qualifying entry: original (non-replication) research; the only replication is within the paper (Experiments 2-3 extend and check Experiment 1), and agreement with prior attractiveness findings is incidental, not a framed replication.",
+  "gt_ambiguity": "clear",
+  "notes": "The word 'replicate' never appears. The closest is p.5 (Exp. 2): 'The predicted location of the attractiveness peak is in line with the results of DeBruine et al. (2007), who found that perceived attractiveness reached its maximum at a DFT of 150%'. The transformation procedure was 'adopted from previous studies (e.g., DeBruine et al., 2007; ...)'. The attractiveness trend is a secondary contrast and is described as consistent with that study, not tested as a replication of it; it also does not reproduce DeBruine's peak at 150%, which lies outside the range tested here. A generous coder might code a conceptual replication of DeBruine et al. (2007) for the attractiveness-increases-past-the-typical-face finding. I judge that reading unsupported by how the authors frame the study.",
+  "effects": []
+}

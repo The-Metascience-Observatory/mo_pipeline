@@ -1,0 +1,26 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Sharf, Kimonis & Howard (2014) Negative life events and posttraumatic stress disorder among incarcerated boys with callous-unemotional traits",
+   "doi": "10.1007/s10862-013-9404-z"
+  },
+  {
+   "reference": "Kimonis, Fanti, Isoma & Donoghue (2013b) Maltreatment profiles among incarcerated boys with callous-unemotional traits",
+   "doi": "10.1177/1077559513483002"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Sharf et al. (2014) is one of the two citations for the finding that the secondary CU variant shows more PTSS, which the paper says it 'aims to replicate' (abstract and the PTSS section); aim 3 tests it, and the discussion says the result is consistent with Sharf et al."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Kimonis et al. (2013b) is the LPA study whose design (CU traits, anxiety, maltreatment types) and findings (secondary variant had more sexual abuse, primary had more neglect, primary had higher unemotional traits) aim 1 and aim 2 test 'consistent with' it. The discussion reports the neglect finding as not replicated and the unemotional finding as partly replicated. This is a conceptual replication in an undergraduate sample."
+  }
+ },
+ "notes": "The explicit replication statement for PTSS cites 'Kimonis et al., 2013a; Sharf et al., 2014'. In the PDF, 2013a is Kimonis, Branch et al. (2013), the ICU psychometric study in undergraduates (10.1037/a0029024), which the paper uses only to validate the instrument. That PTSS citation is probably a mislabel for 2013b. Candidate B is less explicitly framed as a replication than A: it is the source of the hypotheses for aims 1 and 2, and the paper compares its results with it point by point. If a stricter reading allows only the explicitly named replication, B would be cited_not_replicated."
+}

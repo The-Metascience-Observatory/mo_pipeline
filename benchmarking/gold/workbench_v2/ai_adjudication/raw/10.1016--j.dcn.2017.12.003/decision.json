@@ -1,0 +1,41 @@
+{
+  "eligibility": "positive",
+  "eligibility_reason": "With 37 new 5-to-8-month-old infants, the paper replicates Lloyd-Fox et al. (2009, Experiment 2), which found that social dynamic stimuli evoke larger posterior-temporal HbO responses than non-social dynamic stimuli. The authors state 'We thus replicated the findings of Lloyd-Fox et al.'s study (2009)'. The Negative Affect correlation is a new extension, not a replication.",
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "s1:social_vs_nonsocial_posterior_temporal",
+      "original_reference": "Lloyd-Fox et al. (2009)",
+      "original_url": "https://doi.org/10.1111/j.1467-8624.2009.01312.x",
+      "original_title": "Social perception in infancy: a near infrared spectroscopy study",
+      "original_authors": "Lloyd-Fox, S.; Blasi, A.; Volein, A.; Everdell, N.; Elwell, C. E.; Johnson, M. H.",
+      "original_year": "2009",
+      "original_journal": "Child Development",
+      "replication_study": "single study (replicating Lloyd-Fox et al., 2009, Experiment 2)",
+      "outcome": "HbO concentration change in posterior temporal cortex (fNIRS)",
+      "contrast": "social dynamic vs non-social dynamic video stimuli",
+      "timepoint": "not applicable: single-session measurement (peak HbO 10-25 s after stimulus onset)",
+      "result": "success",
+      "replication_type": "close extension",
+      "description": "Five-month-old infants show larger blood-oxygenation (HbO) increases in bilateral posterior temporal cortex to social dynamic stimuli (actor's eye/mouth/hand movements) than to non-social dynamic stimuli (moving machinery and toys).",
+      "citation_sentence": "In the present study, we aim to replicate the results of Lloyd-Fox et al. (2009) and investigate the impact of infant Negative Affect (as measured by parental questionnaire) on the early cortical specialization for processing social dynamic stimuli. To this end, we used a similar fNIRS paradigm and the same stimuli as used previously by Lloyd-Fox et al. (2009, Experiment 2).",
+      "evidence": "Discussion (section 4): 'we indeed found more activation in the social dynamic compared to the non-social dynamic condition, indicated by significantly larger HbO increase in the posterior temporal region in the social dynamic condition. We thus replicated the findings of Lloyd-Fox et al.'s study (2009).' Results 3.2: 'a significant difference in HbO concentration between the conditions in channel 18 over the right posterior temporal region (t = 3.15, df = 17, p = 0.006)'. Abstract: 'Our results replicate those of Lloyd-Fox et al.'",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Result: the authors explicitly claim the replication succeeded, so it is coded success. A second coder could choose inconclusive: the original effect was bilateral, but here the social > non-social HbO difference was significant in only 1 of 8 posterior channels (right channel 18), the left hemisphere showed none, and the HbR contrast showed no channel difference (Table 1). The authors acknowledge the right-only effect but do not treat it as undermining the replication. Replication type: the stimuli are identical, the optode placement is equivalent and the procedure 'closely followed' the original, but the age range was deliberately widened from 5 months to 5-8 months (stated aim: test whether specialization is stable across these ages) and a different apparatus was used (NIRx NIRScout). Coded close extension for the population change. The authors never use the term 'direct replication'. Both AI candidates chose direct, which is a plausible alternative given the near-identical procedure; I keep close extension because widening the age range was an explicit generalization aim. The Negative Affect correlation and the age-stability analysis are new hypotheses and get no entry. Lloyd-Fox 2011/2013/2014/2016 and Farroni 2013 are cited as consistent prior work, not replicated. Original authors and year come from the reference list, which gives initials only. The DOI is from the reference list.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.1016--j.dcn.2017.12.003#ling26:1f8ef58097805e15:1": {
+      "action": "map",
+      "effect_ids": ["s1:social_vs_nonsocial_posterior_temporal"],
+      "reason": "Same original (Lloyd-Fox et al. 2009, same DOI) and same claim: social vs non-social posterior-temporal differential response. Result agrees (success). Its replication_type (direct) differs from mine (close extension, for the widened 5-8-month age range)."
+    },
+    "luna56:10.1016--j.dcn.2017.12.003#luna56:08566c8b8c8e75cd:1": {
+      "action": "map",
+      "effect_ids": ["s1:social_vs_nonsocial_posterior_temporal"],
+      "reason": "Same original (Lloyd-Fox et al. 2009, same DOI) and same claim: greater posterior temporal activation to social than non-social dynamic stimuli. Result agrees (success). Its replication_type (direct) differs from mine (close extension)."
+    }
+  },
+  "revision_notes": "No label changes from pass 1. I added a note on the direct-vs-close-extension disagreement with both candidates."
+}

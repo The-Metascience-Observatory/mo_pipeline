@@ -1,0 +1,26 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Kassam-Adams, Marsac & Cirilli (2010) Posttraumatic stress disorder symptom structure in injured children: Functional impairment and depression symptoms in a confirmatory factor analysis",
+   "doi": "10.1016/j.jaac.2010.03.003"
+  },
+  {
+   "reference": "Foa, Johnson, Feeny & Treadwell (2001) The Child PTSD Symptom Scale: A preliminary examination of its psychometric properties (Journal of Clinical Child Psychology)",
+   "doi": "10.1207/S15374424JCCP3003_9"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Table S5 is titled 'Replication of Models of PTSD Symptom Structure Tested by Kassam-Adams et al. (2010) on the CPSS'. On a new sample (N=185) it re-tests the same CFA models, nested-model comparisons and item-drop analysis, and compares its results with theirs (DSM-IV model fit worse; the other patterns were similar)."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": true,
+   "reason": "The paper's title is 'The Child PTSD Symptom Scale: An update and replication of its psychometric properties', so the original is Foa et al. (2001), the CPSS validation study. This candidate's DOI is the PsycTESTS instrument record (10.1037/t05147-000), not the 2001 journal article, so it is a variant of the right work."
+  }
+ },
+ "notes": "source/ holds only the online supplement (body.md, abstract.md and the PDF are all the supplement); the main article text and reference list are missing. The Kassam-Adams replication is explicit in the supplement. The Foa et al. (2001) replication is inferred from the title, which names the CPSS psychometric properties being replicated (reliability, convergent and discriminant validity, cut-offs); the main text could not be checked to confirm it. The Foa 2001 DOI given above comes from background knowledge, not from the source."
+}

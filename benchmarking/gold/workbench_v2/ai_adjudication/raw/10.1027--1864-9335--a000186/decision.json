@@ -1,0 +1,72 @@
+{
+  "eligibility": "positive",
+  "eligibility_reason": "The paper reports two preregistered direct replications with new participants (N = 208 and N = 126) of Experiments 1 and 2 of Schnall, Benton, and Harvey (2008), a separately published study, with results reported for both.",
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "e1:cleanliness_prime_moral_judgment",
+      "original_reference": "Schnall, Benton, & Harvey (2008), Experiment 1",
+      "original_url": "",
+      "original_title": "With a clean conscience: Cleanliness reduces the severity of moral judgments",
+      "original_authors": "Schnall, S.; Benton, J.; Harvey, S.",
+      "original_year": "2008",
+      "original_journal": "Psychological Science",
+      "replication_study": "Experiment 1",
+      "outcome": "Severity of moral judgments (composite wrongness rating across six moral vignettes; individual vignettes also analysed)",
+      "contrast": "cleanliness-related scrambled-sentence prime vs neutral-word prime",
+      "timepoint": "not applicable: single-session experiment with immediate ratings",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Experiment 1 of SBH: participants primed with cleanliness via a scrambled-sentences task rated moral vignettes as less wrong than participants primed with neutral words.",
+      "citation_sentence": "Schnall, Benton, et al. (2008; hereafter SBH) conducted two studies and found that participants primed with cleanliness rated moral vignettes as less wrong than participants in control conditions. ... The goal of the present research was to replicate the results of SBH.",
+      "evidence": "Exp. 1 Results/Discussion and Table 1: \"We did not find statistically significant effects for the overall composite, F(1, 206) = 0.004, p = .95, d = -0.01, 95% CI [-.28, .26].\" Discussion: \"We found no evidence that participants primed with cleanliness judged morally questionable actions as less wrong than participants primed with neutral words.\" Evaluation section: \"would be considered an informative failure to replicate (Simonsohn, 2013).\"",
+      "gt_ambiguity": "clear",
+      "notes": "Original DOI not given in the paper or references.json (reference lists only Psychological Science, 19, 1219-1222), so original_url left blank; the paper gives only author initials (Schnall S, Benton J, Harvey S), recorded as such. Authors call it a direct replication (title: 'A Direct Replication of Schnall, Benton, and Harvey (2008)'; 'procedure was identical'); deviations are US vs UK student sample and an added PBC scale at the end, which authors judge immaterial. The original Exp. 1 composite was itself only p = .064 (only the kitten vignette significant), but SBH reported it as support for the effect. The PBC moderation hypothesis is the replicators' own extension (derived from Schnall, Haidt et al., 2008), not a claim of SBH, so no entry. Self-reported emotions not differing by condition is a manipulation-side check, not coded.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "e2:handwashing_moral_judgment",
+      "original_reference": "Schnall, Benton, & Harvey (2008), Experiment 2",
+      "original_url": "",
+      "original_title": "With a clean conscience: Cleanliness reduces the severity of moral judgments",
+      "original_authors": "Schnall, S.; Benton, J.; Harvey, S.",
+      "original_year": "2008",
+      "original_journal": "Psychological Science",
+      "replication_study": "Experiment 2",
+      "outcome": "Severity of moral judgments (composite wrongness rating across six moral vignettes; individual vignettes incl. trolley and wallet also analysed)",
+      "contrast": "hand-washing vs no hand-washing after watching a disgusting film clip",
+      "timepoint": "not applicable: single-session experiment with immediate ratings",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Experiment 2 of SBH: after exposure to a disgusting video, participants who washed their hands rated moral vignettes as less wrong than participants who did not wash their hands.",
+      "citation_sentence": "In support of this idea, they found that individuals make less severe judgments when they are primed with the concept of cleanliness (Exp. 1) and when they wash their hands after experiencing disgust (Exp. 2). We conducted direct replications of both studies using materials supplied by the original authors.",
+      "evidence": "Exp. 2 Results and Table 2: \"We did not find statistically significant effects for the overall composite, F(1, 124) = 0.001, p = .97, d = 0.01, 95% CI [-.34, .36].\" Discussion: \"We found no evidence that hand-washing after experiencing disgust led participants to judge moral vignettes differently than participants who did not wash their hands.\" Evaluation: \"is significantly smaller than d33%, p = .004 ... and is also considered an informative failure to replicate.\"",
+      "gt_ambiguity": "clear",
+      "notes": "Citation sentence taken from the abstract (the body text's opening sentence naming Schnall, Benton, et al. (2008) is garbled in body.md but visible on PDF p. 209); the General Discussion sentence 'These reasons motivated our replication studies of the two experiments reported in Schnall, Benton, and colleagues (2008).' is an equally valid citation sentence. Original DOI not stated in the paper, left blank; only author initials given in the paper. Deviations: sink located outside the room where vignettes were completed (authors argue it should not weaken the manipulation), US vs UK sample, added PBC scale; authors still call it a direct replication with 'nearly identical procedures', so direct. PBC moderation is the replicators' extension, no entry. A commentary (Schnall, 2014) and rejoinder dispute these results (ceiling effects), but the paper's own conclusion is a failure to replicate.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.1027--1864-9335--a000186#ling26:fd20dc90c6ad1c32:1": {
+      "action": "map",
+      "effect_ids": ["e2:handwashing_moral_judgment"],
+      "reason": "Hand-washing after disgust reduces moral-judgment severity = SBH Experiment 2 replication; failure/direct labels agree."
+    },
+    "ling26:10.1027--1864-9335--a000186#ling26:ee9df26bf0ff41ea:1": {
+      "action": "map",
+      "effect_ids": ["e1:cleanliness_prime_moral_judgment"],
+      "reason": "Cleanliness-word priming reduces moral-judgment severity = SBH Experiment 1 replication; failure/direct labels agree."
+    },
+    "luna56:10.1027--1864-9335--a000186#luna56:e2f7496fd5486d00:1": {
+      "action": "map",
+      "effect_ids": ["e1:cleanliness_prime_moral_judgment"],
+      "reason": "Explicitly Experiment 1 (cleanliness priming); failure/direct labels agree."
+    },
+    "luna56:10.1027--1864-9335--a000186#luna56:80d75b3a45394aaf:1": {
+      "action": "map",
+      "effect_ids": ["e2:handwashing_moral_judgment"],
+      "reason": "Explicitly Experiment 2 (hand-washing after disgust); failure/direct labels agree."
+    }
+  },
+  "revision_notes": ""
+}

@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Wulff, Ellis, Römer, Bardovi-Harlig & Leblanc (2009) The acquisition of tense-aspect: Converging evidence from corpora and telicity ratings",
+   "doi": "10.1111/j.1540-4781.2009.00895.x"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "Gries & Wulff (2009) on L2 constructions does not appear in the reference list or text; the only Gries works cited are the coll.analysis script and Gries & Stefanowitsch (2004)."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The abstract states 'The present study aims to replicate these findings' of [48] Wulff et al. (2009) that L1 corpus frequency and distinctiveness predict L2 tense-aspect production; the conclusion says Wulff et al.'s (2009) conclusion generalizes to L2 Spanish writing."
+  }
+ },
+ "notes": "Conceptual/extension replication: same predictors (L1 token frequency, distinctiveness via DCA) tested in L2 Spanish preterit-imperfect writing corpora (COWS-L2H, CEDEL2) rather than L2 English oral film retells. LAH/DPTH tests are hypothesis tests, not replications of a single original study."
+}

@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Schwitzgebel & Rust (2014) The moral behavior of ethics professors: Relationships among self-reported behavior, expressed normative attitude, and directly observed behavior. Philosophical Psychology 27",
+   "doi": "10.1080/09515089.2012.727135"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Reference [34]; the paper states it 'conducted a replication attempt of Schwitzgebel and Rust's seminal study' (2014) in German-speaking countries, re-running its survey on normative attitudes, self-reported behavior and attitude-behavior consistency."
+  },
+  "B": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "This 2014 book chapter (Rust & Schwitzgebel, Advances in Experimental Moral Psychology) is not in the reference list; the only 2014 Schwitzgebel/Rust work cited and replicated is the Philosophical Psychology article."
+  }
+ },
+ "notes": "The authors describe the study as a replication-extension (close survey replication, but conceptual overall because it collected no observational data). The other Schwitzgebel/Rust works cited (2009 peer opinion, 2010 voting, 2013 student emails, the self-reported behavior manuscript) and Schwitzgebel & Cushman are background only."
+}

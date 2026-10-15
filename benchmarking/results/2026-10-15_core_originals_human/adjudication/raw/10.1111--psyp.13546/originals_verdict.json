@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Morriss, Macdonald & van Reekum (2016a) What is going on around here? Intolerance of uncertainty predicts threat generalization",
+   "doi": "10.1371/journal.pone.0154494"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The paper states 'we attempted a three-lab direct and conceptual replication of Morriss and colleagues' (2016a) original results' (IU and threat generalization, uneasiness ratings and SCR); the Reading lab ran the direct replication and McGill and Texas A&M ran conceptual replications."
+  },
+  "B": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Morriss, Christakou & van Reekum (2016b, fear extinction) is cited only as background evidence that IU modulates threat generalization and responses to generalized stimuli; it is not the study being replicated."
+  }
+ },
+ "notes": "There is one original study, tested at three sites: a direct replication (same lab, same paradigm) and two conceptual replications that add ERP/LPP measures. Nelson et al. (2015) is cited as a contrasting finding and was not replicated."
+}

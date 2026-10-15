@@ -1,0 +1,6 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "Reanalysis genre: the paper re-examines the same 1980 Mariel Boatlift event with the same Current Population Survey data (May/ORG and March CPS) used by Card (1990) and Borjas (2017), applying the synthetic control method; it reproduces Borjas's estimates ('The first column shows our replication of exactly the regressions performed by Borjas') and re-tests Angrist and Krueger's (1999) 1994 non-event on the same CPS data, so no new participants or new data test any prior finding. Ambiguous: a second coder could code it positive as a methods-based confirmation of Card (1990) ('In essence our results confirm the early findings of Card (1990)'), because it extends the CPS window (1972-91, 43 donor cities) beyond Card's sample, but the post-1979 observations that test the claim are the same survey data Card analysed.",
+  "enumeration_complete": true,
+  "effects": []
+}

@@ -1,0 +1,140 @@
+{
+  "eligibility": "positive",
+  "eligibility_reason": "A new 6-month prospective study (N=85 at baseline, 64 at follow-up) explicitly 'aimed to replicate previous prospective studies' (Brewin et al., 1999; Brewin et al., 1998) on whether intrusion and avoidance of intrusive memories predict later depression and anxiety, and the Discussion judges each finding against those originals.",
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "s1:brewin1999_intrusion_avoidance_depression",
+      "original_reference": "Brewin, Reynolds, & Tata (1999)",
+      "original_url": "",
+      "original_title": "Autobiographical memory processes and the course of depression",
+      "original_authors": "Brewin, C. R.; Reynolds, M.; Tata, P.",
+      "original_year": "1999",
+      "original_journal": "Journal of Abnormal Psychology",
+      "replication_study": "single study",
+      "outcome": "Follow-up depression (BDI-II at 6 months), controlling for baseline depression",
+      "contrast": "baseline degree of intrusion (IES-I) and avoidance (IES-A) of the intrusive memory as predictors, over and above baseline BDI-II",
+      "timepoint": "6-month follow-up",
+      "result": "inconclusive",
+      "replication_type": "close extension",
+      "description": "In clinically depressed patients, the degree of intrusion and avoidance of intrusive memories of stressful events at baseline predicted depression symptoms 6 months later, even after controlling for baseline depression.",
+      "citation_sentence": "In a prospective study of clinically depressed individuals depression symptoms at 6-month follow-up were predicted by the degree of intrusiveness (intrusion) and avoidance of intrusive memories of stressful life events at initial interview, even after controlling for baseline depression levels (Brewin, Reynolds, & Tata, 1999). ... We aimed to replicate previous prospective studies and examine whether intrusion and avoidance of intrusive memories predict depression and anxiety over a 6-month period.",
+      "evidence": "Discussion, p. 543: \"For untreated participants, controlling for initial levels of depression, baseline levels of intrusion (but not avoidance) predicted follow-up depression. These results partially replicated Brewin et al.'s (1999) finding that both intrusion and avoidance predicted later depression\". Results p. 541: total sample IES-I beta = -.06, p > .05; IES-A beta = -.39, p < .001 (opposite direction). p. 542: untreated IES-I beta = .35, p < .05; IES-A p > .05. p. 544: \"the absence of a relationship between avoidance and depression for the untreated sample was also inconsistent with previous findings (Brewin et al., 1999)\".",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Coded as one entry because the replication authors treat 'intrusion and avoidance predicted later depression' as one Brewin et al. (1999) finding and explicitly call it 'partially replicated'. Alternative split into two rows: intrusion (null in total sample, significant in untreated subgroup -> inconclusive or success) and avoidance (significant in the OPPOSITE direction in the total sample, attributed by the authors to treatment; null in untreated -> failure, arguably reversal for the total sample). Population differs (mixed community sample, incl. never-depressed/recovered/depressed, vs clinically depressed patients) -> close extension. No DOI given in the paper.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:brewin1999_distress_null",
+      "original_reference": "Brewin et al. (1999)",
+      "original_url": "",
+      "original_title": "Autobiographical memory processes and the course of depression",
+      "original_authors": "Brewin, C. R.; Reynolds, M.; Tata, P.",
+      "original_year": "1999",
+      "original_journal": "Journal of Abnormal Psychology",
+      "replication_study": "single study",
+      "outcome": "Follow-up depression (BDI-II at 6 months), controlling for baseline depression",
+      "contrast": "baseline intrusion-related distress rating as predictor over and above baseline BDI-II",
+      "timepoint": "6-month follow-up",
+      "result": "failure",
+      "replication_type": "close extension",
+      "description": "Intrusion-related distress at baseline did not predict depression prospectively (an original null finding).",
+      "citation_sentence": "Brewin et al. (1999) found that intrusion-related distress was not predictive of depression prospectively; a result that requires replication.",
+      "evidence": "Discussion, p. 543: \"For untreated participants, intrusion-related distress and emotional intensity ... predicted depressive symptoms at follow-up. The significant finding for distress departs from the results of Brewin et al. (1999).\" Results p. 542 (untreated): distress among predictors accounting for 6.6%-13.8% unique variance, p < .05.",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Original claim is a null; replication found a significant effect (untreated subsample) and the authors say it 'departs from' Brewin et al. (1999) -> failure under the codebook's null-claim rule. Ambiguity: in the total sample (n=52 with a memory) distress did NOT predict follow-up BDI-II (only anger did), which agrees with the original null; and in the partial-correlation check controlling IES, distress only approached significance (r = .34, p = .075). A second coder could code inconclusive. No candidate proposed this entry; kept because the Introduction explicitly flags this null as 'a result that requires replication' and the Discussion judges it against the original.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:brewin1999_presence_null",
+      "original_reference": "Brewin et al. (1999)",
+      "original_url": "",
+      "original_title": "Autobiographical memory processes and the course of depression",
+      "original_authors": "Brewin, C. R.; Reynolds, M.; Tata, P.",
+      "original_year": "1999",
+      "original_journal": "Journal of Abnormal Psychology",
+      "replication_study": "single study",
+      "outcome": "Follow-up depression (BDI-II at 6 months), controlling for baseline depression",
+      "contrast": "presence vs absence of a recent intrusive memory at baseline",
+      "timepoint": "6-month follow-up",
+      "result": "success",
+      "replication_type": "close extension",
+      "description": "The mere presence (occurrence) of intrusive memories at baseline is a poor predictor of later depression.",
+      "citation_sentence": "These results provide growing support for the notion that memory occurrence alone is a poor predictor of both depression (Brewin et al., 1999) and PTSD (Michael et al., 2005).",
+      "evidence": "Discussion, p. 543: \"The presence of intrusive memories at baseline did not predict depression or anxiety at follow-up. These results provide growing support for the notion that memory occurrence alone is a poor predictor of both depression (Brewin et al., 1999)\". Results p. 541: presence beta = -.12, p > .05 (total); p. 542 untreated beta = .06, p > .05.",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Result itself is clear (null in total and untreated samples, framed as consistent with the original). Ambiguity is about inclusion: the paper never states outright that Brewin et al. (1999) tested presence as a finding, except via the abstract ('Two prospective studies have investigated whether the presence, intrusion, and avoidance ... predict depression') and this Discussion citation. A coder could treat this as supportive citation rather than a replicated claim and omit the row; no candidate proposed it.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:brewin1998_intrusion_avoidance_depression_null",
+      "original_reference": "Brewin, Watson, McCarthy, Hyman, & Dayson (1998)",
+      "original_url": "",
+      "original_title": "Memory processes and the course of anxiety and depression in cancer patients",
+      "original_authors": "Brewin, C. R.; Watson, M.; McCarthy, S.; Hyman, P.; Dayson, D.",
+      "original_year": "1998",
+      "original_journal": "Psychological Medicine",
+      "replication_study": "single study",
+      "outcome": "Follow-up depression (BDI-II at 6 months), controlling for baseline depression",
+      "contrast": "baseline intrusion (IES-I) and avoidance (IES-A) as predictors over and above baseline depression",
+      "timepoint": "6-month follow-up",
+      "result": "failure",
+      "replication_type": "close extension",
+      "description": "In cancer patients, after controlling for baseline depression, intrusion and avoidance of intrusive memories did not predict depression symptoms at 6-month follow-up (an original null finding).",
+      "citation_sentence": "In another prospective study of depressed and nondepressed cancer patients (Brewin, Watson, McCarthy, Hyman, & Dayson, 1998) higher levels of intrusion of memories at baseline were positively associated with depression 6 months later. However, after controlling for baseline depression, intrusion and avoidance did not predict depression symptoms at follow-up.",
+      "evidence": "Discussion, p. 543: \"These results partially replicated Brewin et al.'s (1999) finding that both intrusion and avoidance predicted later depression, yet are inconsistent with Brewin et al. (1998)'s finding that intrusion and avoidance were not predictive.\" Results: total sample IES-A beta = -.39, p < .001; untreated IES-I beta = .35, p < .05.",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Original null claim; the replication found significant prediction (avoidance in the total sample, in the opposite direction to theory; intrusion in the untreated subsample) and the authors explicitly call it 'inconsistent with' Brewin et al. (1998) -> failure per the null-claim rule. Ambiguity: intrusion was null in the total sample and avoidance null in the untreated sample, each agreeing with the original null; a candidate coder chose inconclusive on this reading. Kept failure because the authors' explicit statement is 'inconsistent with' and the codebook prioritizes it. Population differs (community vs cancer patients) -> close extension.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:brewin1998_intrusion_avoidance_anxiety",
+      "original_reference": "Brewin et al. (1998)",
+      "original_url": "",
+      "original_title": "Memory processes and the course of anxiety and depression in cancer patients",
+      "original_authors": "Brewin, C. R.; Watson, M.; McCarthy, S.; Hyman, P.; Dayson, D.",
+      "original_year": "1998",
+      "original_journal": "Psychological Medicine",
+      "replication_study": "single study",
+      "outcome": "Follow-up anxiety (BAI at 6 months), controlling for baseline anxiety",
+      "contrast": "baseline intrusion (IES-I) and avoidance (IES-A) as predictors over and above baseline BAI",
+      "timepoint": "6-month follow-up",
+      "result": "failure",
+      "replication_type": "close extension",
+      "description": "In cancer patients, the extent of intrusion and avoidance of intrusive memories predicted anxiety at 6-month follow-up, controlling for baseline anxiety and stage of illness.",
+      "citation_sentence": "Although our primary aim was to measure the prediction of depression, we included a measure of anxiety in order to explore the generalisability of the findings of Brewin et al. (1998), and to rule out the possibility that any findings relevant to the prediction of depression could not simply be accounted for by co-morbid anxiety symptoms.",
+      "evidence": "Discussion, p. 544: \"Interestingly, across the total sample, intrusion and avoidance of memories at baseline did not predict follow-up anxiety; this pattern of results was also found for untreated participants. Again these findings differed from those of Brewin et al. (1998) who found that intrusion and avoidance predicted follow-up anxiety\". Results p. 542: IES-I beta = -.12, p > .05; IES-A beta = .16, p > .05.",
+      "gt_ambiguity": "clear",
+      "notes": "Null in both total and untreated samples; authors frame as differing from the original and discuss methodological differences (anxiety measure, cancer vs community sample, definition of intrusive memory). Different anxiety measure and population -> close extension.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.1080--09658211.2011.590505#ling26:44b62e39b41adc4b:1": {
+      "action": "map",
+      "effect_ids": ["s1:brewin1998_intrusion_avoidance_depression_null"],
+      "reason": "Same claim: Brewin et al. (1998) null finding that intrusion/avoidance did not predict 6-month depression after controlling baseline. Candidate labels it inconclusive; I keep failure because the authors explicitly call the results 'inconsistent with' this finding (entry marked ambiguous)."
+    },
+    "ling26:10.1080--09658211.2011.590505#ling26:972652efcfe94b0b:1": {
+      "action": "map",
+      "effect_ids": ["s1:brewin1998_intrusion_avoidance_anxiety"],
+      "reason": "Same claim: Brewin et al. (1998) intrusion and avoidance predicted follow-up anxiety; not replicated (p. 544)."
+    },
+    "ling26:10.1080--09658211.2011.590505#ling26:ff10c2604badd6f1:1": {
+      "action": "map",
+      "effect_ids": ["s1:brewin1999_intrusion_avoidance_depression"],
+      "reason": "Same claim: Brewin et al. (1999) intrusion and avoidance predicted 6-month depression; 'partially replicated' -> inconclusive."
+    },
+    "luna56:10.1080--09658211.2011.590505#luna56:dd3f6b4ba99045b1:1": {
+      "action": "map",
+      "effect_ids": ["s1:brewin1998_intrusion_avoidance_anxiety", "s1:brewin1998_intrusion_avoidance_depression_null"],
+      "reason": "Candidate merges the two Brewin et al. (1998) findings (anxiety predicted; depression not predicted after controlling baseline) into one row; these are distinct claims of the original with different directions, so it maps to both entries. Its description ('predict depression and anxiety') misstates the original's depression finding, which was a null after controlling baseline."
+    },
+    "luna56:10.1080--09658211.2011.590505#luna56:808d3f94d3e0a493:1": {
+      "action": "map",
+      "effect_ids": ["s1:brewin1999_intrusion_avoidance_depression"],
+      "reason": "Same claim: Brewin et al. (1999) intrusion and avoidance predicted 6-month depression; authors say 'partially replicated' -> inconclusive."
+    }
+  },
+  "revision_notes": "No label or enumeration changes from pass 1. Candidates covered 3 of my 5 entries; re-checked the source for the two uncovered ones (Brewin 1999 distress null, Brewin 1999 presence null) and kept them, as both are explicitly judged against Brewin et al. (1999) in the paper (pp. 539, 543); both are flagged ambiguous for inclusion/label. Considered the candidate's inconclusive label for the Brewin 1998 depression null and kept failure per the authors' explicit 'inconsistent with' statement."
+}

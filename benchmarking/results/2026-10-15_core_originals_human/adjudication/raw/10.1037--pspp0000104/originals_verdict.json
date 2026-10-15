@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Gebauer, Sedikides, & Neberich (2012) Religiosity, social self-esteem, and psychological adjustment: On the cross-cultural specificity of the psychological benefits of religiosity",
+   "doi": "10.1177/0956797611427045"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The paper names Gebauer, Sedikides & Neberich (2012) as the source of the religiosity-as-social-value hypothesis (RASV) and reports three studies that replicate and extend its finding: the religiosity-self-esteem relation is stronger in religious countries (\"Our results fully and firmly replicated and extended prior evidence\")."
+  },
+  "B": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "The Introduction cites Gebauer, Wagner, Sedikides & Neberich (2013) only as background evidence for the psychological centrality principle outside the religiosity domain. No study re-tests its agency-communion findings."
+  }
+ },
+ "notes": "This is a self-replication by the original RASV authors with new collaborators. It uses independent datasets (OOS online data, informant reports, urban areas) and argues the replication is independent of the original research. Its broader target is the cross-cultural literature on religious adjustment benefits (e.g., Diener et al. 2011; Stavrova et al. 2013), but the hypothesis it explicitly replicates comes from Gebauer et al. (2012)."
+}

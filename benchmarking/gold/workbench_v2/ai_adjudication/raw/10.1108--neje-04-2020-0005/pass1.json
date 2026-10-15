@@ -1,0 +1,47 @@
+{
+  "eligibility": "positive",
+  "eligibility_reason": "The paper describes itself as 'a systematic replication of the Morris study' (Morris et al., 2013b). It collects new pre/post data with the Morris Competency Instrument from two new student cohorts (Fall 2016 and Fall 2017) to test whether an entrepreneurship program raises self-reported entrepreneurial competencies.",
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "c1:competency_gain",
+      "original_reference": "Morris et al. (2013b)",
+      "original_url": "https://doi.org/10.1111/jsbm.12023",
+      "original_title": "A competency-based perspective on entrepreneurship education: conceptual and empirical insights",
+      "original_authors": "Morris, Michael; Webb, J.; Fu, J.; Singhal, S.",
+      "original_year": "2013",
+      "original_journal": "Journal of Small Business Management",
+      "replication_study": "First cohort (Fall 2016; ENTR100 treatment n=28-30 matched vs FINC100 control n=27)",
+      "outcome": "Self-reported entrepreneurial competencies on the 13 Morris Competency Instrument scales (plus the all-items average)",
+      "contrast": "Post- vs pre-program scores within students in an entrepreneurship program (the replication adds a treatment-vs-control interaction against a Financial Literacy class)",
+      "timepoint": "End of the semester-long course (pre in week 2, post in final week)",
+      "result": "inconclusive",
+      "replication_type": "conceptual",
+      "description": "Students exposed to an entrepreneurship program (an international consulting experience in South Africa) showed significant pre-to-post increases in self-reported entrepreneurial competencies, significant for 9 of 13 competencies.",
+      "citation_sentence": "Design/methodology/approach -The study is a systematic replication of the Morris study with the addition of a matched pair, quasi-experimental design, with a self-replication. | We sought to enhance the methods of the original study through a systematic/conceptual replication rather than a reproduction, recognizing that there is a continuum of replication options [62].",
+      "evidence": "Results, p. 89 and Table 6: \"In the first cohort, competencies increased in five areas and declined in one area in the entrepreneurship class, with an overall increase in average competency from the start of the semester to the end. However, the finance class also saw an increase in two areas and a decline in two areas. Overall, the predicted interaction effect occurred in three of the 13 competencies.\" Discussion, p. 91: \"The results from the current sample show only very limited support for this hypothesis.\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "One claim of the original: competencies increase after an entrepreneurship program. The original reported 13 competency scales as measures of that claim (no per-competency hypotheses, which this paper stresses), so the scales form one entry, not 13. Cohort 1 is mixed. The ENTR group rose significantly on 5/13 scales and the all-items average (0.12*), but the treatment x time interaction held for only 3/13 (plus all items). The paper's overall wording, 'only very limited support', maps to inconclusive. A coder judging only the original's pre/post contrast, with no control group, could call this success, since the ENTR average rose significantly. Replication type: the authors call it a 'systematic/conceptual replication' and say it is 'not a direct replication'. It uses the same instrument and the same pre/post design, but the intervention is a classroom course instead of international field consulting, with a different population (HBCU freshmen) and an added control group. Close extension is a plausible alternative; I followed the authors' own word. Entries could also be split differently: a second coder might code one pooled entry (Table 7's repeated-measures model over both cohorts found no class x time interaction) and treat cohort 2 as a within-paper replication of cohort 1. Original author full names other than 'Michael Morris' are not given in the text, so initials from references.json are used. DOI is from references.json."
+    },
+    {
+      "effect_id": "c2:competency_gain",
+      "original_reference": "Morris et al. (2013b)",
+      "original_url": "https://doi.org/10.1111/jsbm.12023",
+      "original_title": "A competency-based perspective on entrepreneurship education: conceptual and empirical insights",
+      "original_authors": "Morris, Michael; Webb, J.; Fu, J.; Singhal, S.",
+      "original_year": "2013",
+      "original_journal": "Journal of Small Business Management",
+      "replication_study": "Second cohort (Fall 2017; ENTR100 treatment n=30 matched vs FINC100 control n=23)",
+      "outcome": "Self-reported entrepreneurial competencies on the 13 Morris Competency Instrument scales (plus the all-items average)",
+      "contrast": "Post- vs pre-program scores within students in an entrepreneurship program (the replication adds a treatment-vs-control interaction against a Financial Literacy class)",
+      "timepoint": "End of the semester-long course (pre in week 2, post in final week)",
+      "result": "failure",
+      "replication_type": "conceptual",
+      "description": "Students exposed to an entrepreneurship program (an international consulting experience in South Africa) showed significant pre-to-post increases in self-reported entrepreneurial competencies, significant for 9 of 13 competencies.",
+      "citation_sentence": "Design/methodology/approach -The study is a systematic replication of the Morris study with the addition of a matched pair, quasi-experimental design, with a self-replication. | The process was then repeated with a different cohort, one year later, to replicate the initial study.",
+      "evidence": "Results, pp. 89-90 and Table 6: \"However, the desired interaction effect was present for only one competency that was not one of the initial three significant interactions. Instead, both classes saw an increase in average competency.\" Discussion, p. 91: \"The results basically indicated that we were unable to reliably increase any of the 13 competencies in the classroom.\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Same single original claim as c1. In cohort 2 the ENTR group again rose on the all-items average (0.11*) and on several scales, but the FINC control rose just as much (0.12*). The treatment x time interaction held only for resource leveraging, a scale the paper reports as unreliable (alpha 0.11). The authors frame this as a 'failure to replicate the significant interaction effects in the first cohort' and conclude they were 'unable to reliably increase any of the 13 competencies', so I coded failure. Inconclusive is a plausible alternative because the original's bare pre/post increase did recur in the treatment group, and the paper's overall wording is 'very limited support'. The pooled Table 7 model (both cohorts) found a significant time effect for both classes but no class x time interaction. The authors describe cohort 2 as an in-study replication of cohort 1, but it applies the same Morris-based design to new participants, so it also tests the Morris claim. A coder applying the within-paper exclusion strictly would drop this entry. See c1 notes on replication type."
+    }
+  ]
+}

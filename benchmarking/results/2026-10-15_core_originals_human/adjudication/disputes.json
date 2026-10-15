@@ -1,0 +1,1249 @@
+[
+ {
+  "paper_folder": "10.1002--ajcp.12385",
+  "replication_doi": "10.1002/ajcp.12385",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1001/archpediatrics.2010.124",
+    "title": "Impact of a mentoring and skills group program on mental health outcomes for maltreated children in foster care",
+    "authors": "Heather N. Taussig; Sara E. Culhane",
+    "year": "2010",
+    "journal": "Archives of Pediatrics and Adolescent Medicine",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1080/15374416.2017.1295379",
+    "title": "The moderating effect of risk exposure on an efficacious intervention for maltreated children",
+    "authors": "Weiler, Lindsey; Taussig, Heather N.",
+    "year": "2017",
+    "journal": "Journal of Clinical Child and Adolescent Psychology",
+    "letter": "B"
+   },
+   {
+    "side": "human",
+    "doi": "10.1037/e522512014-027",
+    "title": "Fostering Healthy Futures: A Randomized Controlled Trial of an Intervention for Preadolescent Youth in Out-of-Home Care",
+    "authors": "Taussig, Heather",
+    "year": 2012,
+    "journal": "PsycEXTRA Dataset",
+    "letter": "C"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1002--aur.1474",
+  "replication_doi": "10.1002/aur.1474",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1007/s10803-012-1719-1",
+    "title": "Standardizing ADOS Domain Scores: Separating Severity of Social Affect and Restricted and Repetitive Behaviors",
+    "authors": "Hus, Vanessa; Gotham, Katherine; Lord, Catherine",
+    "year": 2012,
+    "journal": "Journal of Autism and Developmental Disorders",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1007/s10803-014-2080-3",
+    "title": "The Autism Diagnostic Observation Schedule, Module 4: Revised Algorithm and Standardized Severity Scores",
+    "authors": "Hus, Vanessa; Lord, Catherine",
+    "year": "2014",
+    "journal": "Journal of Autism and Developmental Disorders",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1002--cpp.70057",
+  "replication_doi": "10.1002/cpp.70057",
+  "sets": "main_gt_fred_api",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1080/10503307.2012.731088",
+    "title": "Alliance in action: A new measure of clients' perceptions of therapists' alliance activity",
+    "authors": "Owen, Jesse; Reese, Robert J; Quirk, Kelley; Rodolfa, Emil",
+    "year": 2013,
+    "journal": "Psychotherapy Research",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1002/cpp.1802",
+    "title": "Interaction among alliance, psychodynamic-interpersonal and cognitive-behavioural techniques in the prediction of post-session change",
+    "authors": "Owen, Jesse; Hilsenroth, Mark J.; Rodolfa, Emil",
+    "year": "2013",
+    "journal": "Clinical Psychology & Psychotherapy",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1002--npr2.70078",
+  "replication_doi": "10.1002/npr2.70078",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1002/npr2.70010",
+    "title": "Proposal for a novel classification of patients with enlarged ventricles and cognitive impairment based on data-driven analysis of neuroimaging results in patients with psychiatric disorders",
+    "authors": "Yuka Yasuda; Satsuki Ito; Junya Matsumoto; Naohiro Okada; Toshiaki Onitsuka; Masashi Ikeda; Itaru Kushima; Chika Sumiyoshi; Masaki Fukunaga; Kiyotaka Nemoto; Kenichiro Miura; Naoki Hashimoto; Kazutaka Ohi; Tsutomu Takahashi; Daiki Sasabayashi; Michihiko Koeda; Hidenaga Yamamori; Michiko Fujimoto; Harumasa Takano; Naomi Hasegawa; Hisashi Narita; Maeri Yamamoto; Khin Khin Tha; Masataka Kikuchi; Toshiharu Kamishikiryo; Eri Itai; Yoshiro Okubo; Amane Tateno; Motoaki Nakamura; Manabu Kubota; Hiroyuki Igarashi; Yoji Hirano; Go Okada; Jun Miyata; Shusuke Numata; Osamu Abe; Reiji Yoshimura; Shin Nakagawa; Hidenori Yamasue; Norio Ozaki; Kiyoto Kasai; Ryota Hashimoto",
+    "year": "2025",
+    "journal": "Neuropsychopharmacology Reports",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1002/npr2.70058",
+    "title": "Correction to “Clinical Characteristics of Patients With Enlarged Ventricles and Cognitive Impairment (\n                    <scp>EVCI</scp>\n                    ): Case Series”",
+    "authors": "",
+    "year": 2025,
+    "journal": "Neuropsychopharmacology Reports",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1007--s10899-020-09932-7",
+  "replication_doi": "10.1007/s10899-020-09932-7",
+  "sets": "main_gt_fred_api",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "",
+    "title": "",
+    "authors": "Stange, Madison; Graydon, Candice; Dixon, Mike J.",
+    "year": "2017",
+    "journal": "",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1007/s10899-016-9662-2",
+    "title": "Increased Urge to Gamble Following Near-Miss Outcomes May Drive Purchasing Behaviour in Scratch Card Gambling",
+    "authors": "Stange, Madison; Graydon, Candice; Dixon, Mike J.",
+    "year": 2016,
+    "journal": "Journal of Gambling Studies",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1007--s11409-020-09235-7",
+  "replication_doi": "10.1007/s11409-020-09235-7",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1037/0022-0663.95.1.66",
+    "title": "Accuracy of metacognitive monitoring affects learning of texts",
+    "authors": "Thiede, Keith W.; Anderson, Mary C. M.; Therriault, David",
+    "year": "2003",
+    "journal": "Journal of Educational Psychology",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1037/0278-7393.31.6.1267",
+    "title": "Understanding the Delayed-Keyword Effect on Metacomprehension Accuracy.",
+    "authors": "Thiede, Keith W.; Dunlosky, John; Griffin, Thomas D.; Wiley, Jennifer",
+    "year": 2005,
+    "journal": "Journal of Experimental Psychology: Learning, Memory, and Cognition",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1007--s12186-012-9090-0",
+  "replication_doi": "10.1007/s12186-012-9090-0",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1080/13639080.2011.573776",
+    "title": "Engagement in learning after errors at work: enabling conditions and types of engagement",
+    "authors": "Johannes Bauer; Regina H. Mulder",
+    "year": "2011",
+    "journal": "Journal of Education and Work",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1007/978-90-481-3941-5_10",
+    "title": "Human Fallibility and Learning from Errors at Work",
+    "authors": "Bauer, Johannes; Gartmeier, Martin; Harteis, Christian",
+    "year": 2012,
+    "journal": "Professional and Practice-based Learning",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1007--s40732-024-00597-x",
+  "replication_doi": "10.1007/s40732-024-00597-x",
+  "sets": "main_gt_fred_api",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1002/jeab.432",
+    "title": "Impulsive choice and pre‐exposure to delays: iv. effects of delay‐ and immediacy‐exposure training relative to maturational changes in impulsivity",
+    "authors": "Renee Renda, C.; Rung, Jillian M.; Hinnenkamp, Jay E.; Lenzini, Stephanie N.; Madden, Gregory J.",
+    "year": 2018,
+    "journal": "Journal of the Experimental Analysis of Behavior",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1002/jeab.727",
+    "title": "Effects of immediate-reinforcement training on delay discounting behavior in rats",
+    "authors": "Fox, Adam E.",
+    "year": "2022",
+    "journal": "Journal of the Experimental Analysis of Behavior",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1016--j.sbspro.2015.09.054",
+  "replication_doi": "10.1016/j.sbspro.2015.09.054",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1016/0272-7358(94)90002-7",
+    "title": "Review of the evidence for a sociocultural model of bulimia nervosa and an exploration of the mechanisms of action",
+    "authors": "Stice, Eric",
+    "year": 1994,
+    "journal": "Clinical Psychology Review",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1521/jscp.1994.13.3.288",
+    "title": "Adverse effects of the media portrayed thin-ideal on women and linkages to bulimic symptomatology",
+    "authors": "Stice, Eric; Shaw, Heather E.",
+    "year": "1994",
+    "journal": "Journal of Social and Clinical Psychology",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1017--s1930297500008184",
+  "replication_doi": "10.1017/s1930297500008184",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1177/0956797613482947",
+    "title": "Unit Asking",
+    "authors": "Hsee, Christopher K.; Zhang, Jiao; Lu, Zoe Y.; Xu, Fei",
+    "year": 2013,
+    "journal": "Psychological Science",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1177/0956797613480186",
+    "title": "Unit asking: A method to boost donation and beyond",
+    "authors": "Hsee, Christopher K.; Zhang, Jiao; Lu, Zoe Y.; Xu, Fei",
+    "year": "2013",
+    "journal": "Psychological Science",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1027--1864-9335--a000179",
+  "replication_doi": "10.1027/1864-9335/a000179",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1016/j.jesp.2011.05.017",
+    "title": "You're getting warmer: Level of construal affects the impact of central traits on impression formation",
+    "authors": "McCarthy, Randy; Skowronski, John",
+    "year": "2011",
+    "journal": "Journal of Experimental Social Psychology",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1037/h0055756",
+    "title": "Forming impressions of personality.",
+    "authors": "Asch, S. E.",
+    "year": 1946,
+    "journal": "The Journal of Abnormal and Social Psychology",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1037--a0029709",
+  "replication_doi": "10.1037/a0029709",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1037/e653412011-001",
+    "title": "Experimental Evidence for Retroactive Influences of Future Events on Current Cognitive and Affective Responses",
+    "authors": "Bem, Daryl",
+    "year": 2011,
+    "journal": "PsycEXTRA Dataset",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1037/a0021524",
+    "title": "Feeling the future: Experimental evidence for anomalous retroactive influences on cognition and affect",
+    "authors": "Bem, Daryl J.",
+    "year": "2011",
+    "journal": "Journal of Personality and Social Psychology",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1037--a0033324",
+  "replication_doi": "10.1037/a0033324",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1016/j.jaac.2010.03.003",
+    "title": "Posttraumatic stress disorder symptom structure in injured children: Functional impairment and depression symptoms in a confirmatory factor analysis",
+    "authors": "Kassam-Adams, Nancy; Marsac, Meghan L.; Cirilli, Carla",
+    "year": "2010",
+    "journal": "Journal of the American Academy of Child & Adolescent Psychiatry",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1037/t05147-000",
+    "title": "Children's PTSD Symptom Scale",
+    "authors": "Foa, Edna B.; Johnson, Kelly M.; Feeny, Norah C.; Treadwell, Kimberli R. H.",
+    "year": 2001,
+    "journal": "PsycTESTS Dataset",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1037--cou0000322",
+  "replication_doi": "10.1037/cou0000322",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1037/a0034943",
+    "title": "The association of therapist empathy and synchrony in vocally encoded arousal",
+    "authors": "Zac E. Imel; Jacqueline S. Barco; Halley J. Brown; Brian R. Baucom; John S. Baer; John C. Kircher; David C. Atkins",
+    "year": "2014",
+    "journal": "Journal of Counseling Psychology",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1037/a0036158",
+    "title": "Evaluating therapist adherence in motivational interviewing by comparing performance with standardized and real patients.",
+    "authors": "Imel, Zac E.; Baldwin, Scott A.; Baer, John S.; Hartzler, Bryan; Dunn, Chris; Rosengren, David B.",
+    "year": 2014,
+    "journal": "Journal of Consulting and Clinical Psychology",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1037--edu0000095",
+  "replication_doi": "10.1037/edu0000095",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.3102/0002831212439434",
+    "title": "Enhancing the interpretive reading and analytical writing of mainstreamed English learners in secondary school: Results from a randomized field trial using a cognitive strategies approach",
+    "authors": "Carol Booth Olson; James S. Kim; Robin Scarcella; Jason Kramer; Matthew Pearson; David A. van Dyk; Penny Collins; Robert E. Land",
+    "year": "2012",
+    "journal": "American Educational Research Journal",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.58680/rte20076014",
+    "title": "A Cognitive Strategies Approach to Reading and Writing Instruction for English Language Learners in Secondary School",
+    "authors": "Olson, Carol Booth; Land, Robert",
+    "year": 2007,
+    "journal": "Research in the Teaching of English",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1037--pspp0000104",
+  "replication_doi": "10.1037/pspp0000104",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1177/0956797611427045",
+    "title": "Religiosity, social self-esteem, and psychological adjustment: On the cross-cultural specificity of the psychological benefits of religiosity",
+    "authors": "Gebauer, Jochen E.; Sedikides, Constantine; Neberich, Wiebke",
+    "year": "2012",
+    "journal": "Psychological Science",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1111/j.1467-6494.2012.00807.x",
+    "title": "Agency‐Communion and Self‐Esteem Relations Are Moderated by Culture, Religiosity, Age, and Sex: Evidence for the “Self‐Centrality Breeds Self‐Enhancement” Principle",
+    "authors": "Gebauer, Jochen E.; Wagner, Jenny; Sedikides, Constantine; Neberich, Wiebke",
+    "year": 2013,
+    "journal": "Journal of Personality",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1038--s41598-018-35209-6",
+  "replication_doi": "10.1038/s41598-018-35209-6",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1016/j.neuroimage.2013.05.039",
+    "title": "Resting-state fMRI in the Human Connectome Project",
+    "authors": "Smith, Stephen M.; Beckmann, Christian F.; Andersson, Jesper; Auerbach, Edward J.; Bijsterbosch, Janine; Douaud, Gwenaëlle",
+    "year": 2013,
+    "journal": "NeuroImage",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1073/pnas.0905267106",
+    "title": "Correspondence of the brain's functional architecture during activation and rest",
+    "authors": "Smith, Stephen M.; Fox, Peter T.; Miller, Karla L.; Glahn, David C.; Fox, P. Mickle; Mackay, Clare E.; Filippini, Nicola; Watkins, Kate E.; Toro, Roberto; Laird, Angela R.; Beckmann, Christian F.",
+    "year": "2009",
+    "journal": "Proceedings of the National Academy of Sciences USA",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1038--s41598-020-66915-9",
+  "replication_doi": "10.1038/s41598-020-66915-9",
+  "sets": "main_gt_fred_api",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1016/j.earlhumdev.2015.04.011",
+    "title": "Digit ratio (2D:4D) and salivary testosterone, oestradiol and cortisol levels under challenge: Evidence for prenatal effects on adult endocrine responses",
+    "authors": "Blair Crewther; Christian Cook; Liam Kilduff; John Manning",
+    "year": "2015",
+    "journal": "Early Human Development",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1080/02640414.2012.747690",
+    "title": "Right-left digit ratio (2D:4D) predicts free testosterone levels associated with a physical challenge",
+    "authors": "Liam Kilduff; Christian J. Cook; Mark Bennett; Blair Crewther; Richard Michael Bracken; John Manning",
+    "year": "2013",
+    "journal": "Journal of Sports Sciences",
+    "letter": "B"
+   },
+   {
+    "side": "human",
+    "doi": "10.1093/humrep/13.11.3000",
+    "title": "The ratio of 2nd to 4th digit length: a predictor of sperm numbers and concentrations of testosterone, luteinizing hormone and oestrogen",
+    "authors": "Manning, J. T.; Scutt, D.; Wilson, J.; Lewis-Jones, D. I.",
+    "year": 1998,
+    "journal": "Human Reproduction",
+    "letter": "C"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1080--01973533.2020.1806845",
+  "replication_doi": "10.1080/01973533.2020.1806845",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1073/pnas.1524360113",
+    "title": "Teaching a lay theory before college narrows achievement gaps at scale",
+    "authors": "Yeager, David S.; Walton, Gregory M.; Brady, Shannon T.; Akcinar, Ebru N.; Paunesku, David; Keane, Laura; Kamentz, Donald; Ritter, Gretchen; Duckworth, Angela L.; Urstein, Ross; Gomez, Eric M.; Markus, Hazel R.; Cohen, Geoffrey L.; Dweck, Carol S.",
+    "year": "2016",
+    "journal": "Proceedings of the National Academy of Sciences",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1111/j.1467-8624.2007.00995.x",
+    "title": "Implicit Theories of Intelligence Predict Achievement Across an Adolescent Transition: A Longitudinal Study and an Intervention",
+    "authors": "Blackwell, Lisa S; Trzesniewski, Kali H; Dweck, Carol Sorich",
+    "year": 2007,
+    "journal": "Child Development",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1080--02607476.2019.1674563",
+  "replication_doi": "10.1080/02607476.2019.1674563",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1177/0022487108328155",
+    "title": "Effects of Video Club Participation on Teachers' Professional Vision",
+    "authors": "Gamoran Sherin, Miriam; van Es, Elizabeth A.",
+    "year": 2008,
+    "journal": "Journal of Teacher Education",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1007/s10857-017-9370-6",
+    "title": "Sources of shifts in pre-service teachers' patterns of attention: the roles of teaching experience and of observational experience",
+    "authors": "Simpson, Adrian; Vondrová, Naďa; Žalská, Jarmila",
+    "year": "2018",
+    "journal": "Journal of Mathematics Teacher Education",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1080--02699931.2018.1429389",
+  "replication_doi": "10.1080/02699931.2018.1429389",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1037/0022-3514.91.6.995",
+    "title": "Understanding implicit and explicit attitude change: A systems of reasoning analysis.",
+    "authors": "Rydell, Robert J.; McConnell, Allen R.",
+    "year": 2006,
+    "journal": "Journal of Personality and Social Psychology",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1111/j.1467-9280.2006.01811.x",
+    "title": "Of two minds: Forming and changing valence-inconsistent implicit and explicit attitudes",
+    "authors": "Rydell, Robert J.; McConnell, Allen R.; Mackie, Diane M.; Strain, Laura M.",
+    "year": "2006",
+    "journal": "Psychological Science",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1080--02732173.1991.9981978",
+  "replication_doi": "10.1080/02732173.1991.9981978",
+  "sets": "main_gt_fred_api",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.2307/2062478",
+    "title": "The enduring South: Subcultural persistence in mass society",
+    "authors": "Reed, John Shelton",
+    "year": "1972",
+    "journal": "Lexington, MA: Heath (book)",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1037/h0074049",
+    "title": "Racial stereotypes of one hundred college students.",
+    "authors": "Katz, D.; Braly, K.",
+    "year": 1933,
+    "journal": "The Journal of Abnormal and Social Psychology",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1080--08993408.2022.2079864",
+  "replication_doi": "10.1080/08993408.2022.2079864",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1016/j.chb.2016.08.047",
+    "title": "Which cognitive abilities underlie computational thinking? Criterion validity of the computational thinking test",
+    "authors": "Román-González, Marcos; Pérez-González, Juan-Carlos; Jiménez-Fernández, Carmen",
+    "year": "2017",
+    "journal": "Computers in Human Behavior",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1016/j.chb.2017.09.030",
+    "title": "Extending the nomological network of computational thinking with non-cognitive factors",
+    "authors": "Román-González, Marcos; Pérez-González, Juan-Carlos; Moreno-León, Jesús; Robles, Gregorio",
+    "year": 2018,
+    "journal": "Computers in Human Behavior",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1080--09515089.2014.893288",
+  "replication_doi": "10.1080/09515089.2014.893288",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1093/acprof:osobl/9780199927418.003.0013",
+    "title": "Gender and philosophical intuition",
+    "authors": "Buckwalter, Wesley; Stich, Stephen",
+    "year": "2014",
+    "journal": "Experimental Philosophy, Volume 2",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1093/oxfordhb/9780195309799.013.0022",
+    "title": "Experimental Philosophy",
+    "authors": "Knobe, Joshua",
+    "year": 2012,
+    "journal": "Oxford Handbooks Online",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1080--09515089.2019.1587912",
+  "replication_doi": "10.1080/09515089.2019.1587912",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1080/09515089.2012.727135",
+    "title": "The moral behavior of ethics professors: Relationships among self-reported behavior, expressed normative attitude, and directly observed behavior",
+    "authors": "Schwitzgebel, Eric; Rust, Joshua",
+    "year": "2014",
+    "journal": "Philosophical Psychology",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.5040/9781472594150.ch-005",
+    "title": "The Moral Behavior of Ethicists and the Power of Reason",
+    "authors": "Rust, Joshua; Schwitzgebel, Eric",
+    "year": 2014,
+    "journal": "Advances in Experimental Moral Psychology",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1080--10410236.2016.1140268",
+  "replication_doi": "10.1080/10410236.2016.1140268",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1207/s15506878jobem4801_3",
+    "title": "Complementarity in Consumption of News Types Across Traditional and New Media",
+    "authors": "Dutta-Bergman, Mohan J.",
+    "year": 2004,
+    "journal": "Journal of Broadcasting &amp; Electronic Media",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1080/10810730.2013.821558",
+    "title": "Media complementarity and health information seeking in Puerto Rico",
+    "authors": "Tian, Yan; Robinson, James D.",
+    "year": "2014",
+    "journal": "Journal of Health Communication",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1080--10503307.2011.598580",
+  "replication_doi": "10.1080/10503307.2011.598580",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1037/0022-006x.64.5.927",
+    "title": "Dose–effect relations in time-limited psychotherapy for depression.",
+    "authors": "Barkham, Michael; Rees, Anne; Stiles, William B.; Shapiro, David A.; Hardy, Gillian E.; Reynolds, Shirley",
+    "year": 1996,
+    "journal": "Journal of Consulting and Clinical Psychology",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1037/a0015235",
+    "title": "Rates of change in naturalistic psychotherapy: Contrasting dose-effect and good-enough level models of change",
+    "authors": "Baldwin, Scott A.; Berkeljon, Arjan; Atkins, David C.; Olsen, Joseph A.; Nielsen, Stevan L.",
+    "year": "2009",
+    "journal": "Journal of Consulting and Clinical Psychology",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1080--10926771.2022.2038753",
+  "replication_doi": "10.1080/10926771.2022.2038753",
+  "sets": "main_gt_fred_api",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1007/s10862-013-9404-z",
+    "title": "Negative life events and posttraumatic stress disorder among incarcerated boys with callous-unemotional traits",
+    "authors": "Sharf, Amy; Kimonis, Eva; Howard, Andrea",
+    "year": "2014",
+    "journal": "Journal of Psychopathology and Behavioral Assessment",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1177/1077559513483002",
+    "title": "Maltreatment Profiles Among Incarcerated Boys With Callous-Unemotional Traits",
+    "authors": "Kimonis, Eva R.; Fanti, Kostas A.; Isoma, Zachary; Donoghue, Kathleen",
+    "year": 2013,
+    "journal": "Child Maltreatment",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1080--20008198.2017.1315291",
+  "replication_doi": "10.1080/20008198.2017.1315291",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1016/j.nlm.2012.11.001",
+    "title": "Changing memories after reactivation: A one-time opportunity?",
+    "authors": "Wichert, Sven; Wolf, Oliver T.; Schwabe, Lars",
+    "year": "2013",
+    "journal": "Neurobiology of Learning and Memory",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1037/a0032028",
+    "title": "Updating of episodic memories depends on the strength of new learning after memory reactivation.",
+    "authors": "Wichert, Sonja; Wolf, Oliver T.; Schwabe, Lars",
+    "year": 2013,
+    "journal": "Behavioral Neuroscience",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1111--cdev.12774",
+  "replication_doi": "10.1111/cdev.12774",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1016/j.dcn.2015.09.007",
+    "title": "Toddlers’ dysregulated fear predicts delta–beta coupling during preschool",
+    "authors": "Phelps, Randi A.; Brooker, Rebecca J.; Buss, Kristin A.",
+    "year": 2016,
+    "journal": "Developmental Cognitive Neuroscience",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1037/a0023227",
+    "title": "Which fearful toddlers should we worry about? Context, fear regulation, and anxiety risk",
+    "authors": "Buss, Kristin A.",
+    "year": "2011",
+    "journal": "Developmental Psychology",
+    "letter": "B"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1080/15374416.2013.769170",
+    "title": "Dysregulated fear predicts social wariness and social anxiety symptoms during kindergarten",
+    "authors": "Buss, Kristin A.; Davis, Elizabeth L.; Kiel, Elizabeth J.; Brooker, Rebecca J.; Beekman, Charles; Early, Martha C.",
+    "year": "2013",
+    "journal": "Journal of Clinical Child and Adolescent Psychology",
+    "letter": "C"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1111--psyp.12825",
+  "replication_doi": "10.1111/psyp.12825",
+  "sets": "fred_v242",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1093/scan/nsw175",
+    "title": "Surface-based morphometry reveals the neuroanatomical basis of the five-factor model of personality",
+    "authors": "Riccelli, Roberta; Toschi, Nicola; Nigro, Salvatore; Terracciano, Antonio; Passamonti, Luca",
+    "year": 2017,
+    "journal": "Social Cognitive and Affective Neuroscience",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1111/psyp.12583",
+    "title": "Orienting versus inhibition in the Concealed Information Test: Different cognitive processes drive different physiological measures",
+    "authors": "Klein Selle, Nitzan; Verschuere, Bruno; Kindt, Merel; Meijer, Ewout; Ben-Shakhar, Gershon",
+    "year": "2016",
+    "journal": "Psychophysiology",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1111--psyp.13546",
+  "replication_doi": "10.1111/psyp.13546",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1371/journal.pone.0154494",
+    "title": "What is going on around here? Intolerance of uncertainty predicts threat generalization",
+    "authors": "Morriss, Jayne; Macdonald, Birthe; van Reekum, Carien M.",
+    "year": "2016",
+    "journal": "PLoS One",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1016/j.biopsycho.2016.05.001",
+    "title": "Nothing is safe: Intolerance of uncertainty is associated with compromised fear extinction learning",
+    "authors": "Morriss, Jayne; Christakou, Anastasia; van Reekum, Carien M.",
+    "year": 2016,
+    "journal": "Biological Psychology",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1167--iovs.14-15390",
+  "replication_doi": "10.1167/iovs.14-15390",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1371/journal.pone.0049083",
+    "title": "A common trinucleotide repeat expansion within the transcription factor 4 (TCF4, E2-2) gene predicts Fuchs corneal dystrophy",
+    "authors": "Eric D. Wieben; Ross A. Aleff; Nirubol Tosakulwong; Malinda L. Butz; W. Edward Highsmith; Albert O. Edwards; Keith H. Baratz",
+    "year": "2012",
+    "journal": "PLoS One",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1167/iovs.14-15390",
+    "title": "Transethnic Replication of Association of CTG18.1 Repeat Expansion of\n                    <i>TCF4</i>\n                    Gene With Fuchs' Corneal Dystrophy in Chinese Implies Common Causal Variant",
+    "authors": "Xing, Chao; Gong, Xin; Hussain, Imran; Khor, Chiea-Chuen; Tan, Donald T. H.; Aung, Tin",
+    "year": 2014,
+    "journal": "Investigative Opthalmology &amp; Visual Science",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1176--ps.62.4.pss6204_0367",
+  "replication_doi": "10.1176/ps.62.4.pss6204_0367",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1037/a0018915",
+    "title": "Cognitive behavioral guided self-help for the treatment of recurrent binge eating",
+    "authors": "Striegel-Moore, Ruth H.; Wilson, G. Terence; DeBar, Lynn; Perrin, Nancy; Lynch, Frances; Rosselli, Francine; Kraemer, Helena C.",
+    "year": "2010",
+    "journal": "Journal of Consulting and Clinical Psychology",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1016/j.biopsych.2006.03.040",
+    "title": "The Prevalence and Correlates of Eating Disorders in the National Comorbidity Survey Replication",
+    "authors": "Hudson, James I.; Hiripi, Eva; Pope, Harrison G.; Kessler, Ronald C.",
+    "year": 2007,
+    "journal": "Biological Psychiatry",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1177--0956797619831612",
+  "replication_doi": "10.1177/0956797619831612",
+  "sets": "fred_v242",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1111/1467-6494.t01-1-00094",
+    "title": "Spirituality: Description, Measurement, and Relation to the Five Factor Model of Personality",
+    "authors": "MacDonald, Douglas A.",
+    "year": 2000,
+    "journal": "Journal of Personality",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1146/annurev.psych.57.102904.190127",
+    "title": "Personality and the prediction of consequential outcomes",
+    "authors": "Daniel J. Ozer; Verónica Benet-Martínez",
+    "year": "2006",
+    "journal": "Annual Review of Psychology",
+    "letter": "B"
+   },
+   {
+    "side": "human",
+    "doi": "10.1016/j.paid.2010.07.033",
+    "title": "Gratitude and forgiveness: Convergence and divergence on self-report and informant ratings",
+    "authors": "Breen, William E.; Kashdan, Todd B.; Lenser, Monica L.; Fincham, Frank D.",
+    "year": 2010,
+    "journal": "Personality and Individual Differences",
+    "letter": "C"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1177--1948550618808863",
+  "replication_doi": "10.1177/1948550618808863",
+  "sets": "fred_v242",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1177/1948550617751583",
+    "title": "Ignoring History, Denying Racism: Mounting Evidence for the Marley Hypothesis and Epistemologies of Ignorance",
+    "authors": "Bonam, Courtney M.; Nair Das, Vinoadharen; Coleman, Brett R.; Salter, Phia",
+    "year": 2018,
+    "journal": "Social Psychological and Personality Science",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1177/0956797612451466",
+    "title": "The Marley hypothesis: Denial of racism reflects ignorance of history",
+    "authors": "Nelson, Jason; Adams, Glenn; Salter, Phia",
+    "year": "2013",
+    "journal": "Psychological Science",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1177--2053168018822174",
+  "replication_doi": "10.1177/2053168018822174",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1017/s0022381609990806",
+    "title": "Risk orientations and policy frames",
+    "authors": "Kam, Cindy; Simas, Elizabeth",
+    "year": "2010",
+    "journal": "The Journal of Politics",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1093/pan/mpr057",
+    "title": "Evaluating Online Labor Markets for Experimental Research: Amazon.com's Mechanical Turk",
+    "authors": "Berinsky, Adam J.; Huber, Gregory A.; Lenz, Gabriel S.",
+    "year": 2012,
+    "journal": "Political Analysis",
+    "letter": "B"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1017/s0020818306060255",
+    "title": "Through a glass and darkly: Attitudes toward international trade and the curious effects of issue framing",
+    "authors": "Hiscox, Michael",
+    "year": "2006",
+    "journal": "International Organization",
+    "letter": "C"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1126/science.7455683",
+    "title": "The framing of decisions and the psychology of choice",
+    "authors": "Tversky, Amos; Kahneman, Daniel",
+    "year": "1981",
+    "journal": "Science",
+    "letter": "D"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1017/s0007123415000186",
+    "title": "Rumors and health care reform: Experiments in political misinformation",
+    "authors": "Berinsky, Adam",
+    "year": "2017",
+    "journal": "British Journal of Political Science",
+    "letter": "E"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1177--25152459241267902",
+  "replication_doi": "10.1177/25152459241267902",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.2139/ssrn.3649814",
+    "title": "Knowledge and Assertion in 'Gettier' Cases",
+    "authors": "Turri, John",
+    "year": 2015,
+    "journal": "SSRN Electronic Journal",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.3758/s13423-014-0683-5",
+    "title": "Knowledge and luck",
+    "authors": "Turri, John; Buckwalter, Wesley; Blouw, Peter",
+    "year": "2015",
+    "journal": "Psychonomic Bulletin & Review",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1186--s13024-018-0267-3",
+  "replication_doi": "10.1186/s13024-018-0267-3",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1038/ng.859",
+    "title": "Identification of common variants influencing risk of the tauopathy progressive supranuclear palsy",
+    "authors": "PSP Genetics Study Group; Günter U. Höglinger; Nadine Melhem; Dennis W. Dickson; Patrick M. Abou‐Sleiman; Li-San Wang; Lambertus Klei; Rosa Rademakers; Rohan de Silva; Irene Litvan; David E. Riley; John Cornelis Van Swieten; Peter Heutink; Zbigniew K. Wszołek; Ryan J. Uitti; Jana Vandrovcová; Howard I. Hurtig; Rachel G. Gross; Walter Maetzler; Stefano Goldwurm; EDUARDO S. TOLOSA; Barbara Borroni; Pau Pástor; Laura B. Cantwell; Mi Ryung Han; Allissa Dillman; Marcel P. van der Brug; Jesse Raphael Gibbs; Mark Cookson; Dena G. Hernandez; Andrew Singleton; Matthew James Farrer; Chang‐En Yu; Lawrence I. Golbe; Tamás Révész; John Hardy; Andrew John Lees; Bernie Devlin; Hakon H. Hakonarson; Ulrich Müller; Gerard D. Schellenberg",
+    "year": "2011",
+    "journal": "Nature Genetics",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1093/med/9780195390841.003.0021",
+    "title": "Progressive Supranuclear Palsy",
+    "authors": "Thurtell, Matthew J.; Tomsak, Robert L.; Daroff, Robert B.",
+    "year": 2011,
+    "journal": "Neuro-Ophthalmology",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1371--journal.pone.0129263",
+  "replication_doi": "10.1371/journal.pone.0129263",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1007/s001270050022",
+    "title": "Stability and change in needs of patients with schizophrenic disorders: a 15- and 17-year follow-up from first onset of psychosis, and a comparison between `objective' and `subjective' assessments of needs for care",
+    "authors": "Wiersma, D.; Nienhuis, F. J.; Giel, R.; Slooff, C. J.",
+    "year": 1998,
+    "journal": "Social Psychiatry and Psychiatric Epidemiology",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1093/oxfordjournals.schbul.a033315",
+    "title": "Natural course of schizophrenic disorders: A 15-year followup of a Dutch incidence cohort",
+    "authors": "D. Wiersma; Fokko J. Nienhuis; Cees J. Slooff; R. Giel",
+    "year": "1998",
+    "journal": "Schizophrenia Bulletin",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1371--journal.pone.0209704",
+  "replication_doi": "10.1371/journal.pone.0209704",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.2307/3032069",
+    "title": "Obedience to authority: An experimental view",
+    "authors": "Milgram, Stanley",
+    "year": "1974",
+    "journal": "Harper & Row (book)",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1037/h0040525",
+    "title": "Behavioral Study of obedience.",
+    "authors": "Milgram, Stanley",
+    "year": 1963,
+    "journal": "The Journal of Abnormal and Social Psychology",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1371--journal.pone.0313619",
+  "replication_doi": "10.1371/journal.pone.0313619",
+  "sets": "main_gt_fred_api",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1038/s41598-017-15339-z",
+    "title": "Body size estimation in women with anorexia nervosa and healthy controls using 3D avatars",
+    "authors": "Cornelissen, Katri K.; McCarty, Kristofor; Cornelissen, Piers L.; Tovée, Martin J.",
+    "year": "2017",
+    "journal": "Scientific Reports",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1111/bjhp.12185",
+    "title": "Visual biases in judging body weight",
+    "authors": "Cornelissen, Katri K.; Gledhill, Lucinda J.; Cornelissen, Piers L.; Tovée, Martin J.",
+    "year": 2016,
+    "journal": "British Journal of Health Psychology",
+    "letter": "B"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1016/j.bodyim.2015.01.001",
+    "title": "The influence of personal BMI on body size estimations and sensitivity to body size change in anorexia spectrum disorders",
+    "authors": "Cornelissen, Katri K.; Bester, Amy; Cairns, Paul; Tovée, Martin J.; Cornelissen, Piers L.",
+    "year": "2015",
+    "journal": "Body Image",
+    "letter": "C"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1525--collabra.185",
+  "replication_doi": "10.1525/collabra.185",
+  "sets": "main_gt_human",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.3389/fpsyg.2018.00757",
+    "title": "Contents of hopes and duties: A linguistic analysis",
+    "authors": "Vaughn, Leigh Ann",
+    "year": "2018",
+    "journal": "Frontiers in Psychology",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1177/0146167216684132",
+    "title": "Foundational Tests of the Need-Support Model",
+    "authors": "Vaughn, Leigh Ann",
+    "year": 2017,
+    "journal": "Personality and Social Psychology Bulletin",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.2466--20.22.pms.114.1.185-188",
+  "replication_doi": "10.2466/20.22.pms.114.1.185-188",
+  "sets": "main_gt_fred_api",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "",
+    "title": "Reflexional psychology of Vladimir Lefebvre",
+    "authors": "Lefebvre, V.",
+    "year": "1990",
+    "journal": "Structure of",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.2466/pms.109.2.577-580",
+    "title": "Replicating a Simple Study of Asymmetry in Human Cognition",
+    "authors": "Anderson, James A.; Grice, James W.",
+    "year": 2009,
+    "journal": "Perceptual and Motor Skills",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.32714--ricl.10.01.08",
+  "replication_doi": "10.32714/ricl.10.01.08",
+  "sets": "main_gt_fred_api",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1075/arcl.7.07gri",
+    "title": "Psycholinguistic and corpus-linguistic evidence for L2 constructions",
+    "authors": "Gries, Stefan Th.; Wulff, Stefanie",
+    "year": 2009,
+    "journal": "Annual Review of Cognitive Linguistics",
+    "letter": "A"
+   },
+   {
+    "side": "extractor",
+    "doi": "10.1111/j.1540-4781.2009.00895.x",
+    "title": "The acquisition of tense-aspect: Converging evidence from corpora and telicity ratings",
+    "authors": "Wulff, Stefanie; Ellis, Nick; Römer, Ute; Bardovi-Harlig, Kathleen; Leblanc, Chelsea",
+    "year": "2009",
+    "journal": "The Modern Language Journal",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.3390--su12083069",
+  "replication_doi": "10.3390/su12083069",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1108/bfj-04-2017-0255",
+    "title": "Assessment of household food waste in Hungary",
+    "authors": "Szabó-Bódi, Boglárka; Kasza, Gyula; Szakos, Dávid",
+    "year": "2018",
+    "journal": "British Food Journal",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1504/ijewm.2016.078598",
+    "title": "Household food waste dehydration technique as a pretreatment method for food waste minimisation",
+    "authors": "Sotiropoulos, Aggelos; Bava, Nikoletta; Valta, Katerina; Vakalis, Stergios; Panaretou, Vasiliki; Novacovic, Jelica",
+    "year": 2016,
+    "journal": "International Journal of Environment and Waste Management",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.37237--150205",
+  "replication_doi": "10.37237/150205",
+  "sets": "main_gt_fred_api",
+  "candidates": [
+   {
+    "side": "extractor",
+    "doi": "10.1080/17501229.2020.1825445",
+    "title": "Promoting positive feelings and motivation for language learning: The role of a confidence-building diary",
+    "authors": "Shelton-Strong, Scott J.; Mynard, Jo",
+    "year": "2021",
+    "journal": "Innovation in Language Learning and Teaching",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.37237/relay/010204",
+    "title": "Affective Factors in Self-Access Learning",
+    "authors": "Shelton-Strong, Scott J.; Mynard, Jo",
+    "year": 2018,
+    "journal": "Relay Journal",
+    "letter": "B"
+   }
+  ]
+ }
+]

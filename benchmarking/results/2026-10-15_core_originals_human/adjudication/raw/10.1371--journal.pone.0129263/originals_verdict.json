@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Wiersma, Nienhuis, Slooff & Giel (1998) Natural course of schizophrenic disorders: A 15-year followup of a Dutch incidence cohort (Schizophrenia Bulletin 24:75-85)",
+   "doi": "10.1093/oxfordjournals.schbul.a033315"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "This 1998 Soc Psychiatry Psychiatr Epidemiol paper on needs for care (same Groningen cohort authors) does not appear in the reference list or text; the only Wiersma 1998 work cited is the Schizophrenia Bulletin paper."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Aims state the study replicates 'a study on suicide risk two decades later in the same catchment area (cf. Wiersma et al. 1998)' (ref 4); suicide survival is compared directly with the Wiersma 1973-1988 cohort (log-rank test, 11.0% vs 2.4%)."
+  }
+ },
+ "notes": "Replication is a cohort re-study (new PROGR-S 2000-2009 sample, same catchment area) of the suicide rate reported by Wiersma et al. 1998; the authors frame it as a replication hypothesizing a lower rate, and found a significant decline. Text sometimes cites Wiersma as [3] (Fig 2 caption, Discussion) though the reference list places it at 4 -- a citation-number slip in the paper, not a candidate metadata issue."
+}

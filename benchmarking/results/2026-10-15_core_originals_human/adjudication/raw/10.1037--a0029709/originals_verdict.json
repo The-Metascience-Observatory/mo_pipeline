@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Bem, D. J. (2011) Feeling the future: Experimental evidence for anomalous retroactive influences on cognition and affect (Experiments 8 and 9, retroactive facilitation of recall)",
+   "doi": "10.1037/a0021524"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "PsycEXTRA grey-literature record by Bem (2011) of the same retroactive-influence work under a pre-publication title; the paper cites only the JPSP version, but this is a variant record of the replicated work (Experiments 8 and 9)."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The abstract and methods state that seven experiments replicate the procedure of Bem (2011) Experiments 8 and 9 (retroactive facilitation of recall); the reference list gives doi:10.1037/a0021524."
+  }
+ },
+ "notes": "Galak, LeBoeuf, Nelson & Simmons (2012). The replicated finding is retroactive facilitation of recall from Bem (2011) Exp 8 and Exp 9. The meta-analysis also pools other labs' replications (Ritchie et al. 2012, etc.), but those are not originals. Candidate A is the PsycEXTRA variant of the same Bem 2011 work, not a distinct study."
+}

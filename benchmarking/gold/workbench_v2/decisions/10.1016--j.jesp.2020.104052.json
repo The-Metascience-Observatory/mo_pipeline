@@ -1,13 +1,135 @@
 {
   "packet_sha256": "3c7f9734182c0d700219102ee652fe62e4e603ef0905869cf1aa149c2627fb2e",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
-  "effects": [],
-  "candidate_resolutions": {}
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "positive",
+  "eligibility_reason": "The paper reports new-data (824 MTurk participants), preregistered close replications of Studies 1 and 2 of Hsee and Zhang (2004, JPSP) on distinction bias, with results reported per study and per hypothesis.",
+  "sources_checked": true,
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "s1:quantitative_overprediction",
+      "original_reference": "Hsee and Zhang (2004)",
+      "original_url": "https://doi.org/10/dhnrdb",
+      "original_title": "Distinction bias: Misprediction and mischoice due to joint evaluation",
+      "original_authors": "Hsee, C. K.; Zhang, J.",
+      "original_year": "2004",
+      "original_journal": "Journal of Personality and Social Psychology",
+      "replication_study": "Study 1 (Poem Book)",
+      "outcome": "Predicted happiness (1-9) for quantitatively different scenarios (80 vs 160 vs 240 buyers of one's poem book)",
+      "contrast": "Joint evaluation (within-subject differences between 80/160/240 buyers) vs separate evaluation (between-group differences between the same scenarios)",
+      "timepoint": "not applicable: single cross-sectional rating",
+      "result": "success",
+      "replication_type": "close extension",
+      "description": "Original Study 1: people in joint evaluation overpredict the difference in happiness between quantitatively different outcomes (80, 160, 240 buyers of their poem book) relative to people in separate evaluation, who rate these scenarios similarly.",
+      "citation_sentence": "In the present paper, we report replications and extensions of Studies 1 and 2 from Hsee and Zhang (2004).",
+      "evidence": "Study 1 Results: \"Therefore, people in JE overpredicted the difference between the 80, 160, and 240 buyers scenarios.\"; \"the results of Study 1 in the present paper support the theory of distinction bias and successfully replicate the results of Study 1 from Hsee and Zhang (2004).\"; General Discussion: \"Taken together, the results of Study 1 fully replicated the original findings.\"",
+      "gt_ambiguity": "clear",
+      "notes": "original_url is the shortDOI printed verbatim in the paper's reference list (PDF p. 32: 'https://doi.org/10/dhnrdb'); the paper gives no long-form DOI. Unit of coding: the original Study 1 stated two separate predictions (H1 overprediction for quantitative differences; H2 no overprediction for qualitative differences; quoted in Table S3), so coded as two rows; both candidate coders instead coded one row per study (both success for Study 1). Replication type: authors call these 'close'/'very close replications' (LeBel taxonomy) with 'incidental' differences: MTurk adults instead of US students, online Qualtrics instead of lab -> population and setting change -> close extension per codebook; 'close experiment' (both candidates) or 'direct' are plausible alternatives. The 160-buyer reference-point extension conditions test a new prediction, not an original finding, and get no row.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:qualitative_no_overprediction",
+      "original_reference": "Hsee and Zhang (2004)",
+      "original_url": "https://doi.org/10/dhnrdb",
+      "original_title": "Distinction bias: Misprediction and mischoice due to joint evaluation",
+      "original_authors": "Hsee, C. K.; Zhang, J.",
+      "original_year": "2004",
+      "original_journal": "Journal of Personality and Social Psychology",
+      "replication_study": "Study 1 (Poem Book)",
+      "outcome": "Predicted happiness (1-9) for qualitatively different scenarios (0 vs 80 buyers)",
+      "contrast": "Joint evaluation (within-subject 0 vs 80 buyers) vs separate evaluation (between-group 0 vs 80 buyers)",
+      "timepoint": "not applicable: single cross-sectional rating",
+      "result": "success",
+      "replication_type": "close extension",
+      "description": "Original Study 1: people in joint evaluation do not overpredict the happiness difference between qualitatively different outcomes (no buyers vs 80 buyers), since separate evaluators also rate 80 buyers significantly happier than none.",
+      "citation_sentence": "In the present paper, we report replications and extensions of Studies 1 and 2 from Hsee and Zhang (2004).",
+      "evidence": "Study 1 Results: \"Thus, people in JE did not overpredict the difference in happiness between the 0 and 80 buyers scenarios.\"; Supplement: \"We can conclude that the replication results aligned with the original also for the qualitatively different scenarios.\"",
+      "gt_ambiguity": "clear",
+      "notes": "The claim is an absence-of-overprediction claim (original H2); both JE and SE differences were significant in the same direction in the replication, and JE actually underpredicted relative to SE, which the authors call consistent with the original. Replication effect sizes larger than original (d 2.60 vs 1.17 JE; 4.13 vs 3.26 SE) but authors still frame as aligned. See s1:quantitative row for DOI, granularity and replication-type notes.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s2:quantitative_overprediction",
+      "original_reference": "Hsee and Zhang (2004)",
+      "original_url": "https://doi.org/10/dhnrdb",
+      "original_title": "Distinction bias: Misprediction and mischoice due to joint evaluation",
+      "original_authors": "Hsee, C. K.; Zhang, J.",
+      "original_year": "2004",
+      "original_journal": "Journal of Personality and Social Psychology",
+      "replication_study": "Study 2 (Words Task)",
+      "outcome": "Predicted/experienced happiness (1-9) for quantitatively different tasks (25 vs 10 negative words; 10 vs 25 positive words)",
+      "contrast": "JE predicted-experience vs SE real-experience (and vs SE predicted-experience), differences between 25 vs 10 negative and 10 vs 25 positive word tasks",
+      "timepoint": "not applicable: single rating after task or prediction",
+      "result": "failure",
+      "replication_type": "close extension",
+      "description": "Original Study 2: people in joint evaluation overpredict the happiness difference between quantitatively different tasks (reading 25 vs 10 negative words, 10 vs 25 positive words) relative to people actually experiencing (or predicting) a single task in separate evaluation.",
+      "citation_sentence": "In the present paper, we report replications and extensions of Studies 1 and 2 from Hsee and Zhang (2004).",
+      "evidence": "Abstract: \"Study 2 failed to find support for the original findings: People in JE did not consistently overpredict happiness for quantitatively different scenarios\"; Study 2 Results (PDF p. 25): \"The theoretical predictions were supported only in one out of four quantitative comparisons\"; General Discussion: \"In sum, we successfully replicated Study 1, from Hsee and Zhang (2004), but not Study 2.\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Mixed pattern: JE overprediction vs SE real-experience arguably present for negative words (JE d = 0.45 sig, SE real ns), though the authors note the CIs overlap; absent for positive words (JE d = 0.02 ns) and absent vs SE predicted-experience for both. The authors' own summary for this hypothesis is 'failed to find support' / 'did not replicate', so failure; a second coder could choose inconclusive given 1 of 4 comparisons supported and the section's phrase 'results of Study 2 ... are inconclusive and, in general, do not replicate'. Candidates split exactly this way at study level (ling26 failure, luna56 inconclusive). Study 2 also changed the procedure (read and copy-paste words online) in addition to MTurk population -> close extension.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s2:qualitative_no_overprediction",
+      "original_reference": "Hsee and Zhang (2004)",
+      "original_url": "https://doi.org/10/dhnrdb",
+      "original_title": "Distinction bias: Misprediction and mischoice due to joint evaluation",
+      "original_authors": "Hsee, C. K.; Zhang, J.",
+      "original_year": "2004",
+      "original_journal": "Journal of Personality and Social Psychology",
+      "replication_study": "Study 2 (Words Task)",
+      "outcome": "Predicted/experienced happiness (1-9) for qualitatively different tasks (10 negative vs 10 positive words)",
+      "contrast": "JE predicted-experience vs SE real-experience and vs SE predicted-experience, difference between 10 negative and 10 positive word tasks",
+      "timepoint": "not applicable: single rating after task or prediction",
+      "result": "inconclusive",
+      "replication_type": "close extension",
+      "description": "Original Study 2: people in joint evaluation do not overpredict the happiness difference between qualitatively different tasks (10 negative vs 10 positive words), because people in separate evaluation (experiencing or predicting) also report significantly more happiness after positive words.",
+      "citation_sentence": "In the present paper, we report replications and extensions of Studies 1 and 2 from Hsee and Zhang (2004).",
+      "evidence": "Study 2 Results (PDF p. 25): \"Thus, people in JE predicted-experience overpredicted the difference in happiness for the qualitatively different scenarios when compared to people in the SE real-experience, which is inconsistent with the theory of distinction bias ... but they did not overpredict the difference when compared to people in SE predicted-experience, which is consistent with the theory of distinction bias\"; \"...and in one of two qualitative comparisons (no overprediction ... in comparison to SE predicted-experience)\".",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Split result across the two SE comparison groups: consistent with original vs SE predicted-experience (both JE and SE-pred significant, CIs overlap), inconsistent vs SE real-experience (SE real d = 0.02 ns; JE overpredicted). Original described the focal comparison as JE predicted vs SE real-experience, which failed here, and the General Discussion lists this among three ways Study 2 'failed to support the distinction bias hypotheses' -> failure is a plausible alternative; coded inconclusive per the 1-of-2 split and the failure/inconclusive tiebreaker.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.1016--j.jesp.2020.104052#ling26:d9ce11c013142269:1": {
+      "action": "map",
+      "effect_ids": [
+        "s2:quantitative_overprediction",
+        "s2:qualitative_no_overprediction"
+      ],
+      "reason": "Study 2 replication of Hsee & Zhang (2004) Study 2 at study level; its description bundles both of the original's Study 2 predictions (quantitative overprediction, qualitative no-overprediction), which I code as two claims."
+    },
+    "ling26:10.1016--j.jesp.2020.104052#ling26:cdfde1e007105ea6:1": {
+      "action": "map",
+      "effect_ids": [
+        "s1:quantitative_overprediction",
+        "s1:qualitative_no_overprediction"
+      ],
+      "reason": "Study 1 replication of Hsee & Zhang (2004) Study 1 at study level; covers both Study 1 predictions, coded as two claims (both success, matching the candidate)."
+    },
+    "luna56:10.1016--j.jesp.2020.104052#luna56:90e3ce2fbd431619:1": {
+      "action": "map",
+      "effect_ids": [
+        "s2:quantitative_overprediction",
+        "s2:qualitative_no_overprediction"
+      ],
+      "reason": "Same Study 2 replication, study level; description explicitly names both the quantitative and qualitative predictions."
+    },
+    "luna56:10.1016--j.jesp.2020.104052#luna56:c0cc9fcfde3e7c6a:1": {
+      "action": "map",
+      "effect_ids": [
+        "s1:quantitative_overprediction",
+        "s1:qualitative_no_overprediction"
+      ],
+      "reason": "Same Study 1 replication, study level; description names both the quantitative and qualitative predictions."
+    }
+  },
+  "revision_notes": "original_url filled with https://doi.org/10/dhnrdb (pass 1 left it blank): the candidates proposed it, and I confirmed it is printed verbatim in the paper's reference list (PDF p. 32), so it is stated, not guessed. original_authors updated to the initials the reference list gives (Hsee, C. K.; Zhang, J.). Enumeration unchanged: both coders coded one row per study, but the original stated two separate predictions per study (Table S3), so I kept per-claim rows and mapped each candidate to both rows of its study. No result or replication-type labels changed; the candidates' 'close experiment' and their Study 2 failure/inconclusive split are recorded in notes.",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 1.8618,
+  "adjudication_session": "06a4a874-1938-4d6e-8e3a-76ea5315dc88"
 }

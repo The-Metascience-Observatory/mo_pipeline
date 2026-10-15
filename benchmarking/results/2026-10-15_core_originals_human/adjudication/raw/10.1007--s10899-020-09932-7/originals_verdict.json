@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Stange, Graydon & Dixon (2017b) Increased urge to gamble following near-miss outcomes may drive purchasing behaviour in scratch card gambling",
+   "doi": "10.1007/s10899-016-9662-2"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Authors (Stange, Graydon, Dixon) and year 2017 match exactly the reference list's Stange et al. (2017b), the study whose urge-rating pattern and urge-purchase association this pre-registered study explicitly sets out to replicate; the record lacks a title and DOI but identifies the same work as B (Stange et al. 2017a has a different author list)."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "This is Stange et al. (2017b); the paper calls itself a pre-registered replication and extension of it, reproducing its scratch-card paradigm with a larger sample (near-miss urge > loss urge replicated; the urge-by-purchase interaction was not). The 2016 year is the online-first date of the 2017 print article."
+  }
+ },
+ "notes": "A and B are the same original (Stange, Graydon & Dixon, J Gambling Studies, online 2016 / print 2017). Stange et al. 2016 and 2017a are cited for paradigm and background; the bet-size and illusion-of-control hypotheses are new extensions."
+}

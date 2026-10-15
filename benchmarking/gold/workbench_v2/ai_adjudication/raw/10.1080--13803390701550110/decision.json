@@ -1,0 +1,21 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "An original theory-testing experiment: a new lateralized lexical decision study (N=50) that tests the valence hypothesis with newly chosen attachment-word stimuli. It never presents itself as replicating a specific prior published finding. The word 'replicate' does not appear, and prior studies are cited only as background or, in the Discussion, as results the findings are 'in line with'.",
+  "enumeration_complete": true,
+  "why_negative": "Original hypothesis test with no qualifying entry. It tests a general theory (the valence hypothesis) with a new stimulus set and a new bilateral paradigm, rather than replicating a named prior study's finding.",
+  "gt_ambiguity": "ambiguous",
+  "effects": [],
+  "candidate_resolutions": {
+    "ling26:10.1080--13803390701550110#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal. It agrees with my negative call, and on a negative paper every candidate resolves as reject with no effect_ids."
+    },
+    "luna56:10.1080--13803390701550110#luna56:c79921ac840fe2ad:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Not a replication. Collins & Cooke (2005, Exp. 2) appears only in the Discussion, as a post hoc comparison ('In line with the present findings, Collins and Cooke (2005, Exp. 2) observed...'). The Introduction never sets that study up as the target. The hypotheses are derived from the valence hypothesis, and the predicted direction (a relative LVF advantage for negative words) is the opposite of the Collins & Cooke pattern, so the study was not designed to reproduce it. The paradigm (bilateral simultaneous lexical decision with attachment words) is the authors' own new design. Agreement with an earlier result after the fact is not a replication under the codebook."
+    }
+  },
+  "revision_notes": "No change from pass 1. I re-checked the luna56 candidate against the source: the Collins & Cooke citation sits only in the Discussion (body.md line 53) as a consistent-with comparison, and the Introduction's predictions come from the valence hypothesis. I kept gt_ambiguity at ambiguous because a lenient coder could treat the paper as a conceptual test of the valence hypothesis (result reversal or failure) or of Collins & Cooke (result success)."
+}

@@ -1,0 +1,26 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Fox (2022) Effects of immediate-reinforcement training on delay discounting behavior in rats",
+   "doi": "10.1002/jeab.727"
+  },
+  {
+   "reference": "Fox, Visser & Nicholson (2019) Interventions aimed at changing impulsive choice in rats: Effects of immediate and relatively long delay to reward training",
+   "doi": "10.1016/j.beproc.2018.11.009"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Renda et al. (2018) is ref [20], cited among the prior studies [7][10][20][25] that the new result is 'consistent with' (immediacy exposure blunting maturational decreases in impulsivity). The explicit replication comparisons (double the subjects and training trials) are made only against [7][10], so it is background/converging evidence rather than the replicated study; borderline."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Fox (2022), ref [7], is the self-replicated original: the paper is billed as a 'systematic replication' of recent immediate-reinforcement training work, uses the same FR-training vs control and delay-discounting design, and explicitly doubles the sample and training trials 'compared to previous research [7][10]', finding the same modest increase in impulsive choice."
+  }
+ },
+ "notes": "Systematic self-replication (Fox) of the finding that extended immediate-reinforcement training increases impulsive choice in rats. Primary original is Fox (2022); Fox et al. (2019) is also explicitly compared on sample size and training trials. Renda et al. (2018) and Smith et al. (2022) are cited only as consistent prior work, so the Renda verdict is a judgement call."
+}

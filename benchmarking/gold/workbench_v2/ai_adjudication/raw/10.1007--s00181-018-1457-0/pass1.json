@@ -1,0 +1,6 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "Reanalysis of the same data: the authors state 'We proceed by re-examining the microcensus dataset used by RA (2014)' and rerun Rostam-Afschar's (2014, Empir Econ 47:1067-1101) difference-in-differences regressions on the same German Microcensus survey after re-coding which occupations count as crafts trades, so no new participants or new data test the original claims. Ambiguous: the paper also runs a DiD on aggregate ZDH company-registry exit counts (1998-2015, Table 6) as a cross-check, which a second coder might count as a conceptual replication of RA's 'no change in exit probabilities' claim (that check finds an increase, i.e. failure); the authors frame the ZDH data as motivation and a cross-check, not as the replication.",
+  "enumeration_complete": true,
+  "effects": []
+}

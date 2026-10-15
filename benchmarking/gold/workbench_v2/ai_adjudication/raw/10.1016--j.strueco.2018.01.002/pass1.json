@@ -1,0 +1,9 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "A theoretical and historical critique of Hamilton (1987, 1992) and Mishkin (1990). The authors reproduce Hamilton's own tables, reinterpret the same 1929-1932 commodity futures data in light of Working's theory of storage, and add a small descriptive wheat/CPI regression. They do not run a replication of a prior finding with new data (codebook genres: reanalysis/reinterpretation of existing data; commentary/theory paper).",
+  "enumeration_complete": true,
+  "effects": [],
+  "why_negative": "Reanalysis and commentary: it re-reads Hamilton's published futures data and argues it was misinterpreted, with no independent replication of the original claim on new data.",
+  "gt_ambiguity": "ambiguous",
+  "notes": "A second coder might code an entry for Hamilton (1992), 'Was the deflation during the Great Depression anticipated? Evidence from the commodity futures market', American Economic Review. Hamilton claims that futures markets did not anticipate the 1929-1932 deflation. Saleuddin & Coffman conclude the opposite (Section 5; Conclusions: 'This appears to show that deflation was anticipated by the futures markets'; 'we cannot conclude that futures market participants did not anticipate the deflation'). However, their evidence is a reinterpretation of the same historical CBOT price series (Working 1934 data, Hamilton's tables 3-4 reproduced verbatim), and their own conclusions are 'still preliminary'. Nowhere do the authors frame the paper as a replication. If someone insisted on coding an entry, it would be a failure/inconclusive conceptual reanalysis of Hamilton (1987/1992) on overlapping data, and that does not meet the codebook's new-data requirement. The section on Mishkin (1990) is a methodological critique and contains no replication."
+}

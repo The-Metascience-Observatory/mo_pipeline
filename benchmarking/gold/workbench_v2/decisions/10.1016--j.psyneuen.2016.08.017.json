@@ -1,13 +1,83 @@
 {
   "packet_sha256": "a8d31e999ea1c6500e01b50893b2b534c1bfcbeb427aee34507a0508251eb63f",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
-  "effects": [],
-  "candidate_resolutions": {}
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "positive",
+  "eligibility_reason": "Mostly new mechanistic experiments, but the authors explicitly reproduce their own published finding (Chen et al., 2014) with new postpartum rats: Exp 1 reports MK212 (2.0 mg/kg) disruption 'in agreement with our previous report (Chen et al., 2014)', and Exp 4 states 'we replicated the acute disruptive effect of MK212 on pup retrieval'. These are self-replications, which the codebook includes; eligibility is borderline because the replication is incidental to new research questions.",
+  "sources_checked": true,
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "exp1:mk212_maternal_disruption",
+      "original_reference": "Chen et al. (2014)",
+      "original_url": "",
+      "original_title": "Effects of 5-hydroxytryptamine 2C receptor agonist MK212 and 2A receptor antagonist MDL100907 on maternal behavior in postpartum female rats",
+      "original_authors": "Chen, W; Zhang, Q; Su, W; Zhang, H; Yang, Y; Qiao, J; Sui, N; Li, M",
+      "original_year": "2014",
+      "original_journal": "Pharmacology Biochemistry and Behavior",
+      "replication_study": "Experiment 1",
+      "outcome": "Active maternal behavior, especially pup retrieval (number of pups retrieved, first-retrieval latency; also nursing, licking, nest building)",
+      "contrast": "MK212 2.0 mg/kg s.c. vs vehicle (saline)",
+      "timepoint": "30 min post-injection (disruption absent at 2 h and 4 h)",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "Acute systemic administration of the selective 5-HT2C agonist MK212 disrupts active components of maternal behavior, especially pup retrieval, in postpartum rats (2.0 mg/kg producing the most disruption).",
+      "citation_sentence": "In agreement with our previous report (Chen et al., 2014), acute MK212 injection severely disrupted various active components of maternal behavior.",
+      "evidence": "Results 3.1: 'In comparison to the VEH groups, rats treated with MK212 retrieved significantly fewer pups (all p < 0.001) and took a much longer time to complete pup retrievals (all p < 0.001) at the 30 min post injection testing point under both the pup separation and no separation conditions'; main effect of drug on pups retrieved F(1, 58) = 113.679, p < 0.001. Discussion: 'maternal behavior, especially pup retrieval, was severely disrupted at the 30 min testing point after MK212 injection (2.0 mg/kg)'.",
+      "gt_ambiguity": "clear",
+      "notes": "Self-replication (same lab: Li M is senior author of both; Methods 2.3: 'The basic procedure was identical to what has been described in our previous studies (Chen et al., 2014...)'; dose chosen because it 'produces a reliable disruption on maternal behavior (Chen et al., 2014)'). Embedded in a new crossover design adding pup separation; the no-separation arm is the closest reproduction, but the drug main effect holds in both arms. Licking was not significant in the no-separation condition (p = 0.107) while retrieval, nursing and nest building were all p < 0.001; treated as measures of one claim with the authors' explicit agreement statement deciding success. Eligibility itself is the main doubt: a coder could treat Exp 1 as a new experiment (pup-separation question) rather than a replication. DOI not given in the paper, left blank. Author first names not given (initials only). Exp 2 (VEH-1+MK212 vs VEH-1+VEH, fewer pups retrieved, p = 0.014) also reproduces the effect but is not framed as a replication, so not coded.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "exp4:mk212_pup_retrieval",
+      "original_reference": "Chen et al. (2014)",
+      "original_url": "",
+      "original_title": "Effects of 5-hydroxytryptamine 2C receptor agonist MK212 and 2A receptor antagonist MDL100907 on maternal behavior in postpartum female rats",
+      "original_authors": "Chen, W; Zhang, Q; Su, W; Zhang, H; Yang, Y; Qiao, J; Sui, N; Li, M",
+      "original_year": "2014",
+      "original_journal": "Pharmacology Biochemistry and Behavior",
+      "replication_study": "Experiment 4",
+      "outcome": "Pup retrieval (number of pups retrieved)",
+      "contrast": "MK212 2.0 mg/kg s.c. vs vehicle",
+      "timepoint": "30 min post-injection (first injection day, PP 6)",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "Acute systemic administration of the selective 5-HT2C agonist MK212 disrupts maternal behavior, especially pup retrieval, in postpartum rats (2.0 mg/kg producing the most disruption).",
+      "citation_sentence": "This dose was chosen based on our previous work showing that acute injection of MK212 dose-dependently disrupts rat maternal performance with 2.0 mg/kg MK212 having the most disruption (Chen et al., 2014). ... Behaviorally, we replicated the acute disruptive effect of MK212 on pup retrieval.",
+      "evidence": "Results 3.4: 'Behaviorally, we replicated the acute disruptive effect of MK212 on pup retrieval. In addition, we found that repeated MK212 treatment produced a persistent disruption of pup retrieval (all p < 0.05) (Figure 6A)'; main effect of drug F(1, 10) = 39.205, p < 0.001 across the 4 test days.",
+      "gt_ambiguity": "clear",
+      "notes": "Separate group of 23 postpartum rats (new animals), so a separate replication study from Exp 1. The citation sentence joins two non-adjacent sentences (Methods 2.7 cites Chen et al., 2014; Results 3.4 says 'we replicated' without repeating the citation). The acute behavioral comparison is presumably the first day (PP 6) of the repeated-treatment groups, since the 'acute' groups were not injected during PP 6-9 behavior tests (Methods 2.7); the paper does not report a separate statistic for that day. The repeated-dosing persistence is a new finding, not part of this entry. Eligibility is borderline for the same reason as Exp 1 (incidental self-replication inside a new c-Fos study).",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.1016--j.psyneuen.2016.08.017#ling26:e8443e790649b576:1": {
+      "action": "map",
+      "effect_ids": [
+        "exp4:mk212_pup_retrieval",
+        "exp1:mk212_maternal_disruption"
+      ],
+      "reason": "Same claim (Chen et al., 2014: acute MK212 disrupts pup retrieval), success/direct. Its notes rest on the Exp 4 'we replicated' statement and also cite Exp 1, so this one paper-level candidate covers both of my per-experiment entries; under the codebook those are separate rows because the two experiments used separate animals."
+    },
+    "luna56:10.1016--j.psyneuen.2016.08.017#luna56:da993ef8284d1be2:1": {
+      "action": "map",
+      "effect_ids": [
+        "exp1:mk212_maternal_disruption"
+      ],
+      "reason": "Same original, claim, Experiment 1 citation sentence and labels (success, direct)."
+    },
+    "luna56:10.1016--j.psyneuen.2016.08.017#luna56:05c03c96058b91c9:1": {
+      "action": "map",
+      "effect_ids": [
+        "exp4:mk212_pup_retrieval"
+      ],
+      "reason": "Same original and claim, Experiment 4 (Methods 2.7 citation, 'we replicated' in Results 3.4), with the same labels (success, direct)."
+    }
+  },
+  "revision_notes": "",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 1.4828,
+  "adjudication_session": "02ca97e0-b8aa-449e-b6d5-90a1ff5bc870"
 }

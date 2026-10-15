@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Reed, John Shelton (1972) The Enduring South: Subcultural Persistence in Mass Society (pp. 26-29; the 1970 UNC regional-stereotype study)",
+   "doi": ""
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": true,
+   "reason": "The abstract and text say the 1970 study reported in Reed (1972, pp. 26-29), on southern students' stereotypes of white southerners, white northerners and Americans, 'was replicated in 1987'. This is a self-replication, which the codebook counts. The candidate is a 1972 Heath book, but its DOI is a JSTOR 10.2307 DOI, which probably belongs to a journal item such as a book review, not to the book itself."
+  },
+  "B": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Katz and Braly (1933) supplied the 84-adjective trait-list instrument and the 'definiteness' index. Their findings on stereotypes of ethnic and national groups are not re-tested: the paper studies regional groups and compares against the 1970 Reed study."
+  }
+ },
+ "notes": "The paper spells the name 'Braley'. Footnote 4 says the 1970 study also asked about the Katz-Braly groups, but the 1987 study asked only about three groups (white southerners, white northerners, Americans), so the Katz-Braly targets were not replicated."
+}

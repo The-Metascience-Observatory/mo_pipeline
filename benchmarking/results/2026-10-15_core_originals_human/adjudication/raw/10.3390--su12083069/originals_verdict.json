@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Szabó-Bódi, Kasza & Szakos (2018) Assessment of household food waste in Hungary",
+   "doi": "10.1108/bfj-04-2017-0255"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Ref [24]; the abstract and body describe the study as a replication of the first Hungarian household food waste measurement (2016 data, same FUSIONS diary methodology), and Table 5 compares 2019 results with [24]."
+  },
+  "B": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "Sotiropoulos et al. (food waste dehydration) does not appear in the paper's text or reference list."
+  }
+ },
+ "notes": "New sample of 165 households measured in 2019 with the same FUSIONS methodology as the 2016 study; reports a 4% decrease. This is a descriptive measurement replication rather than a test of an effect."
+}

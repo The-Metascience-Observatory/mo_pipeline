@@ -1,13 +1,38 @@
 {
   "packet_sha256": "ff3dcda16b523a64d721eba82cda9126de88546983edb38d5b6f34f62d29e413",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "negative",
+  "eligibility_reason": "Reanalysis/reproducibility check of the same data: the authors re-obtained the same New Jersey Division of Taxation income tax records for 2000-2007 used by Young and Varner (2011), truncated at YV's own May 6, 2008 cutoff 'to match the original data as closely as possible', re-estimated YV's models, then respecified them (nominal income thresholds, dropping in-migrants, the all-income-in-NJ subsample, probit); no new sample, population or period is observed.",
+  "sources_checked": true,
+  "enumeration_complete": true,
   "effects": [],
-  "candidate_resolutions": {}
+  "candidate_resolutions": {
+    "ling26:10.1177--1091142114537893#ling26:07567cdb91b6cbf5:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative: it re-estimates YV's model 5 (the all-income-in-NJ subsample) on the same 2000-2007 NJ tax records ('We found comparable results when we reestimated the models limiting the sample in a similar fashion'). That is a reanalysis of the same data, not a replication with new data. It is also a subsample specification of the same YV claim rather than a separate claim."
+    },
+    "ling26:10.1177--1091142114537893#ling26:89d02acb36e17bbf:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative: the Table 1 re-estimation of YV models 1-3 uses the same administrative records and the same cutoff date ('Our estimated coefficients are very similar to YV's, suggesting that there are no important differences between our respective data sets'). This is a computational reproduction, the codebook's reanalysis-of-the-same-data genre."
+    },
+    "ling26:10.1177--1091142114537893#ling26:9b5e59d397faa762:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative: the out-migration-only models (Table 2 sections C-D) are alternative specifications run on the same YV dataset. They are a robustness reanalysis, not a new-data replication. Even on a positive reading they would test the same YV claim as the other candidates, so this candidate would be a duplicate at a finer grain than the codebook allows."
+    },
+    "luna56:10.1177--1091142114537893#luna56:a9099fd9dd1d38bd:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative: there is no new data, only a re-estimation and respecification of YV's models on the same NJ tax records for the same years. If a later adjudicator instead treats the independently re-acquired records as new data, this candidate is the right single entry: one YV claim, labelled inconclusive because the null is reproduced under YV's specification but rejected under the authors' out-migration models."
+    }
+  },
+  "revision_notes": "No change from pass 1. All four candidates treat the paper as positive because of its title ('A Replication of ...'). On re-checking the source: the dataset is the same NJ Division of Taxation 2000-2007 records, deliberately matched to YV's cutoff, and nothing new is observed, so the codebook's 'reanalysis or reproducibility check of the same data' genre applies. This call is ambiguous: a coder who counts the independently re-requested records as new data would code one entry, the luna56 framing (inconclusive, direct or close), and would not code ling26's three specification-level rows.",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 1.1905,
+  "adjudication_session": "e3e1993a-3c37-4b59-a6c7-0faf57b03e2f"
 }

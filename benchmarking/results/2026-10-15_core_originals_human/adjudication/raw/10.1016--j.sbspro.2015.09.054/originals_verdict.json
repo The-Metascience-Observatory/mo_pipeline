@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Stice, E., & Shaw, H. E. (1994) Adverse effects of the media portrayed thin-ideal on women and linkages to bulimic symptomatology",
+   "doi": "10.1521/jscp.1994.13.3.288"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "Stice (1994) Clinical Psychology Review is not in the paper's reference list. The only 1994 Stice entry is ref [21], Stice & Shaw (JSCP), and the text ties 'Stice (1994)' to that reference."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The paper (titled 'Replication and Extension') tests 'the original dual pathway model of Bulimia (Stice, 1994)' in 348 Lithuanian schoolgirls and reports both pathways confirmed. The introduction attributes that model to Stice (1994) = ref [21], Stice & Shaw 1994, JSCP 13:288-308, which matches this candidate."
+  }
+ },
+ "notes": "The study tests the dual pathway model cross-sectionally with SEM and then extends it to anorexia symptoms. Only the original-model test counts as the replication; the anorexia extension is a new test. The authors credit the model to 'Stice (1994)', which historically fits the Clinical Psychology Review paper (candidate A). But their bibliography resolves that citation to Stice & Shaw (1994), so B is the cited original. A reviewer could plausibly also credit A as the true source of the model. The Discussion also says the results confirm Stice 2001, Stice & Agras 1998 and Stice et al. 2000 [19][20][22]. Those are earlier tests of the same model, cited as supporting evidence rather than as the original."
+}

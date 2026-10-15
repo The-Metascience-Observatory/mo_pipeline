@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Smith, S. M. et al. (2009) Correspondence of the brain's functional architecture during activation and rest. PNAS 106, 13040-13045",
+   "doi": "10.1073/pnas.0905267106"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Ref 27 (Smith et al. 2013, NeuroImage 80:144-168) is cited only as the description of the HCP resting-state data and its preprocessing, i.e. the data source for the replication."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Ref 30; the paper explicitly sets out to replicate Smith et al. (2009) PNAS, reproducing its rest/task network correspondence (20- and 70-component ICA) with independent HCP task and resting-state fMRI data, and reports the findings were replicated."
+  }
+ },
+ "notes": "Uses the open HCP dataset (different participants and task data from Smith et al., who used BrainMap plus 36 resting-state subjects), so it is an independent-data replication, not a reanalysis of the original data. The network-activation-strength analysis (Figs 2-4) is described as novel, not a replication."
+}

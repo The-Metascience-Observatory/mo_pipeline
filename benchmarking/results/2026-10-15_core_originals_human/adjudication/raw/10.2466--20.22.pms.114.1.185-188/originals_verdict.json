@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Lefebvre, V. D. (1990) Choice without criteria of preference. In H. Wheeler (Ed.), The structure of human reflexion: the reflexional psychology of Vladimir Lefebvre (pp. 113-114). New York: Peter Lang.",
+   "doi": ""
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": true,
+   "reason": "This is the paper's reference to V. D. (Victorina) Lefebvre (1990), the ambiguous-choice study (good/bad sorting of ambiguous pairs) whose findings the abstract says this study 'attempted to extend' as a 'further replication'. The candidate's metadata is garbled, though: its title is the subtitle of the edited book. The real chapter title is 'Choice without criteria of preference' in Wheeler (Ed.), The structure of human reflexion. The venue reads 'Structure of', and the author initial is ambiguous between V. A. and V. D. Lefebvre."
+  },
+  "B": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Anderson & Grice (2009) is cited as an earlier replication of V. D. Lefebvre's (1990) study, and the present results are compared with it ('in contrast to previous findings (V. D. Lefebvre, 1990; Anderson & Grice, 2009)'). The finding being re-tested is Lefebvre's 61.8% asymmetry. Anderson & Grice is a prior replication of that finding by the same authors, not the original."
+  }
+ },
+ "notes": "The title 'Further Replication and Extension' refers to a second replication, after Anderson & Grice (2009), of V. D. Lefebvre's (1990) ambiguous-choice finding: about 61.8% of ambiguous pairs are judged 'good', as V. A. Lefebvre's 1985/1987 model predicts. The bean condition repeats Anderson & Grice's stimuli, so a coder could argue that B is also replicated (a self-replication). We kept B as a prior replication because the paper frames the target as Victorina Lefebvre's original findings. V. A. Lefebvre (1985, 1987) is the theoretical model, not a replicated study."
+}

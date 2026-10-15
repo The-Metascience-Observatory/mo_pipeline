@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Höglinger et al. / PSP Genetics Study Group (2011) Identification of common variants influencing risk of the tauopathy progressive supranuclear palsy",
+   "doi": "10.1038/ng.859"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Ref [7], the original PSP GWAS: the paper genotypes its top SNPs (P<1E-4) in a new cohort of 533 pathology-confirmed PSP cases and 1172 controls, validating the MAPT, MOBP, EIF2AK3 and STX6 associations."
+  },
+  "B": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "This is a generic Neuro-Ophthalmology textbook chapter on PSP. It does not appear in the paper's reference list and is not a study the paper replicates; most likely a mis-resolved match on the disease name."
+  }
+ },
+ "notes": "Replication-plus-meta-analysis of the 2011 PSP GWAS. The new loci (SLCO1A2, DUSP10) were sub-threshold in the original, so they are novel findings and not replications."
+}

@@ -1,13 +1,76 @@
 {
   "packet_sha256": "c4967500875250abd656ed8effc04c6d8207a927ddd5285414e3d349ac01159f",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
-  "effects": [],
-  "candidate_resolutions": {}
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "positive",
+  "eligibility_reason": "A new MTurk experiment (N = 1144) implements the AMP 'closely follow[ing] experiments 1-4 of Payne et al. (2005)' with identical Basic and Warning instructions, and the Discussion states 'Our results first replicate key findings of Payne et al. (2005)'; the Incentive conditions are a new extension.",
+  "sources_checked": true,
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "s1:warning-does-not-reduce-amp",
+      "original_reference": "Payne et al. (2005)",
+      "original_url": "https://doi.org/10.1037/0022-3514.89.3.277",
+      "original_title": "An inkblot for attitudes: Affect misattribution as implicit measurement",
+      "original_authors": "Payne, B.; Cheng, C.; Govorun, O.; Stewart, B.",
+      "original_year": "2005",
+      "original_journal": "Journal of Personality and Social Psychology",
+      "replication_study": "single study (Basic vs Warning conditions)",
+      "outcome": "Individual-level AMP effect (proportion 'pleasant' after positive primes minus after negative primes)",
+      "contrast": "Warning instructions (Payne et al. 2005 Exp. 2 stronger warning) vs Basic (no warning) instructions",
+      "timepoint": "not applicable: single-session task",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "Explicitly warning participants that the prime images could bias their judgments of the targets does not (significantly) diminish the AMP priming effect.",
+      "citation_sentence": "Our results first replicate key findings of Payne et al. (2005): we show that warning participants about the effect of the prime on subsequent judgements in the AMP does not eliminate or significantly mitigate the average AMP effect.",
+      "evidence": "Results, Average AMP effects by condition (p. 5): 'As in Payne et al. (2005), the means for Warning and Basic were not statistically distinguishable (t = 0.93, df = 1,141, p = .35).' Discussion (p. 8) restates this as a replication.",
+      "gt_ambiguity": "clear",
+      "notes": "Original claim is a null (warning does not reduce the effect); replication also finds no mean difference and authors call it a replication -> success under the null-claim rule. Caveat: a new distributional analysis shows the Basic and Warning distributions differ (KS D = .166, p = .03) and the authors say the warning 'does significantly alter the distribution of outcomes', but they still frame the mean-level finding as replicating Payne et al. Replication type: authors write 'our direct replication of Payne et al. (2005)'; deviations are online MTurk administration, 200 ms vs 100 ms target duration and 30 trials, so close extension (online) is a plausible alternative. Authors given as initials because the paper and references.json give only initials.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:amp-priming-effect",
+      "original_reference": "Payne et al. (2005)",
+      "original_url": "https://doi.org/10.1037/0022-3514.89.3.277",
+      "original_title": "An inkblot for attitudes: Affect misattribution as implicit measurement",
+      "original_authors": "Payne, B.; Cheng, C.; Govorun, O.; Stewart, B.",
+      "original_year": "2005",
+      "original_journal": "Journal of Personality and Social Psychology",
+      "replication_study": "single study (Basic condition)",
+      "outcome": "Proportion of neutral Chinese-character targets judged pleasant",
+      "contrast": "positive vs negative (universally valenced Payne) prime images",
+      "timepoint": "not applicable: single-session task",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "Affectively positive versus negative prime images bias subsequent pleasantness judgments of neutral Chinese-character targets, so that targets are rated more pleasant after positive primes (the affect misattribution effect).",
+      "citation_sentence": "Our implementation of the AMP closely follows experiments 1–4 of Payne et al. (2005). Participants are given the traditional AMP instructions, following those of Payne et al. (2005), without warning of the potential priming effect.",
+      "evidence": "Results, Average AMP effects by condition (p. 5): 'Under this condition, participants are on average 35 [CI: 29, 41] percentage points more likely to rate a target as positive following a positive prime than following a negative prime.' (Fig. 1)",
+      "gt_ambiguity": "clear",
+      "notes": "Enumeration judgment: the basic AMP effect is Payne et al.'s core claim and the Basic condition reproduces it with their primes and instructions; the paper does not run a formal test against zero but the 95% CI [29, 41] excludes zero and the authors describe the effect as large 'as expected'. A second coder might fold this into the warning entry or treat Basic as a baseline rather than a replicated claim. The reduction under incentives (35 -> 22 pp) and the bimodal distribution are findings of the new Incentive manipulation, not of the replicated Basic/Warning conditions, so they do not make this entry inconclusive. Replication type: authors call the design a direct replication (online MTurk, 200 ms target vs 100 ms in the original). Authors given as initials because the paper and references.json give only initials.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.1111--bjso.12217#ling26:649bc0fbd9b272ed:1": {
+      "action": "map",
+      "effect_ids": [
+        "s1:amp-priming-effect"
+      ],
+      "reason": "Describes Payne et al. (2005)'s basic AMP priming effect, replicated in the Basic condition (35 pp, CI 29-41). Its concern about the incentive reduction applies to the new Incentive extension, not to the replicated conditions, so the label stays success."
+    },
+    "luna56:10.1111--bjso.12217#luna56:2432fb8332060239:1": {
+      "action": "map",
+      "effect_ids": [
+        "s1:amp-priming-effect",
+        "s1:warning-does-not-reduce-amp"
+      ],
+      "reason": "One candidate combines both Payne et al. (2005) claims: the positive priming effect and the finding that a warning does not diminish it. The codebook codes these as two entries, so it maps to both."
+    }
+  },
+  "revision_notes": "",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 1.4914,
+  "adjudication_session": "42d85ca8-0d3f-4f68-bc66-70d8205e6a12"
 }

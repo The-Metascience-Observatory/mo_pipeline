@@ -1,0 +1,20 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "Reanalysis of the same data (codebook negative genre): Imai re-analyses Gerber and Green's (2000) New Haven field-experiment data (original and revised versions supplied by Don Green) with corrected groups, randomization diagnostics and propensity-score matching; no new participants or data are collected, so there is no replication with new data.",
+  "enumeration_complete": true,
+  "effects": [],
+  "candidate_resolutions": {
+    "ling26:10.1017--s0003055405051658#ling26:acd88467e5d8b3e2:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Not a new-data replication. The candidate's own notes say the paper 'reanalyzes Gerber and Green (2000) data', and the source confirms it: 'I thank Don Green for making his data available'; Tables 3, 5 and 9 use Gerber and Green's original and revised datasets. 'I replicate and extend Gerber and Green's analysis' means re-running their analysis on their data. That is the codebook's 'Reanalysis or reproducibility check of the same data' negative genre, so the reversal of the phone-call estimate (+6.5 pp by matching vs. about -5 pp) is a reanalytic disagreement, not a replication result."
+    },
+    "luna56:10.1017--s0003055405051658#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal; it agrees with my negative call, but under the protocol every candidate on a negative paper is resolved as reject with no effect_ids. It carries no source-based content (reconstructed from a run log)."
+    }
+  },
+  "revision_notes": "",
+  "notes": "The paper uses 'replicate' and 'reverse' language, which explains ling26's positive/reversal proposal, but no new participants or data appear anywhere (intro, methods, results, concluding remarks: 'The reanalysis of Gerber and Green's field experiment shows...'). Green and Gerber (2001) and earlier phone-canvassing experiments are cited as corroborating evidence and were not run here. gt_ambiguity: clear."
+}

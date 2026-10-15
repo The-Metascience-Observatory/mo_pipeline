@@ -1,13 +1,28 @@
 {
   "packet_sha256": "4043d1960ce1c8eecf4fa1df043f40e87b46430e0cbe977f598238df569cac88",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "negative",
+  "eligibility_reason": "Reanalysis of the same data (codebook negative genre): Imai re-analyses Gerber and Green's (2000) New Haven field-experiment data (original and revised versions supplied by Don Green) with corrected groups, randomization diagnostics and propensity-score matching; no new participants or data are collected, so there is no replication with new data.",
+  "sources_checked": true,
+  "enumeration_complete": true,
   "effects": [],
-  "candidate_resolutions": {}
+  "candidate_resolutions": {
+    "ling26:10.1017--s0003055405051658#ling26:acd88467e5d8b3e2:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Not a new-data replication. The candidate's own notes say the paper 'reanalyzes Gerber and Green (2000) data', and the source confirms it: 'I thank Don Green for making his data available'; Tables 3, 5 and 9 use Gerber and Green's original and revised datasets. 'I replicate and extend Gerber and Green's analysis' means re-running their analysis on their data. That is the codebook's 'Reanalysis or reproducibility check of the same data' negative genre, so the reversal of the phone-call estimate (+6.5 pp by matching vs. about -5 pp) is a reanalytic disagreement, not a replication result."
+    },
+    "luna56:10.1017--s0003055405051658#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal; it agrees with my negative call, but under the protocol every candidate on a negative paper is resolved as reject with no effect_ids. It carries no source-based content (reconstructed from a run log)."
+    }
+  },
+  "revision_notes": "",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 1.4077,
+  "adjudication_session": "efb303ef-9949-426b-9d77-917727b7c2bf"
 }

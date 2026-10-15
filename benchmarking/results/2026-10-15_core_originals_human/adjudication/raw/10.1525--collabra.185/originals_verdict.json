@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Vaughn, L. A. (2018) Contents of hopes and duties: A linguistic analysis (Study 1)",
+   "doi": "10.3389/fpsyg.2018.00757"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Study 2 collected a new MTurk sample (N=446) with identical hope/duty writing prompts to test 'how much these findings replicated with a new sample'; the text calls it a direct replication and says 'Study 2 replicated many of the findings in Vaughn's (2018) Study 1'."
+  },
+  "B": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Vaughn (2017b) proposes the need-support model, and its Studies 1 and 2 supply existing data. Study 1a is a new LIWC analysis of the 2017 Study 2 data, with no new participants and an outcome the 2017 paper did not report. It is a data source and theory reference, not a replication."
+  }
+ },
+ "notes": "Studies 1a/1b (high vs low need support LIWC) are new analyses; 1b replicates 1a only within the paper. The 'Vaughn (2018)' column is a re-presentation of the published analysis on the same participants, not a new replication. Only Study 2 qualifies (self-replication, direct)."
+}

@@ -1,13 +1,170 @@
 {
   "packet_sha256": "3336e837eb9e207b732d119c8fe133d6677f6e70c3ca0f1342f8793a844d75c5",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
-  "effects": [],
-  "candidate_resolutions": {}
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "positive",
+  "eligibility_reason": "The paper collects new survey data (N=256 mobile-banking users) to replicate Bhattacherjee's (2001) IS Continuance Model, re-testing all five of its hypothesized paths, and reports that all five are supported.",
+  "sources_checked": true,
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "s1:H1_satisfaction_to_continuance",
+      "original_reference": "Bhattacherjee (2001)",
+      "original_url": "",
+      "original_title": "Understanding information systems continuance: an expectation-confirmation model",
+      "original_authors": "Bhattacherjee, A.",
+      "original_year": "2001",
+      "original_journal": "MIS Quarterly",
+      "replication_study": "single study (cross-sectional survey of mobile banking app users, SEM)",
+      "outcome": "IS continuance intention",
+      "contrast": "not applicable: SEM path coefficient, satisfaction -> continuance intention",
+      "timepoint": "not applicable: cross-sectional survey",
+      "result": "success",
+      "replication_type": "conceptual",
+      "description": "Users' satisfaction with prior IS use is positively associated with their intention to continue using the IS (online banking).",
+      "citation_sentence": "The focus of this paper is on replicating IS Continuance Model (Bhattacherjee, 2001) in the mobile banking context.",
+      "evidence": "Section 4.2 / Figure 2 (path 0.432): \"The analysis shows that all hypotheses are supported at p < 0.01 level. Continuance intention was predicted by satisfaction and perceived usefulness.\" Table 3: \"Hypotheses Supported: All five hypotheses supported.\"",
+      "gt_ambiguity": "clear",
+      "notes": "Original DOI not given in the paper (references.json has none), so original_url is left blank. The paper gives the author only as 'Bhattacherjee, A.'; the full first name is not stated, so it is not supplied. Replication type: the authors explicitly classify the study as a conceptual replication (Dennis & Valacich 2014 taxonomy: 'This research fits into the conceptual category'), and the codebook tiebreaker gives precedence to the authors' label. By the codebook's own definitions it reads more like a close extension: same theory, same cross-sectional survey and SEM paradigm, items adapted to mobile banking, and a new context and population (mobile apps, 2015, students from several banks). The five hypotheses are coded as separate claims because the original reported each path as a distinct hypothesized finding. Citation sentence: body.md replaces author-year citations with numbers, but the abstract and PDF (p.1) do cite 'Bhattacherjee (2001)' by name, so the candidates' claim that no author-year sentence exists is wrong.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:H2_confirmation_to_satisfaction",
+      "original_reference": "Bhattacherjee (2001)",
+      "original_url": "",
+      "original_title": "Understanding information systems continuance: an expectation-confirmation model",
+      "original_authors": "Bhattacherjee, A.",
+      "original_year": "2001",
+      "original_journal": "MIS Quarterly",
+      "replication_study": "single study (cross-sectional survey of mobile banking app users, SEM)",
+      "outcome": "satisfaction with IS use",
+      "contrast": "not applicable: SEM path coefficient, confirmation -> satisfaction",
+      "timepoint": "not applicable: cross-sectional survey",
+      "result": "success",
+      "replication_type": "conceptual",
+      "description": "Users' extent of confirmation of expectations is positively associated with their satisfaction with IS use.",
+      "citation_sentence": "The focus of this paper is on replicating IS Continuance Model (Bhattacherjee, 2001) in the mobile banking context.",
+      "evidence": "Section 4.2 / Figure 2 (path 0.607): \"all hypotheses are supported at p < 0.01 level ... Satisfaction was also predicted by confirmation.\"",
+      "gt_ambiguity": "clear",
+      "notes": "Internal inconsistency: Figure 2 labels confirmation->satisfaction 0.607 and confirmation->PU 0.586, but the Discussion gives 0.607 as the confirmation->perceived usefulness coefficient. Either way the path is supported. See H1 notes for original_url, author name and replication type.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:H3_usefulness_to_satisfaction",
+      "original_reference": "Bhattacherjee (2001)",
+      "original_url": "",
+      "original_title": "Understanding information systems continuance: an expectation-confirmation model",
+      "original_authors": "Bhattacherjee, A.",
+      "original_year": "2001",
+      "original_journal": "MIS Quarterly",
+      "replication_study": "single study (cross-sectional survey of mobile banking app users, SEM)",
+      "outcome": "satisfaction with IS use",
+      "contrast": "not applicable: SEM path coefficient, perceived usefulness -> satisfaction",
+      "timepoint": "not applicable: cross-sectional survey",
+      "result": "success",
+      "replication_type": "conceptual",
+      "description": "Users' perceived usefulness of the IS is positively associated with their satisfaction with IS use.",
+      "citation_sentence": "The focus of this paper is on replicating IS Continuance Model (Bhattacherjee, 2001) in the mobile banking context.",
+      "evidence": "Section 4.2 / Figure 2 (path 0.252): \"all hypotheses are supported at p < 0.01 level\"; Discussion: \"In both the original model and in ours, this relationship has the lowest beta weight ... (0.227 in the original research and 0.252 in our research).\"",
+      "gt_ambiguity": "clear",
+      "notes": "Supported and significant, though it is the weakest path. The Discussion argues the PU->satisfaction link is not strong and cites the later model that drops it, but it does not question the replication result. See H1 notes for original_url, author name and replication type.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:H4_usefulness_to_continuance",
+      "original_reference": "Bhattacherjee (2001)",
+      "original_url": "",
+      "original_title": "Understanding information systems continuance: an expectation-confirmation model",
+      "original_authors": "Bhattacherjee, A.",
+      "original_year": "2001",
+      "original_journal": "MIS Quarterly",
+      "replication_study": "single study (cross-sectional survey of mobile banking app users, SEM)",
+      "outcome": "IS continuance intention",
+      "contrast": "not applicable: SEM path coefficient, perceived usefulness -> continuance intention",
+      "timepoint": "not applicable: cross-sectional survey",
+      "result": "success",
+      "replication_type": "conceptual",
+      "description": "Users' perceived usefulness of the IS is positively associated with their IS continuance intention.",
+      "citation_sentence": "The focus of this paper is on replicating IS Continuance Model (Bhattacherjee, 2001) in the mobile banking context.",
+      "evidence": "Section 4.2 / Figure 2 (path 0.486): \"all hypotheses are supported at p < 0.01 level. Continuance intention was predicted by satisfaction and perceived usefulness.\"",
+      "gt_ambiguity": "clear",
+      "notes": "The paper's H4 wording reverses the direction ('continuance intention ... is positively associated with their perceived usefulness'), but the model (Figure 1) and the results test PU -> continuance intention. See H1 notes for original_url, author name and replication type.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:H5_confirmation_to_usefulness",
+      "original_reference": "Bhattacherjee (2001)",
+      "original_url": "",
+      "original_title": "Understanding information systems continuance: an expectation-confirmation model",
+      "original_authors": "Bhattacherjee, A.",
+      "original_year": "2001",
+      "original_journal": "MIS Quarterly",
+      "replication_study": "single study (cross-sectional survey of mobile banking app users, SEM)",
+      "outcome": "perceived usefulness (post-acceptance)",
+      "contrast": "not applicable: SEM path coefficient, confirmation -> perceived usefulness",
+      "timepoint": "not applicable: cross-sectional survey",
+      "result": "success",
+      "replication_type": "conceptual",
+      "description": "Users' extent of confirmation of expectations is positively associated with their post-acceptance perceived usefulness of the IS.",
+      "citation_sentence": "The focus of this paper is on replicating IS Continuance Model (Bhattacherjee, 2001) in the mobile banking context.",
+      "evidence": "Section 4.2 / Figure 2 (path 0.586): \"Ultimately, confirmation predicted perceived usefulness.\"; Discussion: \"confirmation-perceived usefulness association, which is a stronger relationship in both the original model and our paper (respectively, 0.525 and 0.607).\"",
+      "gt_ambiguity": "clear",
+      "notes": "The coefficient is inconsistent between Figure 2 (0.586) and the Discussion (0.607); see H2 notes. See H1 notes for original_url, author name and replication type.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.17705--1atrr.00014#ling26:ba33843460280bc0:1": {
+      "action": "map",
+      "effect_ids": [
+        "s1:H1_satisfaction_to_continuance",
+        "s1:H2_confirmation_to_satisfaction",
+        "s1:H3_usefulness_to_satisfaction",
+        "s1:H4_usefulness_to_continuance",
+        "s1:H5_confirmation_to_usefulness"
+      ],
+      "reason": "A single entry for the whole IS Continuance Model, covering all five paths (satisfaction, confirmation, perceived usefulness -> continuance intention). It is coarser than the codebook allows, since the original reported five distinct hypothesized paths, so it maps to all five per-claim entries. Its labels (success, conceptual) match."
+    },
+    "luna56:10.17705--1atrr.00014#luna56:f81d6a451c13f51c:1": {
+      "action": "map",
+      "effect_ids": [
+        "s1:H5_confirmation_to_usefulness"
+      ],
+      "reason": "Confirmation -> perceived usefulness is H5; Figure 2 shows it supported (p < 0.01)."
+    },
+    "luna56:10.17705--1atrr.00014#luna56:91a30527cc386034:1": {
+      "action": "map",
+      "effect_ids": [
+        "s1:H1_satisfaction_to_continuance"
+      ],
+      "reason": "Satisfaction -> continuance intention is H1; supported."
+    },
+    "luna56:10.17705--1atrr.00014#luna56:891cebf67e1a062b:1": {
+      "action": "map",
+      "effect_ids": [
+        "s1:H2_confirmation_to_satisfaction"
+      ],
+      "reason": "Confirmation -> satisfaction is H2; supported."
+    },
+    "luna56:10.17705--1atrr.00014#luna56:a8a11978afb13773:1": {
+      "action": "map",
+      "effect_ids": [
+        "s1:H3_usefulness_to_satisfaction"
+      ],
+      "reason": "Perceived usefulness -> satisfaction is H3; supported."
+    },
+    "luna56:10.17705--1atrr.00014#luna56:1cf8cf1f11e51b65:1": {
+      "action": "map",
+      "effect_ids": [
+        "s1:H4_usefulness_to_continuance"
+      ],
+      "reason": "Perceived usefulness -> continuance intention is H4; supported."
+    }
+  },
+  "revision_notes": "No change to the enumeration or the labels. The candidates contain no entry I had not already coded. In H1's notes I added that the candidates' claim of no author-year citation is wrong, because the abstract and PDF name Bhattacherjee (2001).",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 1.8281,
+  "adjudication_session": "18d87d70-b2ce-4627-bf97-66ba29c7cfeb"
 }

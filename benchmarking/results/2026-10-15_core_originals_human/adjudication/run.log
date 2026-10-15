@@ -1,0 +1,49 @@
+47 dispute(s) with claude-opus-5-5, 12 workers
+OK  10.1027--1864-9335--a000179: {'A': 'replicated', 'B': 'cited_not_replicated'} $0.34
+OK  10.1037--a0029709: {'A': 'replicated', 'B': 'replicated'} $0.39
+OK  10.1017--s1930297500008184: {'A': 'replicated', 'B': 'replicated'} $0.37
+OK  10.1002--cpp.70057: {'A': 'not_relevant', 'B': 'replicated'} $0.65
+OK  10.1002--npr2.70078: {'A': 'replicated', 'B': 'not_relevant'} $0.41
+OK  10.1007--s12186-012-9090-0: {'A': 'replicated', 'B': 'cited_not_replicated'} $0.47
+OK  10.1002--aur.1474: {'A': 'replicated', 'B': 'cited_not_replicated'} $0.55
+OK  10.1002--ajcp.12385: {'A': 'replicated', 'B': 'replicated', 'C': 'not_relevant'} $0.59
+OK  10.1007--s40732-024-00597-x: {'A': 'cited_not_replicated', 'B': 'replicated'} $0.50
+OK  10.1007--s10899-020-09932-7: {'A': 'replicated', 'B': 'replicated'} $0.55
+OK  10.1037--pspp0000104: {'A': 'replicated', 'B': 'cited_not_replicated'} $0.43
+OK  10.1037--cou0000322: {'A': 'replicated', 'B': 'cited_not_replicated'} $0.52
+OK  10.1038--s41598-018-35209-6: {'A': 'cited_not_replicated', 'B': 'replicated'} $0.56
+OK  10.1007--s11409-020-09235-7: {'A': 'replicated', 'B': 'cited_not_replicated'} $0.52
+OK  10.1016--j.sbspro.2015.09.054: {'A': 'not_relevant', 'B': 'replicated'} $0.54
+OK  10.1037--a0033324: {'A': 'replicated', 'B': 'replicated'} $0.49
+OK  10.1037--edu0000095: {'A': 'replicated', 'B': 'cited_not_replicated'} $0.49
+OK  10.1080--08993408.2022.2079864: {'A': 'replicated', 'B': 'cited_not_replicated'} $0.46
+OK  10.1080--02732173.1991.9981978: {'A': 'replicated', 'B': 'cited_not_replicated'} $0.40
+OK  10.1080--09515089.2014.893288: {'A': 'replicated', 'B': 'not_relevant'} $0.38
+OK  10.1080--02607476.2019.1674563: {'A': 'cited_not_replicated', 'B': 'replicated'} $0.49
+OK  10.1080--02699931.2018.1429389: {'A': 'cited_not_replicated', 'B': 'replicated'} $0.39
+OK  10.1080--09515089.2019.1587912: {'A': 'replicated', 'B': 'not_relevant'} $0.45
+OK  10.1080--01973533.2020.1806845: {'A': 'replicated', 'B': 'replicated'} $0.53
+OK  10.1080--10410236.2016.1140268: {'A': 'replicated', 'B': 'replicated'} $0.54
+OK  10.1080--20008198.2017.1315291: {'A': 'replicated', 'B': 'cited_not_replicated'} $0.45
+OK  10.1111--psyp.12825: {'A': 'not_relevant', 'B': 'replicated'} $0.34
+OK  10.1038--s41598-020-66915-9: {'A': 'replicated', 'B': 'replicated', 'C': 'cited_not_replicated'} $0.50
+OK  10.1111--cdev.12774: {'A': 'cited_not_replicated', 'B': 'replicated', 'C': 'replicated'} $0.55
+OK  10.1111--psyp.13546: {'A': 'replicated', 'B': 'cited_not_replicated'} $0.47
+OK  10.1167--iovs.14-15390: {'A': 'replicated', 'B': 'not_relevant'} $0.46
+OK  10.1080--10503307.2011.598580: {'A': 'cited_not_replicated', 'B': 'replicated'} $0.65
+OK  10.1177--2053168018822174: {'A': 'replicated', 'B': 'cited_not_replicated', 'C': 'replicated', 'D': 'replicated', 'E': 'replicated'} $0.46
+OK  10.1176--ps.62.4.pss6204_0367: {'A': 'replicated', 'B': 'cited_not_replicated'} $0.44
+OK  10.1177--25152459241267902: {'A': 'not_relevant', 'B': 'replicated'} $0.44
+OK  10.1080--10926771.2022.2038753: {'A': 'replicated', 'B': 'replicated'} $0.72
+OK  10.1371--journal.pone.0129263: {'A': 'not_relevant', 'B': 'replicated'} $0.53
+OK  10.1186--s13024-018-0267-3: {'A': 'replicated', 'B': 'not_relevant'} $0.38
+OK  10.1177--0956797619831612: {'A': 'replicated', 'B': 'cited_not_replicated', 'C': 'not_relevant'} $0.54
+OK  10.1177--1948550618808863: {'A': 'cited_not_replicated', 'B': 'replicated'} $0.49
+OK  10.32714--ricl.10.01.08: {'A': 'not_relevant', 'B': 'replicated'} $0.47
+OK  10.1371--journal.pone.0313619: {'A': 'replicated', 'B': 'cited_not_replicated', 'C': 'replicated'} $0.57
+OK  10.3390--su12083069: {'A': 'replicated', 'B': 'not_relevant'} $0.38
+OK  10.2466--20.22.pms.114.1.185-188: {'A': 'replicated', 'B': 'cited_not_replicated'} $0.49
+OK  10.1525--collabra.185: {'A': 'replicated', 'B': 'cited_not_replicated'} $0.51
+OK  10.1371--journal.pone.0209704: {'A': 'replicated', 'B': 'replicated'} $0.53
+OK  10.37237--150205: {'A': 'replicated', 'B': 'replicated'} $0.44
+cost $22.80

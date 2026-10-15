@@ -1,0 +1,27 @@
+{
+  "eligibility": "positive",
+  "eligibility_reason": "The paper genotypes a new Chinese Han case-control sample (513 AIS patients, 440 controls) for the three LBX1-region SNPs reported by the Japanese GWAS of Takahashi et al. (2011) and reports that the susceptibility association 'was successfully replicated in this Chinese Han population'.",
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "casecontrol:lbx1_ais_susceptibility",
+      "original_reference": "Takahashi Y et al. (2011) [ref 1]",
+      "original_url": "",
+      "original_title": "A genome-wide association study identifies common variants near LBX1 associated with adolescent idiopathic scoliosis",
+      "original_authors": "Takahashi, Y; Kou, I; Takahashi, A; Johnson, T; Kono, K",
+      "original_year": "2011",
+      "original_journal": "Nature Genetics",
+      "replication_study": "Case-control study (513 AIS patients vs 440 controls, Chinese Han, Southern China)",
+      "outcome": "AIS susceptibility (case vs control status) by allele/genotype at rs11190870, rs625039 and rs11598564 near LBX1",
+      "contrast": "risk allele vs non-risk allele (T for rs11190870, G for rs625039, G for rs11598564), AIS cases vs healthy controls",
+      "timepoint": "not applicable: cross-sectional case-control genetic association",
+      "result": "success",
+      "replication_type": "close extension",
+      "description": "In a Japanese GWAS, common SNPs near LBX1 on chromosome 10q24.31 (rs11190870, rs625039, rs11598564) were associated with susceptibility to adolescent idiopathic scoliosis.",
+      "citation_sentence": "Recently, a genome-wide association study (GWAS) was performed in a Japanese population, and three SNPs (rs11190870, rs625039 and rs11598564), all of which were located near the gene LBX1 on chromosome 10q24.31, were reported to be associated with AIS susceptibility [1]. ... In order to determine whether rs11190870, rs625039, and rs11598564 are associated with a predisposition to AIS in Chinese Han population of Southern China, we conducted a case-control study involving 513 AIS patients and 440 control subjects.",
+      "evidence": "Results, Case-control Study (Table 2): 'All the SNPs were all found to be associated with AIS predisposition, the ORs were observed as 1.49 (95% CI 1.23-1.80, P = 5.09E-5), 1.70 (95% CI 1.42-2.04, P = 1.17E-8) and 1.52 (95% CI 1.27-1.83, P = 5.54E-6) for rs625039, rs11190870 and rs11598564, respectively.' Discussion: 'We also found G, T, and G to be risk alleles ... the same as those reported in the previous Japanese GWAS [1]. The association between common variants near LBX1 and AIS predisposition found in Japanese population was successfully replicated in this Chinese Han population.'",
+      "gt_ambiguity": "clear",
+      "notes": "Coded as ONE entry because the original presented a single locus finding (variants near LBX1; title-level claim) with three SNPs in LD (r2 0.59-0.70 here); a second coder could plausibly split into three per-SNP rows, each of which would also be success (all three significant, same risk alleles). Result label is unambiguous either way. Original DOI not given in the paper's reference list (references give Nat Genet 43:1237-1240) so original_url left blank. Author list in the reference is truncated to five names (et al.). Replication_type: same SNPs and case-control design in a different ethnic population (Chinese Han vs Japanese) with a different genotyping platform (Sequenom MassArray); the authors frame it as confirming the finding 'in other ethnic groups', hence close extension; 'direct' is a plausible alternative. Sex-stratified analysis found association in females but not males, attributed by authors to low power in the small male subset; not treated as a separate claim. Not coded: the case-only severity (maximum Cobb angle) analysis, which found no association — the paper presents it as a new question ('to determine the effects of these variants on the severity'), not as a replication of a severity claim by the original GWAS. Haplotype/age/sex-adjustment analyses are secondary analyses of the same claim. Earlier Chinese replications [34][35] are cited, not replicated."
+    }
+  ]
+}

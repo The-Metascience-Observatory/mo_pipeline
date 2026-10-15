@@ -1,0 +1,22 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "Sofer, Dotsch, Wigboldus & Todorov (2014, Psychological Science) is an original research article: three new experiments testing a new hypothesis that distance from the typical face lowers perceived trustworthiness. Nowhere does it present any study as a replication of a prior published finding. Experiments 2 and 3 replicate Experiment 1 within the same paper, which the codebook excludes.",
+  "enumeration_complete": true,
+  "why_negative": "No qualifying entry: original (non-replication) research; the only replication is within the paper (Experiments 2-3 extend and check Experiment 1), and agreement with prior attractiveness findings is incidental, not a framed replication.",
+  "gt_ambiguity": "clear",
+  "notes": "The word 'replicate' never appears. The closest is p.5 (Exp. 2): 'The predicted location of the attractiveness peak is in line with the results of DeBruine et al. (2007)'. The transformation procedure was 'adopted from previous studies'. The authors never frame the attractiveness trend as a replication. A generous coder might code a conceptual replication of DeBruine et al. (2007), but the paper's framing does not support it.",
+  "effects": [],
+  "candidate_resolutions": {
+    "ling26:10.1177--0956797614554955#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal; it agrees with my negative call (original experiments, no framed replication). The format requires reject on a negative paper, with no effects to map to."
+    },
+    "luna56:10.1177--0956797614554955#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal; it agrees with my negative call (new experiments on an original hypothesis). The format requires reject on a negative paper, with no effects to map to."
+    }
+  },
+  "revision_notes": ""
+}

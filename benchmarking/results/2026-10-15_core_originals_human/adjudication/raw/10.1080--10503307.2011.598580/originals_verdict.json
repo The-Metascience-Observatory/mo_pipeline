@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Baldwin, Berkeljon, Atkins, Olsen & Nielsen (2009) Rates of change in naturalistic psychotherapy: Contrasting dose-effect and good-enough level models of change",
+   "doi": "10.1037/a0015235"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Cited as Barkham et al. (1996), which the authors credit with proposing the GEL hypothesis (they write that it 'proffered' it and made 'predictions'). The paper tests those predictions, but the empirical comparison it actually re-runs (aggregate vs. stratified/GEL growth models on OQ-45 counseling-center data) is Baldwin et al. (2009)."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The paper is titled 'Replicating ... the GEL model'. It repeats Baldwin et al.'s (2009) multilevel comparison of the aggregate dose-effect model against the GEL (stratified) model on OQ-45 data and finds that GEL fits better and that clients with fewer sessions have steeper slopes. The discussion says its GEL results 'parallel the Baldwin et al. study'."
+  }
+ },
+ "notes": "There is some ambiguity over A. The authors attribute the GEL model to Barkham et al. (1996), although the GEL is usually credited to Barkham et al. (2006), which is ref 4 in this paper. A second coder could treat the 1996 paper as a replicated theoretical source, because the paper tests its prediction that session-stratified trajectories are linear and steeper for shorter treatments. The extension (session frequency) is a new analysis, not a replication."
+}

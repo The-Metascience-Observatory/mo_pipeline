@@ -1,0 +1,36 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "Reanalysis of the same data: the paper re-runs Cairns and Davis (1998)'s regressions on their own 28-gold-mine cross-section ('a replication of that study using the same data'; 'Using their data, I show...') and re-estimates them with robust/WLS methods. No new data are collected, so it falls in the codebook's 'reanalysis or reproducibility check of the same data' negative genre.",
+  "enumeration_complete": true,
+  "effects": [],
+  "why_negative": "Reanalysis/reproducibility check of the same data (Cairns & Davis 1998 gold-mine dataset); no new data.",
+  "gt_ambiguity": "ambiguous",
+  "candidate_resolutions": {
+    "ling26:10.1007--s00181-005-0242-z#ling26:8680750506f0e24b:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Not a qualifying replication: the paper reanalyses Cairns & Davis's own data ('a replication of that study using the same data', abstract; 'Using their data, I show...', Introduction). The codebook requires new data; same-data reanalysis is a listed negative genre."
+    },
+    "luna56:10.1007--s00181-005-0242-z#luna56:5aa5f9a912369851:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Same-data reanalysis: the matched-pairs comparison of prediction errors (Section 3) is computed on C&D's 28-mine dataset, so it is not a replication with new data."
+    },
+    "luna56:10.1007--s00181-005-0242-z#luna56:9c481186e1d5a94c:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Same-data reanalysis: the OLS/robust/WLS re-estimation of Eq. (1) (Section 2, Table 1) uses C&D's own data; no new data."
+    },
+    "luna56:10.1007--s00181-005-0242-z#luna56:e006b20649c5eaf6:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Same-data reanalysis: the WLS re-estimation of Eq. (2) (Section 3, Table 1) uses C&D's data; no new data."
+    },
+    "luna56:10.1007--s00181-005-0242-z#luna56:43f8a5c45d88a139:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Same-data reanalysis: the re-estimation of Eq. (3) (Section 3, Table 1; 'Table 1 gives my replication') uses C&D's data; no new data."
+    }
+  },
+  "revision_notes": "No change to the eligibility call (negative, no entries). gt_ambiguity raised from clear to ambiguous: the author calls the paper a replication (a Mittelstaedt-Zorn type I/II 'econometric audit'), every candidate coded it as one, and a luna56 note implies an external database record exists for this paper. So a second coder who does not apply the codebook's new-data requirement could plausibly code entries against Cairns & Davis (1998), Review of Economics and Statistics 80:658-663. Under the codebook, a reanalysis of the original's own dataset is a negative genre."
+}

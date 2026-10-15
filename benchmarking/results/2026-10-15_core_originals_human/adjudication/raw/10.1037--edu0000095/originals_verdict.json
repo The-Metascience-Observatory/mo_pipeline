@@ -1,0 +1,26 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Olson, Kim, Scarcella, Kramer, Pearson, van Dyk, Collins & Land (2012) Enhancing the interpretive reading and analytical writing of mainstreamed English learners in secondary school: Results from a randomized field trial using a cognitive strategies approach",
+   "doi": "10.3102/0002831212439434"
+  },
+  {
+   "reference": "Kim, Olson, Scarcella, Kramer, Pearson, van Dyk, Collins & Land (2011) A randomized experiment of a cognitive strategies approach to text-based analytical writing for mainstreamed Latino English language learners in Grades 6 to 12",
+   "doi": "10.1080/19345747.2010.523513"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The abstract and discussion say the AUHSD RCT 'largely replicated the earlier RCT in the SAUSD' (d = .35/.67 vs .48/.60). The paper attributes the SAUSD trial to Kim et al. (2011) and Olson et al. (2012); this candidate is the 2012 AERJ report."
+  },
+  "B": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Olson & Land (2007, RTE 41) appears only among the 'earlier studies' of the program, as background support. The effects being replicated come from the SAUSD randomized trial, not from this earlier quasi-experimental study."
+  }
+ },
+ "notes": "The replicated finding is the Pathway Project's effect on on-demand analytical writing in the SAUSD RCT, reported in both Kim et al. 2011 (JREE) and Olson et al. 2012 (AERJ). The reference parser garbled the author lists of both (refs 23-24, 34-35), but their titles and DOIs are intact."
+}

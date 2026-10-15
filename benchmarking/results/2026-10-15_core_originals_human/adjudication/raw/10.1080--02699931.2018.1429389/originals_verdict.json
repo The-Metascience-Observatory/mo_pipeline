@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Rydell, McConnell, Mackie & Strain (2006) Of two minds: Forming and changing valence-inconsistent implicit and explicit attitudes",
+   "doi": "10.1111/j.1467-9280.2006.01811.x"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Rydell & McConnell (2006, JPSP) is cited as the systems-of-reasoning theory and as one of two similar studies by the original authors. It is not the target of the replication."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The title is 'A registered replication of Rydell et al. (2006)'. Experiments 1 and 2 closely replicate this Psychological Science study (subliminal primes vs. behavioural information on IAT and explicit attitudes) using the original materials."
+  }
+ },
+ "notes": "Two experiments, both close replications of the same original: Exp 1 in Germany with translated materials, Exp 2 with US undergraduates and a shorter prime duration. The explicit-attitude effect replicated; the prime effect on implicit attitudes did not."
+}

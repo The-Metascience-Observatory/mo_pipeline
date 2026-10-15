@@ -1,13 +1,124 @@
 {
   "packet_sha256": "452fe74e7fbd64ffcce109ffef580e2967426dde4d9c2ea9e238b7312f9ac0b4",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
-  "effects": [],
-  "candidate_resolutions": {}
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "positive",
+  "eligibility_reason": "Three new-data studies (new Facebook and undergraduate samples) test whether the five-factor MUSIC music-preference structure reported in the separately published Rentfrow, Goldberg, & Levitin (2011, JPSP) replicates; Study 1 uses a subset of that paper's Study 2 excerpts, and Studies 2-3 test it within jazz and rock. The authors frame the paper as 'a replication and extension of the MUSIC model' (a self-replication).",
+  "sources_checked": true,
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "s1:music_five_factor_mixed_genre",
+      "original_reference": "Rentfrow, Goldberg, & Levitin (2011)",
+      "original_url": "",
+      "original_title": "The structure of musical preferences: A five-factor model",
+      "original_authors": "Rentfrow, Peter J.; Goldberg, Lewis R.; Levitin, Daniel J.",
+      "original_year": "2011",
+      "original_journal": "Journal of Personality and Social Psychology",
+      "replication_study": "Study 1 (mixed-genre excerpts, Facebook 'My Personality' sample, N = 1,057)",
+      "outcome": "Factor structure of liking ratings for 15 s audio excerpts (five MUSIC factors), plus the auditory/psychological attribute profiles that define each factor",
+      "contrast": "not applicable: factor-analytic structure; compared to the original's factors and to its Table 4 attribute correlations (column-vector correlations)",
+      "timepoint": "not applicable: single cross-sectional assessment",
+      "result": "success",
+      "replication_type": "close extension",
+      "description": "Individual differences in liking for audio excerpts of real music from many genres are described by five orthogonal dimensions - Mellow, Unpretentious, Sophisticated, Intense, and Contemporary (MUSIC) - each defined by distinct auditory and psychological attributes.",
+      "citation_sentence": "Study 1 was designed to replicate the five-factor music-preference model reported in Rentfrow, Goldberg, and Levitin (2011) and to extend that work by investigating a larger set of auditory and psychological attributes.",
+      "evidence": "Study 1 Results/Summary: \"The final five-factor solution was consistent with our expectations and clearly resembled the MUSIC model.\" ... \"The results from the present study are consistent with previous research on the MUSIC model (Rentfrow, Goldberg, & Levitin, 2011).\" Attribute profiles vs. original Table 4: \"column-vector correlations = .96, .85, .92, .97, and .81, for M, U, S, I, and C\".",
+      "gt_ambiguity": "clear",
+      "notes": "Self-replication (Rentfrow, Goldberg and Levitin are co-authors here). Stimuli are a subset (50 pieces) of the original's Study 2 Getty Images excerpts. The population was deliberately changed ('test whether the MUSIC preference model would replicate in a large and representative sample of Internet users, as opposed to music fans') and attributes were added, so this is coded close extension: the codebook says a changed population means close extension, including when methodology also changed. Candidates proposed direct (ling26) and close experiment (luna56). Both are defensible, and the type label (not the result) is the uncertain field. The attribute-profile convergence (14 shared attributes) is coded as part of the same claim, because it is how the factors are identified as MUSIC, not as a separate entry. original_url is blank: the paper's reference list gives no DOI.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s2:music_five_factor_jazz",
+      "original_reference": "Rentfrow, Goldberg, & Levitin (2011)",
+      "original_url": "",
+      "original_title": "The structure of musical preferences: A five-factor model",
+      "original_authors": "Rentfrow, Peter J.; Goldberg, Lewis R.; Levitin, Daniel J.",
+      "original_year": "2011",
+      "original_journal": "Journal of Personality and Social Psychology",
+      "replication_study": "Study 2 (jazz excerpts; Facebook sample N = 913 and University of Texas undergraduate sample N = 408)",
+      "outcome": "Factor structure of liking ratings for jazz-only excerpts (whether five MUSIC-like factors emerge) and convergence of their attribute profiles with the MUSIC factors",
+      "contrast": "not applicable: factor-analytic structure; jazz factors compared to the MUSIC factors via attribute column-vector correlations",
+      "timepoint": "not applicable: single cross-sectional assessment",
+      "result": "success",
+      "replication_type": "close extension",
+      "description": "Individual differences in music preferences are described by five MUSIC dimensions (Mellow, Unpretentious, Sophisticated, Intense, Contemporary) defined by particular auditory and psychological attributes rather than by genre.",
+      "citation_sentence": "Previous research suggests that the MUSIC factors are defined and differentiated by certain musical attributes that account for significant proportions of variance in preferences over and above genre classification (Rentfrow, Goldberg, & Levitin, 2011). ... The strongest test, therefore, of this hypothesis would be if the five MUSIC factors could be replicated solely using musical excerpts from a single genre.",
+      "evidence": "Study 2 Results/Summary: \"The five-factor solution that emerged in the Internet sample was highly consistent with our expectations and clearly resembled the MUSIC model.\" ... \"The present results supported our hypothesis and revealed five jazz-preference factors.\" But: \"at least four of the five jazz-preference factors clearly resemble the MUSIC factors\"; Sophisticated psychological convergence = -.40 (Table 4).",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Self-replication. The original did not test within-genre structure, so this extends the five-factor claim to a single genre with new jazz stimuli: close extension, with conceptual as a possible alternative. The citation sentence was revised in pass 2 to the Study 2 introduction sentence that names Rentfrow, Goldberg, & Levitin (2011), the same sentence luna56 used. Result: the authors say their hypothesis was supported and five factors emerged. However, the Sophisticated jazz factor 'showed no convergence on the psychological attributes' (r = -.40), so a second coder could call this inconclusive (partial support). The Internet and undergraduate samples are one entry: they are two samples of one study, the undergraduate sample checks the reliability of the same structure (congruence .96, .94, .97, .68, .94), and the attribute analysis pools them.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s3:music_five_factor_rock",
+      "original_reference": "Rentfrow, Goldberg, & Levitin (2011)",
+      "original_url": "",
+      "original_title": "The structure of musical preferences: A five-factor model",
+      "original_authors": "Rentfrow, Peter J.; Goldberg, Lewis R.; Levitin, Daniel J.",
+      "original_year": "2011",
+      "original_journal": "Journal of Personality and Social Psychology",
+      "replication_study": "Study 3 (rock excerpts; Facebook sample N = 1,786 and University of Texas undergraduate sample N = 374)",
+      "outcome": "Factor structure of liking ratings for rock-only excerpts (whether five MUSIC-like factors emerge) and convergence of their attribute profiles with the mixed-genre and jazz MUSIC factors",
+      "contrast": "not applicable: factor-analytic structure; rock factors compared to the MUSIC factors via attribute column-vector correlations",
+      "timepoint": "not applicable: single cross-sectional assessment",
+      "result": "success",
+      "replication_type": "close extension",
+      "description": "Individual differences in music preferences are described by five MUSIC dimensions (Mellow, Unpretentious, Sophisticated, Intense, Contemporary) defined by particular auditory and psychological attributes rather than by genre.",
+      "citation_sentence": "Studies 2 and 3 were designed to examine the structure of preferences for pieces of music within genres. Specifically, preferences for various jazz musical pieces were assessed in Study 2 and preferences for various rock pieces were assessed in Study 3. [General Discussion:] Using multiple pieces of music, methods, and samples, three studies were conducted to test the replicability of the five-dimensional music-preference model ... Taken together, these results provide almost complete replication of the MUSIC model",
+      "evidence": "Study 3 Summary: \"The results from this study once again support the hypothesis ... results from the factor analyses revealed five rock-preference factors ... those factors were defined by attributes that resembled the preference models observed in Studies 1 and 2.\" Rock vs mixed-genre psychological column-vector correlations = .93, .70, .91, .97, and .25 (M, U, S, I, C).",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Self-replication that extends the five-factor claim to rock-only stimuli: close extension, with conceptual as a possible alternative. Study 3's own section does not cite Rentfrow, Goldberg, & Levitin (2011) by name; it calls itself 'a further test of the hypothesis that the MUSIC model reflects ...' (the Study 2 hypothesis attributed to that paper). The authors call the result support, but a second coder could call it inconclusive: (1) the Contemporary factor converged only weakly with the mixed-genre factor on psychological attributes (.25); (2) convergence with the jazz factors was lower (psychological S = -.53, C = -.19); (3) parallel analysis suggested six factors in the Internet sample. The Internet and undergraduate samples are one entry (congruence .86, .98, .92, .98, .85), as in Study 2. General Discussion: 28 of 35 attribute comparisons were significantly similar, and the authors call the results an 'almost complete replication of the MUSIC model'.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26@v2:10.1525--mp.2012.30.2.161#flora_93": {
+      "action": "map",
+      "effect_ids": [
+        "s3:music_five_factor_rock"
+      ],
+      "reason": "Same claim and study: the five-factor MUSIC structure within rock (Study 3). Its labels (success, close extension) agree with mine. Its citation sentence comes from Study 1's stimuli section, which is a field error, not a different entry."
+    },
+    "ling26@v2:10.1525--mp.2012.30.2.161#added_a2b963dbf2": {
+      "action": "map",
+      "effect_ids": [
+        "s1:music_five_factor_mixed_genre"
+      ],
+      "reason": "This is the mixed-genre test of the MUSIC structure: its citation sentence is from Study 1 ('test the robustness of the MUSIC model'). It labels the type direct, but I keep close extension because the authors deliberately changed the population (representative Internet users instead of music fans) and added attributes."
+    },
+    "ling26@v2:10.1525--mp.2012.30.2.161#added_6d05bf316c": {
+      "action": "map",
+      "effect_ids": [
+        "s2:music_five_factor_jazz"
+      ],
+      "reason": "Same claim and study: the five-factor MUSIC structure within jazz (Study 2). Its labels agree with mine."
+    },
+    "luna56@v2:10.1525--mp.2012.30.2.161#flora_93": {
+      "action": "map",
+      "effect_ids": [
+        "s3:music_five_factor_rock"
+      ],
+      "reason": "Study 3 rock excerpts, treated as one entry across the two samples. Its labels agree with mine."
+    },
+    "luna56@v2:10.1525--mp.2012.30.2.161#added_c61476cf45": {
+      "action": "map",
+      "effect_ids": [
+        "s1:music_five_factor_mixed_genre"
+      ],
+      "reason": "Study 1 mixed-genre replication. It labels the type close experiment, but I keep close extension: the source says the study tests replication 'in a large and representative sample of Internet users, as opposed to music fans', a change of population, which the codebook codes as close extension."
+    },
+    "luna56@v2:10.1525--mp.2012.30.2.161#added_0f926b3898": {
+      "action": "map",
+      "effect_ids": [
+        "s2:music_five_factor_jazz"
+      ],
+      "reason": "Study 2 jazz excerpts, treated as one entry across the two samples. Its labels agree with mine."
+    }
+  },
+  "revision_notes": "Pass 2 changed no labels and no entries. The Study 2 citation_sentence now uses the sentence from the Study 2 introduction that names Rentfrow, Goldberg, & Levitin (2011); the pass 1 sentence did not name the original. The Study 1 replication_type stays close extension even though the candidates proposed direct and close experiment: the source states a deliberate population change, and the codebook says a population change takes close extension even when methodology also changed. The prior source review also flags close extension for human consideration.",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 1.9711,
+  "adjudication_session": "9425bf35-09a8-4ccf-bd09-6d514a0aae07"
 }

@@ -1,0 +1,44 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "Reanalysis genre: the paper re-examines the same 1980 Mariel Boatlift event with the same Current Population Survey data (May/ORG and March CPS) used by Card (1990) and Borjas (2017), applying the synthetic control method; it reproduces Borjas's estimates ('The first column shows our replication of exactly the regressions performed by Borjas') and re-tests Angrist and Krueger's (1999) 1994 non-event on the same CPS data, so no new participants or new data test any prior finding. Ambiguous: a second coder could code it positive as a methods-based confirmation of Card (1990) ('In essence our results confirm the early findings of Card (1990)'), because it extends the CPS window (1972-91, 43 donor cities) beyond Card's sample, but the post-1979 observations that test the claim are the same survey data Card analysed.",
+  "enumeration_complete": true,
+  "effects": [],
+  "candidate_resolutions": {
+    "ling26:10.3386--w21801#ling26:81d3ba65d488c69c:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative (reanalysis): it re-tests Card (1990)'s Mariel claim on the same CPS survey data for the same 1980 event with a new estimator (synthetic control), with no new data on the phenomenon."
+    },
+    "ling26:10.3386--w21801#ling26:9d4107a0e5fbb56a:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative: the Borjas (2017) section is a computational reproduction and robustness reanalysis of the same March-CPS/ORG data ('our replication of exactly the regressions performed by Borjas', Table 5), not a replication with new data."
+    },
+    "ling26:10.3386--w21801#ling26:486602f0ec261de4:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative: the 1994 'Boatlift that did not happen' section reanalyses the same CPS data for the same non-event Angrist and Krueger (1999) used, with a different control-group method; Angrist and Krueger's point was a methodological caution, not an empirical finding that new data test."
+    },
+    "luna56:10.3386--w21801#luna56:aff2728c7c7b8245:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative: it reanalyses Card (1990)'s wage claim on the same CPS data for the same event with synthetic control. It would also duplicate the Card wage/unemployment split, which is one claim under the codebook."
+    },
+    "luna56:10.3386--w21801#luna56:40ad3d75ac5217d0:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative (reanalysis of the same CPS data). Even on a positive reading, it splits Card's single 'no wage/employment impact' claim into a separate unemployment row, which the codebook's one-row-per-claim rule would not allow."
+    },
+    "luna56:10.3386--w21801#luna56:c47e3bc2ff69d5bf:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative: reproducing Borjas (2017)'s regression on his own March-CPS sample and specification is a reproducibility check of the same data (codebook negative genre), not a replication with new data."
+    },
+    "luna56:10.3386--w21801#luna56:38cfc01a178e6719:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative: the 1994 placebo analysis reanalyses the same CPS data for the same non-event as Angrist and Krueger (1999), with a different method."
+    }
+  },
+  "revision_notes": "No change from pass 1. All seven candidates treat the paper as a replication, but on re-checking the source every comparison (Card 1990, Borjas 2017, Angrist and Krueger 1999) reanalyses the same CPS survey data for the same event with new methods, which is the codebook's 'Reanalysis or reproducibility check of the same data' negative genre. The ambiguity remains (positive reading: a methods-based confirmation of Card 1990) and is recorded in eligibility_reason."
+}

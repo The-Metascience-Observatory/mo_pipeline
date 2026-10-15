@@ -1,0 +1,27 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "MacDonald (2000) Spirituality: Description, measurement, and relation to the Five Factor Model of personality",
+   "doi": "10.1111/1467-6494.t01-1-00094"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Table 1 replicates Big Five associations with religious beliefs/behavior, existential/phenomenological concerns and existential well-being, all with original N = 595. These are the dimensions of MacDonald's (2000) Expressions of Spirituality Inventory. The 38 original sources are listed only in Supplemental Appendix A, which is not in the folder, so this match is inferred from the table and not read from a citation."
+  },
+  "B": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Ozer & Benet-Martinez (2006) is the review whose Table 1 was used to pick the 78 trait-outcome associations. The replications target the empirical studies behind those associations, not the review."
+  },
+  "C": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "Breen et al. (2010) is not cited in the main text or references. It postdates the 2006 review from which all original sources were drawn. The gratitude (N = 1,228) and forgiveness (N = 140) originals in Table 1 do not match it."
+  }
+ },
+ "notes": "LOOPR Project (Soto, 2019): 78 trait-outcome associations from 38 original sources, cited only in Supplemental Appendix A (https://osf.io/mc3z7), which is not in the source folder. So replicated_originals lists only the candidate the paper's tables identify. The full set of originals is much larger and cannot be listed from these files."
+}

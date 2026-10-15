@@ -1,13 +1,147 @@
 {
   "packet_sha256": "e2be92c0f52bcf44ab67c6923e2de95edd536a3f6e5e43ab86485dc737d0ea10",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
-  "effects": [],
-  "candidate_resolutions": {}
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "positive",
+  "eligibility_reason": "Registered-report replication with new data (N = 166 Japanese learners of English) of the multi-talker (HV) phonetic training experiment of Logan et al. (1991) and the single-talker (LV) experiment (Exp. 2) of Lively et al. (1993), testing pre/post learning and the claimed high-variability generalisation benefit.",
+  "sources_checked": true,
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "s1:hv_generalisation_benefit",
+      "original_reference": "Lively et al. (1993)",
+      "original_url": "https://doi.org/10.1121/1.408177",
+      "original_title": "Training Japanese listeners to identify English /r/ and /l/. II: The role of phonetic environment and talker variability in learning new perceptual categories",
+      "original_authors": "Lively, S. E.; Logan, J. S.; Pisoni, D. B.",
+      "original_year": "1993",
+      "original_journal": "The Journal of the Acoustical Society of America",
+      "replication_study": "single study (HV vs LV training groups)",
+      "outcome": "Generalisation of /r/-/l/ identification to a novel talker (pre-test to Generalisation 1 improvement; also the trained- vs novel-talker post-test difference)",
+      "contrast": "high-variability (5-talker) vs low-variability (single-talker) training",
+      "timepoint": "post-test (24 h to 5 days after the 15th training session)",
+      "result": "inconclusive",
+      "replication_type": "direct",
+      "description": "Training with multiple talkers (Logan et al., 1991) produced better generalisation of /r/-/l/ identification to novel talkers than training with a single talker (Lively et al., 1993, Exp. 2), so talker variability in training is important for robust generalisation.",
+      "citation_sentence": "For the current study, we therefore performed such a large-scale replication of the two key experiments in the original seminal studies of Logan et al. (1991) and Lively et al. (1993). We aimed to test the claim that learners generalise more after having had phonetic training on multiple talkers.",
+      "evidence": "Results, Model 1: \"the evidence for the interaction between test session and variability condition was ambiguous (β = 0.076, SE = 0.090, z = 0.844, p =.398; BF H(0,0.32) = 0.598\"; Model 2: \"we similarly found ambiguous evidence for the interaction ... BF H(0,0.27) = 1.504 ... This means that results are inconclusive as to whether the amount of variability encountered during training results in differential performance\". Conclusion: \"Bayes Factor analyses found that in each case the evidence for a variability benefit was ambiguous. This means that null effects are not established\".",
+      "gt_ambiguity": "ambiguous",
+      "notes": "The HV>LV claim is a cross-paper comparison: the conclusion is drawn in Lively et al. (1993) by comparing its single-talker Exp. 2 with Logan et al. (1991)'s multi-talker experiment (Logan et al. only speculated that variation is needed). Attributed here to Lively et al. (1993); a coder could attribute it to Logan et al. (1991) or code it under both. Prediction 1 (pre-to-novel-post interaction, the authors' key test) and prediction 2 (trained- vs novel-talker interaction, 'the test most closely corresponding to the claims made in Lively et al., 1993') are two measures of one claim ('Across two different measures'), so one entry; both gave ambiguous BFs. Result changed in pass 2 from failure to inconclusive: the authors' explicit wording is mixed ('found no evidence of such effect', 'different from those of the original study' vs. 'ambiguous', 'results are inconclusive', 'null effects are not established'), and the codebook tiebreaker for doubt between failure and inconclusive is inconclusive. Failure remains a plausible reading (99% power for the original effect size; 'if it does exist, such a benefit ... is likely very small'). Replication type: authors call it a 'direct-as-possible replication'; deliberate changes (new stimulus recordings, Japan-resident online Prolific sample, counterbalanced talkers, pre-test vs generalisation-task comparison, feedback on all trials, pre-test ceiling cut-off) could support close extension. Training-phase LV-advantage hypothesis (prediction 3) is not from the originals and gets no entry.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:hv_pre_post_learning",
+      "original_reference": "Logan et al. (1991)",
+      "original_url": "https://doi.org/10.1121/1.1894649",
+      "original_title": "Training Japanese listeners to identify English /r/ and /l/: A first report",
+      "original_authors": "Logan, J. S.; Lively, S. E.; Pisoni, D. B.",
+      "original_year": "1991",
+      "original_journal": "The Journal of the Acoustical Society of America",
+      "replication_study": "single study (HV training group)",
+      "outcome": "/r/-/l/ identification accuracy (2AFC) from pre-test to post-test with an untrained talker and untrained items",
+      "contrast": "post-test vs pre-test within the multi-talker (HV) training group",
+      "timepoint": "post-test after 15 training sessions",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "Fifteen sessions of multiple-talker high-variability phonetic training improved Japanese learners' identification of English /r/ and /l/ from pre- to post-test, including for untrained items and talkers.",
+      "citation_sentence": "Logan et al. (1991) report that the multiple talker phonetic training paradigm was successful at improving the learners’ abilities to identify /l/ and /r/ from pre- to post-test.",
+      "evidence": "Results, Model 1: \"there is substantial (indeed very strong) evidence of pre- to post- improvement in both HV learners (β = 0.448, SE = 0.085, z = 5.298, p < .001; BF H(0,0.45) = 284830.477\"; Discussion: \"Our results clearly confirm the seminal finding and subsequent replications that the phonetic training paradigm is useful\".",
+      "gt_ambiguity": "clear",
+      "notes": "Prediction 4 (pairwise comparison, not the key test but explicitly motivated by 'Pre- to post-test improvement was seen both in Logan et al. (1991) and Lively et al. (1993)'). Replication measures improvement from pre-test to Generalisation 1 (novel talker, novel items) rather than the original's identical pre/post-test, which was dropped.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:lv_pre_post_learning",
+      "original_reference": "Lively et al. (1993)",
+      "original_url": "https://doi.org/10.1121/1.408177",
+      "original_title": "Training Japanese listeners to identify English /r/ and /l/. II: The role of phonetic environment and talker variability in learning new perceptual categories",
+      "original_authors": "Lively, S. E.; Logan, J. S.; Pisoni, D. B.",
+      "original_year": "1993",
+      "original_journal": "The Journal of the Acoustical Society of America",
+      "replication_study": "single study (LV training group)",
+      "outcome": "/r/-/l/ identification accuracy (2AFC) from pre-test to post-test with an untrained talker and untrained items",
+      "contrast": "post-test vs pre-test within the single-talker (LV) training group",
+      "timepoint": "post-test after 15 training sessions",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "In Lively et al.'s Experiment 2, fifteen sessions of single-talker phonetic training improved Japanese learners' identification of English /r/ and /l/ from pre- to post-test.",
+      "citation_sentence": "Lively et al. (1993) describe that in the single talker version of the phonetic training paradigm, learners did improve from pre- to post-test, but that, in generalisation, performance with a novel talker was lower than performance with a familiar talker.",
+      "evidence": "Results, Model 1: \"... and LV learners (β = 0.372, SE = 0.083, z = 4.492, p < .001; BF H(0,0.45) = 6266.237 [RR 0, > 4.067]). This means both groups show gains following training\"; Conclusion: \"our results have clearly shown that even training with a single talker can lead to robust improvements in generalization\".",
+      "gt_ambiguity": "clear",
+      "notes": "Prediction 4 (pairwise). Experiment 2 of Lively et al. (1993) is the single-talker experiment replicated; Lively et al.'s Exp. 1 (multi-talker, limited phonetic contexts) was not replicated.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:hv_familiar_talker_advantage",
+      "original_reference": "Logan et al. (1991)",
+      "original_url": "https://doi.org/10.1121/1.1894649",
+      "original_title": "Training Japanese listeners to identify English /r/ and /l/: A first report",
+      "original_authors": "Logan, J. S.; Lively, S. E.; Pisoni, D. B.",
+      "original_year": "1991",
+      "original_journal": "The Journal of the Acoustical Society of America",
+      "replication_study": "single study (HV training group, post-tests)",
+      "outcome": "/r/-/l/ identification accuracy in the generalisation test with a familiar (trained) talker vs a novel talker",
+      "contrast": "Generalisation 2 (familiar talker) vs Generalisation 1 (novel talker) within the HV group",
+      "timepoint": "post-test after 15 training sessions",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "After multi-talker training, generalisation performance was higher for a familiar talker from training than for an unfamiliar talker, taken as evidence that learners encode talker-specific information.",
+      "citation_sentence": "Importantly, performance in the generalisation test was greater for a familiar talker from training than for a talker who was unfamiliar.",
+      "evidence": "Results, Model 2: \"we find substantial evidence for the null for an effect of test session for the HV learners (β = 0.049, SE = 0.133, z = 0.367, p = .713; BF H(0,1.17) = 0.154 ... This indicates that HV learners generalised and did not treat stimuli spoken by novel or familiar talkers differently\".",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Tested as part of prediction 5 (pairwise, motivated by the originals' numerically higher trained-talker means); the authors note the prediction is 'unclear for HV' and read the null as successful HV generalisation rather than as a failure to replicate Logan et al. A coder could treat this as a supporting pairwise test rather than a coded claim and drop the entry. Logan et al. ran generalisation tests on only 3 of 6 participants. Neither candidate coder proposed this entry; kept on re-reading the source (Logan et al.'s familiar-talker finding is stated as an original result and directly tested).",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:lv_familiar_talker_advantage",
+      "original_reference": "Lively et al. (1993)",
+      "original_url": "https://doi.org/10.1121/1.408177",
+      "original_title": "Training Japanese listeners to identify English /r/ and /l/. II: The role of phonetic environment and talker variability in learning new perceptual categories",
+      "original_authors": "Lively, S. E.; Logan, J. S.; Pisoni, D. B.",
+      "original_year": "1993",
+      "original_journal": "The Journal of the Acoustical Society of America",
+      "replication_study": "single study (LV training group, post-tests)",
+      "outcome": "/r/-/l/ identification accuracy in the generalisation test with the trained talker vs a novel talker",
+      "contrast": "Generalisation 2 (familiar/trained talker) vs Generalisation 1 (novel talker) within the LV group",
+      "timepoint": "post-test after 15 training sessions",
+      "result": "inconclusive",
+      "replication_type": "direct",
+      "description": "After single-talker training (Lively et al., Exp. 2), generalisation performance with a novel talker was lower than with the familiar training talker.",
+      "citation_sentence": "Lively et al. (1993) describe that in the single talker version of the phonetic training paradigm, learners did improve from pre- to post-test, but that, in generalisation, performance with a novel talker was lower than performance with a familiar talker.",
+      "evidence": "Results, Model 2: \"However for the LV learners, the evidence for this comparison is ambiguous (β = 0.173, SE = 0.134, z = 1.293, p = .196; BF H(0,1.17) = 0.464 [RR 0, 1.567]) ... for LV learners this evidence is not conclusive.\"",
+      "gt_ambiguity": "clear",
+      "notes": "Prediction 5 (pairwise) for LV; means in the predicted direction (71.0% familiar vs 68.1% novel) but BF ambiguous and authors call it 'not conclusive'. Closely tied to the comparative claim in s1:hv_generalisation_benefit (prediction 2 interaction); a coder could fold it into that entry. Failure is a possible alternative reading but the authors explicitly describe the evidence as ambiguous.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.1016--j.jml.2022.104352#ling26:cf88abab063f06b4:1": {
+      "action": "map",
+      "effect_ids": [
+        "s1:hv_generalisation_benefit"
+      ],
+      "reason": "Describes the multi-talker generalisation benefit (HV > LV) tested by the paper's key interaction; attributes it to Logan et al. (1991) rather than Lively et al. (1993), an attribution the notes of s1:hv_generalisation_benefit allow. Result inconclusive matches the final label."
+    },
+    "luna56:10.1016--j.jml.2022.104352#luna56:ab8fa5207194fa4f:1": {
+      "action": "map",
+      "effect_ids": [
+        "s1:hv_pre_post_learning",
+        "s1:hv_generalisation_benefit"
+      ],
+      "reason": "Logan et al. (1991) claim that multi-talker training improves /r/-/l/ identification and generalises to novel talkers: the description matches s1:hv_pre_post_learning (strong BF evidence for HV pre-to-novel-post improvement, a success), while its inconclusive label and notes reflect the ambiguous HV-over-LV benefit of s1:hv_generalisation_benefit. It blends the two claims."
+    },
+    "luna56:10.1016--j.jml.2022.104352#luna56:331fe7915c5aa428:1": {
+      "action": "map",
+      "effect_ids": [
+        "s1:hv_generalisation_benefit",
+        "s1:lv_pre_post_learning"
+      ],
+      "reason": "Lively et al. (1993) Exp. 2 claim that single-talker training improves identification but generalises worse than multi-talker training: the comparative half is s1:hv_generalisation_benefit (ambiguous BFs, inconclusive), the improvement half is s1:lv_pre_post_learning (success)."
+    }
+  },
+  "revision_notes": "s1:hv_generalisation_benefit result changed from failure to inconclusive. On re-reading, the authors' explicit wording is mixed: 'no evidence of such effect' on one side, and 'ambiguous', 'results are inconclusive' and 'null effects are not established' on the other. The codebook tiebreaker (doubt between failure and inconclusive -> inconclusive) therefore applies. This was decided from the source, not from the candidates agreeing. No entries added or removed. Neither candidate proposed the two familiar-talker entries; both are kept as source-supported, with their drop-risk noted.",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 2.537,
+  "adjudication_session": "b977f51e-bb73-462a-99c0-f589aa3e3cee"
 }

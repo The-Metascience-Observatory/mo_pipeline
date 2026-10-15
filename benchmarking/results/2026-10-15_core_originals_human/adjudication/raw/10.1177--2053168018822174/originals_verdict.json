@@ -1,0 +1,53 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "General Social Survey (2014) 'welfare' vs 'assistance to the poor' question-wording experiment",
+   "doi": ""
+  },
+  {
+   "reference": "Tversky & Kahneman (1981) The framing of decisions and the psychology of choice",
+   "doi": "10.1126/science.7455683"
+  },
+  {
+   "reference": "Kam & Simas (2010) Risk orientations and policy frames",
+   "doi": "10.1017/s0022381609990806"
+  },
+  {
+   "reference": "Hiscox (2006) Through a glass and darkly: Attitudes toward international trade and the curious effects of issue framing",
+   "doi": "10.1017/s0020818306060255"
+  },
+  {
+   "reference": "Berinsky (2017) Rumors and health care reform: Experiments in political misinformation",
+   "doi": "10.1017/s0007123415000186"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Experiment 3 'replicates [26]' (Kam and Simas 2010): mortality frame effect and its (non-)moderation by risk acceptance, re-run on Lucid."
+  },
+  "B": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Cited as the methodological precedent ('Berinsky et al. (2012) demonstrated the validity of MTurk by replicating classic experiments... we follow their lead') and as the MTurk comparison benchmark; its own findings are not replicated."
+  },
+  "C": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Experiment 4 'is a replication of [24]' (Hiscox), the 2x4 expert-opinion and valence framing experiment on support for free trade."
+  },
+  "D": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Experiment 2 replicates the Asian Disease problem of [42] (Tversky and Kahneman), gain vs loss framing shifting choice of the risky program."
+  },
+  "E": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Experiment 5 replicates Berinsky's 2017 ACA 'death panels' rumor-correction experiment; Lucid corrections were much weaker than in the original."
+  }
+ },
+ "notes": "Lucid sample-validation paper replicating five survey experiments (Coppock & McClellan). Experiment 1 replicates the GSS welfare question-wording experiment using the 2014 GSS as baseline; no published-paper DOI is given for it in the source."
+}

@@ -1,0 +1,70 @@
+{
+  "eligibility": "positive",
+  "eligibility_reason": "Gibson & Levy report two new-data self-paced reading experiments on Mechanical Turk (72 and 72 analyzed participants) that attempt to replicate Hackl, Koster-Hale & Varvoutis (2012) Experiments 1 and 2, a separately published work.",
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "e1:det_x_verbtype_interaction",
+      "original_reference": "Hackl, Koster-Hale & Varvoutis (2012)",
+      "original_url": "",
+      "original_title": "Quantification and ACD: Evidence from Real Time Sentence Processing",
+      "original_authors": "Hackl, M.; Koster-Hale, J.; Varvoutis, J.",
+      "original_year": "2012",
+      "original_journal": "Journal of Semantics",
+      "replication_study": "Attempted replication of HKV Experiment 1",
+      "outcome": "Residual self-paced reading times in the words following the ACD relative-clause verb (regions 15-18, critically word 17)",
+      "contrast": "Interaction of determiner (every vs the) x verb type (ellipsis 'was' vs full verb): 'the'/ellipsis condition especially slow",
+      "timepoint": "not applicable: single-session reading-time measure",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "HKV Experiment 1 claimed that ACD (ellipsis) relative clauses modifying an object NP with 'every' are read faster than those modifying an NP with 'the', with no such advantage in full-verb controls, yielding a determiner x verb-type interaction in reading times shortly after the elided verb (supporting quantifier raising).",
+      "citation_sentence": "In order to better understand the on-line data in HKV's self-paced reading experiments, we therefore attempted to replicate HKV's self-paced reading experiments.",
+      "evidence": "Section 'Attempted replication of HKV Experiment 1', Results: \"But, unlike HKV, we did not find the predicted interaction between verb type and determiner in any of the four regions that we investigated\"; Summary: \"we have failed to find even hints of the predicted interactions in the locations that HKV found them.\"",
+      "gt_ambiguity": "clear",
+      "notes": "The citation sentence uses the abbreviation HKV, defined in the Introduction as 'Hackl, Koster-Hale & Varvoutis (HKV;2012)'. Original DOI is not stated in the paper (reference gives J. Semantics 29, 145-206), so original_url is left blank; only author initials are given. Interaction was significant by items (F2) at word 18 but not by participants, and later than HKV's effect; authors still frame the result as a failure. The replication also reproduced HKV's main effects of verb type (verb slower at word 15, ellipsis slower at 16-18). These are not coded as separate claims because they are not the finding HKV reported as evidence for QR. Replication type was revised from close extension to direct in pass 2. The study ran HKV's procedure (same SPR paradigm, near-identical target items with only the pre-critical NP and verb region edited, same trimming and analysis), so its aim was to reproduce the original result. MTurk administration and new fillers and comprehension questions are close-type variations, and the codebook tiebreaker 'doubt between direct and close -> direct' applies. Close extension (online administration) remains defensible."
+    },
+    {
+      "effect_id": "e2:det_x_verbtype_interaction",
+      "original_reference": "Hackl, Koster-Hale & Varvoutis (2012)",
+      "original_url": "",
+      "original_title": "Quantification and ACD: Evidence from Real Time Sentence Processing",
+      "original_authors": "Hackl, M.; Koster-Hale, J.; Varvoutis, J.",
+      "original_year": "2012",
+      "original_journal": "Journal of Semantics",
+      "replication_study": "Attempted replication of HKV Experiment 2",
+      "outcome": "Residual self-paced reading times in the words following the ACD relative-clause verb (regions 15-18, critically word 16)",
+      "contrast": "Interaction of determiner (the vs every) x verb type (full verb / local ellipsis 'did' / long-distance ellipsis 'was'), in the 3x2 design and the restricted 2x2 (full verb vs local ellipsis): 'the'/local-ellipsis especially slow",
+      "timepoint": "not applicable: single-session reading-time measure",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "HKV Experiment 2 claimed that 'the' was read more slowly than 'every' only in the local-ellipsis condition, giving a determiner x verb-type interaction (3x2 and 2x2) at the second word after the relative-clause verb, consistent with quantifier raising.",
+      "citation_sentence": "In order to better understand the on-line data in HKV's self-paced reading experiments, we therefore attempted to replicate HKV's self-paced reading experiments.",
+      "evidence": "Section 'Attempted replication of HKV Experiment 2', Results: \"But, unlike HKV, we did not find the predicted interaction between verb type and determiner in the full 3x2 design ... Nor did we find the predicted interaction between verb type and determiner in the restricted 2x2 conditions\"; mixed-effects models \"showed no reliable interactions in any word position.\"",
+      "gt_ambiguity": "clear",
+      "notes": "The 3x2 and 2x2 interaction tests check the same claim, so they are coded as one entry. A marginal interaction at word 16 went in the direction opposite to the QR prediction, but it was not significant (p=.12/.066 for the 2x2), so this is not a reversal. The main effect of verb type at words 16-17 was replicated but is not coded as a separate claim. The study used 'the original versions of HKV's 60 Experimental 2 items'. Fillers and comprehension questions were new, and it ran on MTurk. Replication type was revised from close extension to direct in pass 2 (see the e1 notes); close extension remains defensible. Original DOI is not stated in the paper."
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.48550--arxiv.1605.00178#ling26:d5b3592bf5f0f9d2:1": {
+      "action": "map",
+      "effect_ids": ["e1:det_x_verbtype_interaction"],
+      "reason": "Same claim and study: HKV Experiment 1 determiner x verb-type interaction, failed in the replication of Experiment 1."
+    },
+    "ling26:10.48550--arxiv.1605.00178#ling26:e25d7d79826518b8:1": {
+      "action": "map",
+      "effect_ids": ["e2:det_x_verbtype_interaction"],
+      "reason": "Same claim and study: HKV Experiment 2 determiner x verb-type interaction (3x2 and 2x2), failed in the replication of Experiment 2."
+    },
+    "luna56:10.48550--arxiv.1605.00178#luna56:f096f4bd9ae272f9:1": {
+      "action": "map",
+      "effect_ids": ["e1:det_x_verbtype_interaction"],
+      "reason": "Same claim and study: Experiment 1 every/the advantage in ACD, shown as a determiner x verb-type interaction."
+    },
+    "luna56:10.48550--arxiv.1605.00178#luna56:4f5d1f2cdc257bdb:1": {
+      "action": "map",
+      "effect_ids": ["e2:det_x_verbtype_interaction"],
+      "reason": "Same claim and study: Experiment 2 'the' slower than 'every' specifically in local ellipsis, shown as a determiner x verb-type interaction."
+    }
+  },
+  "revision_notes": "Enumeration and results are unchanged from pass 1 (2 entries, both failure). replication_type changed from close extension to direct for both entries. On re-reading, the experiments reproduce HKV's paradigm, target items and analysis pipeline with the goal of reproducing the result; MTurk administration and new fillers are minor variations, and the codebook tiebreaker for direct vs close favours direct. Candidate agreement on 'direct' prompted the re-check but was not taken as evidence."
+}

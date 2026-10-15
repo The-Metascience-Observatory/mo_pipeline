@@ -1,13 +1,28 @@
 {
   "packet_sha256": "1f70aecd5050d0cde0faf0df122fb80d91dbfd97915dba78cf27b620620b7b7d",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "excluded",
+  "eligibility_reason": "The paper reports new-data, preregistered multicenter replications of published Brazilian biomedical experiments (90 valid replications of 45 experiments in the v5 primary analysis), but it never identifies any original article. Experiments appear only as anonymized codes (e.g. EPM1, MTT4, PCR147 in Fig. 3A), and the list of originals is in Table S3 / https://osf.io/cyjsz, which is not in the source. So no entry can be coded with an original reference, title, citation sentence or per-original result without guessing, and the document cannot be scored at the entry level.",
+  "sources_checked": true,
+  "enumeration_complete": true,
   "effects": [],
-  "candidate_resolutions": {}
+  "candidate_resolutions": {
+    "ling26:10.1101--2025.04.02.645026#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged excluded (unscorable from the provided document), so every candidate is rejected. This candidate is also substantively wrong as a negative call: the paper does report completed replications with new data (Results, 'Concluded experiments': 143 replications carried out, 90 valid covering 45 experiments)."
+    },
+    "luna56:10.1101--2025.04.02.645026#luna56:7ad1a7c85aed7be1:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged excluded, so every candidate is rejected. The row also could not be kept on a positive call: it lumps 45 distinct original articles into one aggregate row with no identifiable original (no authors, year, journal or citation sentence). The codebook requires one row per distinct original study, and its single-aggregate-row exception does not apply because per-experiment results are broken down, anonymously, in Fig. 3A."
+    }
+  },
+  "revision_notes": "Eligibility changed from 'positive' (pass 1, with an empty and explicitly incomplete enumeration) to 'excluded'. Validation requires a positive paper to carry a complete, source-based enumeration. I re-checked the source: the XML rendition, the PDF main text and all reference pages, and references.json. None names any replicated original, and the supplementary tables (S3, S4) that do are not provided. A complete enumeration is therefore impossible without inventing original references, and an aggregate row would violate the codebook's one-row-per-original rule. 'Excluded' is used in its sense of 'the document cannot be scored'. Flag for the human adjudicator: this is substantively a large multi-original replication project (Brazilian Reproducibility Initiative). With Table S3 / OSF it would be positive with roughly 45-56 rows (one per original experiment; each replicated unit is the first significant two-group comparison in its article). Replication type would be direct/close: preregistered protocols transcribed from the original methods, with labs blind to the original results. Aggregate outcome: 12/45 (27%) experiments replicated by at least half of the applicable criteria. Versions differ: the PDF is v1 (April 3, 2025; 47 experiments) and the XML is v5 (45 experiments). Ambiguity: a second coder could plausibly code this 'positive', so treat the eligibility label itself as ambiguous.",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 2.7691,
+  "adjudication_session": "a6bf0148-1063-43a7-85ff-9bee56d14a8e"
 }

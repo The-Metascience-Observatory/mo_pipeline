@@ -1,0 +1,19 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "A theoretical reply to Knobe & Mendlow (2004). Its only data come from a new 'mini-study' with 44 undergraduates and two newly written cook-out vignettes (C1/C2). The study manipulates the agent's knowledge and desire while holding the bad side effect constant, to test an alternative 'desire plus knowledge' explanation. It is a new original experiment, not a repetition of any prior published finding, so it fits the commentary/theory genre with no qualifying replication entry.",
+  "enumeration_complete": true,
+  "effects": [],
+  "candidate_resolutions": {
+    "ling26:10.1037--h0091247#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "This is a negative-paper proposal. It agrees with the final negative call: the paper's only study is an original mini-study (pp. 266-267) testing a new 'desire plus knowledge' hypothesis, not a replication. Under the protocol, every candidate on a negative paper is rejected with no effect_ids."
+    },
+    "luna56:10.1037--h0091247#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "This is a negative-paper proposal. It agrees with the final negative call: the reply's cook-out vignette study is novel and does not repeat any separately published experiment. Under the protocol, every candidate on a negative paper is rejected with no effect_ids."
+    }
+  },
+  "revision_notes": ""
+}

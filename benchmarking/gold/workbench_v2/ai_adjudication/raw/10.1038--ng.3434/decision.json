@@ -1,0 +1,22 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "A discovery GWAS of SLE (new GWAS + meta-analysis with the existing Hom et al. 2008 data + a 'replication study' cohort). The replication cohort validates SNPs selected from this paper's own GWAS/meta-analysis (a within-paper, statistical-sense replication stage), and the Hom et al. component reanalyses existing data; no prior published finding is framed or tested as a replication target.",
+  "enumeration_complete": true,
+  "why_negative": "Within-paper GWAS replication stage ('replicates' in the statistical sense) plus reanalysis of an existing GWAS dataset; the paper is a locus-discovery study, not a replication of specific published findings.",
+  "gt_ambiguity": "ambiguous",
+  "notes": "The 'replication study' (2,018 new cases, 6,925 controls; Online Methods 'Data: replication study') genotypes the 33 SNPs that passed thresholds in the meta-analysis of this paper's GWAS and Hom et al. (Supplementary Table 2); its purpose is to confirm this paper's own candidate signals, so it is a within-paper replication. Hom et al. (2008) data are re-analysed, not newly collected. A second coder might argue for positive entries because many of the 43 loci were previously published (e.g. 'Five other genes (TNIP1, IKZF1, ETS1, WDFY4 and ARID5B) that we mapped are novel in European SLE, but had been previously shown to be associated with SLE in Chinese subjects5,6'), but the paper does not present any of these as replications of those studies.",
+  "effects": [],
+  "candidate_resolutions": {
+    "ling26:10.1038--ng.3434#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal; agrees with my negative call (the replication stage validates this paper's own GWAS/meta-analysis signals). Rejected only in the mechanical sense that the paper has no entries to map to."
+    },
+    "luna56:10.1038--ng.3434#luna56:92946627cc0c133c:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Its citation sentence describes a meta-analysis that pools this paper's GWAS with the existing Hom et al. genotype data ('We analyzed data from a previous genome-wide association study of SLE (the Hom et al. study)', Online Methods). That is a reanalysis of the original data, not new data testing Hom et al.'s claim. The independent replication cohort genotyped SNPs selected from the paper's own meta-analysis to validate its own signals, which is a within-paper replication stage. The 'inconclusive' label also conflicts with the source: Table 1 reports strong post-replication associations at BLK (rs2736340, meta P = 6.28E-20) and ITGAM (rs34572943, meta P = 3.39E-76), and the authors never describe mixed replication of Hom et al."
+    }
+  },
+  "revision_notes": ""
+}

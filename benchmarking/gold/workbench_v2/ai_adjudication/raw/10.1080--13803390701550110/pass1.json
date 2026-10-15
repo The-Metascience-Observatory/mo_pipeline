@@ -1,0 +1,9 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "An original theory-testing experiment: a new lateralized lexical decision study (N=50) that tests the valence hypothesis (Davidson; Borod) with newly chosen attachment-word stimuli. It never presents itself as replicating a specific prior published finding. The word 'replicate' does not appear, and prior studies are cited only as background or as results the findings are 'in line with'.",
+  "enumeration_complete": true,
+  "why_negative": "Original hypothesis test (genre: no qualifying entry). It tests a general theory (the valence hypothesis) with a new stimulus set and design, rather than replicating a named prior study's finding.",
+  "effects": [],
+  "gt_ambiguity": "ambiguous",
+  "notes": "Read the whole body.md, including the introduction, method, results and discussion; the paper has a single study. A second coder might code a conceptual replication of the valence hypothesis, or of the lateralized emotional-word advantage (ref [25], Graves et al.; Collins & Cooke 2005 Exp. 2). If so, the result would be a reversal or failure: the authors say the findings are 'in the opposite direction to the predictions made by the VH' and 'opposite to the VH'. The paper also reproduces the 'commonly observed RVF advantage' for lexical decisions, but only as a background observation, not as a framed replication. I judged it negative because the paper frames its target as a theory (the VH), drawing on many inconsistent prior studies, and does not repeat any specific published experiment."
+}

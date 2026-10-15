@@ -1,0 +1,31 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Cornelissen, Bester, Cairns, Tovée & Cornelissen (2015) The influence of personal BMI on body size estimations and sensitivity to body size change in anorexia spectrum disorders",
+   "doi": "10.1016/j.bodyim.2015.01.001"
+  },
+  {
+   "reference": "Cornelissen, McCarty, Cornelissen & Tovée (2017) Body size estimation in women with anorexia nervosa and healthy controls using 3D avatars",
+   "doi": "10.1038/s41598-017-15339-z"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Ref 18; the paper states it 'serves both as a replication and extension of Cornelissen et al. [17,18]', aiming to replicate the group difference in the regression slope of self-estimated BMI on actual BMI (ED group vs controls)."
+  },
+  "B": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Ref 20, cited only within [19–25] as prior evidence of contraction bias in healthy individuals; not one of the studies the paper names as its replication targets."
+  },
+  "C": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Ref 17; the primary replication target — the sample size, 3:1 control:ANSD design and power analysis follow Cornelissen et al. [17], and the BMI-by-group interaction it reported is the tested effect."
+  }
+ },
+ "notes": "Self-replication by the same lab, using a method-of-adjustment task in place of the original yes/no task, better-matched BMI ranges, and an added SATAQ. Refs 17 and 18 are always cited together as the replicated originals; ref 17 is the main one for design and power."
+}

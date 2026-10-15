@@ -1,0 +1,7 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "Reanalysis of the same data (codebook negative genre): Imai re-analyses Gerber and Green's (2000) New Haven field-experiment data (original and revised versions supplied by Don Green) with corrected groups, randomization diagnostics and propensity-score matching; no new participants or data are collected, so there is no replication with new data.",
+  "enumeration_complete": true,
+  "effects": [],
+  "notes": "The paper says 'I replicate and extend Gerber and Green's analysis' (THE NEW HAVEN VOTER MOBILIZATION STUDY section) and its matching estimates 'revers[e] the negative finding reported in Gerber and Green (2000)' (phone calls +6.5 pp vs. -5 pp), but every estimate uses Gerber and Green's own dataset ('I thank Don Green for making his data available'). This is a reproducibility/reanalysis check, not a new-data replication. The supporting citations of Green and Gerber (2001) and earlier phone-canvassing experiments are others' studies, not replications run here. gt_ambiguity: clear — a second coder could be misled by the word 'replicate' and the 'reversal' framing, but the absence of new data is unambiguous."
+}

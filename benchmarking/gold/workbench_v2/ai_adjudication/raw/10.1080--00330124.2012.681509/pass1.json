@@ -1,0 +1,9 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "The paper 'replicates' the construction procedure of Cutter, Boruff and Shirley's (2003) Social Vulnerability Index (SoVI) on Norwegian municipal data and compares it with an adapted version; it applies a measurement method to a new context rather than testing a finding or claim of the original, so it yields no qualifying replication entry (methods/application paper; 'replicate' in the sense of reproducing an index recipe).",
+  "enumeration_complete": true,
+  "effects": [],
+  "why_negative": "Methods/application paper: reproduces an index-construction algorithm (SoVI, Cutter et al. 2003) for Norway and compares replica vs adapted indexes; no prior published finding is tested for replication success or failure.",
+  "gt_ambiguity": "ambiguous",
+  "notes": "Title and abstract say 'we first replicate ... an existing index'; intro (PDF p.312): 'We construct two variants of the Social Vulnerability Index (SoVI; Cutter, Boruff, and Shirley 2003) for Norway: one that replicates the original index as closely as possible (SoVI Replica) and a second index where we make adjustments (SoVI Adapted).' The paper's results are the Norwegian factor structure (7 factors, 71% variance), Moran's I clustering, and the replica-vs-adapted correlation (r = 0.44, R2 = 0.19) — all new analyses with no stated expectation drawn from Cutter et al.'s findings, and the authors never compare their factors with the original's or judge whether Cutter et al.'s result held. A second coder could read the SoVI Replica as a close-extension/conceptual replication of Cutter et al. (2003) (Social Science Quarterly) in a new country; if so, the only conceivable claim is the SoVI factor structure / multidimensional vulnerability index, and the paper offers no success/failure verdict (it would be inconclusive at best). Original DOI not stated in the paper text available."
+}

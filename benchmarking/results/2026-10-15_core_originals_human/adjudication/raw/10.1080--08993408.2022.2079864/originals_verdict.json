@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Román-González, Pérez-González & Jiménez-Fernández (2017) Which cognitive abilities underlie computational thinking? Criterion validity of the computational thinking test",
+   "doi": "10.1016/j.chb.2016.08.047"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Ref [61] is the original study: the pre-registered paper sets out to replicate its findings on figural reasoning, visualization, arithmetic and gender differences in CTt scores, and reports which ones replicated (arithmetic did not)."
+  },
+  "B": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Ref [62] is cited once in the Discussion as background evidence linking figural reasoning to CT. It is a different study by the same group and is not the target of the replication."
+  }
+ },
+ "notes": "This is a replication plus extension. The extension adds numerical reasoning, algebra, mental rotation and visuo-spatial STM; those constructs are new and are not replications."
+}

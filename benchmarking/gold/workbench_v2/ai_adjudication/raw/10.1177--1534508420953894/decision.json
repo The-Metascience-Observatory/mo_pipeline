@@ -1,0 +1,62 @@
+{
+  "eligibility": "positive",
+  "eligibility_reason": "The paper is a self-described direct replication of Klingbeil et al. (2019): it takes the interval and dichotomized LRs published there and applies them to a new cohort (2017-2018 school year, N = 1,593 middle schoolers) in an emulated gated screening framework. It then compares efficiency and diagnostic accuracy with the original's findings.",
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "s1:efficiency_fewer_further_assessment",
+      "original_reference": "Klingbeil et al. (2019)",
+      "original_url": "https://doi.org/10.1016/j.jsp.2019.07.016",
+      "original_title": "Interval likelihood ratios: Applications for gated screening in schools",
+      "original_authors": "Klingbeil, David A.; Van Norman, Ethan R.; Nelson, Peter M.; Birr, C.",
+      "original_year": "2019",
+      "original_journal": "Journal of School Psychology",
+      "replication_study": "single study (Grades 6-8, gated Models 1 and 2)",
+      "outcome": "Screening efficiency: number/percentage of students requiring further assessment (post-test probability .11-.49) after each gate, and number of tests needed to classify all students",
+      "contrast": "interval LRs vs dichotomized LRs used to estimate post-test probabilities",
+      "timepoint": "after the first screening gate (prior-year state test), as the original's stated benefit; later gates also reported",
+      "result": "inconclusive",
+      "replication_type": "direct",
+      "description": "Klingbeil et al. (2019) reported that using interval rather than dichotomized likelihood ratios in a gated math screening model reduced the number of students requiring further assessment after the first gate (46-53% vs 60-74%), with nearly all students classified after two tests (a third test needed only in Grade 6; 1.7% undifferentiated in Model 2).",
+      "citation_sentence": "In the current study, we sought to replicate our initial evaluation of using interval LRs to estimate post-test probabilities to determine math risk (Klingbeil et al., 2019).",
+      "evidence": "Results, Differences in Efficiency / Table 3; Discussion, Screening Efficiency and Diagnostic Accuracy: \"The added precision of using interval LRs to interpret the first screening test was evident in all three grades. As in Klingbeil et al. (2019)...\" but \"When post-test probabilities were estimated using interval LRs, the number of students requiring a third test (Model 1) or remaining undifferentiated (Model 2) diverged from Klingbeil et al. (2019).\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Mixed result within the efficiency research question (RQ1). The step-1 reduction replicated in all grades: 39.6-46.2% (interval) vs 64.5-72.1% (dichotomized) needed further assessment. But after Step 2, interval LRs left 26-38% of Grade 6-7 students undifferentiated, whereas the original needed a third test only in Grade 6 and left 1.7% undifferentiated in Model 2. The abstract concludes that interval LRs 'may be best reserved for situations where at least three successive tests are available'. Competing readings: (a) code success, because the original's stated benefit was specifically the step-1 reduction and the closing summary reaffirms it ('the primary benefit ... could be to reduce the number of students requiring further assessment after the first screening test'); (b) split into two rows: step-1 reduction = success, and number of tests needed / undifferentiated after Step 2 = failure. I kept one row because both are reported under one efficiency research question. Type is direct by the authors' own label ('direct replication'), although the design deliberately changed one thing: published LRs were applied to a new cohort instead of being derived on and applied to the same sample.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "s1:diagnostic_accuracy_similar",
+      "original_reference": "Klingbeil et al. (2019)",
+      "original_url": "https://doi.org/10.1016/j.jsp.2019.07.016",
+      "original_title": "Interval likelihood ratios: Applications for gated screening in schools",
+      "original_authors": "Klingbeil, David A.; Van Norman, Ethan R.; Nelson, Peter M.; Birr, C.",
+      "original_year": "2019",
+      "original_journal": "Journal of School Psychology",
+      "replication_study": "single study (Grades 6-8, gated Models 1 and 2)",
+      "outcome": "Diagnostic accuracy (sensitivity and specificity) of gated screening decisions predicting non-proficiency on the end-of-year state math test",
+      "contrast": "interval LRs vs dichotomized LRs used to estimate post-test probabilities",
+      "timepoint": "not applicable: accuracy is assessed after the final gate against the end-of-year criterion test",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "Klingbeil et al. (2019) reported that gated screening decisions based on interval and on dichotomized likelihood ratios gave essentially the same diagnostic accuracy, with sensitivity and specificity within .03 of each other (sensitivity .79-.89, specificity .82-.90).",
+      "citation_sentence": "Klingbeil et al. (2019) conducted an initial evaluation of whether using interval LRs improved upon the diagnostic accuracy and efficiency of a gated screening framework but the LRs were applied to the same sample from which they were derived. The purpose of this direct replication was to evaluate the screening efficiency and accuracy when applying dichotomized and interval LRs, derived from a previous sample, to a different cohort of students.",
+      "evidence": "Results, Differences in Diagnostic Accuracy / Table 4; Discussion: \"Yet, we found similar sensitivity and specificity values when predicting students' end-of-year proficiency status in math, regardless of the LRs used to estimate post-test probability. The negligible differences in sensitivity and specificity corroborated the findings of Klingbeil et al. (2019).\"",
+      "gt_ambiguity": "clear",
+      "notes": "The original claim is a 'no meaningful difference' claim. The replication again finds negligible differences (sensitivity +.03 for interval LRs in Model 1, Grades 6-7; identical in Grade 8), and the authors explicitly say this 'corroborated' the original, so this is a success under the null-claim rule. Sensitivity and specificity were not estimated for interval-LR Model 2 in Grades 6-7 because many students remained undifferentiated; that is covered by the efficiency entry. This is descriptive diagnostic-accuracy work, so no inferential test of the difference is reported.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.1177--1534508420953894#ling26:8497df82dcda502b:1": {
+      "action": "map",
+      "effect_ids": ["s1:efficiency_fewer_further_assessment", "s1:diagnostic_accuracy_similar"],
+      "reason": "This is a single whole-paper row for the same direct replication of Klingbeil et al. (2019), which covers both of the original's findings (efficiency and diagnostic accuracy). Its 'success' label fits the accuracy claim. For efficiency, the Discussion says the results 'diverged from Klingbeil et al. (2019)' after Step 2, so efficiency stays inconclusive."
+    },
+    "luna56:10.1177--1534508420953894#luna56:4440ec60ba7c0dd2:1": {
+      "action": "map",
+      "effect_ids": ["s1:efficiency_fewer_further_assessment", "s1:diagnostic_accuracy_similar"],
+      "reason": "This is a single row combining both original claims (efficiency and diagnostic accuracy) from Klingbeil et al. (2019). Its notes describe the same mixed efficiency pattern I coded as inconclusive, plus the similar diagnostic accuracy I coded as success. The codebook asks for one row per claim, so it maps to both entries."
+    }
+  },
+  "revision_notes": ""
+}

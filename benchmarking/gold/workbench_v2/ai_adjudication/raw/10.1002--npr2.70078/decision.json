@@ -1,0 +1,41 @@
+{
+  "eligibility": "positive",
+  "eligibility_reason": "Self-replication ('A Replication Study') of Yasuda et al. (2025): the original identified an EVCI subgroup using cognitive data from the Osaka cohort only; this paper gathers new cognitive data for EV individuals from the other COCORO cohorts (27 individuals, 8 cohorts) and tests whether the EVCI subgroup and its characteristics reappear.",
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "single:evci_subgroup_schizophrenia",
+      "original_reference": "Yasuda et al. (2025)",
+      "original_url": "https://doi.org/10.1002/npr2.70010",
+      "original_title": "Proposal for a Novel Classification of Patients With Enlarged Ventricles and Cognitive Impairment Based on Data-Driven Analysis of Neuroimaging Results in Patients With Psychiatric Disorders",
+      "original_authors": "Yasuda, Yuka; Ito, Satsuki; Matsumoto, Junya",
+      "original_year": "2025",
+      "original_journal": "Neuropsychopharmacology Reports",
+      "replication_study": "single study",
+      "outcome": "Existence of a subgroup with enlarged ventricles and moderate/severe cognitive impairment (EVCI; >=20-point drop from JART premorbid IQ to WAIS current IQ) among individuals with enlarged ventricles, and its predominant association with schizophrenia",
+      "contrast": "EVCI vs EV-non-CI individuals among those with enlarged lateral ventricles (average z > 3)",
+      "timepoint": "not applicable: cross-sectional",
+      "result": "success",
+      "replication_type": "close experiment",
+      "description": "Among individuals with enlarged lateral ventricles, a distinct subgroup (~27%) shows marked cognitive impairment (EVCI), and this subgroup consists predominantly of patients with schizophrenia (8 of 9).",
+      "citation_sentence": "In our previous study [6], we performed data‐driven classification based on large‐scale neuroimaging datasets to identify a novel subtype of psychiatric disorders characterized by pronounced EV and CI (i.e., EVCI). ... Yasuda et al. [6] performed a large‐scale data‐driven analysis and found that patients with EVCI constitute a distinct subgroup characterized by a high prevalence of schizophrenia.",
+      "evidence": "Results/Table 1: 'A total of 18.5% (n = 5) were classified as having EVCI'; 'all individuals classified as having EVCI had a diagnosis of schizophrenia'. Conclusions: 'The present study validated the existence of the EVCI subgroup in independent cohorts. EVCI may be more frequently observed among males and is predominantly associated with a diagnosis of schizophrenia.' Abstract: 'This study validated the existence of the EVCI subgroup in independent cohorts, thus supporting our previous findings.'",
+      "gt_ambiguity": "clear",
+      "notes": "Original DOI taken from the reference's pub-id in the source XML (ref 6: e70010, doi 10.1002/npr2.70010, PMID 40011069); the rendered references list no DOI. Only the first three original authors are given ('et al.'). Result: authors explicitly say 'validated' and 'provided additional support for our previous findings'; caveats: EVCI n = 5, cognitive data for only 27/146 EV individuals, no inferential test of the subgroup claim itself (prevalence 18.5% vs original 27.3%; 5/5 vs 8/9 schizophrenia). A stricter coder could call it inconclusive on power grounds, but the codebook says follow the explicit statement. Enumeration: I coded the subgroup + schizophrenia-predominance as one claim, since the paper frames the original finding as one ('a distinct subgroup characterized by a high prevalence of schizophrenia'). Possible additional splits a second coder might make: (a) male predominance in EVCI ('Consistent with our previous study, the present study also revealed a higher prevalence of males in the EVCI group' — 3/5 male, but the EV-non-CI group is 77% male, chi-square p = 0.43, so as a between-group comparison it is not supported); (b) the EVCI vs EV-non-CI comparison pattern (lower current IQ, no difference in premorbid IQ or ventricle z-score; 'consistent with the trends observed in our previous study (see Table S1 ... table 5 in the previous paper)') — the CI/current-IQ difference is true by construction, so I treated these as descriptive characterization rather than separate claims. Replication type: same EV definition (z > 3) and CI criterion, but other cohorts/sites and current IQ also measured with WAIS-IV or the simplified WAIS (the original used WAIS-III + JART) — coded close experiment (equivalent alternative measure). Candidates proposed direct and close extension; both are defensible. Direct: same operational definitions, only different sites. Close extension: 'independent cohorts'. But the population is the same kind (Japanese psychiatric patients and HC in the same COCORO consortium, EV individuals drawn from the same 186-person MRI pool reported in the original), so the context did not change; the only deliberate change is to the measure, hence close experiment. The authors never characterize the replication type. What is new is the cognitive data for the 146 non-Osaka EV individuals.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.1002--npr2.70078#ling26:916a84ca36bcc0f7:1": {
+      "action": "map",
+      "effect_ids": ["single:evci_subgroup_schizophrenia"],
+      "reason": "Same original (Yasuda et al. 2025) and same claim (EVCI subtype predominantly schizophrenia); result agrees (success). Replication type differs (direct vs my close experiment). Its citation sentence points to the Table S1 comparison, which is part of the same claim's characterization, not a separate entry."
+    },
+    "luna56:10.1002--npr2.70078#luna56:c0a51daff92e1a4d:1": {
+      "action": "map",
+      "effect_ids": ["single:evci_subgroup_schizophrenia"],
+      "reason": "Same original and same claim, worded almost exactly as my description and citation sentence; result agrees (success). Replication type differs (close extension vs my close experiment)."
+    }
+  },
+  "revision_notes": "No label changes. I added a note on the replication_type disagreement (the candidates said direct and close extension) to the effect's notes."
+}

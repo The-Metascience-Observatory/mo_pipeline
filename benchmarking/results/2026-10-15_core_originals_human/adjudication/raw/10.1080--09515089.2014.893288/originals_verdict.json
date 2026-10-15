@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Buckwalter, W. & Stich, S. (2014/forthcoming) Gender and philosophical intuition. In Knobe & Nichols (Eds.), Experimental Philosophy, Vol. 2",
+   "doi": "10.1093/acprof:osobl/9780199927418.003.0013"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The paper attempts to replicate the gender differences Buckwalter and Stich (forthcoming) report in their section 3.8 (Brain in the Vat, Chinese Room, Plank of Carneades, among others) on MTurk and SurveyMonkey, and it fails to replicate them."
+  },
+  "B": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "The paper cites the Knobe & Nichols (2013) edited volume Experimental Philosophy only as the place Buckwalter and Stich's chapter appears. Knobe's 2012 Oxford Handbook chapter is not cited, so this is probably a mis-resolved match to that reference."
+  }
+ },
+ "notes": "Several scenarios from a single original chapter (Buckwalter & Stich), all null results. The Knobe & Nichols volume is only the venue."
+}

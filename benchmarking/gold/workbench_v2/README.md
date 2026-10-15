@@ -41,6 +41,34 @@ The original coding sheets, production database and existing gold release are un
     `harness.py evaluate --gold-dir` reads. Human and AI-adjudicated decisions
     are exported separately and never mixed.
 
+## AI adjudication, 2026-10-15
+
+The system under test is now the core extractor (`extract_core.py`, Sonnet), so
+neither AI coder is the model being scored. A stratified 60-paper subset
+(`ai_adjudication/selection.csv`: 8 stratum groups, 13 disciplines, psychology
+down-weighted; the revision notice and the scarcity paper excluded) was
+adjudicated by **Claude Opus 5.5** with `benchmarking/ai_adjudicate.py`:
+
+1. **Blind pass:** the agent works in a staging copy holding only the source files
+   and the codebook -- no `<tag>/` pipeline output, no `paper.json`, no coder
+   candidates, no flags -- and decides eligibility and enumerates effects.
+2. **Resolution pass** (same session, resumed): it sees both coders' candidates,
+   flags and recovered source proposals, maps or rejects every candidate, and may
+   add a missed effect only after re-checking the source (`added_after_candidates`).
+
+Decisions carry `reviewer_kind: ai_adjudicator`, export with
+`export --kind ai_adjudicator` as `ai_adjudicated:claude-opus-5-5` provenance, and
+are never mixed with human decisions. Raw pass outputs and CLI logs are in
+`ai_adjudication/raw/<folder>/`. The human audit sample is
+`ai_adjudication/audit_sample.csv` (`ai_adjudicate.py audit-sample`); it puts first
+the papers whose eligibility call contradicts their prior label.
+
+**Known boundary:** codebook_v2 makes a reanalysis of the same data a negative
+genre, but the extraction prompt has no such rule, and the production database
+holds Replication Wiki economics rows that are mostly same-data reproductions.
+Opus applies the codebook, so those papers are adjudicated negative. Report
+results with and without them until the rule is settled.
+
 ## Start reviewing
 
 `registry.csv` links every paper to a source/candidate packet and a separate decision file.

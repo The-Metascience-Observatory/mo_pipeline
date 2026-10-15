@@ -1,0 +1,27 @@
+{
+  "eligibility": "positive",
+  "eligibility_reason": "A pre-registered Registered Report (Results Blind track) that collects new data from 62 musicians and 62 non-musicians to replicate Proverbio et al. (2016, Sci. Rep.), which claimed skilled musicians are not subject to the McGurk effect; results are reported in full.",
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "s1:musicians_no_mcgurk",
+      "original_reference": "Proverbio et al. (2016)",
+      "original_url": "https://doi.org/10.1038/srep30423",
+      "original_title": "Skilled musicians are not subject to the McGurk effect",
+      "original_authors": "Proverbio, A.; Massetti, G.; Rizzi, E.; Zani, A.",
+      "original_year": "2016",
+      "original_journal": "Scientific Reports",
+      "replication_study": "single study",
+      "outcome": "McGurk effect in skilled musicians: accuracy of consonant identification for audiovisual incongruent (McGurk) stimuli versus audio-only stimuli, and its size relative to non-musicians",
+      "contrast": "audio-only vs audiovisual incongruent stimuli within musicians (and the condition x group interaction, musicians vs non-musicians)",
+      "timepoint": "not applicable: single-session perception experiment",
+      "result": "failure",
+      "replication_type": "close extension",
+      "description": "Skilled musicians (unlike non-musicians) are not subject to the McGurk effect: their consonant identification is not reduced when the auditory syllable is dubbed onto a video of a different articulation.",
+      "citation_sentence": "Proverbio and colleagues [2] argue that the McGurk effect is absent in highly trained musicians. ... For these reasons, it is valuable to conduct a close replication of this study to assess whether skilled musicians really are not subject to the McGurk effect. [ref 2: Proverbio A, Massetti G, Rizzi E, Zani A. 2016. Skilled musicians are not subject to the McGurk effect. Sci. Rep. 6, 30423]",
+      "evidence": "Results 3.1 (replication analysis): 'The statistical analysis confirmed that musicians have a highly significant McGurk effect (b = -2.34, z = -18.37, p < 0.001) ... musicians' McGurk effect was in fact significantly larger than the non-musicians' McGurk effect (b = 0.46, z = 2.72, p = 0.007)'; same in targeted analysis 3.2. Abstract: 'Contrary to the original study's conclusion, we find that musicians do show a large and statistically significant McGurk effect and that their effect is no smaller than that of non-musicians.' Conclusion: 'musicians are subject to the McGurk effect, and to at least as much extent (if not more) as non-musicians are.'",
+      "gt_ambiguity": "clear",
+      "notes": "Original claimed an ABSENCE of the McGurk effect in musicians (a null claim); the replication finds a large significant effect, so per the null-claim rule this is failure. Enumeration: the paper tests two hypotheses (musicians' McGurk effect > 0; musicians' effect smaller than non-musicians') and runs two analyses (replication coding and targeted place-of-articulation coding) on the same participants. I treat these as tests/analysis paths of ONE original claim (the abstract frames them as two readings of the single claim 'skilled musicians are not subject to' the effect); a second coder could split into two entries (no-effect claim -> failure; smaller-than-non-musicians claim -> failure, arguably reversal since musicians' effect was significantly larger, but the original's group difference was non-significant and the authors say the larger effect 'should be interpreted with caution', so not reversal). Both analyses agree, so no inconclusive. Type: authors call it a 'close replication'; methodology changed (within- vs between-participants manipulation, doubled N, GLMM instead of ANOVA, noisier stimuli, extra targeted coding) AND context changed (Mandarin/Cantonese speakers in Hong Kong/Shenzhen vs Italian participants), so close extension per tiebreaker; close experiment is a plausible alternative since the authors list language as a 'minor difference'. Original authors' full first names not given in the paper (initials only). Stage 1 accepted via Results Blind track (submitted after data collection)."
+    }
+  ]
+}

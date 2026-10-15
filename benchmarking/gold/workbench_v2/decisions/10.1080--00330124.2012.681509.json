@@ -1,13 +1,33 @@
 {
   "packet_sha256": "0614fc10aebe6032fb270762ff83e4846ffce8b862c072a4d9a9ba0f24549b04",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "negative",
+  "eligibility_reason": "The paper 'replicates' the construction procedure of Cutter, Boruff and Shirley's (2003) Social Vulnerability Index (SoVI) on Norwegian municipal data and compares it with an adapted version; it applies a measurement method to a new context rather than testing a finding or claim of the original, so it yields no qualifying replication entry (methods/application paper; 'replicate' in the sense of reproducing an index recipe).",
+  "sources_checked": true,
+  "enumeration_complete": true,
   "effects": [],
-  "candidate_resolutions": {}
+  "candidate_resolutions": {
+    "ling26:10.1080--00330124.2012.681509#ling26:8a97bb2426dd2942:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative. This candidate describes the SoVI Adapted index, which is the authors' own new, modified index for Norway, not a test of any claim made by Cutter et al. (2003). Its 'evidence' (Moran's I = 0.374; correlation with the ILC of 0.49 vs 0.44) is a validation of the new index, not a comparison with the original's findings."
+    },
+    "ling26:10.1080--00330124.2012.681509#ling26:0b3a341ab15f0297:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative. The SoVI Replica rebuilds the original index-construction method (PCA, varimax, summed factor scores) on Norwegian data, but the paper never states which of the original's findings it expects to reproduce and never judges whether one held. The paper reports 7 factors explaining 71% of the variance, but it does not compare that structure with Cutter et al.'s. Its only comparison (r = 0.44 and R2 = 0.19 between replica and adapted) sets the two Norwegian indexes against each other and says nothing about whether the original replicated, so 'inconclusive' has no claim to attach to."
+    },
+    "luna56:10.1080--00330124.2012.681509#luna56:3b29dbef45318b8e:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative. The stated 'claim' (SoVI combines indicators to quantify and differentiate counties' relative vulnerability) describes a measurement instrument, not an empirical finding that could replicate or fail. The paper constructs the index for Norway but runs no test against the original's results. This candidate duplicates the ling26 replica candidate."
+    }
+  },
+  "revision_notes": "No change from pass 1. All three candidates call the paper positive with an 'inconclusive' result, and their notes concede that the authors give no success/failure verdict. I re-read the replica, comparison and final-remarks sections (body.md, and the PDF intro on p.312). Every reported result is a new analysis of Norwegian data, or a comparison of the replica with the adapted index or with the Norwegian ILC. None tests a finding of Cutter et al. (2003), so I keep negative and flag it ambiguous. If an adjudicator instead takes the paper as positive, the single defensible entry is the SoVI Replica, coded as a close extension (same method, new country/unit) of Cutter, Boruff and Shirley (2003, Social Science Quarterly), result inconclusive. The adapted index would get no entry, because it is the authors' own modified instrument.",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 1.1327,
+  "adjudication_session": "d3fab800-d0a2-45da-b217-ed39c76909aa"
 }

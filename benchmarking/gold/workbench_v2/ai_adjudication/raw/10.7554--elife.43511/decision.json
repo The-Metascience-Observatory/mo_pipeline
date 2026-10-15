@@ -1,0 +1,154 @@
+{
+  "eligibility": "positive",
+  "eligibility_reason": "RP:CB Replication Study reporting new experiments (new cells, mice, assays) that replicate Figures 1B, 4A, 4D and Supplemental Figures 4A,B and 5C of Liu et al. (2011, Nature Medicine), with results reported for each.",
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "fig1b:mir34a_underexpressed_cd44pos",
+      "original_reference": "Liu et al. (2011)",
+      "original_url": "https://doi.org/10.1038/nm.2284",
+      "original_title": "The microRNA miR-34a inhibits prostate cancer stem cells and metastasis by directly repressing CD44",
+      "original_authors": "Liu, C; Kelnar, K; Liu, B; Chen, X; Calhoun-Davis, T; Li, H; Patrawala, L; Yan, H; Jeter, C; Honorio, S; Wiggins, J; Bader, A; Fagin, R; Brown, D; Tang, D",
+      "original_year": "2011",
+      "original_journal": "Nature Medicine",
+      "replication_study": "Expression of miR-34a in LAPC4 cells (Figure 1; original Figure 1B; Registered Report Protocol 3)",
+      "outcome": "miR-34a expression (qRT-PCR, normalized to miR-103) in FACS-sorted CD44+ vs CD44- LAPC4 cells purified from xenograft tumors",
+      "contrast": "CD44+ vs CD44- LAPC4 cells",
+      "timepoint": "not applicable: single cross-sectional measurement after sorting",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "miR-34a is underexpressed in CD44+ prostate cancer stem-like LAPC4 cells relative to CD44- cells (reported at 3.4% of the CD44- level).",
+      "citation_sentence": "We independently replicated an experiment to determine miR-34a expression in CD44[+] and CD44[-] LAPC4 cells. This experiment is comparable to what was reported in Figure 1B of Liu et al. (2011) and described in Protocol 3 in the Registered Report (Li et al., 2015).",
+      "evidence": "Results, 'Expression of miR-34a in LAPC4 cells' / Figure 1: \"miR-34a was elevated in level in CD44[+] cells, being expressed at 202% of the level in the CD44[-] cells\" ... \"To summarize, for this experiment we found results that were in the same direction as the original study for let-7b expression, but not for miR-34a expression.\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Direction opposite to original (202% vs 3.4%), but one biological repeat and no inferential test, so not reversal (no significance; authors say only 'not in the same direction'). Authors flag a confound: CD44 staining was weak/indistinguishable from isotype control, so CD44+ was redefined as top 1% (original/RR: top 10%), and the CD44- group may contain CD44+ cells. Kept failure rather than inconclusive: the authors' summary and abstract present it as a non-replication, and the confound they describe (CD44+ cells diluting the CD44- group) would bias toward no difference, not toward a doubling in CD44+ cells; a second coder could still choose inconclusive. let-7b (also underexpressed in the original, reduced here 'as expected') is a reference/positive-control comparison used to validate the sort, not a separate claim. Replication type: the authors call the whole effort 'This direct replication'; the gating change and different LAPC4 source are deviations (close experiment is a plausible alternative).",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "suppfig5c:mir34a_inhibits_tumor_regeneration",
+      "original_reference": "Liu et al. (2011)",
+      "original_url": "https://doi.org/10.1038/nm.2284",
+      "original_title": "The microRNA miR-34a inhibits prostate cancer stem cells and metastasis by directly repressing CD44",
+      "original_authors": "Liu, C; Kelnar, K; Liu, B; Chen, X; Calhoun-Davis, T; Li, H; Patrawala, L; Yan, H; Jeter, C; Honorio, S; Wiggins, J; Bader, A; Fagin, R; Brown, D; Tang, D",
+      "original_year": "2011",
+      "original_journal": "Nature Medicine",
+      "replication_study": "Effect of miR-34a expression on tumor growth (Figure 2B,C; original Supplemental Figure 5C; Registered Report Protocol 4)",
+      "outcome": "Weight of xenograft tumors (also tumor volume over time) from lentivirally miR-34a-transduced LAPC4 cells in male NOD/SCID mice",
+      "contrast": "miR-34a-transduced vs negative-control (scramble) transduced LAPC4 cells",
+      "timepoint": "end of experiment when control tumors reached ~0.54 g (100 days post injection in replication; 69 days in original)",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Enforced lentiviral expression of miR-34a in purified LAPC4 cells inhibits tumor regeneration in NOD/SCID mice (smaller tumors than negative-control-transduced cells).",
+      "citation_sentence": "LAPC4 tumor cells were used to replicate an experiment that tested the effect of miR-34a on tumor growth. This experiment is similar to what was reported in Supplemental Figure 5C of Liu et al. (2011) and described in Protocol 4 in the Registered Report (Li et al., 2015).",
+      "evidence": "Results, 'Effect of miR-34a expression on tumor growth' / Figure 2B: miR-34a 0.55 g vs control 0.51 g; \"The planned comparisons of the miR-34a group to the negative control group (t(18) = 0.432, p=0.671) ... were not statistically significant.\" \"To summarize, we found results that were not in the same direction as the original study and not statistically significant.\" Meta-analysis (Figure 4A): opposite direction, p=0.510.",
+      "gt_ambiguity": "ambiguous",
+      "notes": "The authors' summary is a failure statement. Caveat: miR-34a was undetectable in the excised tumors (silenced in vivo), and the authors note 'this observation does not necessarily imply miR-34a does not suppress tumor growth ... since miR-34a overexpression was not confirmed in vivo', so a coder might code inconclusive on validity grounds. The point estimate is slightly opposite and non-significant, so not reversal. The untransduced group is an added control (no row). A different LAPC4 source and 48 h vs 24 h infection-to-injection are deviations; the vectors, cell line and mouse strain are the same, and the authors call it a direct replication.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "fig4a:mir34a_represses_cd44_in_tumors",
+      "original_reference": "Liu et al. (2011)",
+      "original_url": "https://doi.org/10.1038/nm.2284",
+      "original_title": "The microRNA miR-34a inhibits prostate cancer stem cells and metastasis by directly repressing CD44",
+      "original_authors": "Liu, C; Kelnar, K; Liu, B; Chen, X; Calhoun-Davis, T; Li, H; Patrawala, L; Yan, H; Jeter, C; Honorio, S; Wiggins, J; Bader, A; Fagin, R; Brown, D; Tang, D",
+      "original_year": "2011",
+      "original_journal": "Nature Medicine",
+      "replication_study": "CD44 Western blot in excised tumors (Figure 2E; original Figure 4A; Registered Report Protocol 5)",
+      "outcome": "CD44 protein expression (Western blot, normalized to beta-actin) in xenograft tumors",
+      "contrast": "tumors from miR-34a-transduced vs control (negative-control-transduced / untransduced) cells",
+      "timepoint": "not applicable: measured once in excised tumors at end of tumor experiment",
+      "result": "inconclusive",
+      "replication_type": "close extension",
+      "description": "In tumors formed from miR-34a-transduced prostate cancer cells (DU145, retroviral vector), CD44 expression is reduced, inversely correlating with miR-34a expression.",
+      "citation_sentence": "This experiment was described in Protocol 5 in the Registered Report (Li et al., 2015) and is conceptually similar to what was reported in Figure 4A of Liu et al. (2011), which used DU145 cells transduced with a retroviral vector encoding miR-34a.",
+      "evidence": "Results / Figure 2E: \"we found CD44 expression in tumors derived from miR-34a transduced LAPC4 cells was similar to the expression in tumors derived from untransduced or negative control transduced LAPC4 cells (Figure 2E, Figure 2—figure supplement 1D). Interpretation of these results need to take into consideration the absence of miR-34a expression that was observed in the tumors from miR-34a transduced LAPC4 cells.\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Changed from failure (pass 1) to inconclusive. Unlike the tumor-weight and luciferase experiments, the authors give no failure summary and no inferential test for this comparison. Their only interpretive statement is the caveat that miR-34a was absent in the tumors, so the manipulation the claim depends on (miR-34a overexpression in tumors) did not hold. Under the codebook tiebreaker (doubt between failure and inconclusive -> inconclusive), inconclusive fits better. Failure remains plausible: the abstract says 'we did not observe changes in tumor growth or CD44 expression'. Type: different cell line (LAPC4 vs DU145) and a lentiviral vs retroviral vector, and the authors say 'conceptually similar', so conceptual is a plausible alternative. Coded close extension because the paradigm (miR-34a-transduced xenograft, CD44 Western) is recognizably the same.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "fig4d:mir34a_targets_cd44_3utr",
+      "original_reference": "Liu et al. (2011)",
+      "original_url": "https://doi.org/10.1038/nm.2284",
+      "original_title": "The microRNA miR-34a inhibits prostate cancer stem cells and metastasis by directly repressing CD44",
+      "original_authors": "Liu, C; Kelnar, K; Liu, B; Chen, X; Calhoun-Davis, T; Li, H; Patrawala, L; Yan, H; Jeter, C; Honorio, S; Wiggins, J; Bader, A; Fagin, R; Brown, D; Tang, D",
+      "original_year": "2011",
+      "original_journal": "Nature Medicine",
+      "replication_study": "Evaluation of putative miR-34a binding sites in the 3'UTR of CD44 (Figure 3; original Figure 4D; Registered Report Protocol 7)",
+      "outcome": "Luciferase activity of a CD44 3'UTR reporter (wild-type vs double-mutant binding sites) in DU145 cells",
+      "contrast": "miR-34a oligos vs control oligos, with wild-type vs double-mutant (M1M2) CD44 3'UTR reporter",
+      "timepoint": "not applicable: single assay 48 h post-transfection",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "miR-34a directly represses CD44 through binding sites in its 3'UTR: miR-34a decreases CD44 3'UTR luciferase reporter activity, and this repression is partially abrogated by mutating the binding sites.",
+      "citation_sentence": "This is similar to what was reported in Figure 4D of Liu et al. (2011) and described in Protocol 7 in the Registered Report (Li et al., 2015).",
+      "evidence": "Results, 'Evaluation of putative miR-34a binding sites' / Figure 3A: wild-type reporter miR-34a 0.99 vs control 1.00, \"z = 0.517, uncorrected p=0.632\"; double mutant 1.19 vs 1.00. \"To summarize, we found results that were not consistent in direction with the original study and not statistically significant.\"",
+      "gt_ambiguity": "clear",
+      "notes": "Coded as one claim (direct targeting of the CD44 3'UTR) covering both the wild-type repression and the double-mutant abrogation comparisons. A coder could split it into two rows (repression of the WT reporter; abrogation by mutation), and both would be failure. The paper's meta-analysis treats three comparisons separately (Figure 4B,C). The replication tested only the double mutant (the original also tested single mutants). Same plasmids, cell line and design: direct.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26@v2:10.7554--elife.43511#1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Empty anchor placeholder with no claim content ('no entry matched this anchor'); the paper's effects are covered by the other candidates."
+    },
+    "ling26@v2:10.7554--elife.43511#added_94014a5120": {
+      "action": "map",
+      "effect_ids": ["fig1b:mir34a_underexpressed_cd44pos"],
+      "reason": "Same claim (Figure 1B miR-34a in CD44+ vs CD44- LAPC4). Labeled close experiment because of the gating change; kept direct per the authors' 'direct replication' characterization and the direct-vs-close tiebreaker."
+    },
+    "ling26@v2:10.7554--elife.43511#added_88868bc366": {
+      "action": "map",
+      "effect_ids": ["suppfig5c:mir34a_inhibits_tumor_regeneration"],
+      "reason": "Same claim (Supplemental Figure 5C, tumor regeneration); labels agree."
+    },
+    "ling26@v2:10.7554--elife.43511#added_5fdc4ef795": {
+      "action": "map",
+      "effect_ids": ["fig4a:mir34a_represses_cd44_in_tumors"],
+      "reason": "Same claim (Figure 4A, CD44 in tumors). Its inconclusive call prompted a re-check and the label was changed to inconclusive; type kept as close extension (cell line changed from DU145 to LAPC4, i.e. a context change, not only methodology)."
+    },
+    "ling26@v2:10.7554--elife.43511#added_c6ac63d4f9": {
+      "action": "map",
+      "effect_ids": ["fig4d:mir34a_targets_cd44_3utr"],
+      "reason": "Same claim (Figure 4D, CD44 3'UTR luciferase); labels agree."
+    },
+    "luna56@v2:10.7554--elife.43511#1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Empty anchor placeholder with no claim content ('no entry matched this anchor')."
+    },
+    "luna56@v2:10.7554--elife.43511#added_5cc817b64f": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "let-7b in CD44+ vs CD44- cells is a reference/positive-control comparison, not a claim. The paper calls let-7b 'a previously reported tumor suppressive microRNA' (Liu et al., 2012), and the replication uses its reduction 'as expected' to validate the sort despite the gating change. Under the codebook, controls get no row."
+    },
+    "luna56@v2:10.7554--elife.43511#added_a9350e07e8": {
+      "action": "map",
+      "effect_ids": ["fig1b:mir34a_underexpressed_cd44pos"],
+      "reason": "Same claim (Figure 1B miR-34a in CD44+ vs CD44- LAPC4); labels agree."
+    },
+    "luna56@v2:10.7554--elife.43511#added_56fcd8a661": {
+      "action": "map",
+      "effect_ids": ["suppfig5c:mir34a_inhibits_tumor_regeneration"],
+      "reason": "Same claim (Supplemental Figure 5C, tumor growth); labels agree."
+    },
+    "luna56@v2:10.7554--elife.43511#added_3e47ed2d9b": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Supplemental Figure 4A,B (miR-34a levels in tumors) is a manipulation check of whether the miR-34a overexpression persisted in vivo, not a finding Liu et al. claimed. Its 'success' label also misreads the source: the authors treat undetectable miR-34a as an unexpected in-vivo silencing that undermines the overexpression experiments, not as agreement with the original."
+    },
+    "luna56@v2:10.7554--elife.43511#added_3d4b4b11ab": {
+      "action": "map",
+      "effect_ids": ["fig4a:mir34a_represses_cd44_in_tumors"],
+      "reason": "Same claim (Figure 4A, CD44 in tumors). Final labels differ: inconclusive (the authors give only a caveat that miR-34a was absent in vivo) and close extension (different cell line and vector; the authors say 'conceptually similar')."
+    },
+    "luna56@v2:10.7554--elife.43511#added_c2f91236b4": {
+      "action": "map",
+      "effect_ids": ["fig4d:mir34a_targets_cd44_3utr"],
+      "reason": "Same claim (Figure 4D, CD44 3'UTR luciferase); labels agree."
+    }
+  },
+  "revision_notes": "One label changed: fig4a (CD44 Western in tumors) went from failure to inconclusive. The authors give no statistics and no failure summary for this comparison, only the caveat that miR-34a was absent in the tumors, so the codebook tiebreaker for doubt between failure and inconclusive applies. Fig1b stays failure after the targeted outcome review: the opposite point estimate alone was not treated as a reversal, and the gating confound does not plausibly produce the observed doubling. Candidates for let-7b (a control) and Supplemental Figure 4A,B (a manipulation check) were rejected. No entries were added."
+}

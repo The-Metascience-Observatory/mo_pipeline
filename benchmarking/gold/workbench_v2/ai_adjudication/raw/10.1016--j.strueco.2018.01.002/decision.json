@@ -1,0 +1,22 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "A theoretical and historical critique of Hamilton (1987, 1992) and Mishkin (1990). The authors reproduce Hamilton's own tables, reinterpret the same 1929-1932 commodity futures data in light of Working's theory of storage, and add a small descriptive wheat/CPI regression. They do not run a replication of a prior finding with new data (codebook genres: reanalysis/reinterpretation of existing data; commentary/theory paper).",
+  "enumeration_complete": true,
+  "effects": [],
+  "why_negative": "Reanalysis and commentary: it re-reads Hamilton's published futures data and argues it was misinterpreted, with no independent replication of the original claim on new data.",
+  "gt_ambiguity": "ambiguous",
+  "notes": "A second coder might code an entry for Hamilton (1992), 'Was the deflation during the Great Depression anticipated? Evidence from the commodity futures market', American Economic Review. Hamilton claims that futures markets did not anticipate the 1929-1932 deflation. Saleuddin & Coffman reach the opposite conclusion (Section 5 and Conclusions), but only by reinterpreting the same historical CBOT price series. They reproduce Hamilton's tables 3-4 verbatim, call their own conclusions 'still preliminary', and never frame the paper as a replication.",
+  "candidate_resolutions": {
+    "ling26:10.1016--j.strueco.2018.01.002#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal. It agrees with my call: the paper has no qualifying replication entry because it is a reanalysis/critique of Hamilton's existing data, with no new data. Per protocol, every candidate on a negative paper is resolved as reject."
+    },
+    "luna56:10.1016--j.strueco.2018.01.002#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal. It agrees with my call: the paper has no qualifying replication entry because it is a reanalysis/critique of Hamilton's existing data, with no new data. Per protocol, every candidate on a negative paper is resolved as reject."
+    }
+  },
+  "revision_notes": ""
+}

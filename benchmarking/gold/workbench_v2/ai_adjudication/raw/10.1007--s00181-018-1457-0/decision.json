@@ -1,0 +1,29 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "Reanalysis of the same data: the authors state 'We proceed by re-examining the microcensus dataset used by RA (2014)' and rerun Rostam-Afschar's (2014, Empir Econ 47:1067-1101) difference-in-differences regressions on the same German Microcensus survey after re-coding which occupations count as crafts trades (Sect. 4, Appendix A), so no new participants or new data test the original claims. Ambiguous: the paper also runs a DiD on aggregate ZDH company-registry exit counts (Table 6) as a cross-check, which a second coder might count as a conceptual replication of RA's null exit claim (it finds an increase); the authors frame the ZDH data as motivation and a cross-check, not as the replication.",
+  "enumeration_complete": true,
+  "effects": [],
+  "candidate_resolutions": {
+    "ling26:10.1007--s00181-018-1457-0#ling26:1b9514d27bcc498b:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative (reanalysis genre): the replication re-examines the same Microcensus dataset RA used, only re-coding the crafts-occupation classification ('We proceed by re-examining the microcensus dataset used by RA (2014)'); no new data. The candidate also lumps entry, self-employment and exit into one row."
+    },
+    "luna56:10.1007--s00181-018-1457-0#luna56:4dccf3e649e270e3:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative (reanalysis of the same Microcensus data with a re-coded sample). If a later reviewer rules the paper positive, this is the best-specified exit entry: RA's null exit claim versus a significant 2.0-2.5 pp increase for B1-trades (Table 4, specs 1-2), i.e. failure under the null-claim rule."
+    },
+    "luna56:10.1007--s00181-018-1457-0#luna56:93319b922a6b5e48:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative (reanalysis of the same Microcensus data with a re-coded sample). If ruled positive, the self-employment claim would read success: positive, significant interaction terms for both B1 (~6 pp) and A (1.6 pp) (Sect. 6.2, Table 5), with differing magnitudes."
+    },
+    "luna56:10.1007--s00181-018-1457-0#luna56:eb453adc6a848312:1": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Paper judged negative (reanalysis of the same Microcensus data with a re-coded sample). If ruled positive, the entry claim would read inconclusive: entry rises 1.0-1.8 pp in B1, but 'we do not find an increase of entry probabilities for A-trades' (Sect. 6.2)."
+    }
+  },
+  "revision_notes": "No change from pass 1. The candidates treat the paper as a replication, and one notes an external record, but the source says explicitly that it re-examines the same Microcensus dataset with a re-coded sample, which is the codebook's 'reanalysis or reproducibility check of the same data' negative genre. Each reject records how the candidate would be labelled if an adjudicator rules the paper positive (exit failure, self-employment success, entry inconclusive)."
+}

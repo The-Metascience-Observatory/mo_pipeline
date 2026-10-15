@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Wieben ED, Aleff RA, Tosakulwong N, et al. (2012) A common trinucleotide repeat expansion within the transcription factor 4 (TCF4, E2-2) gene predicts Fuchs corneal dystrophy",
+   "doi": "10.1371/journal.pone.0049083"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Ref 25: first report (2012) of the CTG18.1 repeat expansion–FECD association in Caucasians; the paper newly genotypes CTG18.1 in a Chinese case-control cohort and reports a 'transethnic replication' of this association (P = 4.7e-14, OR 66.5)."
+  },
+  "B": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "This is the replication paper itself (same title and DOI 10.1167/iovs.14-15390), not an original study it replicates."
+  }
+ },
+ "notes": "The association was first reported by Wieben et al. 2012 (ref 25) and replicated in Caucasians by the same group's Mootha et al. 2014 (ref 27, IOVS 55:33-42, OR 32.3), which serves as the main effect-size comparator in the Discussion. A coder could plausibly also list Mootha 2014 as an original. The Chinese subjects are the same cohort as Thalamuthu et al. 2011 (ref 23), and its SNP genotypes are reanalysed here. That is reuse of the sample for conditional analyses, not a replication of Thalamuthu's finding. The CTG18.1 genotyping is new data."
+}

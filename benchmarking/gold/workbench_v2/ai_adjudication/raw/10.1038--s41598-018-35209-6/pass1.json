@@ -1,0 +1,27 @@
+{
+  "eligibility": "positive",
+  "eligibility_reason": "The paper replicates the main finding of Smith et al. (2009, PNAS) -- that resting-state networks correspond to task-activation networks -- using independent Human Connectome Project task and resting-state fMRI data (different subjects and data from the original), and reports that the findings were replicated.",
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "s1:rest-task-network-correspondence",
+      "original_reference": "Smith et al. (2009)",
+      "original_url": "",
+      "original_title": "Correspondence of the brain's functional architecture during activation and rest",
+      "original_authors": "Smith, S. M.",
+      "original_year": "2009",
+      "original_journal": "Proceedings of the National Academy of Sciences of the United States of America",
+      "replication_study": "single study (HCP task and resting-state fMRI group ICAs at dimensionality 20, plus 70)",
+      "outcome": "Spatial correspondence (spatial cross-correlation) between independent-component networks derived from resting-state fMRI and from task activation data, for the ten rest/task network pairs reported by Smith et al. (Smith Fig. 1; finer sub-networks at 70 components, Smith Fig. 3)",
+      "contrast": "not applicable: correspondence (spatial cross-correlation) between resting-state and task-derived network maps, not a group comparison",
+      "timepoint": "not applicable: cross-sectional imaging analysis",
+      "result": "success",
+      "replication_type": "close extension",
+      "description": "Smith et al. (2009) reported that the major brain networks identified by ICA of resting-state fMRI (ten networks such as visual, default mode, sensorimotor, auditory, executive control and left/right frontoparietal) closely correspond to the functional networks identified by ICA of task activation data from the BrainMap database.",
+      "citation_sentence": "In 2009, Smith et al. published a paper in the Proceedings of the National Academy of Sciences 30 that showed that the collection of brain networks that are 'active' while a person is resting and engaged in idle thought (e.g., resting state networks or RSNs) correspond to the same functional networks used by the brain to perform tasks.",
+      "evidence": "Results, p. 3: \"In the present study, these Smith et al. main findings were highly reproducible using the HCP task and resting state data.\" Spatial cross correlations HCP task vs Smith BrainMap r = 0.26-0.74 (min p = 4 x 10^-4 corrected); HCP task vs HCP RSNs r = 0.44-0.81. 70 components: \"the correspondence between HCP networks using this dimensionality (70) and the Smith et al. networks were also reproducible.\" Discussion: \"Reassuringly, the Smith et al. findings were replicable under the most challenging form of generalizability using different subjects, stimuli, and analysis methods\" and \"the Smith findings were replicated for the ten networks for which he reported to have high correspondence between rest and task.\"",
+      "gt_ambiguity": "clear",
+      "notes": "Result label is clear (author states replication repeatedly). Enumeration: the 20-component and 70-component analyses are coded as one entry (the same rest-task correspondence claim at two ICA dimensionalities); a second coder could split the 70-component sub-network correspondence (Smith Fig. 3) into its own entry -- it was also reported as reproducible (success). Smith Fig. 2 (network-to-66-BrainMap-behavioral-domain mapping) was explicitly NOT reproduced ('It is not possible to reproduce these findings in the present study'); the paper's network-activation analysis (Fig. 2/3, DMN suppression, occipital activation for visual tasks, working-memory networks) is a novel method with only qualitative parallels, so no entry. Replication type: author calls it a 'true replication', but the task input is fundamentally different (real HCP COPE maps from 7 tasks in ~411-452 subjects vs BrainMap pseudo-activation maps from ~1600 published studies; resting data are single-subject ICA maps from 20 HCP subjects vs timeseries from 36 subjects), with the same group-ICA + spatial cross-correlation paradigm -> close extension (data source/population and methods changed); conceptual is a defensible alternative. HCP is a pre-existing open dataset, but it is independent of the original study's data, so this is not a reanalysis of the same data. DOI of Smith et al. (2009) not stated in the paper or references.json, so original_url left blank; only first author given ('Smith, S. M. et al.')."
+    }
+  ]
+}

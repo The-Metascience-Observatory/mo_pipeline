@@ -1,0 +1,35 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Kilduff et al. (2013) Right-left digit ratio (2D:4D) predicts free testosterone levels associated with a physical challenge",
+   "doi": "10.1080/02640414.2012.747690"
+  },
+  {
+   "reference": "Crewther, Cook, Kilduff & Manning (2015) Digit ratio (2D:4D) and salivary testosterone, oestradiol and cortisol levels under challenge: Evidence for prenatal effects on adult endocrine responses",
+   "doi": "10.1016/j.earlhumdev.2015.04.011"
+  },
+  {
+   "reference": "Crewther & Cook (2019) The digit ratio (2D:4D) relationship with testosterone is moderated by physical training: Evidence of prenatal organizational influences on activational patterns of adult testosterone in physically-active women",
+   "doi": "10.1016/j.earlhumdev.2019.02.008"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Ref 32. One of the prior studies the paper builds its hypothesis on (2D:4D, right minus left, predicting testosterone change after repeated sprints plus an aggressive video in men). The paper reuses its sprint protocol and three-ratio analysis, and the Conclusion names it among the findings contradicted, though the paper notes it dropped the aggressive-video component."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Ref 33. The closest original: right 2D:4D predicted the testosterone rise after physical exertion in 25 rugby players. The paper retests this in 97 men on a cycling task, finds no link, and states that its findings contradict [20][33]."
+  },
+  "C": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Ref 5. Cited for the prenatal-androgen theory of 2D:4D, as one of several studies reporting a negative 2D:4D–adult testosterone link, and for the finger-measurement method. The paper does not present itself as a replication of it."
+  }
+ },
+ "notes": "The paper tests whether 2D:4D predicts the testosterone response to a challenge, based on four prior studies [20][32][33][34]. It says it is not an exact replication: it covers only physical exertion, with no aggressive context, so Kilduff et al. 2013 Evol. Psychol. [34] (aggressive video only) is background rather than replicated. Crewther & Cook 2019 [20] was run in women but is explicitly named as contradicted, so it is listed even though it is not a candidate. Kilduff 2013 [33] is the core original."
+}

@@ -1,0 +1,64 @@
+58 paper(s) to adjudicate with claude-opus-5-5, 12 workers
+OK  10.1007--s10648-015-9332-4: negative 0 effects, +0 after candidates, $0.96, 23s, errors=0
+OK  10.1007--s00181-005-0242-z: negative 0 effects, +0 after candidates, $1.00, 34s, errors=0
+OK  10.1001--jamapsychiatry.2015.0554: negative 0 effects, +0 after candidates, $1.31, 38s, errors=0
+OK  10.1007--s00181-018-1457-0: negative 0 effects, +0 after candidates, $1.44, 61s, errors=0
+OK  10.1016--j.strueco.2018.01.002: negative 0 effects, +0 after candidates, $1.28, 36s, errors=0
+OK  10.1002--npr2.70078: positive 1 effects, +0 after candidates, $1.31, 82s, errors=0
+OK  10.1017--s0003055405051658: negative 0 effects, +0 after candidates, $1.41, 28s, errors=0
+OK  10.1016--j.dcn.2017.12.003: positive 1 effects, +0 after candidates, $1.30, 90s, errors=0
+OK  10.1037--0022-3514.75.6.1411: negative 0 effects, +0 after candidates, $1.14, 29s, errors=0
+OK  10.1016--j.psyneuen.2016.08.017: positive 2 effects, +0 after candidates, $1.48, 79s, errors=0
+OK  10.1016--j.jesp.2020.104052: positive 4 effects, +0 after candidates, $1.86, 114s, errors=0
+OK  10.1002--jae.2886: positive 4 effects, +0 after candidates, $1.97, 131s, errors=0
+OK  10.1037--edu0000146: excluded 0 effects, +0 after candidates, $1.54, 44s, errors=0
+OK  10.1038--mp.2011.142: negative 0 effects, +0 after candidates, $1.27, 44s, errors=0
+OK  10.1007--s10664-025-10739-6: positive 6 effects, +0 after candidates, $2.28, 137s, errors=0
+OK  10.1002--ejsp.2748: positive 2 effects, +0 after candidates, $2.24, 155s, errors=0
+OK  10.1038--ng.3434: negative 0 effects, +0 after candidates, $1.64, 47s, errors=0
+OK  10.1027--1864-9335--a000186: positive 2 effects, +0 after candidates, $1.38, 86s, errors=0
+OK  10.1080--00330124.2012.681509: negative 0 effects, +0 after candidates, $1.13, 46s, errors=0
+OK  10.1080--13803390701550110: negative 0 effects, +0 after candidates, $1.05, 42s, errors=0
+OK  10.1038--s41598-018-35209-6: positive 1 effects, +0 after candidates, $1.52, 71s, errors=0
+OK  10.1016--j.jml.2022.104352: positive 5 effects, +0 after candidates, $2.54, 169s, errors=0
+OK  10.1002--art.39932: positive 10 effects, +0 after candidates, $2.66, 197s, errors=0
+OK  10.1098--rsos.181868: positive 1 effects, +0 after candidates, $1.32, 67s, errors=0
+OK  10.1111--bjso.12217: positive 2 effects, +0 after candidates, $1.49, 74s, errors=0
+OK  10.1101--2025.04.02.645026: excluded 0 effects, +0 after candidates, $2.77, 81s, errors=0
+OK  10.1177--0956797614554955: negative 0 effects, +0 after candidates, $1.20, 48s, errors=0
+OK  10.1108--neje-04-2020-0005: positive 2 effects, +0 after candidates, $1.60, 87s, errors=0
+OK  10.1177--1091142114537893: negative 0 effects, +0 after candidates, $1.19, 46s, errors=0
+OK  10.1080--09658211.2011.590505: positive 5 effects, +0 after candidates, $1.83, 119s, errors=0
+OK  10.1111--sjoe.12341: positive 2 effects, +0 after candidates, $1.77, 94s, errors=0
+OK  10.1101--2021.11.30.470372: positive 4 effects, +0 after candidates, $2.11, 137s, errors=0
+OK  10.1177--1534508420953894: positive 2 effects, +0 after candidates, $1.57, 73s, errors=0
+OK  10.1177--073953298600700307: positive 7 effects, +0 after candidates, $2.06, 127s, errors=0
+OK  10.1371--journal.pone.0053234: positive 1 effects, +0 after candidates, $1.18, 80s, errors=0
+OK  10.1007--s40279-025-02201-w: positive 25 effects, +0 after candidates, $4.00, 342s, errors=0
+OK  10.1177--1745691616664694: positive 4 effects, +0 after candidates, $1.79, 120s, errors=0
+OK  10.1371--journal.pone.0284404: positive 3 effects, +0 after candidates, $1.50, 118s, errors=0
+OK  10.1111--famp.12710: positive 12 effects, +0 after candidates, $2.37, 209s, errors=0
+OK  10.17605--osf.io--ehjdm: positive 3 effects, +0 after candidates, $1.34, 97s, errors=0
+OK  10.1186--1471-2350-13-27: positive 3 effects, +0 after candidates, $1.94, 128s, errors=0
+OK  10.23846--rps0002: negative 0 effects, +0 after candidates, $1.35, 36s, errors=0
+OK  10.3386--w21801: negative 0 effects, +0 after candidates, $1.41, 48s, errors=0
+OK  10.1525--mp.2012.30.2.161: positive 3 effects, +0 after candidates, $1.97, 147s, errors=0
+OK  10.21203--rs.3.rs-8351701--v1: positive 3 effects, +0 after candidates, $1.67, 95s, errors=0
+OK  10.17705--1atrr.00014: positive 5 effects, +0 after candidates, $1.83, 126s, errors=0
+OK  10.48550--arxiv.1605.00178: positive 2 effects, +0 after candidates, $1.34, 71s, errors=0
+OK  10.5018--economics-ejournal.ja.2018-3: negative 0 effects, +0 after candidates, $1.35, 71s, errors=0
+OK  10.18718--81781.29: positive 7 effects, +0 after candidates, $2.39, 154s, errors=0
+OK  10.1177--1745691615605826: positive 9 effects, +0 after candidates, $2.47, 237s, errors=0
+OK  10.2466--pr0.2000.87.2.493: positive 5 effects, +0 after candidates, $1.83, 164s, errors=0
+OK  10.1158--1055-9965.epi-08-1223: positive 23 effects, +0 after candidates, $3.42, 376s, errors=0
+OK  10.3389--fninf.2018.00046: positive 7 effects, +0 after candidates, $2.38, 194s, errors=0
+OK  10.3758--s13423-020-01834-4: positive 5 effects, +0 after candidates, $1.90, 196s, errors=0
+OK  10.7554--elife.39944: positive 5 effects, +0 after candidates, $1.98, 153s, errors=0
+OK  10.7554--elife.43511: positive 4 effects, +0 after candidates, $1.99, 184s, errors=0
+OK  10.7554--elife.56651: positive 6 effects, +0 after candidates, $2.50, 187s, errors=0
+OK  10.7554--elife.34364: positive 6 effects, +0 after candidates, $5.91, 261s, errors=0
+{
+  "done": 58,
+  "cost_usd": 106.46,
+  "with_errors": 0
+}

@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Bauer & Mulder (2011) Engagement in learning after errors at work: enabling conditions and types of engagement (Journal of Education and Work)",
+   "doi": "10.1080/13639080.2011.573776"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The paper's stated goal is to test whether Bauer and Mulder's (2011) exploratory mediation model of hospital nurses' ESLA (276 nurses; indirect effects of error strain and safe team climate) replicates in elder care nurses. It uses the same scales and model, and the reference list gives this DOI."
+  },
+  "B": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Bauer, Gartmeier & Harteis (2012) is the introductory chapter of the Human Fallibility volume. The paper cites it only as background on learning from errors and on social learning activities."
+  }
+ },
+ "notes": "The abstract cites the original as 'Bauer and Mulder, Learning in Health and Social Care 6:121-133, 2011'. That journal and page range belong to the separate Bauer & Mulder (2007) paper 'Modelling learning from errors in daily work'. The body (276 hospital nurses, the post hoc mediation model, the quote from p. 11) and the reference list identify the replicated work as the 2011 Journal of Education and Work article. Not checked: whether the _10 chapter suffix in candidate B's DOI matches a chapter on pp. 1-14."
+}

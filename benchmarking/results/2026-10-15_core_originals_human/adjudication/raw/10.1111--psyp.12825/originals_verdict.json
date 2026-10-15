@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "klein Selle, Verschuere, Kindt, Meijer, & Ben-Shakhar (2016) Orienting versus inhibition in the Concealed Information Test: Different cognitive processes drive different physiological measures",
+   "doi": "10.1111/psyp.12583"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "Riccelli et al. (2017) on surface-based morphometry and personality does not appear in the paper's text or reference list; the paper concerns the Concealed Information Test."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The abstract states the study intends to 'provide a constructive replication of klein Selle et al. (2016)' using an autobiographical CIT, and it reproduces the response-fractionation pattern (SCR in both conditions; RLL/HR only under concealment)."
+  }
+ },
+ "notes": "Constructive/conceptual replication: identity-related items replace the original's mock-crime items, and an item-salience manipulation is added as an extension."
+}

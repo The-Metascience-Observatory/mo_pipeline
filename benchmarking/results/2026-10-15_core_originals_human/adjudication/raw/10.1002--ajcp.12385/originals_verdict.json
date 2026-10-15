@@ -1,0 +1,31 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Taussig, H. N., & Culhane, S. E. (2010). Impact of a mentoring and skills group program on mental health outcomes for maltreated children in foster care. Archives of Pediatrics and Adolescent Medicine, 164, 739-746.",
+   "doi": "10.1001/archpediatrics.2010.124"
+  },
+  {
+   "reference": "Weiler, L., & Taussig, H. (2017). The moderating effect of risk exposure on an efficacious intervention for maltreated children. Journal of Clinical Child and Adolescent Psychology.",
+   "doi": "10.1080/15374416.2017.1295379"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "This is the pilot FHF RCT (Taussig & Culhane, 2010). The current study 'sought to replicate and extend the mental health findings of the pilot FHF trial', and the Discussion says 'As was found in the pilot trial, the FHF program demonstrated significant impact in reducing mental health symptomatology.'"
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Weiler & Taussig (2017) reported that ACE exposure moderated FHF's effect on trauma symptoms. The current study hypothesised the same moderation 'based on our prior research', and the Discussion says the ACE moderation 'replicated our earlier finding'."
+  },
+  "C": {
+   "verdict": "not_relevant",
+   "metadata_problem": true,
+   "reason": "This 2012 PsycEXTRA record does not appear in the paper's reference list. It looks like a conference or grey-literature item about the same FHF trial, catalogued as a 'Dataset', rather than the published 2010 pilot-trial article the paper actually cites."
+  }
+ },
+ "notes": "Self-replication and extension: five new cohorts (N=270) were added to the pilot cohorts, giving N=426 in total. The pooled sample includes the pilot participants, so the overlap is partial; the new cohorts still supply new participants. Taussig et al. (2013) on neglect severity is cited as a pilot moderator finding, but the paper does not test neglect severity again. Taussig, Culhane & Hettleman (2007) is the program description, cited only as background."
+}

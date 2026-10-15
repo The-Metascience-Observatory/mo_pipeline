@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Hsee, Zhang, Lu & Xu (2013) Unit asking: A method to boost donation and beyond. Psychological Science, 24(9), 1801-1808",
+   "doi": "10.1177/0956797613482947"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Hsee et al. (2013) Psychological Science is the unit-asking paper the study directly replicates (exact children/Christmas scenario of Study 1, same items); the title is a shortened form of the same work and the DOI matches it as far as can be judged."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": true,
+   "reason": "Title, authors, year and journal match the replicated Hsee et al. (2013) unit-asking paper exactly. However, this DOI differs from candidate A's for the same work, and from memory the article's DOI is ...613482947, so this DOI probably points to a different paper."
+  }
+ },
+ "notes": "Preregistered direct replication (N=1039, Prolific) of Hsee et al. (2013) Study 1 (children's Christmas presents), extended to animal (koalas) and environment (forest fires) domains. The paper's text gives no DOI, so the DOI choice between A and B rests on memory, not on the source. Simmons (2013) is a Data Colada blog replication cited as prior work and supplied the materials. Hsee (1996) and Ariely et al. (2003) are cited only as theory."
+}

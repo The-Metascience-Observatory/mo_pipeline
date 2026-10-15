@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Hus, Gotham & Lord (2014) Standardizing ADOS domain scores: Separating severity of social affect and restricted and repetitive behaviors",
+   "doi": "10.1007/s10803-012-1719-1"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The paper's stated aim is to replicate 'Hus et al., 2014', the derivation of separate Social Affect and RRB calibrated severity scores for ADOS Modules 1-3, in the SSC. It applies the original mappings and repeats its regressions of child characteristics on raw and calibrated domain scores, then concludes it 'confirms earlier independent findings'. The year 2012 is the online-first date of this JADD 2014 article, so the metadata is consistent."
+  },
+  "B": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Hus & Lord (2014), on the ADOS Module 4 revised algorithm, is in the reference list and is cited as 'Hus & Lord, 2014' only for background, in the point about DSM-5 levels of support. The domain CSS replicated here cover Modules 1-3 in children, not Module 4."
+  }
+ },
+ "notes": "The paper's reference list omits the Hus, Gotham & Lord domain-CSS article it actually replicates and lists only Hus & Lord (2014, Module 4). The in-text 'Hus et al., 2014' (12 age/language cells, Modules 1-3, SA-CSS/RRB-CSS) clearly identifies the domain-CSS paper, so an extractor resolving via the reference list may wrongly pick candidate B."
+}

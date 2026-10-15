@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Imel, Barco, Brown, Baucom, Baer, Kircher & Atkins (2014) The association of therapist empathy and synchrony in vocally encoded arousal",
+   "doi": "10.1037/a0034943"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "This is Imel et al. (2014b): 'we sought to replicate the study by Imel et al. (2014b)', testing whether session- and minute-level clinician-patient F0 synchrony is higher in high-empathy sessions, in two Swiss French samples. Title, authors, journal and DOI match the reference list."
+  },
+  "B": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "This is Imel et al. (2014a). It is cited only as background, on situational empathy variance and on standardized-patient performance being consistent with performance with real patients, and as the source of comparison MISC empathy means. None of its findings is replicated."
+  }
+ },
+ "notes": "The paper is a secondary analysis of audio from two independent Swiss studies (Gaume et al., 2014; Carrard et al., 2018). These are new samples relative to the original, so it is a replication (likely close extension), not a reanalysis of the original data. The authors frame the result as a failure to replicate."
+}

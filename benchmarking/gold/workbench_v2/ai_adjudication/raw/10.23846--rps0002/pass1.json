@@ -1,0 +1,9 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "This is the original authors' (Jensen & Oster) reply to Iversen and Palmer-Jones's 3ie replication of their 2009 QJE cable-TV paper. It re-runs and disputes analyses of the same SARI, DISE and NFHS3 datasets and collects no new data, so it is a commentary/reanalysis, not a replication with new data.",
+  "enumeration_complete": true,
+  "effects": [],
+  "why_negative": "Commentary/response plus reanalysis of existing data: the original authors re-estimate their own and I-PJ's specifications on the same SARI/DISE data, and run an NFHS3 regression on the same survey I-PJ used, to rebut I-PJ's claim. No new participants, and no prior published finding is replicated with new data.",
+  "gt_ambiguity": "clear",
+  "notes": "body.md held only a fragment of page 8; I read the whole paper from the PDF (pp. 1-10). The underlying I-PJ (2013) 3ie replication is a pure replication/robustness reanalysis of the JO data, and this reply only defends against it. Page 4's 'corrected coefficients' table re-runs index constructions on the original SARI data. Page 8's NFHS3 regressions (attitudes vs. experience of spousal violence) use the existing NFHS3 survey to test I-PJ's descriptive claim, so they are a reanalysis of the same data, not a replication."
+}

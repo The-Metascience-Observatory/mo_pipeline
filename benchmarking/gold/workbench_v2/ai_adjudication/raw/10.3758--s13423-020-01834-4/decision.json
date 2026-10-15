@@ -1,0 +1,140 @@
+{
+  "eligibility": "positive",
+  "eligibility_reason": "Experiment 2 reports a new-data direct and a conceptual replication of Zlatev et al.'s (2017, PNAS) Study 1h, and Experiment 3's switch-framing conditions again replicate Study 1h; Experiments 1A/1B are described in the General Discussion as conceptual replications that contradict Zlatev et al.'s claim of default neglect.",
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "e2-direct:study1h-below-chance",
+      "original_reference": "Zlatev et al. (2017)",
+      "original_url": "",
+      "original_title": "Default neglect in attempts at social influence",
+      "original_authors": "Zlatev, J. J.; Daniels, D. P.; Kim, H.; Neale, M. A.",
+      "original_year": "2017",
+      "original_journal": "Proceedings of the National Academy of Sciences",
+      "replication_study": "Experiment 2 (direct replication conditions)",
+      "outcome": "Percentage of choice architects selecting the optimal default (vs. 50% chance) in the Study 1h job (higher pay vs. more vacation days) advice task",
+      "contrast": "observed optimal-default selection rate vs. 50% chance",
+      "timepoint": "not applicable: single-session choice task",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "In Zlatev et al.'s (2017) Study 1h, choice architects asked to influence a new employee toward a target job by choosing one of two pieces of advice (default-framed scenarios) selected the optimal default significantly less often than chance (default neglect).",
+      "citation_sentence": "To directly examine whether default neglect depends on the complexity of the experimental materials, Experiment 2 includes both a direct and a conceptual replication of Zlatev et al.'s (2017) Study 1h.",
+      "evidence": "Experiment 2 Results and discussion (p. 699): \"First, we were able to replicate Zlatev et al.'s (2017) original results. ... Overall, participants chose the optimal default 38.6% of the time, which was significantly less than chance, χ2(1, N = 259) = 12.99, p < .001\"; General Discussion: \"we were able to directly replicate the worse than chance performance (39%) of Study 1h using the original materials\".",
+      "gt_ambiguity": "clear",
+      "notes": "Used the original Study 1h materials verbatim (Fig. 1A), UCSD undergraduates. Below-chance in the higher-pay condition (34.6%, p < .001) but not significant in the vacation condition (42.6%, p = .113); pooled result significantly below chance and authors state they replicated the original. Original DOI not given in the paper (reference list has no DOI), so original_url left blank; candidate luna56 proposes https://doi.org/10.1073/pnas.1708413114, which cannot be verified from the source and is not adopted.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "e2-conceptual:study1h-below-chance",
+      "original_reference": "Zlatev et al. (2017)",
+      "original_url": "",
+      "original_title": "Default neglect in attempts at social influence",
+      "original_authors": "Zlatev, J. J.; Daniels, D. P.; Kim, H.; Neale, M. A.",
+      "original_year": "2017",
+      "original_journal": "Proceedings of the National Academy of Sciences",
+      "replication_study": "Experiment 2 (conceptual replication conditions)",
+      "outcome": "Percentage of choice architects selecting the optimal default (vs. 50% chance) for the same job scenario, presented as a simplified automatic-assignment choice without the default-framing confound",
+      "contrast": "observed optimal-default selection rate vs. 50% chance",
+      "timepoint": "not applicable: single-session choice task",
+      "result": "reversal",
+      "replication_type": "conceptual",
+      "description": "In Zlatev et al.'s (2017) Study 1h, choice architects trying to steer a new employee toward a target job selected the optimal default significantly less often than chance (default neglect).",
+      "citation_sentence": "To directly examine whether default neglect depends on the complexity of the experimental materials, Experiment 2 includes both a direct and a conceptual replication of Zlatev et al.'s (2017) Study 1h.",
+      "evidence": "Experiment 2 Results and discussion (p. 699): \"In our conceptual replication, however, we found the opposite pattern. In contrast to the original results, ... Overall, participants chose the optimal default 61.5% of the time, which was significantly greater than chance, χ2(1, N = 265) = 13.59, p < .001\"; Abstract: \"our conceptual replication, which simplified the task, instead found the opposite.\"",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Authors label it a conceptual replication (same job context and trade-offs, but advice-giving removed and the choice is an explicit automatic assignment). Significantly above chance in both target conditions (59.8%, p = .03; 63.2%, p = .003) and pooled; authors explicitly call it 'the opposite pattern', 'in contrast to the original results', and later 'reversed from significantly below chance to significantly above chance' — all three reversal conditions met relative to Study 1h's below-chance claim. Competing reading: if the original claim is taken as Zlatev's general 'default neglect' (chance-level selection), above-chance performance is a failure rather than a reversal. The authors present it as a demonstration that the original result is paradigm-specific rather than as a 'failed replication'. Both candidate coders also chose reversal/conceptual.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "e3-switch:study1h-below-chance",
+      "original_reference": "Zlatev et al. (2017)",
+      "original_url": "",
+      "original_title": "Default neglect in attempts at social influence",
+      "original_authors": "Zlatev, J. J.; Daniels, D. P.; Kim, H.; Neale, M. A.",
+      "original_year": "2017",
+      "original_journal": "Proceedings of the National Academy of Sciences",
+      "replication_study": "Experiment 3 (switch-framing conditions)",
+      "outcome": "Percentage of choice architects selecting the optimal default (vs. 50% chance) in the Study 1h advice task with (dis)advantages framed in terms of switching to the new job",
+      "contrast": "observed optimal-default selection rate vs. 50% chance",
+      "timepoint": "not applicable: single-session choice task",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "In Zlatev et al.'s (2017) Study 1h, choice architects choosing between default-framed pieces of advice to steer a new employee toward a target job selected the optimal default significantly less often than chance.",
+      "citation_sentence": "The \"switch-framing\" conditions were essentially identical to Zlatev et al.'s (2017) Study 1h, highlighting the advantage and drawback of the new job rather than the current job, with minor wording changes to maximize comparability to the novel stay-framing conditions.",
+      "evidence": "Experiment 3 Results and discussion (p. 700): \"First, we again replicated Zlatev et al.'s (2017) original results when the (dis)advantages were framed in terms of switching to the new job. ... Overall, participants chose the optimal default 44.2% of the time, which was significantly less than chance, χ2(1, N = 391) = 4.95, p = .026\".",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Preregistered; Rady School pool, 440 in-lab and 339 online (pandemic) across the whole experiment. Authors call the switch conditions 'essentially identical' to Study 1h with minor wording changes -> direct (tiebreaker direct vs close -> direct); close experiment/close extension are competing type readings (minor wording changes; partial online administration). Subgroups: higher pay 42.6% significantly below chance (p = .045), vacation 45.9% n.s. (p = .284); pooled significantly below chance and authors say 'we again replicated'. The novel stay-framing conditions of Experiment 3 (57.2%, significantly above chance) are a new manipulation designed to test the default-framing confound, labelled 'novel' by the authors and predicted a priori to go above chance; they are not a test of the original claim and are not coded. Candidate luna56 coded this entry inconclusive by treating the stay framing as a second condition of the same replication; rejected as a label because the stay framing is not a replication condition, but gt_ambiguity raised to ambiguous since a second coder plausibly could read it that way.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "e1a:default-neglect",
+      "original_reference": "Zlatev et al. (2017)",
+      "original_url": "",
+      "original_title": "Default neglect in attempts at social influence",
+      "original_authors": "Zlatev, J. J.; Daniels, D. P.; Kim, H.; Neale, M. A.",
+      "original_year": "2017",
+      "original_journal": "Proceedings of the National Academy of Sciences",
+      "replication_study": "Experiment 1A",
+      "outcome": "Percentage of choice architects selecting the optimal default (vs. 50% chance) when choosing which restaurant to propose by text message to a friend",
+      "contrast": "observed optimal-default selection rate vs. 50% chance",
+      "timepoint": "not applicable: single-session choice task",
+      "result": "failure",
+      "replication_type": "conceptual",
+      "description": "Zlatev et al. (2017) claimed that choice architects exhibit 'default neglect', selecting the optimal default to influence others' choices at no better than chance level.",
+      "citation_sentence": "It is thus not entirely surprising (cf. Wilson & Wixted, 2018) that this effect does not consistently hold up in the conceptual replications reported here and elsewhere (e.g., Jung et al., 2018). When we presented participants with simple scenarios in Experiments 1A and 1B, we instead found that they were excellent at setting defaults, with performance closer to perfect optimality than chance (87.7% and 77.8% of the time, respectively).",
+      "evidence": "Experiment 1A Results and discussion (p. 697): \"Overall, participants selected the optimal default 87.7% of the time, χ2(1, N = 146) = 81.38, p < .001, 95% CI [81.0%, 92.3%] (see Fig. 2), clearly demonstrating default sensitivity.\"",
+      "gt_ambiguity": "clear",
+      "notes": "INCLUSION IS DEBATABLE: Experiments 1A/1B are new paradigms (interpersonal restaurant text message; course-enrollment policy) and are not labelled replications where they are introduced; only Experiment 2 is called a replication in the abstract/intro. Neither candidate coder proposed an entry for them. Retained because the General Discussion refers to 'the conceptual replications reported here' and immediately cites Experiments 1A and 1B, and because they test Zlatev et al.'s general default-neglect claim with a different procedure (same CA-chooses-default logic, cf. Jung et al. 2018 'conceptual replications'). Original claim treated as a chance-level (no-ability) claim, so significantly above-chance selection = failure; the authors frame it as contradicting default neglect. If the human adjudicator judges 1A/1B to be new original experiments, drop this entry.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "e1b:default-neglect",
+      "original_reference": "Zlatev et al. (2017)",
+      "original_url": "",
+      "original_title": "Default neglect in attempts at social influence",
+      "original_authors": "Zlatev, J. J.; Daniels, D. P.; Kim, H.; Neale, M. A.",
+      "original_year": "2017",
+      "original_journal": "Proceedings of the National Academy of Sciences",
+      "replication_study": "Experiment 1B",
+      "outcome": "Percentage of choice architects selecting the optimal default (vs. 50% chance) when choosing the automatic course-enrollment order for an academic program",
+      "contrast": "observed optimal-default selection rate vs. 50% chance",
+      "timepoint": "not applicable: single-session choice task",
+      "result": "failure",
+      "replication_type": "conceptual",
+      "description": "Zlatev et al. (2017) claimed that choice architects exhibit 'default neglect', selecting the optimal default to influence others' choices at no better than chance level.",
+      "citation_sentence": "It is thus not entirely surprising (cf. Wilson & Wixted, 2018) that this effect does not consistently hold up in the conceptual replications reported here and elsewhere (e.g., Jung et al., 2018). When we presented participants with simple scenarios in Experiments 1A and 1B, we instead found that they were excellent at setting defaults, with performance closer to perfect optimality than chance (87.7% and 77.8% of the time, respectively).",
+      "evidence": "Experiment 1B Results and discussion (p. 698): \"Overall, participants selected the optimal default 77.8% of the time, χ2(1, N = 167) = 50.68, p < .001, 95% CI [70.6%, 83.7%] (see Fig. 2), and again demonstrated default sensitivity.\"",
+      "gt_ambiguity": "clear",
+      "notes": "Same inclusion caveat as e1a (no candidate proposed it): policy-setting scenario not labelled a replication at introduction; retained on the strength of the General Discussion's 'conceptual replications reported here' followed by Experiments 1A and 1B. Above-chance selection contradicts the default-neglect (chance-level) claim -> failure. Drop if 1A/1B are judged new original experiments.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.3758--s13423-020-01834-4#ling26:760a2315fc5527a5:1": {
+      "action": "map",
+      "effect_ids": ["e2-direct:study1h-below-chance"],
+      "reason": "Experiment 2 direct replication of Study 1h; citation 'we were able to replicate Zlatev et al.'s (2017) original results'; success/direct agree."
+    },
+    "ling26:10.3758--s13423-020-01834-4#ling26:4d778bd39da3dc70:1": {
+      "action": "map",
+      "effect_ids": ["e2-conceptual:study1h-below-chance"],
+      "reason": "Experiment 2 conceptual replication of Study 1h; reversal/conceptual agree."
+    },
+    "luna56:10.3758--s13423-020-01834-4#luna56:b382b31b01c2a78a:1": {
+      "action": "map",
+      "effect_ids": ["e2-direct:study1h-below-chance"],
+      "reason": "Experiment 2 direct replication of Study 1h; labels agree. Its original_url is not stated in the paper and is not adopted."
+    },
+    "luna56:10.3758--s13423-020-01834-4#luna56:2e171938464e164e:1": {
+      "action": "map",
+      "effect_ids": ["e2-conceptual:study1h-below-chance"],
+      "reason": "Experiment 2 conceptual replication of Study 1h; labels agree."
+    },
+    "luna56:10.3758--s13423-020-01834-4#luna56:670e58f339f1a414:1": {
+      "action": "map",
+      "effect_ids": ["e3-switch:study1h-below-chance"],
+      "reason": "Same entry (Experiment 3 switch-framing replication of Study 1h). Its 'inconclusive' label is not adopted: the stay-framing arm is a novel manipulation predicted to go above chance, not a replication condition, and the switch-framing arm is significantly below chance with the authors stating 'we again replicated Zlatev et al.'s (2017) original results'."
+    }
+  },
+  "revision_notes": "No entries added or removed and no result/type labels changed. e3-switch gt_ambiguity raised from clear to ambiguous because one candidate plausibly read Experiment 3 as one multi-condition replication (inconclusive). Notes record the candidate-proposed original DOI (not adopted; not stated in source) and that no candidate proposed the debatable Experiment 1A/1B conceptual-replication entries, which are retained with the inclusion caveat."
+}

@@ -1,0 +1,9 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "Reanalysis of the same data: the paper re-runs Cairns and Davis (1998)'s OLS regressions on their own 28-gold-mine dataset ('a replication of that study using the same data') and re-estimates them with robust/WLS methods; no new data are collected, so it is the codebook's 'reanalysis or reproducibility check of the same data' negative genre.",
+  "enumeration_complete": true,
+  "effects": [],
+  "why_negative": "Reanalysis/reproducibility check of the same data (Cairns & Davis 1998 gold-mine dataset); no new data.",
+  "gt_ambiguity": "clear",
+  "notes": "The author calls the work a replication ('The present paper replicates that study'; 'Using their data, I show...'; 'econometric audit', Mittelstaedt-Zorn type I and II replication), but every analysis uses C&D's original 28-mine cross-section. Had it been eligible, the target would be Cairns RD, Davis GA (1998) 'On using current information to value hard-rock mineral properties', Review of Economics and Statistics 80: 658-663; the OLS reproduction mostly matched (one Eq. 3 version could not be reproduced) while the WLS reanalysis overturned C&D's rejection of the HVP."
+}

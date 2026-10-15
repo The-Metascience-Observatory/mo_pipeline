@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Owen, Hilsenroth & Rodolfa (2013) Interaction among alliance, psychodynamic-interpersonal and cognitive-behavioural techniques in the prediction of post-session change. Clinical Psychology & Psychotherapy 20(6): 513-522",
+   "doi": "10.1002/cpp.1802"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "Owen, Reese, Quirk & Rodolfa (2013) 'Alliance in action' does not appear in the paper's reference list or text; the paper's 'Owen et al. (2013)' is Owen, Hilsenroth & Rodolfa in Clin Psychol Psychother. Likely a mis-resolution of the shared author/year citation."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Title says 'Replication and Extension of Owen et al. (2013)'; the paper re-runs the same design and measures (CPPS, WAI, CTSC) in an Israeli sample to test the PI x alliance, CB x alliance and PI x CB x alliance interactions on post-session change. Reference list confirms Owen, Hilsenroth & Rodolfa 2013, Clin Psychol Psychother 20(6):513-522."
+  }
+ },
+ "notes": "Replication in a different language/culture (Hebrew CPPS, Tel Aviv clinic, n=112). PI x alliance interaction replicated in significance but reversed in direction; three-way interaction not replicated; CB x alliance significant where original was not. Extension: average therapeutic activity x alliance (not significant)."
+}

@@ -1,0 +1,22 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "A discovery GWAS meta-analysis of neuroticism (29 cohorts) whose only 'replication' is the Generation Scotland follow-up of its own new MAGI1 hit, a within-paper replication; the agreement with earlier polygenic-score reports (refs 56, 57) is a passing consistency remark, not a replication of a prior published finding.",
+  "enumeration_complete": true,
+  "why_negative": "Within-paper-only replication: the replication cohort (Generation Scotland, n = 9786) tests the paper's own discovery SNP rs35855737, not a separately published finding.",
+  "gt_ambiguity": "ambiguous",
+  "notes": "Competing readings a second coder might take: (1) Discussion: 'These findings are consistent with previous reports that studied the prediction of MDD and bipolar disorder based on polygenic scores derived from Big Five neuroticism GWA results. 56,57' (Middeldorp et al 2011 Transl Psychiatry; Luciano et al 2012 Am J Med Genet B). One could code a conceptual/close-extension success on 'neuroticism polygenic scores predict MDD'. I did not: the polygenic MDD test is stated as one of the study's own aims, never framed as a replication, and its target sample (NTR + NESDA) very likely overlaps the data of Middeldorp 2011, so it is not clearly new data. (2) The SNP-based heritability (~15%) is explicitly contrasted with earlier estimates of ~6% (refs 44, 46: Vinkhuyzen 2012; Verweij 2012), so it is a differing estimate, not a replication claim; the NTR and QIMR samples also overlap those studies. (3) The power comparison with de Moor et al 2012 (ref 38) does not test that paper's top SNP. The MAGI1 SNP was not replicated in Generation Scotland (P = .32), but that is a within-paper replication and gets no row.",
+  "effects": [],
+  "candidate_resolutions": {
+    "ling26:10.1001--jamapsychiatry.2015.0554#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal on a paper judged negative; it agrees with the final call (original GWAS meta-analysis, no replication of a separately published finding), so no effect is mapped."
+    },
+    "luna56:10.1001--jamapsychiatry.2015.0554#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal on a paper judged negative; it agrees with the final call (the Generation Scotland follow-up is an internal, within-paper replication), so no effect is mapped."
+    }
+  },
+  "revision_notes": ""
+}

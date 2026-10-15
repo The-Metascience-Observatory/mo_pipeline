@@ -1,0 +1,31 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Buss (2011) Which fearful toddlers should we worry about? Context, fear regulation, and anxiety risk",
+   "doi": "10.1037/a0023227"
+  },
+  {
+   "reference": "Buss, Davis, Kiel, Brooker, Beekman, & Early (2013) Dysregulated fear predicts social wariness and social anxiety symptoms during kindergarten",
+   "doi": "10.1080/15374416.2013.769170"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Phelps, Brooker & Buss (cited as 2015 in text, 2016 in references) is cited in the Discussion as earlier neural (delta-beta coupling) evidence from a subsample of the current cohort; it is not a replication target."
+  },
+  "B": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Goals (1) and (2) are to replicate Buss (2011): identifying a dysregulated fear pattern in toddlers and its prediction of social inhibition, in a new oversampled cohort using the same Lab-TAB fear episodes and coding."
+  },
+  "C": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Goal (2) explicitly replicates 'the prediction from toddler dysregulated fear to elevated social inhibition (Buss, 2011; Buss et al., 2013)'; the paper states it was designed to replicate Buss (2011) and Buss et al. (2013)."
+  }
+ },
+ "notes": "Self-replication in a new cohort (n=124, oversampled for fear) plus an RSA extension. Buss et al. (2013) followed the 2011 sample to kindergarten social anxiety symptoms; the present study measures social inhibition at 24-48 months, so the 2013 replication is closer to a close extension/conceptual. The RSA analyses are new, not replications."
+}

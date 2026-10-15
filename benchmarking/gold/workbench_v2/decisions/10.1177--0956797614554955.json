@@ -1,13 +1,28 @@
 {
   "packet_sha256": "a6b8edd5af8a164afe10dc384b15aab230e068926c3540a51035b4538b7c282b",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "negative",
+  "eligibility_reason": "Sofer, Dotsch, Wigboldus & Todorov (2014, Psychological Science) is an original research article: three new experiments testing a new hypothesis that distance from the typical face lowers perceived trustworthiness. Nowhere does it present any study as a replication of a prior published finding. Experiments 2 and 3 replicate Experiment 1 within the same paper, which the codebook excludes.",
+  "sources_checked": true,
+  "enumeration_complete": true,
   "effects": [],
-  "candidate_resolutions": {}
+  "candidate_resolutions": {
+    "ling26:10.1177--0956797614554955#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal; it agrees with my negative call (original experiments, no framed replication). The format requires reject on a negative paper, with no effects to map to."
+    },
+    "luna56:10.1177--0956797614554955#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal; it agrees with my negative call (new experiments on an original hypothesis). The format requires reject on a negative paper, with no effects to map to."
+    }
+  },
+  "revision_notes": "",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 1.2018,
+  "adjudication_session": "b83b3f4d-e609-4ec3-9e34-9b937bb7c9e9"
 }

@@ -1,13 +1,187 @@
 {
   "packet_sha256": "a209a2d877307cb7930bfb3d14e207db18bbd77980044facfffc49a637b6460f",
-  "reviewer": "",
-  "reviewer_kind": "",
-  "adjudicator_model": "",
-  "reviewed_at": "",
-  "eligibility": "",
-  "eligibility_reason": "",
-  "sources_checked": false,
-  "enumeration_complete": false,
-  "effects": [],
-  "candidate_resolutions": {}
+  "reviewer": "Claude Opus 5.5 (AI adjudicator)",
+  "reviewer_kind": "ai_adjudicator",
+  "adjudicator_model": "claude-opus-5-5",
+  "reviewed_at": "2026-10-15",
+  "eligibility": "positive",
+  "eligibility_reason": "The paper reports an external close replication, with ten new participants and newly collected biometric and self-report data, of the lab study in Züger and Fritz (2015, CHI). It compares its results with the original's main research question and with additional questions AQ1-AQ4.",
+  "sources_checked": true,
+  "enumeration_complete": true,
+  "effects": [
+    {
+      "effect_id": "lab:rq_biometric_prediction",
+      "original_reference": "Züger and Fritz (2015)",
+      "original_url": "https://doi.org/10.1145/2702123.2702593",
+      "original_title": "Interruptibility of software developers and its prediction using psycho-physiological sensors",
+      "original_authors": "Züger, M; Fritz, T",
+      "original_year": "2015",
+      "original_journal": "Proceedings of the 2015 Conference on Human Factors in Computing Systems (CHI 2015)",
+      "replication_study": "single study (replication of the original lab study)",
+      "outcome": "Accuracy of a Naïve Bayes classifier that predicts self-reported interruptibility (two-state and five-state) from biometric sensor features, measured by per-instance 10x10-fold cross-validation",
+      "contrast": "classifier accuracy vs majority-classifier (ZeroR) baseline, corrected paired t-test",
+      "timepoint": "not applicable: single lab session",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Biometric sensor data (EEG, eye blinks, EDA, BVP/heart, skin temperature) from developers doing code-change tasks in the lab classify their perceived interruptibility with high accuracy, significantly better than a majority-classifier baseline, for both two-state (91.5% vs 83.3%) and five-state (43.9% vs 38.9%) models.",
+      "citation_sentence": "In this paper, we report on what is, to the best of our knowledge, the first external and close replication of the original lab study (Züger and Fritz 2015).",
+      "evidence": "Sec 6.1 and Table 2 (p.16-17): 'in the replication, the models based on both scales do not perform significantly better at predicting interruptibility than their baselines: 69.9 %±14.32 vs. baseline of 61.1 % (two states); 32.1%±12.96 vs. baseline of 35.5 % (five states)'. Key Results box (p.19): 'Replicated models are not better than the baseline (RQ).' Conclusions: 'we were not able to generate models that performed significantly better than the proposed baseline'.",
+      "gt_ambiguity": "clear",
+      "notes": "Two-state and five-state models are coded as one entry: they are two operationalizations of the same claim, and both fail. The two-state model's gain over baseline (+8.8pp) is similar to the original's (+8.2pp), but it is not significant because of high variance, and the authors frame the RQ as not replicated. Replication type: the authors call it an external 'close' replication of Gómez Group I ('faithful replication ... with no or minimal variation'; 'follows the original study's design, procedure, and materials as closely as possible'). That matches the codebook's direct category, and the authors' characterization wins. The candidates proposed close experiment or close extension because of forced deviations: substitute sensor hardware, ECG for BVP, EDA features dropped, wrapper-based instead of filter-based feature selection, and a more varied participant profile (the abstract says results 'did not generalize to our more varied setting'). These are plausible alternatives, but most deviations were unavoidable rather than deliberate generalization tests. The discussion also notes that the original's 'errors are mostly adjacent categories' observation was not reproduced. That is not coded as a separate entry.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "lab:per_participant_cv_null",
+      "original_reference": "Züger and Fritz (2015)",
+      "original_url": "https://doi.org/10.1145/2702123.2702593",
+      "original_title": "Interruptibility of software developers and its prediction using psycho-physiological sensors",
+      "original_authors": "Züger, M; Fritz, T",
+      "original_year": "2015",
+      "original_journal": "Proceedings of the 2015 Conference on Human Factors in Computing Systems (CHI 2015)",
+      "replication_study": "single study (replication of the original lab study)",
+      "outcome": "Accuracy of interruptibility classifiers under per-participant cross-validation",
+      "contrast": "per-participant CV accuracy vs majority-classifier baseline",
+      "timepoint": "not applicable: single lab session",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "Under per-participant cross-validation, interruptibility classifiers built from biometric data showed no significant accuracy improvement over the majority-classifier baseline (an original null result).",
+      "citation_sentence": "Per-Participant Cross-Validation The replication arrives at the same results as the original study, finding no significant accuracy improvements over the baseline (see Table 2, 'Per Participant CV').",
+      "evidence": "Sec 6.1, 'Per-Participant Cross-Validation' paragraph (p.17): 'The replication arrives at the same results as the original study, finding no significant accuracy improvements over the baseline'. Table 2 Per Part. CV: lab 74.9% / 37.6% vs replication 59.3% / 25.2%; none are significant.",
+      "gt_ambiguity": "ambiguous",
+      "notes": "Whether this is a 'claim' of the original or only a secondary analysis reported in its table is debatable. The replicators treat it as an original result they reproduce, but it is absent from their Key Results box. Neither candidate coder proposed it. If it counts, the codebook's null-claim rule gives success, since the authors say 'same results as the original'. An adjudicator may reasonably drop this entry; it is kept because the paper explicitly states that the replication matches the original's reported result.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "lab:aq1_mental_load",
+      "original_reference": "Züger and Fritz (2015)",
+      "original_url": "https://doi.org/10.1145/2702123.2702593",
+      "original_title": "Interruptibility of software developers and its prediction using psycho-physiological sensors",
+      "original_authors": "Züger, M; Fritz, T",
+      "original_year": "2015",
+      "original_journal": "Proceedings of the 2015 Conference on Human Factors in Computing Systems (CHI 2015)",
+      "replication_study": "single study (replication of the original lab study)",
+      "outcome": "Correlation between self-rated mental workload and self-rated interruptibility at interruption time",
+      "contrast": "not applicable: correlation between two self-report ratings",
+      "timepoint": "not applicable: ratings at each interruption",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "Perceived mental workload is strongly correlated with perceived (un)interruptibility (r_lab = 0.815), i.e., developers are less interruptible during high mental load (AQ1).",
+      "citation_sentence": "First, the original found a strong correlation between interruptibility and mental workload (r lab = 0.815, r field = 0.702). We see only a weaker but significant effect (r = 0.318; p = 0.004).",
+      "evidence": "Sec 6.2 (p.17): 'We see only a weaker but significant effect (r = 0.318; p = 0.004)'; Spearman ρ = 0.312, p = 0.004. Key Results box: 'Interruptions are still undesired during high mental load (AQ1). We are only able to replicate a weak negative effect between interruptibility and mental workload, compared to the strong effect in the original.' Discussion: 'We observed only a weak correlation between the mental load and interruptibility compared to the strong correlation reported in the original study.'",
+      "gt_ambiguity": "ambiguous",
+      "notes": "One candidate (luna56) proposed inconclusive. I re-checked the Key Results box and the Discussion. The authors say they are 'able to replicate' the effect, and the heading affirms the claim ('Interruptions are still undesired during high mental load'). The effect is significant in the same direction under both Pearson and Spearman. The codebook tiebreaker ('replicated' + significant same direction, even if weaker) and the success/inconclusive rule ('use the authors' explicit statement') both point to success. The strong-vs-weak magnitude gap (0.815 vs 0.318) and the hedging word 'only' make inconclusive a plausible alternative, so the entry is marked ambiguous.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "lab:aq2_disruptiveness",
+      "original_reference": "Züger and Fritz (2015)",
+      "original_url": "https://doi.org/10.1145/2702123.2702593",
+      "original_title": "Interruptibility of software developers and its prediction using psycho-physiological sensors",
+      "original_authors": "Züger, M; Fritz, T",
+      "original_year": "2015",
+      "original_journal": "Proceedings of the 2015 Conference on Human Factors in Computing Systems (CHI 2015)",
+      "replication_study": "single study (replication of the original lab study)",
+      "outcome": "Correlation between self-rated disruptiveness of the interruption and self-rated interruptibility",
+      "contrast": "not applicable: correlation between two self-report ratings",
+      "timepoint": "not applicable: ratings at each interruption",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Perceived interruptibility is strongly correlated with how disruptive the interruption is perceived to be (r_lab = 0.807), i.e., interruptions are more disruptive when developers are less interruptible / under high load (AQ2).",
+      "citation_sentence": "They also observe a strong correlation between interruptibility and disruptiveness (r lab = 0.807, r field = 0.741). We do not observe a significant effect in the replication (r = 0.17; p = 0.13).",
+      "evidence": "Sec 6.2 (p.17): 'We do not observe a significant effect in the replication (r = 0.17; p = 0.13)'; Spearman ρ = 0.2, p = 0.059 ('almost significant'). Key Results box: 'We cannot replicate the significant effect between interruptibility and disruptiveness from the original.' Discussion: 'two possible explanations for our failure to replicate a significant correlation between interruptibility and disruptiveness.'",
+      "gt_ambiguity": "clear",
+      "notes": "The Key Results heading says 'correlate more weakly but almost significantly' (Spearman p = .059), but the authors explicitly call it a 'failure to replicate', so it is coded failure. A cautious coder might pick inconclusive because of the 'almost significant' hedge.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "lab:aq3_interruption_lag",
+      "original_reference": "Züger and Fritz (2015)",
+      "original_url": "https://doi.org/10.1145/2702123.2702593",
+      "original_title": "Interruptibility of software developers and its prediction using psycho-physiological sensors",
+      "original_authors": "Züger, M; Fritz, T",
+      "original_year": "2015",
+      "original_journal": "Proceedings of the 2015 Conference on Human Factors in Computing Systems (CHI 2015)",
+      "replication_study": "single study (replication of the original lab study)",
+      "outcome": "Correlation between interruption lag (time to address a negotiated interruption) and self-rated interruptibility",
+      "contrast": "not applicable: correlation between interruption lag and rating",
+      "timepoint": "not applicable: measured at each interruption",
+      "result": "success",
+      "replication_type": "direct",
+      "description": "Interruption lag is only weakly (but significantly) correlated with perceived interruptibility (r_lab = 0.382), so it is not a substitute for subjective interruptibility ratings (AQ3).",
+      "citation_sentence": "To do this, they measured the correlation between the interruptibility score and interruption lag, but observed only a weak correlation between these two measures (r lab = 0.382, r field = 0.282; p < 0.001). We also observed a weak but significant correlation (r = 0.381; p = 0.0004).",
+      "evidence": "Sec 6.2 (p.17): 'We also observed a weak but significant correlation (r = 0.381; p = 0.0004)'. Key Results box: 'We can replicate the weak but significant effect between perceived interruptibility and interruption lag from the original.' Discussion: 'we can confirm a weak correlation between interruptibility ratings and interruption lags in setups with negotiated interruptions.'",
+      "gt_ambiguity": "clear",
+      "notes": "The original also reported no significant correlation of resumption lag or edit lag with interruptibility (Sec 4.3). The replication reports no results for those lags, so they get no entry.",
+      "added_after_candidates": false
+    },
+    {
+      "effect_id": "lab:aq4_time_window",
+      "original_reference": "Züger and Fritz (2015)",
+      "original_url": "https://doi.org/10.1145/2702123.2702593",
+      "original_title": "Interruptibility of software developers and its prediction using psycho-physiological sensors",
+      "original_authors": "Züger, M; Fritz, T",
+      "original_year": "2015",
+      "original_journal": "Proceedings of the 2015 Conference on Human Factors in Computing Systems (CHI 2015)",
+      "replication_study": "single study (replication of the original lab study)",
+      "outcome": "Classification accuracy as a function of the feature time-window length (10s-180s)",
+      "contrast": "shorter (10 s) vs longer (20-180 s) feature time windows",
+      "timepoint": "not applicable: single lab session",
+      "result": "failure",
+      "replication_type": "direct",
+      "description": "Features computed over shorter time windows (10 s) yield better interruptibility classification accuracy than longer windows (20-180 s), though the differences were not large (AQ4).",
+      "citation_sentence": "The original study found that a time window of 10 seconds performed slightly better on the chosen performance measure rather than longer ones (20s-180s).",
+      "evidence": "Sec 6.3 (p.18): 'there was no consistent direction toward shorter or longer time windows, unlike in the original study.' Key Results box: 'Shorter time windows are not consistently better (AQ4). We do not observe a consistent trend of shorter time windows always performing better in the classification task.' Best windows: two-state 20 s, five-state 10 s (Table 3).",
+      "gt_ambiguity": "ambiguous",
+      "notes": "The original described this as a modest pattern ('differences in performance are not large'). The replication finds no consistent trend, and the best window was 20 s for two-state and 10 s for five-state. The authors frame it as not observed, so it is coded failure. Because the best five-state window matches the original, a second coder could choose inconclusive. AQ5 (when participants dislike being interrupted) was not replicated because of a wrong questionnaire (Sec 6.4), so it gets no entry.",
+      "added_after_candidates": false
+    }
+  ],
+  "candidate_resolutions": {
+    "ling26:10.1007--s10664-025-10739-6#ling26:e590f197a07d1f19:1": {
+      "action": "map",
+      "effect_ids": [
+        "lab:rq_biometric_prediction"
+      ],
+      "reason": "Same main claim (biometric sensors predict interruptibility with high accuracy above the baseline); result failure agrees. Its replication_type of close experiment differs from my direct, because the authors call it a close (Group I, as-faithful-as-possible) replication."
+    },
+    "luna56:10.1007--s10664-025-10739-6#luna56:c9801722436cf973:1": {
+      "action": "map",
+      "effect_ids": [
+        "lab:aq4_time_window"
+      ],
+      "reason": "Same AQ4 claim (shorter, 10 s time windows classify better); result failure agrees (Sec 6.3, 'no consistent direction'). Type close extension vs my direct."
+    },
+    "luna56:10.1007--s10664-025-10739-6#luna56:ce95171d83032ebf:1": {
+      "action": "map",
+      "effect_ids": [
+        "lab:rq_biometric_prediction"
+      ],
+      "reason": "Same main RQ claim (high-accuracy prediction vs the majority-classifier baseline); result failure agrees. Type close extension vs my direct."
+    },
+    "luna56:10.1007--s10664-025-10739-6#luna56:d84708d40092db24:1": {
+      "action": "map",
+      "effect_ids": [
+        "lab:aq1_mental_load"
+      ],
+      "reason": "Same AQ1 claim (mental workload correlated with interruptibility). It labels the result inconclusive; I keep success (ambiguous) because the authors say they are 'able to replicate' a significant same-direction effect (Key Results, AQ1)."
+    },
+    "luna56:10.1007--s10664-025-10739-6#luna56:50eea6045613e7d4:1": {
+      "action": "map",
+      "effect_ids": [
+        "lab:aq2_disruptiveness"
+      ],
+      "reason": "Same AQ2 claim. The interruptions-more-disruptive-under-high-load hypothesis was tested via the interruptibility–disruptiveness correlation (Sec 6.2). Result failure agrees."
+    },
+    "luna56:10.1007--s10664-025-10739-6#luna56:bee98616acd14f79:1": {
+      "action": "map",
+      "effect_ids": [
+        "lab:aq3_interruption_lag"
+      ],
+      "reason": "Same AQ3 claim (weak, significant interruption lag–interruptibility correlation); result success agrees."
+    }
+  },
+  "revision_notes": "No changes to eligibility, entries, or labels. All six candidates map onto five of my six entries. The per-participant CV null entry was proposed by neither coder; it is kept, flagged ambiguous, and its notes say an adjudicator may drop it. I re-checked AQ1 against the Key Results box and the Discussion after luna56's inconclusive label and kept success (ambiguous). I kept replication_type direct against the candidates' close experiment/close extension because the authors call it a Group I faithful close replication; the alternatives are recorded in the RQ entry's notes.",
+  "protocol": "ai_adjudicate.py: blind pass 1 (sources only), then candidate resolution",
+  "adjudication_cost_usd": 2.2849,
+  "adjudication_session": "9bb0c88e-91f0-4ac4-80da-ced986885a1a"
 }

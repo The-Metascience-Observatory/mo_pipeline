@@ -1,0 +1,20 @@
+{
+  "eligibility": "negative",
+  "eligibility_reason": "Within-paper-only replication: the paper's 'replication sample' (EGCUT de novo and in silico genotyping, N = 5949 + 536) tests the ABCC9 rs11046205 association discovered in this same paper's own GWAS meta-analysis ('The data of the individual GWAS regarding sleep duration are reported here for the first time'), not a separately published finding; no prior published finding is replicated with new data.",
+  "enumeration_complete": true,
+  "effects": [],
+  "candidate_resolutions": {
+    "ling26:10.1038--mp.2011.142#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal on a paper judged negative; it agrees with the pass-1 call (internal discovery->replication design in one publication = within-paper replication). Under the protocol every candidate on a negative paper is resolved as reject with no effect_ids."
+    },
+    "luna56:10.1038--mp.2011.142#neg": {
+      "action": "reject",
+      "effect_ids": [],
+      "reason": "Negative-paper proposal on a paper judged negative; it agrees with the pass-1 call (new discovery GWAS + internal replication sample + Drosophila functional follow-up; no separately published original replicated). Resolved as reject with no effect_ids, per protocol."
+    }
+  },
+  "revision_notes": "",
+  "notes": "Candidates considered and rejected in pass 1 (unchanged): (1) the discovery->replication GWAS design replicates this paper's own discovery result (within-paper). (2) Prior CLOCK association (Allebrandt et al. 2010, ref 9) explicitly not tested: 'earlier associations could not be followed up because of low-quality imputation in the region'. (3) DEC2 (He et al. 2009) only discussed. (4) Hyperkinetic (Bushey et al. 2007): Discussion's 'Our study supports the role of Hyperkinetic ... as its human homologue, KCNAB1, is the second best signal' is a post hoc cross-species consistency remark on a sub-genome-wide locus, not a designed replication; low-probability alternative reading as conceptual. (5) Drosophila dSur knockdown is a new functional experiment. (6) The proxy-SNP 'technical replication' is a genotyping replicate. Neither AI candidate proposed an entry, so nothing was missed."
+}
