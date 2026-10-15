@@ -508,3 +508,34 @@ def test_force_tier_never_substitutes_raw_markup(tmp_path):
 
     assert ex.paper_artifacts(paper, force_tier="grobid")["primary_tier"] is None
     assert ex.paper_artifacts(paper, force_tier="pdf")["primary_tier"] is None
+
+
+def test_enrichment_drops_a_doi_that_resolves_to_another_work(monkeypatch):
+    """A DOI whose registered title is a different paper is dropped, never used to
+    fill fields, and the DOI is recovered from the extracted title (2026-10-15:
+    ~10% of extracted originals pointed at the wrong paper this way)."""
+    from mo_pipeline.extract import extract as ex
+    wrong = {"title": "The Tipping Point of Animacy", "journal": "Psychological Science", "year": 2010}
+    right = {"doi": "10.1177/0956797611403157", "journal": "Psychological Science", "year": 2011,
+             "title": "Learning about what others were doing: Verb aspect and attributions of mundane and criminal intent"}
+    monkeypatch.setattr(ex, "fetch_metadata_from_doi", lambda doi, **kw: None)
+    monkeypatch.setattr(ex, "fetch_metadata_from_title", lambda title, **kw: right)
+    rep = {"original_url": "https://doi.org/10.1177/0956797610388044",
+           "original_title": right["title"], "original_authors": "Hart, William; Albarracín, Dolores",
+           "original_year": "", "original_journal": ""}
+    data, msgs = ex.enrich_metadata({"replications": [rep]}, replication_doi="",
+                                    original_doi_cache={"10.1177/0956797610388044": wrong})
+    out = data["replications"][0]
+    assert out["original_url"] == "https://doi.org/10.1177/0956797611403157"
+    assert out["original_year"] == 2011          # from the recovered DOI, not the wrong one
+    assert any("dropped DOI 10.1177/0956797610388044" in m for m in msgs)
+
+    # a DOI whose title matches (main title of a subtitled paper) is kept and enriches
+    rep2 = {"original_url": "https://doi.org/10.1111/j.1467-9280.2008.02227.x",
+            "original_title": "With a clean conscience: Cleanliness reduces the severity of moral judgments",
+            "original_year": "", "original_journal": ""}
+    meta2 = {"title": "With a Clean Conscience", "journal": "Psychological Science", "year": 2008}
+    data, _ = ex.enrich_metadata({"replications": [rep2]}, replication_doi="",
+                                 original_doi_cache={"10.1111/j.1467-9280.2008.02227.x": meta2})
+    assert data["replications"][0]["original_url"].endswith("02227.x")
+    assert data["replications"][0]["original_journal"] == "Psychological Science"

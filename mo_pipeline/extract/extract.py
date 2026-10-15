@@ -832,6 +832,40 @@ def validate_citation_sentences(data: dict, references: list[dict] | None = None
     return mismatches
 
 
+def _doi_from_title(i: int, rep: dict, email: str, msgs: list[str]) -> None:
+    """Find an entry's original DOI (or PMID) by title search; best-effort."""
+    try:
+        meta = fetch_metadata_from_title(
+            rep["original_title"],
+            email=email,
+            authors=rep.get("original_authors"),
+            year=rep.get("original_year"),
+        )
+        if meta and meta.get("doi"):
+            # Sanity check: title similarity
+            api_title = meta.get("title", "")
+            if api_title and _title_similarity(rep["original_title"], api_title) >= 0.55:
+                rep["original_url"] = f"https://doi.org/{meta['doi']}"
+                filled = _fill_metadata_fields(rep, "original", meta)
+                msgs.append(
+                    f"  +  Entry {i}: found DOI {meta['doi']} from title "
+                    f"({filled} field(s) enriched)"
+                )
+            else:
+                logger.debug(f"Entry {i}: title search DOI failed similarity check")
+        elif meta and meta.get("pmid"):
+            api_title = meta.get("title", "")
+            if api_title and _title_similarity(rep["original_title"], api_title) >= 0.55:
+                rep["original_url"] = f"https://pubmed.ncbi.nlm.nih.gov/{meta['pmid']}/"
+                filled = _fill_metadata_fields(rep, "original", meta)
+                msgs.append(
+                    f"  +  Entry {i}: found PMID {meta['pmid']} from title "
+                    f"({filled} field(s) enriched)"
+                )
+    except Exception as e:
+        logger.warning(f"Title search failed for entry {i}: {e}")
+
+
 def enrich_metadata(
     data: dict,
     replication_doi: str,
@@ -882,43 +916,28 @@ def enrich_metadata(
                     logger.warning(f"Enrichment fetch failed for original DOI {doi}: {e}")
                     meta = None
 
-            if meta:
+            agent_title = rep.get("original_title", "")
+            if (meta and meta.get("title") and agent_title
+                    and _title_similarity(agent_title, meta["title"]) < 0.55):
+                # The DOI resolves to a different work than the title the model
+                # read in the paper. The title is the evidence (it comes from the
+                # paper); the DOI is usually a recalled or mis-typed one. Until
+                # 2026-10-15 the mismatch was only logged: the wrong DOI was kept
+                # and its metadata filled the entry's blank fields, which made
+                # ~10% of extracted originals point at the wrong paper. Drop it
+                # and recover the DOI from the title instead.
+                msgs.append(f"  ✗  Entry {i}: dropped DOI {doi} — it resolves to "
+                            f"\"{meta['title'][:60]}\", not the extracted title")
+                rep["original_url"] = ""
+                _doi_from_title(i, rep, email, msgs)
+            elif meta:
                 filled = _fill_metadata_fields(rep, "original", meta)
                 if filled:
                     msgs.append(f"  +  Entry {i} original: enriched {filled} field(s) from DOI")
 
         elif not original_url and rep.get("original_title"):
             # B2. No DOI but have title — try title search
-            try:
-                meta = fetch_metadata_from_title(
-                    rep["original_title"],
-                    email=email,
-                    authors=rep.get("original_authors"),
-                    year=rep.get("original_year"),
-                )
-                if meta and meta.get("doi"):
-                    # Sanity check: title similarity
-                    api_title = meta.get("title", "")
-                    if api_title and _title_similarity(rep["original_title"], api_title) >= 0.55:
-                        rep["original_url"] = f"https://doi.org/{meta['doi']}"
-                        filled = _fill_metadata_fields(rep, "original", meta)
-                        msgs.append(
-                            f"  +  Entry {i}: found DOI {meta['doi']} from title "
-                            f"({filled} field(s) enriched)"
-                        )
-                    else:
-                        logger.debug(f"Entry {i}: title search DOI failed similarity check")
-                elif meta and meta.get("pmid"):
-                    api_title = meta.get("title", "")
-                    if api_title and _title_similarity(rep["original_title"], api_title) >= 0.55:
-                        rep["original_url"] = f"https://pubmed.ncbi.nlm.nih.gov/{meta['pmid']}/"
-                        filled = _fill_metadata_fields(rep, "original", meta)
-                        msgs.append(
-                            f"  +  Entry {i}: found PMID {meta['pmid']} from title "
-                            f"({filled} field(s) enriched)"
-                        )
-            except Exception as e:
-                logger.warning(f"Title search failed for entry {i}: {e}")
+            _doi_from_title(i, rep, email, msgs)
 
         # C. Format author names (add periods after initials)
         if rep.get("original_authors"):
