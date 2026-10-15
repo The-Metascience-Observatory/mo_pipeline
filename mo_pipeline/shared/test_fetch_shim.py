@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-GREY_ENV = Path(__file__).resolve().parents[3] / "fetchpdf-grey" / ".env.local"
+GREY_ENV = Path(__file__).resolve().parents[3] / "fetchpdf2" / ".env.local"
 REPO = Path(__file__).resolve().parents[2]
 
 
@@ -16,7 +16,7 @@ def _has_key_line():
                                      for l in GREY_ENV.read_text().splitlines())
 
 
-@pytest.mark.skipif(not _has_key_line(), reason="no Elsevier key configured in fetchpdf-grey/.env.local")
+@pytest.mark.skipif(not _has_key_line(), reason="no Elsevier key configured in fetchpdf2/.env.local")
 @pytest.mark.parametrize("module", ["mo_pipeline.shared.fetch",
                                     "mo_pipeline.discover.download_all_confirmed"])
 def test_entry_point_sees_the_elsevier_key(module):

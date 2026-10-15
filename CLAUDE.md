@@ -24,7 +24,7 @@ Read [README.md](README.md) first.
 ## Running it
 
 - Install once: `pip install --break-system-packages --user -e .` (system Python;
-  `fetchpdf` (`../fetchpdf_public`) + `fetchpdf_grey` (`../fetchpdf-grey`) + `pdf4llm` are
+  `fetchpdf` (`../fetchpdf_public`) + `fetchpdf2` (`../fetchpdf2`) + `pdf4llm` are
   separate editable installs, not consolidated). `pyproject.toml` declares no
   dependencies, so third-party ones are installed by hand: `pip install litdown`
   for the rendition ladder's second rung (without it `corpus/litdown_render.py`
@@ -132,10 +132,10 @@ are `MO_GROBID_URL`, `MO_GROBID_CONTAINER`, `MO_GROBID_IMAGE`, and
    only the PDF into `papers/{doi}/` (pdf4llm globs `**/*.pdf` and names the
    output by PDF stem), so run `python -m mo_pipeline.corpus adopt-structured
    --execute` after a convert to bring the rest of the folder across. The library
-   is `../fetchpdf_public` (PyPI `fetchpdf`); `import fetchpdf_grey`
-   (`../fetchpdf-grey`) adds the Sci-Hub last resort and owns `disable_last_resorts`.
+   is `../fetchpdf_public` (PyPI `fetchpdf`); `import fetchpdf2` (`../fetchpdf2`)
+   adds the Anna's Archive and Sci-Hub last resorts and owns `disable_last_resorts`.
    Fetch through `mo_pipeline/shared/fetch.py`, never `from fetchpdf import` directly:
-   fetchpdf reads the Elsevier key at first import, and only fetchpdf_grey loads it.
+   fetchpdf reads the Elsevier key at first import, and only fetchpdf2 loads it.
    Records downloaded flat before this layout: `corpus inbox-subfolders`.
    Institutional access (fetchpdf's cookie route, Wiley/T&F/SAGE/Springer/
    Royal Society/Hogrefe/INFORMS) is OFF until `get-cookies setup` has been run;

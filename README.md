@@ -31,7 +31,7 @@ USB drive `/media/dan/500Gb`) — see the corpus layout below.
 
 ```bash
 pip install --break-system-packages --user -e .   # editable install of mo_pipeline
-# fetchpdf (../fetchpdf_public), fetchpdf_grey (../fetchpdf-grey) and pdf4llm are separate editable installs
+# fetchpdf (../fetchpdf_public), fetchpdf2 (../fetchpdf2) and pdf4llm are separate editable installs
 ```
 
 ## Run a stage from the CLI

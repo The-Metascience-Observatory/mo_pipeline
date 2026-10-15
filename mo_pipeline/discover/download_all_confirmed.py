@@ -8,8 +8,8 @@ Stage 5: Download full text for confirmed replications that are:
 
 Uses the public `fetchpdf` library (../fetchpdf_public; OSF, SSRN, Figshare,
 PsychArchives, PMC, Unpaywall, Crossref, EuropePMC, Semantic Scholar, OpenAlex,
-CORE, Elsevier TDM, ...) plus the grey last resorts from `fetchpdf_grey`
-(Sci-Hub; `--legalonly` turns them off), with parallel batch processing.
+CORE, Elsevier TDM, ...) plus the grey last resorts from `fetchpdf2`
+(Anna's Archive, then Sci-Hub; `--legalonly` turns them off), with parallel batch processing.
 
 Layout: one folder per record, `inbox/{stem}/{stem}.*` (fetchpdf's
 --make-subfolder), named exactly as the record's future papers/{stem}/ folder --
@@ -68,7 +68,7 @@ from pathlib import Path
 
 csv.field_size_limit(sys.maxsize)
 
-# Through the shim (CLAUDE.md invariant 7): it imports fetchpdf_grey first, which
+# Through the shim (CLAUDE.md invariant 7): it imports fetchpdf2 first, which
 # loads the Elsevier key and installs the grey last-resort hook on fetch_pdf.
 from mo_pipeline.shared.fetch import batch_fetch_pdfs, disable_last_resorts
 
