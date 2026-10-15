@@ -526,21 +526,35 @@ forms. Unknown DOIs pass through untouched. Add an entry only with a checked
 
 ## Matching
 
-`matching.assign` runs per replication paper:
+`matching.assign` runs per replication paper (matcher 2.0, 2026-10-15):
 
-1. normalized original-DOI equality -> cost ~0 (description similarity breaks ties
-   among rows sharing a DOI);
-2. for GT rows with no DOI hit, or an ambiguous one, the Haiku judge
-   (`prompts/prompt_match.md`, via `discover/screening_backend.py`:
-   `claude -p --model haiku --tools ""`, or `--provider openrouter`) sees the GT
-   entry and all extracted rows of the paper with result labels withheld and returns
-   `{match, relation, confidence, reason}` with relation in `same_effect`,
-   `subanalysis_of_gt`, `same_original_other_effect`, `different_original`, `none`.
-   Only the first two count as matches (cost 0.1 / 0.4 / 0.7 by confidence). Every
-   decision is cached under `cache/match/<sha256(prompt version, model, GT fields,
-   candidate fields)>.json` and appended to `match_log.jsonl`; if the judge is
-   unavailable the Feb-2026 fuzzy rule (2 of title/authors/year) is the fallback;
+1. every GT row goes to the judge -- Sonnet by default (`--match-model`), on
+   `prompts/prompt_match.md` via `discover/screening_backend.py`
+   (`claude -p --model sonnet --tools ""`, or `--provider openrouter`) -- which sees
+   the GT entry (with its effect identity -- replication study, outcome, contrast,
+   timepoint -- when the ground truth records it) and ALL extracted rows of the
+   paper, result labels withheld, and returns `{match, relation, confidence,
+   reason}` with relation in `same_effect`, `subanalysis_of_gt`,
+   `same_original_other_effect`, `different_original`, `none`. Only the first two
+   count as matches (cost 0.1 / 0.4 / 0.7 by confidence, 0.05 less when the
+   original DOIs also agree). **A shared original DOI never creates a match on its
+   own**: one original paper carries several claims, and before 2.0 a DOI hit was a
+   near-zero-cost match the judge never saw, so two different effects of one
+   original could pair up even against the judge's verdict. Every decision is
+   cached under `cache/match/<sha256(prompt version, model, GT fields, candidate
+   fields)>.json` and appended to `match_log.jsonl`;
+2. without a judge (`--matcher deterministic`) or when it fails: original-DOI
+   equality (inside a DOI several GT rows share, description similarity decides
+   and a dissimilar pair is refused), then the Feb-2026 fuzzy rule (2 of
+   title/authors/year);
 3. `scipy.optimize.linear_sum_assignment` makes the assignment one-to-one.
+
+Entry metrics are end-to-end since harness 1.6: a GT paper with no usable
+extraction (not extracted, bad JSON, wrong document) counts all its effects as
+false negatives (`fn_no_output`), and every row extracted from a negative paper is
+a false positive (`fp_negative_papers`). The conditional views
+(`precision_positive_papers`, `recall_given_output`) are reported beside them, and
+entry precision/recall/F1 carry paper-cluster bootstrap CIs.
 
 First live run (2026-09-02, FLoRa pilot, 50 papers, `claude -p --model haiku`):
 29 of 33 matches came from DOI equality; the judge was called 7 times for the

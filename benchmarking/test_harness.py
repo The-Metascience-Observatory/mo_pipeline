@@ -28,7 +28,7 @@ def _gt(**kw):
 
 
 def test_doi_match_is_one_to_one_and_extra_rows_are_fp():
-    gt = [_gt(row_id="g1", original_url="https://doi.org/10.1037/a0001"),
+    gt = [_gt(row_id="g1", original_url="https://doi.org/10.1037/a0001", description="study 1 effect on speed"),
           _gt(row_id="g2", original_url="https://doi.org/10.1037/a0001", description="study 2 effect on memory")]
     ext = [{"original_url": "https://doi.org/10.1037/A0001", "description": "study 1 effect on speed"},
            {"original_url": "https://doi.org/10.1037/a0001", "description": "study 2 effect on memory"},
@@ -500,3 +500,66 @@ def test_two_coder_build_is_refused_even_with_an_empty_b_sheet(tmp_path, monkeyp
     with pytest.raises(SystemExit) as e:
         gold_build.cmd_build_gold(args)
     assert "two-coder gold export" in str(e.value)
+
+
+def test_judge_can_veto_a_shared_original_doi(tmp_path):
+    """Matcher 2.0: a DOI hit is evidence, not a match. Two effects of one original
+    paper must not pair because the judge was never asked (2026-10-04 review)."""
+    gt = [_gt(row_id="g1", original_url="https://doi.org/10.1037/orig1", description="Study 1: compassion toward strangers")]
+    ext = [{"original_url": "https://doi.org/10.1037/orig1", "description": "Study 2: numerical working memory accuracy"}]
+    judge = matching.MatchJudge(offline=True, cache_dir=tmp_path)
+    key = judge._key(gt[0], ext, "effect")
+    (tmp_path / f"{key}.json").write_text(json.dumps({"match": 0, "relation": "same_original_other_effect",
+                                                      "confidence": "high", "reason": "other claim"}))
+    o = matching.assign(gt, ext, judge=judge)
+    assert o.matches == [] and o.granularity_misses == [(0, 0)]
+    assert judge.cache_hits == 1          # the DOI hit was still put to the judge
+    # a confirmed DOI hit is labelled as such and outranks a judge-only match
+    (tmp_path / f"{key}.json").write_text(json.dumps({"match": 0, "relation": "same_effect",
+                                                      "confidence": "high", "reason": "same"}))
+    o = matching.assign(gt, ext, judge=matching.MatchJudge(offline=True, cache_dir=tmp_path))
+    assert [(m.method, m.cost) for m in o.matches] == [("doi+judge", 0.05)]
+
+
+def test_deterministic_fallback_refuses_dissimilar_effects_inside_a_shared_doi():
+    gt = [_gt(row_id="g1", original_url="10.1037/orig1", description="anchoring raises willingness to pay"),
+          _gt(row_id="g2", original_url="10.1037/orig1", description="scarcity framing reduces savings rate")]
+    ext = [{"original_url": "10.1037/orig1", "description": "mortality salience increases worldview defense"}]
+    assert matching.assign(gt, ext).matches == []
+    # a DOI only one GT row carries still matches without a judge
+    assert len(matching.assign(gt[:1], ext).matches) == 1
+
+
+def test_entry_metrics_count_missing_output_and_negative_paper_rows(tmp_path, monkeypatch):
+    """A run that failed on half its papers, or hallucinated entries on a negative
+    paper, used to keep 100% entry precision and recall (2026-10-04 review)."""
+    def g(rep, rid):
+        return harness._gt_row({"row_id": rid, "replication_url": rep, "original_url": "10.1037/o" + rid,
+                                "result": "success", "description": "effect " + rid, "provenance": "human:x"},
+                               source="t", granularity="effect", has_reversal_class=True, effects_complete=True)
+    rows = [g("10.1000/ok", "a"), g("10.1000/missing", "b"), g("10.1000/bad", "c")]
+    negatives = [{"replication_doi": "10.1000/neg", "paper_folder": "10.1000--neg"}]
+    ok_row = {"original_url": "https://doi.org/10.1037/oa", "description": "effect a", "result": "success"}
+    ext = {"10.1000--ok": {"status": "ok", "contains": True, "rows": [ok_row], "tier": "xml", "model": "m"},
+           "10.1000--missing": {"status": "not_extracted"},
+           "10.1000--bad": {"status": "bad_json"},
+           "10.1000--neg": {"status": "ok", "contains": True, "rows": [dict(ok_row)] * 10, "tier": "xml", "model": "m"}}
+    monkeypatch.setattr(harness, "load_ground_truth", lambda *a, **k: (rows, negatives, {"spec": "t", "files": {}}))
+    monkeypatch.setattr(harness, "load_extraction", lambda folder, *a, **k: ext[folder])
+    monkeypatch.setattr(harness, "provenance_block", lambda *a, **k: {
+        "run": None, "gt": {"spec": "t", "files": {}}, "tags": ["t"], "split": "all", "model_ids": {},
+        "ai_versions_in_results": {}, "prompt_version_now": "x", "git_dirty_prompts": False,
+        "git_commit": "0" * 10, "claude_cli_version": "", "harness_version": harness.HARNESS_VERSION,
+        "timestamp_utc": "now", "matcher": {}, "tier_counts": {}, "prompt_levels": {}})
+    args = argparse.Namespace(gt="t", split="all", allow_dirty_gt=False, allow_paper_level_gt=False, tags="t",
+                              run=None, papers_dir=str(tmp_path), release=False, gold_dir=None,
+                              matcher="deterministic", provider="claude_cli", match_model="sonnet",
+                              offline=True, no_fuzzy=True, bootstrap=200, out_dir=str(tmp_path / "out"),
+                              judge_workers=1)
+    harness.cmd_evaluate(args)
+    m = json.loads((tmp_path / "out" / "metrics.json").read_text())
+    e = m["metrics"]["entry"]
+    assert (e["tp"], e["fn"], e["fn_no_output"], e["fp"], e["fp_negative_papers"]) == (1, 2, 2, 0, 10)
+    assert e["recall"] == pytest.approx(1 / 3) and e["precision"] == pytest.approx(1 / 11)
+    assert e["recall_given_output"] == 1.0 and e["precision_positive_papers"] == 1.0
+    assert "entry.recall" in m["ci95"]

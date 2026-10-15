@@ -2,14 +2,18 @@
 
 Three stages per replication paper (see benchmarking/README.md, "Matching"):
 
-  1. deterministic  normalized original-DOI equality -> cost ~0
-  2. LLM judge      for GT rows with no DOI hit, or an ambiguous one (several
-                    rows on either side share the original DOI), a Haiku judge
-                    run through the stage-4 screening backend decides which
-                    extracted row is the same effect. Result labels are withheld
-                    from the judge. Every decision is cached by content hash and
+  1. LLM judge      every GT row is judged against all of the paper's extracted
+                    rows by a judge (Sonnet by default, on the claude_cli
+                    screening backend) that decides which row, if any, is the
+                    same effect. A shared original DOI is shown to the judge as
+                    evidence but never creates a match on its own: one original
+                    paper carries several claims. Result labels are withheld from
+                    the judge. Every decision is cached by content hash and
                     appended to a jsonl log so the run is reproducible and
                     auditable.
+  2. fallback       without a judge (--matcher deterministic) or when it fails:
+                    original-DOI equality (description similarity decides inside
+                    a DOI several GT rows share), then the Feb-2026 fuzzy rule.
   3. assignment     Hungarian assignment over the cost matrix so one extracted
                     row can satisfy at most one GT row. Unmatched GT rows are
                     false negatives; unmatched extracted rows are false positives
@@ -111,7 +115,9 @@ MATCH_RELATIONS = frozenset({"same_effect", "subanalysis_of_gt"})
 CONF_COST = {"high": 0.10, "medium": 0.40, "low": 0.70}
 
 GT_JUDGE_FIELDS = ("original_title", "original_authors", "original_year",
-                   "original_journal", "description")
+                   "original_journal", "description",
+                   # effect identity recorded by workbench adjudication (blank in silver sets)
+                   "replication_study", "outcome", "contrast", "timepoint")
 EXT_JUDGE_FIELDS = ("original_title", "original_authors", "original_year",
                     "original_journal", "description", "citation_sentence")
 
@@ -124,7 +130,7 @@ def _clip(v, n: int = 300) -> str:
 class MatchJudge:
     """LLM matcher on the screening backend. `offline=True` answers only from cache."""
 
-    def __init__(self, provider: str = "claude_cli", model: str = "haiku",
+    def __init__(self, provider: str = "claude_cli", model: str = "sonnet",
                  prompt_path: Path = config.MATCH_PROMPT_FILE,
                  version_path: Path = config.MATCH_VERSION_FILE,
                  cache_dir: Path = config.BENCH_CACHE_DIR / "match",
@@ -171,6 +177,11 @@ class MatchJudge:
             f"  original authors: {_clip(gt.get('original_authors'), 200)}",
             f"  original year: {gt.get('original_year') or ''}   journal: {_clip(gt.get('original_journal'), 120)}",
             f"  replicated effect (description): {_clip(gt.get('description'), 600)}",
+        ]
+        ident = [(k, gt.get(k)) for k in ("replication_study", "outcome", "contrast", "timepoint") if gt.get(k)]
+        if ident:
+            lines.append("  effect identity: " + "; ".join(f"{k.replace('_', ' ')}: {_clip(v, 200)}" for k, v in ident))
+        lines += [
             "",
             f"PIPELINE ROWS FROM THE SAME REPLICATION PAPER ({len(cands)} rows; index in brackets)",
         ]
@@ -399,48 +410,59 @@ def assign(gt_rows: list[dict], ext_rows: list[dict], judge: MatchJudge | None =
     gt_canon = [canonical_doi(d) for d in gt_dois]
     ext_canon = [canonical_doi(d) for d in ext_dois]
 
-    # stage 1: DOI equality (description ratio breaks ties inside a shared DOI)
-    for i, g in enumerate(gt_rows):
-        for j, e in enumerate(ext_rows):
-            if gt_canon[i] and gt_canon[i] == ext_canon[j]:
-                r = string_ratio(g.get("description"), e.get("description"))
-                cost[i][j] = 0.05 * (1.0 - r)
-                why = ("original DOI equal" if gt_dois[i] == ext_dois[j]
-                       else f"same work under two DOIs ({alias_kind(gt_dois[i], ext_dois[j])}): "
-                            f"{gt_dois[i]} = {ext_dois[j]}")
-                meta[(i, j)] = ("doi", "same_effect", "high", why)
+    # A shared original DOI says two rows cite the same ORIGINAL PAPER, not that
+    # they are the same effect: one original routinely carries several claims, and
+    # a paper replicates several of them. So with a judge, DOI equality is only
+    # evidence -- every GT row is judged against ALL the paper's extracted rows and
+    # only the judge's same_effect/subanalysis verdict creates a match. (Until
+    # matcher 2.0 a DOI hit was a near-zero-cost match the judge never saw, so two
+    # different effects of one original could pair up even when the judge said no.)
+    doi_hit = [[bool(gt_canon[i]) and gt_canon[i] == ext_canon[j] for j in range(m)] for i in range(n)]
 
-    # stage 2: judge (or fuzzy fallback) where DOI did not settle it
+    def _doi_why(i: int, j: int) -> str:
+        return ("original DOI equal" if gt_dois[i] == ext_dois[j]
+                else f"same work under two DOIs ({alias_kind(gt_dois[i], ext_dois[j])}): "
+                     f"{gt_dois[i]} = {ext_dois[j]}")
+
+    def _doi_fallback(i: int, g: dict) -> None:
+        # No judge (deterministic matcher) or the judge failed on this row: DOI
+        # equality is the best evidence left. Inside a DOI shared by several GT
+        # rows, description similarity decides and a dissimilar pair is refused.
+        shared = sum(1 for d in gt_canon if d and d == gt_canon[i]) > 1
+        for j, e in enumerate(ext_rows):
+            if not doi_hit[i][j]:
+                continue
+            r = string_ratio(g.get("description"), e.get("description"))
+            if shared and r < 0.5:
+                continue
+            cost[i][j] = 0.30 + 0.20 * (1.0 - r)
+            meta[(i, j)] = ("doi", "same_effect", "medium" if shared else "high", _doi_why(i, j))
+
     for i, g in enumerate(gt_rows):
-        hits = [j for j in range(m) if cost[i][j] < INF]
-        shared_doi = gt_canon[i] and sum(1 for d in gt_canon if d == gt_canon[i]) > 1
-        ambiguous = len(hits) > 1 and shared_doi
-        if hits and not ambiguous:
+        hits = [j for j in range(m) if doi_hit[i][j]]
+        if judge is None:
+            _doi_fallback(i, g)
+            if allow_fuzzy and not hits:
+                _fuzzy_row(i, g, ext_rows, cost, meta)
             continue
-        cands_idx = hits if ambiguous else list(range(m))
-        cands = [ext_rows[j] for j in cands_idx]
-        if judge is not None:
-            res = judge.judge(g, cands, granularity)
-            out.judged[i] = res
-            out.n_judge_calls += 1
-            j_local = res.get("match")
-            j = cands_idx[j_local] if isinstance(j_local, int) and 0 <= j_local < len(cands_idx) else None
-            rel, conf = res.get("relation"), res.get("confidence", "low")
-            if rel in MATCH_RELATIONS and j is not None:
-                if ambiguous:
-                    cost[i][j] = min(cost[i][j], 0.0)      # judge-preferred among DOI hits
-                    meta[(i, j)] = ("doi+judge", rel, conf, res.get("reason", ""))
-                else:
-                    cost[i][j] = min(cost[i][j], CONF_COST.get(conf, 0.7))
-                    meta[(i, j)] = ("llm", rel, conf, res.get("reason", ""))
-            elif rel == "same_original_other_effect" and j is not None:
-                out.granularity_misses.append((i, j))
-            elif rel == "different_original" and j is not None:
-                out.wrong_original.append((i, j))
-            if res.get("error") and allow_fuzzy and not hits:
-                _fuzzy_row(i, g, ext_rows, cost, meta)   # judge unavailable: degrade, don't drop
-        elif allow_fuzzy and not hits:
-            _fuzzy_row(i, g, ext_rows, cost, meta)
+        res = judge.judge(g, ext_rows, granularity)
+        out.judged[i] = res
+        out.n_judge_calls += 1
+        j = res.get("match")
+        j = j if isinstance(j, int) and 0 <= j < m else None
+        rel, conf = res.get("relation"), res.get("confidence", "low")
+        if res.get("error"):
+            _doi_fallback(i, g)                      # judge unavailable: degrade, don't drop
+            if allow_fuzzy and not hits:
+                _fuzzy_row(i, g, ext_rows, cost, meta)
+        elif rel in MATCH_RELATIONS and j is not None:
+            # A DOI agreement the judge confirmed outranks a judge-only match.
+            cost[i][j] = CONF_COST.get(conf, 0.7) - (0.05 if doi_hit[i][j] else 0.0)
+            meta[(i, j)] = ("doi+judge" if doi_hit[i][j] else "llm", rel, conf, res.get("reason", ""))
+        elif rel == "same_original_other_effect" and j is not None:
+            out.granularity_misses.append((i, j))
+        elif rel == "different_original" and j is not None:
+            out.wrong_original.append((i, j))
 
     # stage 3: one-to-one
     pairs = _solve(cost)

@@ -149,6 +149,22 @@ prompt hashes, which remains the only reliable identification of what they ran.
 is part of the benchmark matcher's cache key, so a bump re-judges affected pairs
 rather than reusing stale decisions.
 
+## Matcher 2.0 (2026-10-15)
+
+- **A shared original DOI no longer creates a match.** Until now `matching.assign`
+  paired any GT and extracted rows citing the same original DOI at near-zero cost,
+  and the judge only saw rows the DOI had not settled. One original paper carries
+  several claims, so two different effects of it could pair up even when the judge
+  rejected them (reproduced in the 2026-10-04 evaluator review). Now every GT row
+  is judged against all of the paper's extracted rows and only a `same_effect` /
+  `subanalysis_of_gt` verdict matches; DOI agreement is a small tie-break bonus.
+  DOI equality survives only as the fallback when there is no judge.
+- Prompt: a shared DOI means the same original paper, not the same effect; match
+  on the claim and the replication study.
+- The judge now sees the GT entry's effect identity (replication study, outcome,
+  contrast, timepoint) when the ground truth records it (workbench adjudication).
+- Default judge model is Sonnet (was Haiku), on the `claude_cli` backend.
+
 ## Matcher 1.1 (2026-09-02)
 
 - Two DOIs can identify the same work: a preprint or postprint of the published

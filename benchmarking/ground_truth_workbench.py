@@ -263,9 +263,14 @@ def validate(root=ROOT, show_untouched=False):
     return bad
 
 
+# The bibliographic fields are scored by the harness (title/authors/year/journal),
+# so an export without them silently scored those fields against blanks.
+# added_after_candidates marks an effect the blind pass missed (ai_adjudicate.py).
 EFFECT_FIELDS = ('effect_id', 'original_reference', 'original_url', 'original_title',
+                 'original_authors', 'original_year', 'original_journal',
                  'replication_study', 'outcome', 'contrast', 'timepoint', 'result',
-                 'replication_type', 'description', 'citation_sentence', 'evidence', 'gt_ambiguity')
+                 'replication_type', 'description', 'citation_sentence', 'evidence', 'gt_ambiguity',
+                 'notes', 'added_after_candidates')
 
 
 def decision_provenance(decision):

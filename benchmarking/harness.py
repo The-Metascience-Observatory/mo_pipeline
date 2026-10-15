@@ -90,7 +90,7 @@ csv.field_size_limit(sys.maxsize)
 # claimed that", "<author> et al. (year) reported that") before comparing, so a
 # coder that writes the frame and one that writes the bare finding can pair.
 # Thresholds and margin unchanged. Agreement numbers differ from 1.4.
-HARNESS_VERSION = "1.5"
+HARNESS_VERSION = "1.6"
 GOLD_DIR = config.BENCH_GOLD_DIR
 SILVER_DIR = config.BENCH_SILVER_DIR
 RESULTS_DIR = config.BENCH_RESULTS_DIR
@@ -251,6 +251,11 @@ def _gt_row(raw: dict, *, source: str, granularity: str, has_reversal_class: boo
         "original_journal": raw.get("original_journal") or "",
         "description": raw.get("description") or "",
         "citation_sentence": raw.get("citation_sentence") or "",
+        # effect identity from workbench adjudication; the judge reads them
+        "replication_study": raw.get("replication_study") or "",
+        "outcome": raw.get("outcome") or "",
+        "contrast": raw.get("contrast") or "",
+        "timepoint": raw.get("timepoint") or "",
         "result": norm_label(raw.get("result")),
         "replication_type": TYPE_COLLAPSE.get(rtype, rtype),
         "tier_available": raw.get("tier_available") or "",
@@ -534,7 +539,12 @@ def _document_identity(paper_dir: Path, data: dict, gt_title: str = "") -> str:
 def load_extraction(folder: str, tags: list[str], papers_dir: Path, gt_title: str = "") -> dict:
     paper_dir = papers_dir / folder
     if not paper_dir.is_dir():
-        return {"status": "not_converted"}
+        # The 27 main_gt_human papers live only in the legacy ground-truth corpus;
+        # without this fallback they read as not converted under the default root.
+        alt = paper_dir_for(folder)
+        if alt is None:
+            return {"status": "not_converted"}
+        paper_dir, papers_dir = alt, alt.parent
     rj = find_result_json(folder, tags, papers_dir)
     if rj is None:
         return {"status": "not_extracted"}
@@ -793,6 +803,32 @@ def summarize(records: list[dict], funnel: Counter, entry: dict, paper_level: di
     return out
 
 
+def _entry_rates(tp: int, fp: int, fn: int) -> dict:
+    p = tp / (tp + fp) if (tp + fp) else None
+    r = tp / (tp + fn) if (tp + fn) else None
+    return {"precision": p, "recall": r, "f1": (2 * p * r / (p + r)) if p and r else None}
+
+
+def entry_bootstrap(paper_counts: list[tuple[int, int, int]], n_boot: int = 2000, seed: int = 0) -> dict:
+    """Paper-cluster percentile 95% CIs for end-to-end entry precision/recall/F1."""
+    if len(paper_counts) < 2:
+        return {}
+    rng = random.Random(seed)
+    samples = {"entry.precision": [], "entry.recall": [], "entry.f1": []}
+    for _ in range(n_boot):
+        draw = rng.choices(paper_counts, k=len(paper_counts))
+        rates = _entry_rates(sum(d[0] for d in draw), sum(d[1] for d in draw), sum(d[2] for d in draw))
+        for k in ("precision", "recall", "f1"):
+            if rates[k] is not None:
+                samples["entry." + k].append(rates[k])
+    out = {}
+    for k, xs in samples.items():
+        if len(xs) >= 100:
+            xs.sort()
+            out[k] = {"lo": xs[int(0.025 * len(xs))], "hi": xs[int(0.975 * len(xs)) - 1], "n_boot": len(xs)}
+    return out
+
+
 def cluster_bootstrap(records: list[dict], funnel, entry, paper_level, n_boot: int = 2000,
                       seed: int = 0) -> dict:
     """Paper-level resampling of the matched records for headline metrics (percentile 95% CI)."""
@@ -899,11 +935,14 @@ def render_report(m: dict, cis: dict, prov: dict, breakdowns: dict, matcher_stat
           f"wrong document on disk: {f.get('wrong_document_on_disk',0)}; scored: {f.get('scored',0)}", ""]
     e = m["entry"]
     L += ["## Entry-level matching (effect-level GT only)", "",
-          f"TP {e.get('tp',0)}  FN {e.get('fn',0)}  FP {e.get('fp',0)}  → precision {_pct(e.get('precision'))}, "
-          f"recall {_pct(e.get('recall'))}, F1 {_pct(e.get('f1'))}",
+          f"TP {e.get('tp',0)}  FN {e.get('fn',0)}  FP {e.get('fp',0)} + {e.get('fp_negative_papers',0)} on negative papers"
+          f"  → end-to-end precision {_pct(e.get('precision'))}, recall {_pct(e.get('recall'))}, F1 {_pct(e.get('f1'))}",
+          f"conditional: precision on positive papers {_pct(e.get('precision_positive_papers'))}, "
+          f"recall on papers with usable output {_pct(e.get('recall_given_output'))}",
           f"FN breakdown: {e.get('fn_different_original',0)} judged different_original, "
           f"{e.get('fn_no_candidate',0)} no candidate row, "
-          f"{e.get('fn_no_replications',0)} paper reported no replications",
+          f"{e.get('fn_no_replications',0)} paper reported no replications, "
+          f"{e.get('fn_no_output',0)} no usable extraction output",
           f"granularity misses (same original, other effect): {e.get('granularity_misses',0)}; "
           f"wrong-original errors flagged by judge: {e.get('wrong_original',0)}; "
           f"paper-level GT extra rows (unpenalized): {e.get('extra_rows_paper_level',0)}", ""]
@@ -1076,7 +1115,11 @@ def cmd_evaluate(args) -> None:
     entry = Counter({k: 0 for k in ("tp", "fn", "fp", "granularity_misses", "wrong_original",
                                     "extra_rows_paper_level", "fn_no_candidate",
                                     "fn_different_original", "fn_no_replications",
-                                    "fp_same_original", "fp_other_original")})
+                                    "fp_same_original", "fp_other_original",
+                                    "fn_no_output", "fp_negative_papers")})
+    # (tp, fp, fn) per paper -- GT papers and negative papers alike -- so entry
+    # precision/recall get a paper-cluster bootstrap CI like the matched metrics.
+    paper_counts: list[tuple[int, int, int]] = []
     # The judge is the slow part (one CLI call per GT row the DOI did not
     # settle), so papers are loaded and matched concurrently; the tally below
     # then walks them in sorted order, so the outputs are deterministic.
@@ -1097,6 +1140,16 @@ def cmd_evaluate(args) -> None:
         papers[doi] = px
         if px["status"] != "ok":
             funnel[px["status"]] += 1
+            # A paper the extractor left without usable output (none written,
+            # malformed JSON, wrong document) missed every effect in it. Counting
+            # these only in the funnel let a run that failed on half its papers
+            # still report 100% entry recall.
+            # No full text at all is an input-coverage gap, not an extraction
+            # failure: it stays in the funnel and out of the entry rates.
+            if px["status"] != "not_converted":
+                entry["fn"] += len(gt_rows)
+                entry["fn_no_output"] += len(gt_rows)
+                paper_counts.append((0, 0, len(gt_rows)))
             unmatched += [{"row_id": g["row_id"], "replication_doi": doi, "reason": px["status"],
                            "judge_reason": px.get("detail", ""),
                            "original_title": g["original_title"][:80], "gt_result": g["result"]} for g in gt_rows]
@@ -1107,6 +1160,7 @@ def cmd_evaluate(args) -> None:
             funnel["no_replications"] += 1
             entry["fn"] += len(gt_rows)
             entry["fn_no_replications"] += len(gt_rows)
+            paper_counts.append((0, 0, len(gt_rows)))
             unmatched += [{"row_id": g["row_id"], "replication_doi": doi, "reason": "pipeline says no replications",
                            "original_title": g["original_title"][:80], "gt_result": g["result"]} for g in gt_rows]
             per_paper.append({"replication_doi": doi, "status": "no_replications", "n_gt": len(gt_rows), "n_ext": 0})
@@ -1138,6 +1192,9 @@ def cmd_evaluate(args) -> None:
             records.append(rec)
         entry["tp"] += len(outcome.matches)
         entry["fn"] += len(outcome.gt_unmatched)
+        paper_counts.append((len(outcome.matches),
+                             0 if gran == "paper" else len(outcome.ext_unmatched),
+                             len(outcome.gt_unmatched)))
         entry["granularity_misses"] += len(outcome.granularity_misses)
         entry["wrong_original"] += len(outcome.wrong_original)
         if gran == "paper":
@@ -1173,13 +1230,6 @@ def cmd_evaluate(args) -> None:
                                "description": (e.get("description") or "")[:160], "result": e.get("result", "")})
         per_paper.append({"replication_doi": doi, "status": "scored", "n_gt": len(gt_rows), "n_ext": len(px["rows"]),
                           "n_matched": len(outcome.matches), "tier": px["tier"], "model": px["model"]})
-    tp, fp, fn = entry["tp"], entry["fp"], entry["fn"]
-    entry_d = dict(entry)
-    entry_d["precision"] = tp / (tp + fp) if (tp + fp) else None
-    entry_d["recall"] = tp / (tp + fn) if (tp + fn) else None
-    entry_d["f1"] = (2 * entry_d["precision"] * entry_d["recall"] / (entry_d["precision"] + entry_d["recall"])
-                     if entry_d["precision"] and entry_d["recall"] else None)
-
     # paper-level: positives = GT papers; negatives = gold_negatives
     pl = Counter()
     for doi, px in papers.items():
@@ -1193,6 +1243,17 @@ def cmd_evaluate(args) -> None:
             pl["neg_not_evaluated"] += 1
         else:
             pl["fp" if px["contains"] else "tn"] += 1
+            # Every row extracted from a paper with no replication is a false
+            # entry, not just a paper-level false positive.
+            n_rows = len(px["rows"]) if px["contains"] else 0
+            entry["fp_negative_papers"] += n_rows
+            paper_counts.append((0, n_rows, 0))
+    entry_d = dict(entry)
+    entry_d.update(_entry_rates(entry["tp"], entry["fp"] + entry["fp_negative_papers"], entry["fn"]))
+    # Conditional views, reported beside the end-to-end figures above: precision
+    # on papers that do contain replications, recall on papers with usable output.
+    entry_d["precision_positive_papers"] = _entry_rates(entry["tp"], entry["fp"], 0)["precision"]
+    entry_d["recall_given_output"] = _entry_rates(entry["tp"], 0, entry["fn"] - entry["fn_no_output"])["recall"]
     pl_d = dict(pl)
     if pl:
         pl_d["precision"] = pl["tp"] / (pl["tp"] + pl["fp"]) if (pl["tp"] + pl["fp"]) else None
@@ -1200,6 +1261,8 @@ def cmd_evaluate(args) -> None:
 
     m = summarize(records, funnel, entry_d, pl_d)
     cis = cluster_bootstrap(records, funnel, entry_d, pl_d, n_boot=args.bootstrap) if args.bootstrap else {}
+    if args.bootstrap:
+        cis.update(entry_bootstrap(paper_counts, n_boot=args.bootstrap))
     prov = provenance_block(papers, gt_info, judge, args)
     if args.split == "test":
         fam = prov["prompt_version_now"]
@@ -1537,7 +1600,7 @@ def main() -> None:
                    help="score against paper-level GT (FLoRa) anyway; retired 2026-09-04 because one "
                         "verdict per paper cannot say which effect the extractor got right")
     s.add_argument("--matcher", choices=["llm", "deterministic"], default="llm")
-    s.add_argument("--provider", default="claude_cli"); s.add_argument("--match-model", default="haiku")
+    s.add_argument("--provider", default="claude_cli"); s.add_argument("--match-model", default="sonnet")
     s.add_argument("--offline", action="store_true", help="LLM matcher answers only from cache")
     s.add_argument("--no-fuzzy", action="store_true", help="disable the string-similarity fallback")
     s.add_argument("--bootstrap", type=int, default=2000); s.add_argument("--papers-dir", default=None)
@@ -1547,7 +1610,7 @@ def main() -> None:
     s = sub.add_parser("retest", help="run-to-run agreement between two tags")
     s.add_argument("--run", default=None); s.add_argument("--tag-a", required=True); s.add_argument("--tag-b", required=True)
     s.add_argument("--matcher", choices=["llm", "deterministic"], default="deterministic")
-    s.add_argument("--provider", default="claude_cli"); s.add_argument("--match-model", default="haiku")
+    s.add_argument("--provider", default="claude_cli"); s.add_argument("--match-model", default="sonnet")
     s.add_argument("--offline", action="store_true"); s.add_argument("--papers-dir", default=None)
     s.add_argument("--out", default=None); s.set_defaults(func=cmd_retest)
     s.add_argument("--judge-workers", type=int, default=4)
