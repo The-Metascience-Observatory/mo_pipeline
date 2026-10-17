@@ -1,0 +1,21 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Hulleman, C. S., & Harackiewicz, J. M. (2009) Promoting interest and performance in high school science classes",
+   "doi": "10.1126/science.1177067"
+  },
+  {
+   "reference": "Hulleman, C. S., Godes, O., Hendricks, B. L., & Harackiewicz, J. M. (2010) Enhancing interest and performance with a utility value intervention",
+   "doi": ""
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The source's title is 'Making Connections: Replicating and Extending the Utility Value Intervention in the Classroom'. Its Study 2 tests the utility-value writing intervention and finds a larger benefit for students with low initial exam scores (the Exam x UV contrast). That is the core finding of the Hulleman & Harackiewicz (2009) utility-value intervention. The source does not name this reference, so the identification rests on the title and design."
+  }
+ },
+ "notes": "LIMITED SOURCE: source/ holds only the Supplemental Online Materials. That is the PDF, abstract.md and body.md: Study 2 exam analyses, Tables S1-S7 and the appendices. references.json is empty. The main article's introduction, discussion and reference list are absent, so no replicated original is named explicitly anywhere in the source. The is_replication_paper=true verdict rests on the article title printed in the supplement header ('Replicating and Extending the Utility Value Intervention'). The design matches the established UV-intervention paradigm: a randomized writing intervention in an introductory psychology course, with outcomes of exam performance and interest, moderated by initial performance. Hulleman et al. (2010, Journal of Educational Psychology, college psychology course) is listed as a probable second original, based on the coder's background knowledge rather than the source text, so its DOI is left blank. A human reviewer with the main text should confirm both originals before this is used as gold."
+}

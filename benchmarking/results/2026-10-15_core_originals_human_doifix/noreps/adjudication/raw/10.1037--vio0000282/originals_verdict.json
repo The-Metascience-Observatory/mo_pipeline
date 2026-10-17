@@ -1,0 +1,17 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Peterson, Beagley, McCallum & Artime (2019) Sexual attitudes and behaviors among men who are victims, perpetrators, or both victims and perpetrators of adult sexual assault",
+   "doi": "10.1037/vio0000187"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Source is titled 'Correlates of Victim-Perpetrator Overlap in Sexual Aggression among Men and Women: A Conceptual Replication and Extension' and compares nonvictim, victim-only, perpetrator-only and victim-perpetrator groups on sexual self-esteem, depression, risky sexual scripts and risky sexual behavior. That is the four-group design of Peterson et al.'s men-only study, extended here to women, though the available text never names the original."
+  }
+ },
+ "notes": "LOW-CONFIDENCE: source/ contains only the 7-page Supplementary Material (VIO-2019-0309.R3). There is no main text, and references.json is empty, so the original study could not be confirmed by citation. The verdict on A rests on the self-described conceptual replication and a close topical and design match: the victim/perpetrator/both four-group comparison of men's sexual attitudes and behaviors, from the same journal. Re-check against the full article if it can be obtained."
+}

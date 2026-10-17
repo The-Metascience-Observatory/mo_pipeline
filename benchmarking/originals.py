@@ -53,6 +53,88 @@ def _near(a: str, b: str) -> bool:
     return len(short) >= 12 and long_.startswith(short) and len(long_) - len(short) <= 3
 
 
+# ── work-level equivalence ──────────────────────────────────────────────────
+# One work often carries several DOIs: an SSRN or NBER working paper and the
+# journal article, a PsycEXTRA or ICPSR record, JSTOR's alias of a publisher
+# article. Human labels and the extractor regularly pick different ones (11 of
+# 458 papers on 2026-10-15), and DOI equality calls that a miss. Two DOIs are
+# the same WORK when their registered Crossref records share the first author's
+# surname, years within 3, and the title (or a main title of >= 4 words before
+# the colon). A DOI with no record -- a fabricated one -- never matches.
+WORK_CACHE = h.config.BENCH_CACHE_DIR / "crossref_works.json"
+_work_cache: dict | None = None
+_work_lock = __import__("threading").Lock()
+
+
+def _work_meta(doi: str) -> dict:
+    """{title, year, first_family} from Crossref, cached on disk; {} if unregistered."""
+    global _work_cache
+    with _work_lock:
+        if _work_cache is None:
+            _work_cache = json.loads(WORK_CACHE.read_text()) if WORK_CACHE.exists() else {}
+        if doi in _work_cache:
+            return _work_cache[doi]
+    import urllib.error
+    import urllib.parse
+    import urllib.request
+    meta = None
+    for attempt in range(4):
+        try:
+            url = ("https://api.crossref.org/works/" + urllib.parse.quote(doi)
+                   + "?mailto=dan@metascienceobservatory.org")
+            m = json.load(urllib.request.urlopen(url, timeout=30))["message"]
+            authors = m.get("author") or []
+            meta = {"title": (m.get("title") or [""])[0],
+                    "year": ((m.get("issued") or {}).get("date-parts") or [[None]])[0][0],
+                    "first_family": (authors[0].get("family") or "") if authors else ""}
+            break
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                meta = {}
+                break
+            time.sleep(2 + 3 * attempt)
+        except Exception:  # noqa: BLE001 - network: retry, then give up uncached
+            time.sleep(2 + 3 * attempt)
+    if meta is None:
+        return {}
+    with _work_lock:
+        _work_cache[doi] = meta
+        WORK_CACHE.parent.mkdir(parents=True, exist_ok=True)
+        WORK_CACHE.write_text(json.dumps(_work_cache))
+    return meta
+
+
+def _norm_title(t: str) -> str:
+    import re
+    return " ".join(re.sub(r"[^a-z0-9 ]+", " ", (t or "").lower()).split())
+
+
+def same_work(a: dict, b: dict) -> bool:
+    """Do two Crossref records describe one work? (see the block comment above)"""
+    if not a or not b or not a.get("title") or not b.get("title"):
+        return False
+    fa, fb = _norm_title(a.get("first_family")), _norm_title(b.get("first_family"))
+    if not fa or fa != fb:
+        return False
+    if a.get("year") and b.get("year") and abs(int(a["year"]) - int(b["year"])) > 3:
+        return False
+    ta, tb = _norm_title(a["title"]), _norm_title(b["title"])
+    if matching.string_ratio(ta, tb) >= 0.9:
+        return True
+    ma, mb = (_norm_title(x.split(":")[0]) for x in (a["title"], b["title"]))
+    return ma == mb and len(ma.split()) >= 4
+
+
+def work_matches(gt: set, ext: set) -> set:
+    """GT originals that some extracted DOI names as the same work (strict hits included)."""
+    hits = gt & ext
+    for g in gt - hits:
+        mg = _work_meta(g)
+        if mg and any(same_work(mg, _work_meta(e)) for e in ext):
+            hits.add(g)
+    return hits
+
+
 def human_originals(sets=GT_SETS) -> dict[str, dict]:
     """{paper_folder: {doi, originals:set, sets:set, no_doi_rows:int}} over the sets."""
     papers: dict[str, dict] = {}
@@ -85,13 +167,16 @@ def extracted_originals(rows: list[dict]) -> tuple[set, int]:
     return found, missing
 
 
-def score_paper(gt: set, ext: set) -> dict:
+def score_paper(gt: set, ext: set, work_level: bool = True) -> dict:
     tp = len(gt & ext)
     near = tp > 0 or any(_near(g, e) for g in gt for e in ext)
+    tp_work = len(work_matches(gt, ext)) if (work_level and ext) else tp
     return {"n_gt": len(gt), "n_ext": len(ext), "tp": tp,
             "recall": tp / len(gt) if gt else None,
             "precision_lb": tp / len(ext) if ext else None,
-            "hit": tp > 0, "hit_lenient": near, "exact": gt == ext}
+            "hit": tp > 0, "hit_lenient": near, "exact": gt == ext,
+            "tp_work": tp_work, "hit_work": tp_work > 0,
+            "recall_work": tp_work / len(gt) if gt else None}
 
 
 def summarize(recs: list[dict]) -> dict:
@@ -109,6 +194,8 @@ def summarize(recs: list[dict]) -> dict:
         "macro_recall": sum(r["recall"] for r in scored) / len(scored),
         "hit_rate": sum(r["hit"] for r in scored) / len(scored),
         "hit_rate_lenient": sum(r["hit_lenient"] for r in scored) / len(scored),
+        "hit_rate_work": sum(r.get("hit_work", r["hit"]) for r in scored) / len(scored),
+        "micro_recall_work": sum(r.get("tp_work", r["tp"]) for r in scored) / n_gt,
         "exact_rate": sum(r["exact"] for r in scored) / len(scored),
         "hit_rate_when_extracted": (sum(r["hit"] for r in with_ext) / len(with_ext)) if with_ext else None,
         "extracted_none": len(scored) - len(with_ext),
@@ -122,7 +209,8 @@ def bootstrap(recs: list[dict], n_boot: int = 2000, seed: int = h.SEED_DEFAULT) 
     if len(scored) < 2 or not n_boot:
         return {}
     rng = random.Random(seed)
-    keys = ("micro_recall", "micro_precision_lb", "macro_recall", "hit_rate", "exact_rate")
+    keys = ("micro_recall", "micro_precision_lb", "macro_recall", "hit_rate", "exact_rate",
+            "hit_rate_work", "micro_recall_work")
     draws = defaultdict(list)
     for _ in range(n_boot):
         s = summarize([rng.choice(scored) for _ in scored])
@@ -195,18 +283,21 @@ def render(overall, cis, by_set, funnel, prov) -> str:
           "| Measure | Value (95% CI, paper bootstrap) |", "|---|---|",
           f"| Hit rate (≥1 human original named) | {_pct(overall['hit_rate'])}{ci('hit_rate')} |",
           f"| Hit rate, lenient (truncated DOI tail accepted) | {_pct(overall['hit_rate_lenient'])} |",
+          f"| Hit rate, work level (another registered record of the same work accepted) | "
+          f"{_pct(overall.get('hit_rate_work'))}{ci('hit_rate_work')} |",
           f"| Recall of human originals (micro) | {_pct(overall['micro_recall'])}{ci('micro_recall')} |",
+          f"| Recall of human originals, work level (micro) | {_pct(overall.get('micro_recall_work'))}{ci('micro_recall_work')} |",
           f"| Recall (macro, per paper) | {_pct(overall['macro_recall'])}{ci('macro_recall')} |",
           f"| Precision, lower bound (micro) | {_pct(overall['micro_precision_lb'])}{ci('micro_precision_lb')} |",
           f"| Exact set match | {_pct(overall['exact_rate'])}{ci('exact_rate')} |",
           f"| Hit rate where something was extracted | {_pct(overall['hit_rate_when_extracted'])} |",
           f"| Extracted rows with no original DOI | {overall['ext_rows_without_doi']} |", "",
           "Precision is a lower bound: the human lists are not exhaustive.", "",
-          "| Set | Papers | Hit | Recall (micro) | Precision LB |", "|---|---|---|---|---|"]
+          "| Set | Papers | Hit | Hit, work level | Recall (micro) | Precision LB |", "|---|---|---|---|---|---|"]
     for s, m in by_set.items():
         if m.get("n_papers"):
-            L.append(f"| {s} | {m['n_papers']} | {_pct(m['hit_rate'])} | {_pct(m['micro_recall'])} | "
-                     f"{_pct(m['micro_precision_lb'])} |")
+            L.append(f"| {s} | {m['n_papers']} | {_pct(m['hit_rate'])} | {_pct(m.get('hit_rate_work'))} | "
+                     f"{_pct(m['micro_recall'])} | {_pct(m['micro_precision_lb'])} |")
     return "\n".join(L) + "\n"
 
 

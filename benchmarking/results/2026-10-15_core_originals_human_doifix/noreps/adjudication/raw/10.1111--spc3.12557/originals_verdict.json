@@ -1,0 +1,12 @@
+{
+ "is_replication_paper": false,
+ "replicated_originals": [],
+ "candidates": {
+  "A": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Cited as ref [54] in the review's discussion of past behavior making action more normal (regret for deviating from prior behavior); the paper reports no new data or replication of it."
+  }
+ },
+ "notes": "Narrative/theoretical review of action-inaction effects (omission/commission, action-effect in regret) through norm theory's concept of normality. It mentions other groups' replications (e.g., refs [22][23][26][34][64]) but runs no study of its own, so it is a negative paper under the codebook's review genre."
+}

@@ -539,3 +539,172 @@ def test_enrichment_drops_a_doi_that_resolves_to_another_work(monkeypatch):
                                  original_doi_cache={"10.1111/j.1467-9280.2008.02227.x": meta2})
     assert data["replications"][0]["original_url"].endswith("02227.x")
     assert data["replications"][0]["original_journal"] == "Psychological Science"
+
+
+def test_enrichment_replaces_a_doi_that_resolves_nowhere(monkeypatch):
+    """A recalled DOI with a wrong digit resolves nowhere while the title is right
+    (14 of 458 papers, 2026-10-15): replace it with the DOI the title lookup
+    verifies, and keep it when the lookup finds nothing."""
+    from mo_pipeline.extract import extract as ex
+    right = {"doi": "10.1521/ijgp.52.4.511.45520", "year": 2002,
+             "title": "Interpersonal predictors of group therapy outcome for complicated grief"}
+    rep = {"original_url": "https://doi.org/10.1521/ijgp.52.4.511.45529", "original_title": right["title"],
+           "original_year": "2002", "original_journal": ""}
+    monkeypatch.setattr(ex, "fetch_metadata_from_title", lambda title, **kw: right)
+    data, msgs = ex.enrich_metadata({"replications": [dict(rep)]}, replication_doi="",
+                                    original_doi_cache={"10.1521/ijgp.52.4.511.45529": {
+                                        "title": None, "year": None,
+                                        "url": "https://doi.org/10.1521/ijgp.52.4.511.45529"}})
+    assert data["replications"][0]["original_url"] == "https://doi.org/10.1521/ijgp.52.4.511.45520"
+    assert any("resolves nowhere" in m for m in msgs)
+    monkeypatch.setattr(ex, "fetch_metadata_from_title", lambda title, **kw: None)
+    data, msgs = ex.enrich_metadata({"replications": [dict(rep)]}, replication_doi="",
+                                    original_doi_cache={"10.1521/ijgp.52.4.511.45529": None})
+    assert data["replications"][0]["original_url"].endswith("45529")    # lookup failed: kept
+    assert not any("resolves nowhere" in m for m in msgs)
+
+
+def test_title_lookup_prefers_the_published_article_over_a_secondary_record():
+    from mo_pipeline.shared.fetch_metadata_from_title import is_secondary_record
+    assert is_secondary_record({"DOI": "10.2307/1126804"})            # JSTOR alias
+    assert is_secondary_record({"DOI": "10.2139/ssrn.901642"})        # SSRN
+    assert is_secondary_record({"DOI": "10.3386/w8460"})              # NBER
+    assert is_secondary_record({"DOI": "10.1037/e513702014-054"})     # PsycEXTRA
+    assert is_secondary_record({"DOI": "10.5555/x", "type": "dataset"})
+    assert not is_secondary_record({"DOI": "10.1037/a0030655", "type": "journal-article"})
+
+
+# ── DOI provenance (prompt 8.11): a DOI must be printed in the paper ─────────
+
+_SOURCE = ("Introduction ... as shown by Smith (2015). References: [1] Smith, J. (2015). "
+           "Default effects on saving. J. Econ. 4: 1-10. https://doi.org/10.1037%2FA0030655 "
+           "[2] Doe (2001) doi:10.1111/J.1467-9280.2008.02227.X")
+
+
+@pytest.mark.parametrize("doi", [
+    "https://doi.org/10.1037/a0030655",            # URL-encoded and upper-case in the source
+    "10.1111/j.1467-9280.2008.02227.x",            # "doi:" prefix and different case
+    "doi.org/10.1037/a0030655",
+])
+def test_doi_in_source_tolerates_encoding_prefix_and_case(doi):
+    assert ex.doi_in_source(doi, _SOURCE)
+
+
+def test_doi_in_source_rejects_a_recalled_doi():
+    assert not ex.doi_in_source("10.1037/a0030656", _SOURCE)          # near-miss
+    assert ex.doi_in_source("10.1037/a00306\n55", "x") is False
+    assert ex.doi_in_source("10.1037/a0030655", "see 10.1037/a003\n0655 for") is True  # line break
+
+
+def _rep(url):
+    return {"original_url": url, "original_title": "Default effects on saving",
+            "original_authors": "Smith, J.", "original_year": "2015", "original_journal": ""}
+
+
+def test_a_doi_printed_in_the_paper_is_kept(monkeypatch):
+    monkeypatch.setattr(ex, "fetch_metadata_from_doi",
+                        lambda doi, **kw: {"title": "Default effects on saving", "year": 2015})
+    monkeypatch.setattr(ex, "fetch_metadata_from_title", lambda *a, **kw: pytest.fail("no lookup needed"))
+    src = {}
+    data, msgs = ex.enrich_metadata({"replications": [_rep("https://doi.org/10.1037/a0030655")]},
+                                    replication_doi="", original_doi_cache={}, source_text=_SOURCE,
+                                    doi_sources=src)
+    assert data["replications"][0]["original_url"] == "https://doi.org/10.1037/a0030655"
+    assert src == {0: "paper"}
+
+
+def test_a_doi_absent_from_the_paper_is_blanked_then_resolved_from_the_title(monkeypatch):
+    found = {"doi": "10.1037/a0030655", "title": "Default effects on saving", "year": 2015}
+    monkeypatch.setattr(ex, "fetch_metadata_from_title", lambda *a, **kw: found)
+    src = {}
+    data, msgs = ex.enrich_metadata({"replications": [_rep("https://doi.org/10.9999/recalled.123")]},
+                                    replication_doi="", original_doi_cache={}, source_text=_SOURCE,
+                                    doi_sources=src)
+    assert data["replications"][0]["original_url"] == "https://doi.org/10.1037/a0030655"
+    assert any("10.9999/recalled.123 not found in the paper" in m for m in msgs)
+    assert src == {0: "title_lookup"}
+
+
+def test_a_doi_absent_from_the_paper_stays_blank_when_the_lookup_fails(monkeypatch):
+    monkeypatch.setattr(ex, "fetch_metadata_from_title", lambda *a, **kw: None)
+    src = {}
+    data, _ = ex.enrich_metadata({"replications": [_rep("https://doi.org/10.9999/recalled.123")]},
+                                 replication_doi="", original_doi_cache={}, source_text=_SOURCE,
+                                 doi_sources=src)
+    assert data["replications"][0]["original_url"] == ""        # never the guessed DOI
+    assert src == {0: ""}
+
+
+def test_the_bibliography_supplies_a_doi_and_a_title_to_retry(monkeypatch):
+    refs = [{"id": "b1", "title": "Precision of the anchor influences the amount of adjustment",
+             "authors": ["Janiszewski, Chris"], "year": "2008", "doi": "10.1111/j.1467-9280.2008.02057.x"}]
+    rep = {"original_url": "", "original_title": "Anchor precision influences the amount of adjustment",
+           "original_authors": "Janiszewski, Chris", "original_year": "2008"}
+    monkeypatch.setattr(ex, "fetch_metadata_from_title", lambda *a, **kw: pytest.fail("bibliography DOI first"))
+    monkeypatch.setattr(ex, "fetch_metadata_from_doi", lambda doi, **kw: {"title": refs[0]["title"], "year": 2008})
+    src = {}
+    data, msgs = ex.enrich_metadata({"replications": [dict(rep)]}, replication_doi="", original_doi_cache={},
+                                    source_text="", references=refs, doi_sources=src)
+    assert data["replications"][0]["original_url"] == "https://doi.org/10.1111/j.1467-9280.2008.02057.x"
+    assert src == {0: "references"}
+
+    # no DOI in the bibliography: the reworded title fails, the printed one succeeds
+    refs[0].pop("doi")
+    calls = []
+    def lookup(title, **kw):
+        calls.append(title)
+        return ({"doi": "10.1111/j.1467-9280.2008.02057.x", "title": refs[0]["title"]}
+                if title == refs[0]["title"] else None)
+    monkeypatch.setattr(ex, "fetch_metadata_from_title", lookup)
+    data, msgs = ex.enrich_metadata({"replications": [dict(rep)]}, replication_doi="", original_doi_cache={},
+                                    source_text="", references=refs, doi_sources=src)
+    assert calls == [rep["original_title"], refs[0]["title"]]
+    assert data["replications"][0]["original_url"].endswith("02057.x") and src == {0: "title_lookup"}
+
+
+def test_bare_doi_keeps_parentheses_and_sici_brackets():
+    assert ex._bare_doi("https://doi.org/10.1044/1092-4388(2001/052)") == "10.1044/1092-4388(2001/052)"
+    assert ex._bare_doi("(see doi:10.1037/A0030655).") == "10.1037/a0030655"
+    sici = "10.1002/(sici)1099-0771(199806)11:2<107::aid-bdm292>3.0.co;2-y"
+    assert ex._bare_doi("https://doi.org/" + sici) == sici
+
+
+
+def test_a_truncated_wiley_doi_in_the_source_still_counts_but_a_near_miss_does_not():
+    src = "Smith (2009) Dev. Sci. doi:10.1111/j.1467-7687.2009.00859 [2] x 10.1521/ijgp.52.4.511.45520"
+    assert ex.doi_in_source("10.1111/j.1467-7687.2009.00859.x", src)
+    assert not ex.doi_in_source("10.1521/ijgp.52.4.511.45529", src)
+
+
+def test_an_unverifiable_reference_list_doi_is_not_used(monkeypatch):
+    """GROBID can parse an issue DOI or a truncated one out of a bibliography."""
+    refs = [{"title": "Who is most likely to fat talk", "authors": ["Corning, A."], "year": "2017",
+             "doi": "10.1002/ejsp.v47.4"}]
+    rep = {"original_url": "", "original_title": "Who is most likely to fat talk", "original_year": "2017"}
+    monkeypatch.setattr(ex, "fetch_metadata_from_doi", lambda doi, **kw: {"title": "European Journal of Social Psychology, Volume 47, Issue 4"})
+    monkeypatch.setattr(ex, "fetch_metadata_from_title", lambda *a, **kw: {"doi": "10.1002/ejsp.2219", "title": rep["original_title"]})
+    src = {}
+    data, msgs = ex.enrich_metadata({"replications": [dict(rep)]}, replication_doi="", original_doi_cache={},
+                                    source_text="", references=refs, doi_sources=src)
+    assert data["replications"][0]["original_url"] == "https://doi.org/10.1002/ejsp.2219"
+    assert src == {0: "title_lookup"} and any("does not verify" in m for m in msgs)
+
+
+def test_a_reference_list_doi_must_verify_strictly(monkeypatch):
+    """GROBID attached a DOI to the wrong bibliography entry; 0.55 let it through."""
+    refs = [{"title": "Numeracy and decision making", "year": "2006", "doi": "10.1016/j.joep.2016.02.011"}]
+    rep = {"original_url": "", "original_title": "Numeracy and decision making", "original_year": "2006"}
+    monkeypatch.setattr(ex, "fetch_metadata_from_doi", lambda doi, **kw: {"title": "Numeracy and wealth"})
+    monkeypatch.setattr(ex, "fetch_metadata_from_title", lambda *a, **kw: None)
+    data, msgs = ex.enrich_metadata({"replications": [dict(rep)]}, replication_doi="", original_doi_cache={},
+                                    source_text="", references=refs)
+    assert data["replications"][0]["original_url"] == ""
+
+
+def test_a_neighbouring_bibliography_entry_is_not_matched():
+    refs = [{"title": "Numeracy and wealth", "doi": "10.1016/j.joep.2016.02.011"},
+            {"title": "Replicating different roles of intent across moral domains", "doi": "10.1098/rsos.190808"}]
+    assert ex._reference_for({"original_title": "Numeracy and decision making"}, refs) is None
+    assert ex._reference_for({"original_title": "When ignorance is no excuse: Different roles for intent "
+                                                 "across moral domains"}, refs) is None
+    assert ex._reference_for({"original_title": "Numeracy and wealth"}, refs) is refs[0]

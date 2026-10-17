@@ -832,38 +832,157 @@ def validate_citation_sentences(data: dict, references: list[dict] | None = None
     return mismatches
 
 
-def _doi_from_title(i: int, rep: dict, email: str, msgs: list[str]) -> None:
-    """Find an entry's original DOI (or PMID) by title search; best-effort."""
-    try:
-        meta = fetch_metadata_from_title(
-            rep["original_title"],
-            email=email,
-            authors=rep.get("original_authors"),
-            year=rep.get("original_year"),
-        )
+# ── DOI provenance ───────────────────────────────────────────────────────────
+# A DOI reaches the output only if it is (a) printed in the paper text the model
+# was given, or (b) found by the metadata APIs from the title and verified against
+# the registry -- never one from model memory. The 2026-10-15 evaluation found the
+# model recalling DOIs when the paper prints none: ~65 entries carried a real DOI
+# of a different paper and 14 papers a DOI that does not exist (a near-miss of the
+# real one), although the prompt already said "do not fabricate".
+
+def _bare_doi(value: str) -> str | None:
+    """The `10.xxxx/...` core of a DOI in any spelling -- bare, `doi:`, a
+    doi.org URL with or without scheme, URL-encoded -- lower-cased."""
+    import urllib.parse
+    m = re.search(r"10\.\d{4,9}/+[^\s\"']+", urllib.parse.unquote(value or ""))
+    if not m:
+        return None
+    d = re.sub(r"^(10\.\d{4,9})//+", r"\1/", m.group(0)).rstrip(".,;]")
+    while d.endswith(")") and d.count(")") > d.count("("):   # keep "(2001/052)"
+        d = d[:-1].rstrip(".,;]")
+    return d.lower()
+
+
+def _norm_source_text(text: str) -> str:
+    import html
+    import urllib.parse
+    t = urllib.parse.unquote(html.unescape(text or "")).lower()
+    return re.sub(r"(10\.\d{4,9})//+", r"\1/", t)
+
+
+def doi_in_source(doi: str, source_text: str, _norm_cache: dict | None = None) -> bool:
+    """Is this DOI printed in the source text? Case-, prefix- and URL-encoding-
+    insensitive; also tolerates a DOI broken across lines (PDF/GROBID text)."""
+    d = _bare_doi(doi)
+    if not d:
+        return False
+    cache = _norm_cache if _norm_cache is not None else {}
+    if "t" not in cache:
+        cache["t"] = _norm_source_text(source_text)
+        cache["t_nospace"] = re.sub(r"\s+", "", cache["t"])
+    if d in cache["t"] or d in cache["t_nospace"]:
+        return True
+    # GROBID drops the ".x" of Wiley DOIs (10.1111/j.1467-7687.2009.00859.x is
+    # printed in references.json as ...00859). Accept the full DOI when the
+    # source carries exactly that truncation -- never a shorter prefix, which
+    # would let a near-miss (...45529 vs ...45520) through.
+    if d.endswith(".x"):
+        return re.search(re.escape(d[:-2]) + r"(?![0-9a-z./_-])", cache["t"]) is not None
+    return False
+
+
+def paper_source_text(paper_dir: Path) -> str:
+    """The paper's own text files (never a `<tag>/` output): renditions, GROBID
+    text, abstract, tables, references and the raw publisher markup. Used for
+    the agentic extractor, which reads the folder itself; the core extractor
+    checks against exactly the input it assembled instead. A DOI printed only in
+    the PDF is blanked and then resolved from the title, so nothing is lost."""
+    parts = []
+    for f in sorted(Path(paper_dir).iterdir()):
+        if f.is_file() and (f.suffix.lower() in (".md", ".xml", ".html", ".txt")
+                            or f.name == "references.json"):
+            try:
+                parts.append(f.read_text(encoding="utf-8", errors="replace"))
+            except OSError:
+                pass
+    return "\n".join(parts)
+
+
+def _reference_for(rep: dict, references: list | None) -> dict | None:
+    """The bibliography entry an extracted row most plausibly names."""
+    if not references:
+        return None
+    title = rep.get("original_title") or ""
+    best, best_sim = None, 0.0
+    for ref in references:
+        if not isinstance(ref, dict):
+            continue
+        # Title only: first author + year alone matched a different paper by the
+        # same author in 3 of 458 papers (2026-10-16), so it no longer counts.
+        sim = _title_similarity(title, ref.get("title") or "", threshold=0.75) if title else 0.0
+        if sim > best_sim:
+            best, best_sim = ref, sim
+    # 0.75: a reworded title still finds its entry ("Anchor precision
+    # influences..." for "Precision of the anchor influences...", 0.81), a
+    # neighbouring entry does not ("Numeracy and decision making" vs "Numeracy
+    # and wealth", 0.64; a later replication of the same study, 0.73).
+    return best if best_sim >= 0.75 else None
+
+
+def _doi_from_title(i: int, rep: dict, email: str, msgs: list[str],
+                    references: list | None = None) -> str:
+    """Find an entry's original DOI (or PMID); best-effort. Returns where it came
+    from -- "references" (a DOI the paper's own bibliography prints), "title_lookup"
+    (registry search on the extracted, then the bibliography's, title) -- or ""."""
+    ref = _reference_for(rep, references)
+    ref_doi = _bare_doi(str(ref.get("doi") or "")) if ref else None
+    if ref_doi:
+        # GROBID's parse of a bibliography can truncate a DOI or pick up an
+        # issue DOI (10.1002/ejsp.v47.4), so verify it against the registry.
+        try:
+            meta = fetch_metadata_from_doi(ref_doi, email=email, delay=0.1)
+        except Exception:
+            meta = None
+        # Strict (0.85, the main-title-of-a-subtitled-paper case still passes):
+        # GROBID also attaches a DOI to the wrong entry, and at 0.55 "Numeracy
+        # and wealth" verified for "Numeracy and decision making".
+        # Compared with the bibliography entry's own title -- what the paper
+        # prints -- not the model's, which may be reworded.
+        want = ref.get("title") or rep.get("original_title") or ""
+        if meta and meta.get("title") and _title_similarity(want, meta["title"], threshold=0.85) >= 0.85:
+            rep["original_url"] = f"https://doi.org/{ref_doi}"
+            _fill_metadata_fields(rep, "original", meta)
+            msgs.append(f"  +  Entry {i}: DOI {ref_doi} from the paper's reference list")
+            return "references"
+        msgs.append(f"  ✗  Entry {i}: reference-list DOI {ref_doi} does not verify; trying the title")
+    titles = [rep.get("original_title") or ""]
+    if ref and ref.get("title") and ref["title"] not in titles:
+        titles.append(ref["title"])     # the model reworded the title: retry as printed
+    for n, title in enumerate(t for t in titles if t):
+        try:
+            meta = fetch_metadata_from_title(
+                title,
+                email=email,
+                authors=rep.get("original_authors"),
+                year=rep.get("original_year"),
+            )
+        except Exception as e:
+            logger.warning(f"Title search failed for entry {i}: {e}")
+            continue
+        via = "" if n == 0 else " (bibliography title)"
         if meta and meta.get("doi"):
             # Sanity check: title similarity
             api_title = meta.get("title", "")
-            if api_title and _title_similarity(rep["original_title"], api_title) >= 0.55:
+            if api_title and _title_similarity(title, api_title) >= 0.55:
                 rep["original_url"] = f"https://doi.org/{meta['doi']}"
                 filled = _fill_metadata_fields(rep, "original", meta)
                 msgs.append(
-                    f"  +  Entry {i}: found DOI {meta['doi']} from title "
+                    f"  +  Entry {i}: found DOI {meta['doi']} from title{via} "
                     f"({filled} field(s) enriched)"
                 )
-            else:
-                logger.debug(f"Entry {i}: title search DOI failed similarity check")
+                return "title_lookup"
+            logger.debug(f"Entry {i}: title search DOI failed similarity check")
         elif meta and meta.get("pmid"):
             api_title = meta.get("title", "")
-            if api_title and _title_similarity(rep["original_title"], api_title) >= 0.55:
+            if api_title and _title_similarity(title, api_title) >= 0.55:
                 rep["original_url"] = f"https://pubmed.ncbi.nlm.nih.gov/{meta['pmid']}/"
                 filled = _fill_metadata_fields(rep, "original", meta)
                 msgs.append(
-                    f"  +  Entry {i}: found PMID {meta['pmid']} from title "
+                    f"  +  Entry {i}: found PMID {meta['pmid']} from title{via} "
                     f"({filled} field(s) enriched)"
                 )
-    except Exception as e:
-        logger.warning(f"Title search failed for entry {i}: {e}")
+                return "title_lookup"
+    return ""
 
 
 def enrich_metadata(
@@ -871,6 +990,9 @@ def enrich_metadata(
     replication_doi: str,
     original_doi_cache: dict[str, dict],
     email: str = "dan@metascienceobservatory.org",
+    source_text: str | None = None,
+    references: list | None = None,
+    doi_sources: dict | None = None,
 ) -> tuple[dict, list[str]]:
     """Enrich result data with metadata from APIs.
 
@@ -879,10 +1001,18 @@ def enrich_metadata(
       B. Original study metadata enrichment (reuse cache + title search for missing DOIs)
       C. Author name formatting (add periods after initials)
 
+    With `source_text` (the paper text the model was given), an original DOI not
+    printed in it is treated as recalled from memory: blanked, then resolved from
+    the title. `references` (references.json) lets a failed lookup retry with the
+    bibliography's own title. `doi_sources`, if given, is filled with
+    {entry index: "paper" | "references" | "title_lookup" | ""}.
+
     Modifies data in-place. Returns (data, log_messages).
     All API failures are logged but never raise — enrichment is best-effort.
     """
     msgs = []
+    sources = doi_sources if doi_sources is not None else {}
+    norm_cache: dict = {}
 
     # A. Fetch replication paper metadata (shared across all entries in this paper)
     if replication_doi:
@@ -904,6 +1034,13 @@ def enrich_metadata(
     for i, rep in enumerate(data.get("replications", [])):
         original_url = rep.get("original_url", "")
         doi = _extract_doi_from_url(original_url)
+        sources[i] = "paper" if doi else ""
+
+        if doi and source_text is not None and not doi_in_source(doi, source_text, norm_cache):
+            # B0. Not printed in the paper the model read: recalled from memory.
+            msgs.append(f"  ✗  Entry {i}: DOI {doi} not found in the paper; resolving from title")
+            rep["original_url"] = original_url = ""
+            doi = None
 
         if doi:
             # B1. Have DOI — use cache from validate_original_dois, or fetch if missing
@@ -921,23 +1058,34 @@ def enrich_metadata(
                     and _title_similarity(agent_title, meta["title"]) < 0.55):
                 # The DOI resolves to a different work than the title the model
                 # read in the paper. The title is the evidence (it comes from the
-                # paper); the DOI is usually a recalled or mis-typed one. Until
+                # paper); a DOI can still be a typo even when printed. Until
                 # 2026-10-15 the mismatch was only logged: the wrong DOI was kept
-                # and its metadata filled the entry's blank fields, which made
-                # ~10% of extracted originals point at the wrong paper. Drop it
-                # and recover the DOI from the title instead.
+                # and its metadata filled the entry's blank fields. Drop it and
+                # recover the DOI from the title instead.
                 msgs.append(f"  ✗  Entry {i}: dropped DOI {doi} — it resolves to "
                             f"\"{meta['title'][:60]}\", not the extracted title")
                 rep["original_url"] = ""
-                _doi_from_title(i, rep, email, msgs)
-            elif meta:
+                sources[i] = _doi_from_title(i, rep, email, msgs, references)
+            elif meta and meta.get("title"):
                 filled = _fill_metadata_fields(rep, "original", meta)
                 if filled:
                     msgs.append(f"  +  Entry {i} original: enriched {filled} field(s) from DOI")
+            elif agent_title:
+                # The DOI resolves nowhere (fetch_metadata_from_doi returns
+                # {"url": ..., everything else None} for an unregistered DOI).
+                # Replace it only with a DOI the title lookup verifies; if the
+                # lookup finds nothing, keep it -- an API outage must not erase
+                # a DOI the paper itself prints.
+                n_before = len(msgs)
+                found = _doi_from_title(i, rep, email, msgs, references)
+                if found:
+                    sources[i] = found
+                    msgs.insert(n_before, f"  ✗  Entry {i}: DOI {doi} resolves nowhere; "
+                                          f"replaced from the title")
 
         elif not original_url and rep.get("original_title"):
-            # B2. No DOI but have title — try title search
-            _doi_from_title(i, rep, email, msgs)
+            # B2. No DOI but have title — try the bibliography, then title search
+            sources[i] = _doi_from_title(i, rep, email, msgs, references)
 
         # C. Format author names (add periods after initials)
         if rep.get("original_authors"):
@@ -1513,12 +1661,19 @@ def extract_paper(
     # ---- metadata enrichment, on the final data ----
     if not _shutdown_requested:
         try:
+            # The agent reads the folder itself, so its source is the paper's
+            # own text files; a DOI printed in none of them was recalled.
+            doi_sources: dict = {}
             data, enrich_msgs = enrich_metadata(
                 data,
                 replication_doi=_extract_doi_from_url(replication_url) or "",
                 original_doi_cache=original_doi_cache,
+                source_text=paper_source_text(paper_dir),
+                references=_load_references(paper_dir), doi_sources=doi_sources,
             )
             log_messages.extend(enrich_msgs)
+            debug_log["doi_sources"] = {str(k): v for k, v in doi_sources.items()}
+            debug_path.write_text(json.dumps(debug_log, indent=2))
         except Exception as e:
             log_messages.append(f"  !  Metadata enrichment failed: {e}")
 

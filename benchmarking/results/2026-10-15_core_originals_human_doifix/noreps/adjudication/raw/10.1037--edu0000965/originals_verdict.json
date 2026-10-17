@@ -1,0 +1,17 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Wood, Wood & Middleton (1978) An Experimental Evaluation of Four Face-to-Face Teaching Strategies",
+   "doi": "10.1177/016502547800100203"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The only available source text gives the manuscript title as 'What it takes to tutor - A preregistered direct replication of the scaffolding experimental study by Wood et al. (1978)'. Wood, Wood & Middleton (1978, IJBD) is that experimental scaffolding/tutoring-strategies study."
+  }
+ },
+ "notes": "The source folder does not contain the article itself. source/body.md, abstract.md and the 3-page PDF are only the APA Open Practices Disclosure form, and references.json is empty. The verdict rests on the manuscript title in that form (authors Smit, de Kleijn, Wicherts, van de Pol; preregistration at osf.io/yhqgb). The identification is unambiguous, but the methods and results could not be checked."
+}

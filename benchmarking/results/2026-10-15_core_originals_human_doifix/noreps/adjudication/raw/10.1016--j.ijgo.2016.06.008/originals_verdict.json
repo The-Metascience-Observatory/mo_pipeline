@@ -1,0 +1,17 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Briozzo L, Vidiella G, Rodríguez F, Gorgoroso M, Faúndes A, Pons JE (2006) A risk reduction strategy to prevent maternal deaths associated with unsafe abortion",
+   "doi": "10.1016/j.ijgo.2006.07.013"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "The paper implements the Uruguayan 'Iniciativas Sanitarias' risk and harm reduction model in Buenos Aires and tests whether it again lowers abortion-related maternal mortality. The Discussion concludes the model 'can be replicated in other contexts'. Briozzo et al. 2006 is the published report of that model and of its effect in Uruguay. The paper does not list it among its 8 references, though; it cites only Briozzo & Faúndes 2008 [6], on the medical profession and reproductive rights."
+  }
+ },
+ "notes": "Borderline case (gt_ambiguity). This is a conceptual, program-level replication: a public-health intervention is carried to a new setting and evaluated with an uncontrolled before/after comparison of maternal deaths. The Uruguayan finding is described but never cited by an explicit reference, so the link to Briozzo 2006 is inferred from the content. A second coder could plausibly code this paper as negative (a policy implementation report with no cited original finding)."
+}

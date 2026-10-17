@@ -1,0 +1,57 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [],
+ "candidates": {
+  "A": {
+   "verdict": "not_relevant",
+   "metadata_problem": true,
+   "reason": "Blankenship & Wegener (2008) is not named or cited anywhere in the paper text or reference list; the paper does not list the 176 individual originals (they are only in the OSF dataset). The DOI is malformed (duplicated '94.2'; the JPSP article is 10.1037/0022-3514.94.2.196)."
+  },
+  "B": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "Hughes et al. (2013) is not cited in the text or references. It may be one of the 176 class replications (a Psychological Science article), but the paper does not identify individual originals, so this cannot be confirmed from the source."
+  },
+  "C": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "Romero Verdugo et al. (2022) is not cited in the text or references. It could be among the unlisted class-project originals, but nothing in the source names it."
+  },
+  "D": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "Blair et al. (2007) is not cited in the text or references; the paper names no individual original studies."
+  },
+  "E": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "Hart et al. (2018) is not cited in the text or references; the paper names no individual original studies."
+  },
+  "F": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "Kim & Markus (1999) is not cited in the text or references; the paper names no individual original studies."
+  },
+  "G": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "Jakesch et al. (2019) is not cited in the text or references. The paper mentions a few non-psychology originals in aggregate (11% non-psychology) but names none."
+  },
+  "H": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "Paxton, Ungar & Greene (2011) is not cited in the text or references; the paper names no individual original studies."
+  },
+  "I": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "Metaxa-Kakavouli et al. (2018) is not cited in the text or references. The paper only says in aggregate that some originals came from outside psychology or from Stanford authors, and names none."
+  },
+  "J": {
+   "verdict": "not_relevant",
+   "metadata_problem": false,
+   "reason": "Greenberg & Spiller (2015) is not cited in the text or references; the paper names no individual original studies."
+  }
+ },
+ "notes": "Boyce, Mathur & Frank: aggregate report of 176 new-data replications run by students in Stanford PSYCH 251/254 (2011-2022). The authors include former students and the instructor, and the paper is the primary report for most of these projects (4 were in RP:P, 10 in ref [37]). It therefore reports replications rather than only aggregating published ones, though it is close to the 'meta-analysis of replications' negative genre. The full text names none of the 176 original studies; they are listed only in the OSF dataset (https://osf.io/xwn9m/). Candidates B, C, G, I, J and others are plausible members of that dataset (Psych Science default, CHI papers by Stanford's Hancock, Kim & Markus classic), but none can be confirmed from the source, so no candidate is marked replicated and replicated_originals is empty. A reference set derived from the OSF data (e.g. FReD) would legitimately list many of these; scoring an extractor on this paper requires that dataset, not the paper text."
+}

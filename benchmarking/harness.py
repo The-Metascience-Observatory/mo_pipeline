@@ -90,7 +90,7 @@ csv.field_size_limit(sys.maxsize)
 # claimed that", "<author> et al. (year) reported that") before comparing, so a
 # coder that writes the frame and one that writes the bare finding can pair.
 # Thresholds and margin unchanged. Agreement numbers differ from 1.4.
-HARNESS_VERSION = "1.6"
+HARNESS_VERSION = "1.7"
 GOLD_DIR = config.BENCH_GOLD_DIR
 SILVER_DIR = config.BENCH_SILVER_DIR
 RESULTS_DIR = config.BENCH_RESULTS_DIR

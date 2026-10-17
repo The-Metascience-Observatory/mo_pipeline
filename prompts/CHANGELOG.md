@@ -15,6 +15,38 @@ Hashes are sha256 of the file as stored, not of the rendered prompt: rendering
 also substitutes the discipline ontology, which lives in the website repo and
 changes on its own schedule.
 
+## Prompt 8.11 (2026-10-16)
+
+**DOIs are copied, never recalled.** The 2026-10-15 core evaluation found the
+model naming the right original study but attaching a wrong DOI in ~10% of 458
+papers: ~65 entries carried a real DOI of a different paper and 14 papers a DOI
+that does not exist (a near-miss of the real one). The paper printed no DOI and
+the model filled one in from memory, although the field reference already said
+"do not fabricate". The schema example also modelled a filled-in DOI.
+
+- The schema example's `original_url` is now a placeholder that says "copied
+  verbatim from the paper's reference list or text, else empty"; the multi-study
+  example uses `""`.
+- `original_url` (field reference, Missing DOI rule, `prompt_core.md`,
+  `prompt_full.md`): only a DOI printed in this paper, copied exactly; `""` is
+  correct and expected otherwise and is resolved downstream; a DOI not printed in
+  the paper is discarded automatically.
+- `original_title`, `original_authors`, `original_journal`: copied as printed in
+  the reference list, not paraphrased, because they drive the DOI lookup (a
+  reworded title, "Anchor precision influences…" for "Precision of the anchor
+  influences…", defeated it).
+
+Enforced in code as well: `extract.enrich_metadata` blanks any DOI not found in
+the text the model was given and re-resolves it from the title.
+
+| prompt file | sha256 |
+|---|---|
+| prompt_core.md | fb1629db1bb940c5ca15e59fc830847bfadda401ccd35b42d8bb7f13a2ab6789 |
+| prompt_full.md | 3eb45cd60dd04f449df97aa4a1f4543ce9b9ffde8c151f9b7d690426b315af4b |
+| prompt_full_html.md | 16f3d1c13006d856b418caafb9be388261931a94f6ca32177f18493144db9968 |
+| prompt_full_pdf_only.md | af6414299e2b4bb458598f871a63f31ef11156c3217022f092f2b05991758db9 |
+| prompt_shared_core.md | c432f2fe29410174b195af9a2be0753eaa6a9ea50f856c8df9aec8f401881fd3 |
+
 ## Prompt 8.10 (2026-10-01)
 
 `prompt_full_xml.md` is retired to `prompts/archive/`, and its `"xml"` entries are

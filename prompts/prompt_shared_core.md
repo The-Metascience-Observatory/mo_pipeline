@@ -12,7 +12,7 @@ Reply with the JSON object only — no prose before or after it, no code fences.
   "contains_replications": true,
   "replications": [
     {
-      "original_url": "https://doi.org/10.1234/example",
+      "original_url": "<DOI URL copied verbatim from the paper's reference list or text, else empty>",
       "original_authors": "Smith, J.; Jones, A.",
       "original_title": "The original study title",
       "original_journal": "Journal of Example Studies",
@@ -75,7 +75,7 @@ If a paper replicates Studies 1, 2, and 4 from the same original paper:
   "contains_replications": true,
   "replications": [
     {
-      "original_url": "https://doi.org/10.1234/original",
+      "original_url": "",
       "original_authors": "Smith, J.; Jones, A.",
       "original_title": "The Original Study Title",
       "description": "Study 1: Priming with elderly-related words causes participants to walk more slowly",
@@ -92,7 +92,7 @@ If a paper replicates Studies 1, 2, and 4 from the same original paper:
       ...
     },
     {
-      "original_url": "https://doi.org/10.1234/original",
+      "original_url": "",
       "original_authors": "Smith, J.; Jones, A.",
       "original_title": "The Original Study Title",
       "description": "Study 2: Priming with elderly-related words affects performance on lexical decision task",
@@ -109,7 +109,7 @@ If a paper replicates Studies 1, 2, and 4 from the same original paper:
       ...
     },
     {
-      "original_url": "https://doi.org/10.1234/original",
+      "original_url": "",
       "original_authors": "Smith, J.; Jones, A.",
       "original_title": "The Original Study Title",
       "description": "Study 4: Priming with elderly-related words impairs memory recall performance",
@@ -165,10 +165,10 @@ Do not narrate. Your entire reply must be the JSON object.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `original_url` | string | DOI URL (`https://doi.org/...`). `""` if not found — do not fabricate. |
-| `original_authors` | string | Semicolon-separated full names (e.g., `"Smith, John; Jones, Alice"`) |
-| `original_title` | string | Title in sentence case (only first word capitalized). **Always extract this even if DOI is missing.** |
-| `original_journal` | string | Full journal or venue name |
+| `original_url` | string | DOI URL (`https://doi.org/...`) **only if that DOI is printed in this paper** (its reference list or text) — copy it character for character. Otherwise `""`. Never write a DOI from memory, even one you are confident of: an empty value is correct and expected, and is resolved downstream from the title, authors, year and journal. A DOI that is not printed in the paper is discarded automatically. |
+| `original_authors` | string | Semicolon-separated names as printed in the reference list (e.g., `"Smith, John; Jones, Alice"`) |
+| `original_title` | string | Title **as printed in the reference list** — same words in the same order, subtitle included; do not paraphrase, shorten or reword (capitalization may be sentence case). It drives the downstream DOI lookup, which fails on a reworded title. **Always extract this even if DOI is missing.** |
+| `original_journal` | string | Journal or venue name as printed in the reference list |
 | `original_volume` | string | Volume number. `""` if unavailable. |
 | `original_issue` | string | Issue number. `""` if unavailable. |
 | `original_pages` | string | Page range (e.g., `"112-128"`). `""` if unavailable. |
@@ -338,7 +338,7 @@ Rate your confidence that the specific extraction is correct overall — that yo
 - **Multiple originals**: One row per effect per original study.
 - **Multi-effect replications from the same original**: If a paper replicates several distinct claims of the same original study (e.g., its reported effects on compassion, empathy, and Theory of Mind), create one row per claim with the same `original_url` but different `description` and potentially different `result`. See "What counts as a separate replication entry" for what makes a claim distinct.
 - **Within-paper replications**: Exclude. If Study 2 replicates Study 1 within the same paper (even with separate participants), this does not count as a qualifying replication. The original study must be a separately published work.
-- **Missing DOI**: Leave `""`. Title + journal + year will be used to resolve it downstream. But **always extract the title**.
+- **Missing DOI**: Leave `""` — this is the normal case when the reference list prints no DOI, and it is not an error. Never supply a DOI from memory. Title + authors + year + journal, copied as printed, are used to resolve it downstream, so **always extract the title exactly**.
 <!-- mode:full -->
 - **Missing statistics**: Many papers won't report all statistical fields. Leave unreported fields as `""`. Only extract what is explicitly stated clearly in paper for the particular experiment being analyzed — do not calculate or try to infer values.
 <!-- /mode -->

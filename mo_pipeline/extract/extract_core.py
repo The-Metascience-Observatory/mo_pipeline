@@ -41,6 +41,7 @@ from mo_pipeline.discover.screening_backend import (BACKENDS, BackendUnavailable
                                                     parse_json_reply)
 from mo_pipeline.extract.extract import (
     STAT_FIELDS, SkipPaper, discover_papers, _extract_doi_from_url, _format_duration, _husk_reason,
+    _load_references,
     _write_provenance, collate_results, enrich_metadata, is_usage_limit_error,
     load_existing_replication_urls, load_system_prompt, load_version_number,
     normalize_doi_url, paper_artifacts, wait_for_session,
@@ -405,14 +406,22 @@ def extract_paper_core(paper_dir: Path, backend, system_prompt: str, existing_ur
                 f"  ❌  Citation mismatch entry {cm['entry_idx']} ({', '.join(parts)}) "
                 f"— citation: \"{cm['citation'][:80]}\" vs extracted: "
                 f"\"{cm['extracted_authors'][:40]}\" ({cm['extracted_year']})")
+        doi_sources: dict = {}
         try:
+            # A DOI the model wrote must be printed in the input it was given
+            # (user_prompt: full text + reference list); otherwise it came from
+            # memory and is re-resolved from the title.
             data, enrich_msgs = enrich_metadata(
                 data,
                 replication_doi=_extract_doi_from_url(folder_to_doi_url(paper_dir.name)) or "",
-                original_doi_cache=doi_cache)
+                original_doi_cache=doi_cache, source_text=user_prompt,
+                references=_load_references(paper_dir), doi_sources=doi_sources)
             log.extend(enrich_msgs)
         except Exception as e:
             log.append(f"  !  Metadata enrichment failed: {e}")
+        # Where each entry's final DOI came from, for evaluation by source.
+        debug["doi_sources"] = {str(k): v for k, v in doi_sources.items()}
+        (output_dir / "debug_log.json").write_text(json.dumps(debug, indent=2, default=str))
 
     _write_provenance(output_dir, model_id=usage["model"], prompt_level=LEVEL, artifacts=art,
                       html_mode=False, pdf_only=False, force_tier=None,

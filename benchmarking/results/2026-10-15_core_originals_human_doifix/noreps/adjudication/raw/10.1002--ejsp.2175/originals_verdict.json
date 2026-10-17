@@ -1,0 +1,12 @@
+{
+ "is_replication_paper": false,
+ "replicated_originals": [],
+ "candidates": {
+  "A": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Sklar et al. (2012) is cited only in the introduction as background evidence that subliminally presented arithmetic problems can be solved; the paper runs no arithmetic or reading task."
+  }
+ },
+ "notes": "Original research (Ruch, Züst & Henke, 'Subliminal messages exert long-term effects on decision-making'): two new experiments testing whether subliminal face-occupation pairs and pseudoword-translation pairs influence decisions 15-25 min later. The text never frames either experiment as a replication. Experiment 1 reuses the masking paradigm and face-occupation stimuli of Duss et al. (2011, Conscious Cogn 20:928-935; ref [20]), the authors' own lab, but tests a new question (long delays) and presents it as new evidence. Under the codebook ('new, original experiments in the same paper are not entries') this is negative. gt_ambiguity: a second coder could read Exp 1 as a close extension of Duss et al. (2011)."
+}

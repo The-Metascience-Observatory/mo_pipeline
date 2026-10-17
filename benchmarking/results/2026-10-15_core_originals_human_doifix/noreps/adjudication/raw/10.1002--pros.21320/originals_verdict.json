@@ -1,0 +1,25 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Amundadottir et al. (2006) A common variant associated with prostate cancer in European and African populations (Nature Genetics) — region 1, rs1447295 A allele",
+   "doi": "10.1038/ng1808"
+  },
+  {
+   "reference": "Gudmundsson et al. (2007) Genome-wide association study identifies a second prostate cancer susceptibility variant at 8q24 (Nature Genetics) — region 2, rs16901979 A allele",
+   "doi": ""
+  },
+  {
+   "reference": "Yeager et al. (2007) Genome-wide association study of prostate cancer identifies a second risk locus at 8q24 (Nature Genetics) — region 3, rs6983267",
+   "doi": ""
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Ref 9 (Amundadottir et al.) is the source of the region-1 rs1447295 A-allele finding. The paper genotypes that SNP in Tobago men and compares its null result with the original (Discussion: 'Allele A of rs1447295 was not associated with risk'). Title, authors, year and DOI all match ref 9."
+  }
+ },
+ "notes": "This is a candidate-SNP case-control study (354 cases, 438 controls) in Afro-Caribbean Tobago men. The abstract frames it as a replication of the 8q24 GWAS findings for three SNPs, one from each region. Region 1 (rs1447295) comes from Amundadottir 2006 and is null here. Region 2 (rs16901979) comes from Gudmundsson 2007 (ref 12) and is significant here, OR 1.41. Region 3 (rs6983267) comes from Yeager 2007 (ref 13; Gudmundsson 2007 also reported it) and is null here. The ref 12 and 13 titles are truncated in references.json, so I named those originals from domain knowledge, not from the source, and left their DOIs blank. The SNP-to-original mapping for regions 2 and 3 is moderately ambiguous: the paper credits Gudmundsson (ref 12) and Yeager (ref 13) for both."
+}

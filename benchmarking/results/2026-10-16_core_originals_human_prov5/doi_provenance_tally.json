@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "blanked_not_in_source": 273,
+    "ref_doi_rejected": 16,
+    "dropped_wrong_registered_title": 8,
+    "  -> title_lookup": 273
+  },
+  "sources": {
+    "title_lookup": 621,
+    "paper": 701,
+    "(none)": 15
+  }
+}

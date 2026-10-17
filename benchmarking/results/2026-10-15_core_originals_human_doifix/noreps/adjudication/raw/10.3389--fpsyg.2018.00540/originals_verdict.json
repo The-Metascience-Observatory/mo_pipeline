@@ -1,0 +1,12 @@
+{
+ "is_replication_paper": false,
+ "replicated_originals": [],
+ "candidates": {
+  "A": {
+   "verdict": "cited_not_replicated",
+   "metadata_problem": false,
+   "reason": "Cited in the Introduction as prior evidence that a brief metacognitively focused intervention can work for social phobia, but the authors contrast it with their own 'purer' generic MCT (Wells 2009), which they say 'has yet to be evaluated in its purer form in SAD'; they do not frame the study as repeating Wells & Papageorgiou's treatment or finding."
+  }
+ },
+ "notes": "'Replication' in the title is single-case-design terminology: an A-B series replicated across three patients with different SAD subtypes ('systematic replication', Barlow & Hersen 1984). That is replication within the study, and no prior published finding is being re-tested. The paper is a preliminary efficacy test of a new treatment variant, so it is negative under the codebook. Ambiguity: a lenient coder could call it a conceptual replication of Wells & Papageorgiou (2001) and/or Nordahl et al. (2016b), which are cited together as showing that brief metacognitive interventions work; the authors stress instead how their treatment differs from both."
+}

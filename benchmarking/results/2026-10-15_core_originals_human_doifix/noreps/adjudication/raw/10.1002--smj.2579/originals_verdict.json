@@ -1,0 +1,22 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Waddock & Graves (1997) The corporate social performance-financial performance link. Strategic Management Journal 18(4):303-319",
+   "doi": "10.1002/(SICI)1097-0266(199704)18:4<303::AID-SMJ869>3.0.CO;2-G"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": true,
+   "reason": "This is Waddock & Graves (1997, SMJ 18(4):303). The target paper's own title, as cited in the source reference list, is 'Revisiting the corporate social performance-financial performance link: A replication of Waddock and Graves' (Zhao & Murrell 2016, SMJ, 10.1002/smj.2579). The DOI is cut off at the ';' (it is missing ';2-G') and has no title or authors."
+  },
+  "B": {
+   "verdict": "not_relevant",
+   "metadata_problem": true,
+   "reason": "'2-g' is not a DOI. It is the tail end of candidate A's SICI DOI after a split on ';', so it does not identify a separate work."
+  }
+ },
+ "notes": "SOURCE MISMATCH: source/ does not hold 10.1002/smj.2579. The PDF, body.md and abstract.md are Abdillah, Hadi, Prabawani & Wijayanto (2025), 'The effect of CEO's social relational and moral capital on board process and performance of socially responsible company', Accounting 11:103-130 (doi 10.5267/j.ac.2025.3.001). That paper is not a replication, but it cites the target paper as ref [108]: Zhao X, Murrell A (2016) 'Revisiting the corporate social performance-financial performance link: A replication of Waddock and Graves', SMJ 37(11):2378-2388, doi 10.1002/smj.2579. The original identified here comes from that cited title, not from reading the replication paper itself. The source folder needs re-downloading before any entry-level coding."
+}

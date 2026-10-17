@@ -105,7 +105,7 @@ A qualifying replication is one where:
 - `original_journal`
 - `original_year`
 - `original_volume`, `original_issue`, `original_pages`
-- `original_url` (DOI URL if present)
+- `original_url` (DOI URL only if the paper prints one — copy it exactly; never from memory)
 
 **Important:** If the reference is there but has no DOI, still extract the title, authors, journal, and year. A missing DOI will be resolved automatically downstream — but a missing title cannot be recovered. Prioritize getting the title and authors right.
 

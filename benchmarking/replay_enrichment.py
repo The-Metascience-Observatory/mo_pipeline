@@ -32,11 +32,14 @@ from mo_pipeline.extract import extract as ex  # noqa: E402
 from mo_pipeline.extract import extract_core as core  # noqa: E402
 
 
-def replay(folder: str, tag: str, new_tag: str) -> str:
+def replay(folder: str, tag: str, new_tag: str, resume: bool = True) -> str:
     paper = h.paper_dir_for(folder)
     if paper is None or not (paper / tag / "debug_log.json").exists():
         return "skipped"
     src, dst = paper / tag, paper / new_tag
+    if resume and (dst / "replay_log.txt").exists():
+        log = (dst / "replay_log.txt").read_text()
+        return f"ok, {log.count('dropped DOI')} DOI(s) dropped (resumed)"
     debug = json.loads((src / "debug_log.json").read_text())
     data = parse_json_reply(debug.get("assistant_text") or "")
     if data is None:
@@ -44,13 +47,27 @@ def replay(folder: str, tag: str, new_tag: str) -> str:
     data = core.postprocess(data, paper, debug.get("prompt_version") or "")
     data, log = ex.validate_extraction(data)
     mismatches, cache = ex.validate_original_dois(data)
+    # The replication paper's own metadata does not depend on the post-processing
+    # being replayed and costs a full multi-API lookup per paper: carry it over
+    # from the source tag's result instead of fetching it again.
+    prior = src / f"{folder}{core.RESULT_SUFFIX}"
+    rep_meta = json.loads(prior.read_text()).get("replication_metadata") if prior.exists() else None
+    # The input the model was given, re-assembled exactly as extract_core does,
+    # so the DOI-provenance check tests against what the model actually saw.
+    from mo_pipeline import config
+    source_text, _ = core.assemble_input(paper, core.paper_artifacts(paper), config.EXTRACT_CORE_MAX_INPUT_CHARS)
+    doi_sources: dict = {}
     data, msgs = ex.enrich_metadata(
-        data, replication_doi=ex._extract_doi_from_url(folder_to_doi_url(folder)) or "",
-        original_doi_cache=cache)
+        data, replication_doi="" if rep_meta else (ex._extract_doi_from_url(folder_to_doi_url(folder)) or ""),
+        original_doi_cache=cache, source_text=source_text,
+        references=ex._load_references(paper), doi_sources=doi_sources)
+    if rep_meta:
+        data["replication_metadata"] = rep_meta
+    debug["doi_sources"] = {str(k): v for k, v in doi_sources.items()}
     dst.mkdir(exist_ok=True)
-    for name in ("debug_log.json", "provenance.json"):
-        if (src / name).exists():
-            shutil.copy2(src / name, dst / name)
+    (dst / "debug_log.json").write_text(json.dumps(debug, indent=2, default=str))
+    if (src / "provenance.json").exists():
+        shutil.copy2(src / "provenance.json", dst / "provenance.json")
     prov_path = dst / "provenance.json"
     if prov_path.exists():
         prov = json.loads(prov_path.read_text())

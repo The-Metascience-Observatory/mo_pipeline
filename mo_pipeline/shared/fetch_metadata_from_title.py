@@ -168,6 +168,19 @@ def _normalize_title(title):
 
 
 
+# DOI prefixes and Crossref types that register a second record of a work
+# whose citable version lives elsewhere: JSTOR's alias of a publisher article,
+# SSRN and NBER working papers, ICPSR data deposits, APA PsycEXTRA entries.
+SECONDARY_DOI_PREFIXES = ("10.2307/", "10.2139/ssrn.", "10.3386/w", "10.3886/icpsr", "10.1037/e")
+SECONDARY_TYPES = {"dataset", "posted-content", "report", "report-component"}
+
+
+def is_secondary_record(item: dict) -> bool:
+    """Is this Crossref item a secondary record rather than the published article?"""
+    doi = (item.get("DOI") or "").lower()
+    return doi.startswith(SECONDARY_DOI_PREFIXES) or item.get("type") in SECONDARY_TYPES
+
+
 def fetch_metadata_from_title(title, email=None, delay=0.2, authors=None,
                              journal=None, year=None, volume=None):
     if email is None:
@@ -263,7 +276,15 @@ def fetch_metadata_from_title(title, email=None, delay=0.2, authors=None,
                         continue
                     fetched_title = crossref_title(item)
                     sim = _title_similarity(title, fetched_title)
-                    if sim > best_sim:
+                    # A secondary record of the same work (JSTOR alias,
+                    # SSRN/NBER working paper, PsycEXTRA or ICPSR record)
+                    # gives way to the published article when both match.
+                    tie = best_item is not None and sim > 0 and abs(sim - best_sim) <= 0.05
+                    if tie and is_secondary_record(best_item) and not is_secondary_record(item):
+                        best_sim, best_item = max(sim, best_sim), item
+                    elif tie and is_secondary_record(item) and not is_secondary_record(best_item):
+                        continue
+                    elif sim > best_sim:
                         best_sim, best_item = sim, item
                 if best_item:
                     fetched_title = crossref_title(best_item)

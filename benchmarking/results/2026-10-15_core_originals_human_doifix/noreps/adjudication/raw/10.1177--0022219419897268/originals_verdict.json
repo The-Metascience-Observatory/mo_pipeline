@@ -1,0 +1,17 @@
+{
+ "is_replication_paper": true,
+ "replicated_originals": [
+  {
+   "reference": "Peverly, Vekaria, Reddington, Sumowski, Johnson & Ramsay (2012) The relationship of handwriting speed, working memory, language comprehension and outlines to lecture note-taking and test-taking among college students",
+   "doi": "10.1002/acp.2881"
+  }
+ ],
+ "candidates": {
+  "A": {
+   "verdict": "replicated",
+   "metadata_problem": false,
+   "reason": "Ref [47] is the main comparison study. The paper tests whether its predictors of note-taking and test performance in undergraduates (language comprehension and handwriting speed for notes; comprehension and background knowledge for tests) carry over to high school students with and without LD. It uses the same paradigm (alphabet handwriting task, a video lecture, scored notes, a multiple-choice test), bases its power analysis on [47]'s R^2, and its Discussion compares results directly with [47] (partly confirmed, partly contrary)."
+  }
+ },
+ "notes": "Borderline case (gt_ambiguity): the paper never calls itself a replication. Its framing is to 'examine the contribution of variables related to note- and test-taking among typically functioning college students' in a new population, which is a close extension under the codebook. It even recommends a future 'replication and extension of this research'. A second coder could reasonably call it a new study that draws on a line of prior work and code it negative. The predictor model also draws on other Peverly-lab papers, also compared in the Discussion: [46] Peverly et al. (handwriting speed and notes), [44] Peverly, Garner & Vekaria (sustained attention), [43] Peverly et al. (background knowledge) and [62] Vekaria & Peverly (2018, ADHD). [47] is the one the paper leans on most, so it is listed as the replicated original. The sentence '[12] replicated that finding' describes other authors' work, not this paper."
+}

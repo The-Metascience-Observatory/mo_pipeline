@@ -1,0 +1,316 @@
+[
+ {
+  "paper_folder": "10.1002--ejsp.2175",
+  "replication_doi": "10.1002/ejsp.2175",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1073/pnas.1211645109",
+    "title": "Reading and doing arithmetic nonconsciously",
+    "authors": "Sklar, Asael Y.; Levy, Nir; Goldstein, Ariel; Mandel, Roi; Maril, Anat; Hassin, Ran R.",
+    "year": 2012,
+    "journal": "Proceedings of the National Academy of Sciences",
+    "letter": "A"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1002--pros.21320",
+  "replication_doi": "10.1002/pros.21320",
+  "sets": "main_gt_fred_api",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1038/ng1808",
+    "title": "A common variant associated with prostate cancer in European and African populations",
+    "authors": "Amundadottir, Laufey T; Sulem, Patrick; Gudmundsson, Julius; Helgason, Agnar; Baker, Adam; Agnarsson, Bjarni A",
+    "year": 2006,
+    "journal": "Nature Genetics",
+    "letter": "A"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1002--smj.2579",
+  "replication_doi": "10.1002/smj.2579",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1002/(sici)1097-0266(199704)18:4<303::aid-smj869>3.0.co",
+    "title": "",
+    "authors": "",
+    "year": "",
+    "journal": "",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "2-g",
+    "title": "",
+    "authors": "",
+    "year": "",
+    "journal": "",
+    "letter": "B"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1016--j.ijgo.2016.06.008",
+  "replication_doi": "10.1016/j.ijgo.2016.06.008",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1016/j.ijgo.2006.07.013",
+    "title": "A risk reduction strategy to prevent maternal deaths associated with unsafe abortion",
+    "authors": "Briozzo, L.; Vidiella, G.; Rodríguez, F.; Gorgoroso, M.; Faúndes, A.; Pons, J.E.",
+    "year": 2006,
+    "journal": "International Journal of Gynecology &amp; Obstetrics",
+    "letter": "A"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1016--j.tjnut.2025.101302",
+  "replication_doi": "10.1016/j.tjnut.2025.101302",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.3945/jn.112.159319",
+    "title": "Hippuric Acid in 24-Hour Urine Collections Is a Potential Biomarker for Fruit and Vegetable Consumption in Healthy Children and Adolescents,",
+    "authors": "Krupp, Danika; Doberstein, Natalie; Shi, Lijie; Remer, Thomas",
+    "year": 2012,
+    "journal": "The Journal of Nutrition",
+    "letter": "A"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1037--edu0000146",
+  "replication_doi": "10.1037/edu0000146",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1126/science.1177067",
+    "title": "Promoting Interest and Performance in High School Science Classes",
+    "authors": "Hulleman, Chris S.; Harackiewicz, Judith M.",
+    "year": 2009,
+    "journal": "Science",
+    "letter": "A"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1037--edu0000965",
+  "replication_doi": "10.1037/edu0000965",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1177/016502547800100203",
+    "title": "An Experimental Evaluation of Four Face-to-Face Teaching Strategies",
+    "authors": "Wood, David; Wood, Heather; Middleton, David",
+    "year": 1978,
+    "journal": "International Journal of Behavioral Development",
+    "letter": "A"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1037--vio0000282",
+  "replication_doi": "10.1037/vio0000282",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1037/vio0000187",
+    "title": "Sexual attitudes and behaviors among men who are victims, perpetrators, or both victims and perpetrators of adult sexual assault.",
+    "authors": "Peterson, Zoë D.; Beagley, Marin C.; McCallum, Ethan B.; Artime, Tiffany M.",
+    "year": 2019,
+    "journal": "Psychology of Violence",
+    "letter": "A"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1098--rsos.231240",
+  "replication_doi": "10.1098/rsos.231240",
+  "sets": "flora;fred_v242",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1037/0022-3514.94.2.94.2.196",
+    "title": "Opening the mind to close it: Considering a message in light of important values increases message processing and later resistance to change.",
+    "authors": "Blankenship, Kevin L.; Wegener, Duane T.",
+    "year": 2008,
+    "journal": "Journal of Personality and Social Psychology",
+    "letter": "A"
+   },
+   {
+    "side": "human",
+    "doi": "10.1177/0956797613494853",
+    "title": "Aging 5 Years in 5 Minutes",
+    "authors": "Hughes, Matthew L.; Geraci, Lisa; De Forrest, Ross L.",
+    "year": 2013,
+    "journal": "Psychological Science",
+    "letter": "B"
+   },
+   {
+    "side": "human",
+    "doi": "10.1177/09567976221082637",
+    "title": "Choice Boosts Curiosity",
+    "authors": "Romero Verdugo, Patricia; van Lieshout, Lieke L. F.; de Lange, Floris P.; Cools, Roshan",
+    "year": 2022,
+    "journal": "Psychological Science",
+    "letter": "C"
+   },
+   {
+    "side": "human",
+    "doi": "10.1016/j.neuroimage.2006.11.048",
+    "title": "Modulation of emotion by cognition and cognition by emotion",
+    "authors": "Blair, K.S.; Smith, B.W.; Mitchell, D.G.V.; Morton, J.; Vythilingam, M.; Pessoa, L.",
+    "year": 2007,
+    "journal": "NeuroImage",
+    "letter": "D"
+   },
+   {
+    "side": "human",
+    "doi": "10.1038/s41598-018-30314-y",
+    "title": "The statistical shape of geometric reasoning",
+    "authors": "Hart, Yuval; Dillon, Moira R.; Marantan, Andrew; Cardenas, Anna L.; Spelke, Elizabeth; Mahadevan, L.",
+    "year": 2018,
+    "journal": "Scientific Reports",
+    "letter": "E"
+   },
+   {
+    "side": "human",
+    "doi": "10.1037/0022-3514.77.4.785",
+    "title": "Deviance or uniqueness, harmony or conformity? A cultural analysis.",
+    "authors": "Kim, Heejung; Markus, Hazel Rose",
+    "year": 1999,
+    "journal": "Journal of Personality and Social Psychology",
+    "letter": "F"
+   },
+   {
+    "side": "human",
+    "doi": "10.1145/3290605.3300469",
+    "title": "AI-Mediated Communication",
+    "authors": "Jakesch, Maurice; French, Megan; Ma, Xiao; Hancock, Jeffrey T.; Naaman, Mor",
+    "year": 2019,
+    "journal": "Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems",
+    "letter": "G"
+   },
+   {
+    "side": "human",
+    "doi": "10.1111/j.1551-6709.2011.01210.x",
+    "title": "Reflection and Reasoning in Moral Judgment",
+    "authors": "Paxton, Joseph M.; Ungar, Leo; Greene, Joshua D.",
+    "year": 2011,
+    "journal": "Cognitive Science",
+    "letter": "H"
+   },
+   {
+    "side": "human",
+    "doi": "10.1145/3173574.3174188",
+    "title": "Gender-Inclusive Design",
+    "authors": "Metaxa-Kakavouli, Danaë; Wang, Kelly; Landay, James A.; Hancock, Jeff",
+    "year": 2018,
+    "journal": "Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems",
+    "letter": "I"
+   },
+   {
+    "side": "human",
+    "doi": "10.1177/0956797615608267",
+    "title": "Opportunity Cost Neglect Attenuates the Effect of Choices on Preferences",
+    "authors": "Greenberg, Adam Eric; Spiller, Stephen A.",
+    "year": 2015,
+    "journal": "Psychological Science",
+    "letter": "J"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1111--spc3.12557",
+  "replication_doi": "10.1111/spc3.12557",
+  "sets": "main_gt_fred_api",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1037/0022-3514.80.6.861",
+    "title": "To do or not to do: Desirability and consistency mediate judgments of regret.",
+    "authors": "Seta, John J.; McElroy, Todd; Seta, Catherine E.",
+    "year": 2001,
+    "journal": "Journal of Personality and Social Psychology",
+    "letter": "A"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.1177--0022219419897268",
+  "replication_doi": "10.1177/0022219419897268",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1002/acp.2881",
+    "title": "The Relationship of Handwriting Speed, Working Memory, Language Comprehension and Outlines to Lecture Note‐taking and Test‐taking among College Students",
+    "authors": "Peverly, Stephen T.; Vekaria, Pooja C.; Reddington, Lindsay A.; Sumowski, James F.; Johnson, Kamauru R.; Ramsay, Crystal M.",
+    "year": 2012,
+    "journal": "Applied Cognitive Psychology",
+    "letter": "A"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.23846--rps0002",
+  "replication_doi": "10.23846/rps0002",
+  "sets": "main_gt_human",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1162/qjec.2009.124.3.1057",
+    "title": "The Power of TV: Cable Television and Women's Status in India\n                    <sup>*</sup>",
+    "authors": "Jensen, Robert; Oster, Emily",
+    "year": 2009,
+    "journal": "Quarterly Journal of Economics",
+    "letter": "A"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.3389--fnins.2012.00115",
+  "replication_doi": "10.3389/fnins.2012.00115",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1016/j.neuroimage.2010.02.068",
+    "title": "Genome-wide analysis reveals novel genes influencing temporal lobe structure with relevance to neurodegeneration in Alzheimer's disease",
+    "authors": "Stein, Jason L.; Hua, Xue; Morra, Jonathan H.; Lee, Suh; Hibar, Derrek P.; Ho, April J.",
+    "year": 2010,
+    "journal": "NeuroImage",
+    "letter": "A"
+   }
+  ]
+ },
+ {
+  "paper_folder": "10.3389--fpsyg.2018.00540",
+  "replication_doi": "10.3389/fpsyg.2018.00540",
+  "sets": "flora",
+  "candidates": [
+   {
+    "side": "human",
+    "doi": "10.1016/s0005-7967(00)00036-x",
+    "title": "Brief cognitive therapy for social phobia: a case series",
+    "authors": "Wells, Adrian; Papageorgiou, Costas",
+    "year": 2001,
+    "journal": "Behaviour Research and Therapy",
+    "letter": "A"
+   }
+  ]
+ }
+]

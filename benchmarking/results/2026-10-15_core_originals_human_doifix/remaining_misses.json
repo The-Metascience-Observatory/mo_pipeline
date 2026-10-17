@@ -1,0 +1,1024 @@
+[
+ {
+  "folder": "10.1002--aur.1474",
+  "doi": "10.1002/aur.1474",
+  "sets": "flora",
+  "gt": "10.1007/s10803-012-1719-1",
+  "ext": "10.1007/s10803-014-2080-3",
+  "contains": true,
+  "rows": [
+   [
+    "The Autism Diagnostic Observation Schedule, Module 4: Revised Algorithm and Standardized Severity Scores",
+    "Hus, Vanessa; Lord, Catherine",
+    "2014",
+    "https://doi.org/10.1007/s10803-014-2080-3"
+   ]
+  ],
+  "tier": "xml",
+  "chars": 38749,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": [
+   "  +  Entry 0: found DOI 10.1007/s10803-014-2080-3 from title (0 field(s) enriched)"
+  ]
+ },
+ {
+  "folder": "10.1002--cpp.686",
+  "doi": "10.1002/cpp.686",
+  "sets": "flora",
+  "gt": "10.1521/ijgp.52.4.511.45520",
+  "ext": "10.1521/ijgp.52.4.511.45529",
+  "contains": true,
+  "rows": [
+   [
+    "Interpersonal predictors of group therapy outcome for complicated grief",
+    "Ogrodniczuk, J.; Piper, W.; McCallum, M.",
+    "2002",
+    "https://doi.org/10.1521/ijgp.52.4.511.45529"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 15379,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1002--ejsp.2175",
+  "doi": "10.1002/ejsp.2175",
+  "sets": "flora",
+  "gt": "10.1073/pnas.1211645109",
+  "ext": "",
+  "contains": false,
+  "rows": [],
+  "tier": "grobid",
+  "chars": 49674,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1002--ijop.12519",
+  "doi": "10.1002/ijop.12519",
+  "sets": "flora",
+  "gt": "10.1037/e513702014-054",
+  "ext": "10.1037/a0030655",
+  "contains": true,
+  "rows": [
+   [
+    "When cheating would make you a cheater: Implicating the self prevents unethical behavior",
+    "Bryan, Christopher J.; Adams, Gabrielle ",
+    "2013",
+    "https://doi.org/10.1037/a0030655"
+   ],
+   [
+    "When cheating would make you a cheater: Implicating the self prevents unethical behavior",
+    "Bryan, Christopher J.; Adams, Gabrielle ",
+    "2013",
+    "https://doi.org/10.1037/a0030655"
+   ],
+   [
+    "When cheating would make you a cheater: Implicating the self prevents unethical behavior",
+    "Bryan, Christopher J.; Adams, Gabrielle ",
+    "2013",
+    "https://doi.org/10.1037/a0030655"
+   ],
+   [
+    "When cheating would make you a cheater: Implicating the self prevents unethical behavior",
+    "Bryan, Christopher J.; Adams, Gabrielle ",
+    "2013",
+    "https://doi.org/10.1037/a0030655"
+   ],
+   [
+    "When cheating would make you a cheater: Implicating the self prevents unethical behavior",
+    "Bryan, Christopher J.; Adams, Gabrielle ",
+    "2013",
+    "https://doi.org/10.1037/a0030655"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 37971,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": [
+   "  +  Entry 0: found DOI 10.1037/a0030655 from title (0 field(s) enriched)",
+   "  +  Entry 1: found DOI 10.1037/a0030655 from title (0 field(s) enriched)",
+   "  +  Entry 2: found DOI 10.1037/a0030655 from title (0 field(s) enriched)",
+   "  +  Entry 3: found DOI 10.1037/a0030655 from title (0 field(s) enriched)",
+   "  +  Entry 4: found DOI 10.1037/a0030655 from title (0 field(s) enriched)"
+  ]
+ },
+ {
+  "folder": "10.1002--pros.21320",
+  "doi": "10.1002/pros.21320",
+  "sets": "main_gt_fred_api",
+  "gt": "10.1038/ng1808",
+  "ext": "",
+  "contains": false,
+  "rows": [],
+  "tier": "xml",
+  "chars": 30621,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1002--smj.2579",
+  "doi": "10.1002/smj.2579",
+  "sets": "flora",
+  "gt": "10.1002/(sici)1097-0266(199704)18:4<303::aid-smj869>3.0.co;2-g",
+  "ext": "",
+  "contains": false,
+  "rows": [],
+  "tier": "grobid",
+  "chars": 113089,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1007--s11165-012-9320-3",
+  "doi": "10.1007/s11165-012-9320-3",
+  "sets": "flora",
+  "gt": "10.25656/01:31701",
+  "ext": "",
+  "contains": true,
+  "rows": [
+   [
+    "Was verbinden Sch\u00fclerinnen und Sch\u00fcler mit dem Begriff 'Strahlung'?",
+    "Neumann, Susanne; Hopf, Martin",
+    "2011",
+    ""
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 40202,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1016--j.ijgo.2016.06.008",
+  "doi": "10.1016/j.ijgo.2016.06.008",
+  "sets": "flora",
+  "gt": "10.1016/j.ijgo.2006.07.013",
+  "ext": "",
+  "contains": false,
+  "rows": [],
+  "tier": "xml",
+  "chars": 17691,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1016--j.jom.2005.11.004",
+  "doi": "10.1016/j.jom.2005.11.004",
+  "sets": "main_gt_fred_api",
+  "gt": "10.1016/s0272-6963(97)00033-8",
+  "ext": "10.1016/s0272-6963(97)00036-x",
+  "contains": true,
+  "rows": [
+   [
+    "An empirical test of the rigid flexibility model",
+    "Collins, R.S.; Cordon, C.; Julien, D.",
+    "1998",
+    "https://doi.org/10.1016/s0272-6963(97)00036-x"
+   ],
+   [
+    "An empirical test of the rigid flexibility model",
+    "Collins, R.S.; Cordon, C.; Julien, D.",
+    "1998",
+    "https://doi.org/10.1016/s0272-6963(97)00036-x"
+   ]
+  ],
+  "tier": "xml",
+  "chars": 81441,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1016--j.tjnut.2025.101302",
+  "doi": "10.1016/j.tjnut.2025.101302",
+  "sets": "flora",
+  "gt": "10.3945/jn.112.159319",
+  "ext": "",
+  "contains": false,
+  "rows": [],
+  "tier": "xml",
+  "chars": 91049,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1016--j.ynirp.2022.100149",
+  "doi": "10.1016/j.ynirp.2022.100149",
+  "sets": "flora",
+  "gt": "10.1016/j.biopsych.2018.02.061",
+  "ext": "10.1038/s41380-020-0754-0",
+  "contains": true,
+  "rows": [
+   [
+    "Brain aging in major depressive disorder: results from the ENIGMA major depressive disorder working group",
+    "Laura K. M. Han; Richard Dinga; Tim Hahn",
+    "2021",
+    "https://doi.org/10.1038/s41380-020-0754-0"
+   ]
+  ],
+  "tier": "xml",
+  "chars": 37253,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": [
+   "  +  Entry 0: found DOI 10.1038/s41380-020-0754-0 from title (4 field(s) enriched)"
+  ]
+ },
+ {
+  "folder": "10.1016--s0163-6383(80)80021-x",
+  "doi": "10.1016/s0163-6383(80)80021-x",
+  "sets": "flora",
+  "gt": "10.1016/0042-6989(78)90011-1",
+  "ext": "10.1016/0042-6989(78)90010-8",
+  "contains": true,
+  "rows": [
+   [
+    "Infant visual acuity and its meridional variation",
+    "Gwiazda, J.; Brill, S.; Mohindra, I.; He",
+    "1978",
+    "https://doi.org/10.1016/0042-6989(78)90010-8"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 9791,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1016--s0163-6383(99)00012-0",
+  "doi": "10.1016/s0163-6383(99)00012-0",
+  "sets": "flora",
+  "gt": "10.1111/j.1467-8624.1988.tb03262.x",
+  "ext": "10.2307/1130276",
+  "contains": true,
+  "rows": [
+   [
+    "Maternal sensitivity and patterns of infant-mother attachment",
+    "Philip B. Smith; David R. Pederson",
+    "1988",
+    "https://doi.org/10.2307/1130276"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 24637,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": [
+   "  \u2717  Entry 0: dropped DOI 10.2307/1130027 \u2014 it resolves to \"Long-Term Effects of Four Preschool Programs: Ninth- and Ten\", not the extracted title",
+   "  +  Entry 0: found DOI 10.2307/1130276 from title (2 field(s) enriched)"
+  ]
+ },
+ {
+  "folder": "10.1017--psrm.2018.50",
+  "doi": "10.1017/psrm.2018.50",
+  "sets": "flora",
+  "gt": "10.2139/ssrn.2645332",
+  "ext": "10.1017/jop.2016.0009",
+  "contains": true,
+  "rows": [
+   [
+    "Can citizens discern? Information credibility, political sophistication, and the punishment of corruption in Brazil",
+    "Weitz-Shapiro, Rebecca; Winters, Matthew",
+    "2017",
+    "https://doi.org/10.1017/jop.2016.0009"
+   ],
+   [
+    "Can citizens discern? Information credibility, political sophistication, and the punishment of corruption in Brazil",
+    "Weitz-Shapiro, Rebecca; Winters, Matthew",
+    "2017",
+    "https://doi.org/10.1017/jop.2016.0009"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 25135,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1017--s0003055404001200",
+  "doi": "10.1017/s0003055404001200",
+  "sets": "flora",
+  "gt": "10.3886/icpsr01218.v1",
+  "ext": "10.2307/2586378",
+  "contains": true,
+  "rows": [
+   [
+    "Improving quantitative studies of international conflict: A conjecture",
+    "Beck, Nathaniel; King, Gary; Zeng, Langc",
+    "2000",
+    "https://doi.org/10.2307/2586378"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 39476,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": [
+   "  \u2717  Entry 0: dropped DOI 10.2307/2586019 \u2014 it resolves to \"Jury Verdicts and Preference Diversity\", not the extracted title",
+   "  +  Entry 0: found DOI 10.2307/2586378 from title (0 field(s) enriched)"
+  ]
+ },
+ {
+  "folder": "10.1017--s000842392200004x",
+  "doi": "10.1017/s000842392200004x",
+  "sets": "flora",
+  "gt": "10.1017/s0008423903778810",
+  "ext": "10.1017/s0008423903778take",
+  "contains": true,
+  "rows": [
+   [
+    "Does the local candidate matter? Candidate effects in the Canadian election of 2000",
+    "Blais, Andr\u00e9; Gidengil, Elisabeth; Dobrz",
+    "2003",
+    "https://doi.org/10.1017/s0008423903778take"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 5166,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1017--s0008423924000234",
+  "doi": "10.1017/s0008423924000234",
+  "sets": "flora",
+  "gt": "10.1017/s0008423922000749",
+  "ext": "10.1017/s000842392200062x",
+  "contains": true,
+  "rows": [
+   [
+    "Language matters: The study of Canadian politics through an exploration of syllabi and comprehensive exams",
+    "Daoust, Jean-Fran\u00e7ois; Gagnon, Alain-G.;",
+    "2022",
+    "https://doi.org/10.1017/s000842392200062x"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 40182,
+  "trunc": false,
+  "refs": "10.1017--s0008423924000234.pdf (tail pages)",
+  "replay": []
+ },
+ {
+  "folder": "10.1017--xps.2017.22",
+  "doi": "10.1017/xps.2017.22",
+  "sets": "flora",
+  "gt": "10.1086/688585",
+  "ext": "10.1017/s0022381616000863",
+  "contains": true,
+  "rows": [
+   [
+    "The political relevance of irrelevant events",
+    "Busby, Ethan; Druckman, James; Fredendal",
+    "2017",
+    "https://doi.org/10.1017/s0022381616000863"
+   ],
+   [
+    "The political relevance of irrelevant events",
+    "Busby, Ethan; Druckman, James; Fredendal",
+    "2017",
+    "https://doi.org/10.1017/s0022381616000863"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 16044,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1017--xps.2019.1",
+  "doi": "10.1017/xps.2019.1",
+  "sets": "flora",
+  "gt": "10.1007/s11109-016-9383-3",
+  "ext": "10.1007/s11109-017-9393-6",
+  "contains": true,
+  "rows": [
+   [
+    "Are voters mobilized by a 'friend-and-neighbor' on the ballot? Evidence from a field experiment",
+    "Panagopoulos, Costas; Leighley, Jan; Ham",
+    "2017",
+    "https://doi.org/10.1007/s11109-017-9393-6"
+   ],
+   [
+    "Are voters mobilized by a 'friend-and-neighbor' on the ballot? Evidence from a field experiment",
+    "Panagopoulos, Costas; Leighley, Jan; Ham",
+    "2017",
+    "https://doi.org/10.1007/s11109-017-9393-6"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 33168,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1017--xps.2021.29",
+  "doi": "10.1017/xps.2021.29",
+  "sets": "flora",
+  "gt": "10.1007/s11109-015-9325-5",
+  "ext": "10.1007/s11109-015-9325-y",
+  "contains": true,
+  "rows": [
+   [
+    "The dead hand of the past? Toward an understanding of 'constitutional veneration'",
+    "Zink, James R.; Dawes, Christopher T.",
+    "2016",
+    "https://doi.org/10.1007/s11109-015-9325-y"
+   ],
+   [
+    "The dead hand of the past? Toward an understanding of 'constitutional veneration'",
+    "Zink, James R.; Dawes, Christopher T.",
+    "2016",
+    "https://doi.org/10.1007/s11109-015-9325-y"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 28836,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1037--edu0000146",
+  "doi": "10.1037/edu0000146",
+  "sets": "flora",
+  "gt": "10.1126/science.1177067",
+  "ext": "",
+  "contains": false,
+  "rows": [],
+  "tier": "grobid",
+  "chars": 33598,
+  "trunc": false,
+  "refs": "10.1037--edu0000146.pdf (tail pages)",
+  "replay": []
+ },
+ {
+  "folder": "10.1037--edu0000965",
+  "doi": "10.1037/edu0000965",
+  "sets": "flora",
+  "gt": "10.1177/016502547800100203",
+  "ext": "",
+  "contains": false,
+  "rows": [],
+  "tier": "grobid",
+  "chars": 3931,
+  "trunc": false,
+  "refs": "10.1037--edu0000965.pdf (tail pages)",
+  "replay": []
+ },
+ {
+  "folder": "10.1037--vio0000282",
+  "doi": "10.1037/vio0000282",
+  "sets": "flora",
+  "gt": "10.1037/vio0000187",
+  "ext": "",
+  "contains": false,
+  "rows": [],
+  "tier": "grobid",
+  "chars": 9347,
+  "trunc": false,
+  "refs": "10.1037--vio0000282.pdf (tail pages)",
+  "replay": []
+ },
+ {
+  "folder": "10.1037--xge0000788",
+  "doi": "10.1037/xge0000788",
+  "sets": "flora",
+  "gt": "10.1037/e578192014-061",
+  "ext": "10.1037/a0035880",
+  "contains": true,
+  "rows": [
+   [
+    "Free to punish: A motivated account of free will belief",
+    "Clark, Cory J.; Luguri, Jamie B.; Ditto,",
+    "2014",
+    "https://doi.org/10.1037/a0035880"
+   ],
+   [
+    "Free to punish: A motivated account of free will belief",
+    "Clark, Cory J.; Luguri, Jamie B.; Ditto,",
+    "2014",
+    "https://doi.org/10.1037/a0035880"
+   ],
+   [
+    "Free to punish: A motivated account of free will belief",
+    "Clark, Cory J.; Luguri, Jamie B.; Ditto,",
+    "2014",
+    "https://doi.org/10.1037/a0035880"
+   ],
+   [
+    "Free to punish: A motivated account of free will belief",
+    "Clark, Cory J.; Luguri, Jamie B.; Ditto,",
+    "2014",
+    "https://doi.org/10.1037/a0035880"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 16984,
+  "trunc": false,
+  "refs": "10.1037--xge0000788.pdf (tail pages)",
+  "replay": [
+   "  +  Entry 0: found DOI 10.1037/a0035880 from title (0 field(s) enriched)",
+   "  +  Entry 1: found DOI 10.1037/a0035880 from title (0 field(s) enriched)",
+   "  +  Entry 2: found DOI 10.1037/a0035880 from title (0 field(s) enriched)",
+   "  +  Entry 3: found DOI 10.1037/a0035880 from title (0 field(s) enriched)"
+  ]
+ },
+ {
+  "folder": "10.1080--00913367.2015.1088809",
+  "doi": "10.1080/00913367.2015.1088809",
+  "sets": "flora",
+  "gt": "10.1177/002224298204600109",
+  "ext": "10.2307/1251163",
+  "contains": true,
+  "rows": [
+   [
+    "The effects of music in advertising on choice behavior: A classical conditioning approach",
+    "Gorn, Gerald J.",
+    "1982",
+    "https://doi.org/10.2307/1251163"
+   ],
+   [
+    "The effects of music in advertising on choice behavior: A classical conditioning approach",
+    "Gorn, Gerald J.",
+    "1982",
+    "https://doi.org/10.2307/1251163"
+   ],
+   [
+    "The effects of music in advertising on choice behavior: A classical conditioning approach",
+    "Gorn, Gerald J.",
+    "1982",
+    "https://doi.org/10.2307/1251163"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 48929,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1080--10510974.2018.1464937",
+  "doi": "10.1080/10510974.2018.1464937",
+  "sets": "flora",
+  "gt": "10.1111/j.1083-6101.2007.00367.x",
+  "ext": "",
+  "contains": true,
+  "rows": [
+   [
+    "Social capital and college students' use of online social network sites",
+    "Ellison, Nicole; Steinfield, Charles; La",
+    "2007",
+    ""
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 8337,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1097--mlr.0000000000002256",
+  "doi": "10.1097/mlr.0000000000002256",
+  "sets": "flora",
+  "gt": "10.1007/s11606-021-06676-x",
+  "ext": "10.1007/s11606-020-06559-x",
+  "contains": true,
+  "rows": [
+   [
+    "Comparative effectiveness of a complex care program for high-cost/high-need patients: a retrospective cohort study",
+    "Roblin, Douglas W.; Segel, Joel E.; McCa",
+    "2021",
+    "https://doi.org/10.1007/s11606-020-06559-x"
+   ]
+  ],
+  "tier": "html",
+  "chars": 37965,
+  "trunc": false,
+  "refs": "10.1097--mlr.0000000000002256.pdf (tail pages)",
+  "replay": []
+ },
+ {
+  "folder": "10.1098--rsos.231240",
+  "doi": "10.1098/rsos.231240",
+  "sets": "flora;fred_v242",
+  "gt": "10.1016/0010-0285(83)90002-6;10.1016/j.cognition.2016.06.011;10.1016/j.jesp.2020.104080;10.1016/j.jml.2006.02.004;10.1016/j.neuroimage.2006.11.048;10.1016/j.obhdp.2010.10.001;10.1016/s0010-0277(03)00064-7;10.1037/0022-3514.77.4.785;10.1037/0022-3514.94.2.94.2.196;10.1037/0022-3514.94.2.94.2.231;10.1037/0022-3514.94.3.396;10.1037/0022-3514.94.3.495;10.1037/a0032108;10.1037/a0035663;10.1037/xge0000064;10.1037/xge0000738;10.1038/s41598-018-30314-y;10.1073/pnas.0908963106;10.1073/pnas.1202129109;10.1073/pnas.1523698113;10.1073/pnas.2009030117;10.1093/geronb/gbx099;10.1111/cogs.12605;10.1111/ecin.12470;10.1111/j.1467-9280.2008.02039.x;10.1111/j.1467-9280.2008.02040.x;10.1111/j.1551-6709.2010.01161.x;10.1111/j.1551-6709.2010.01164.x;10.1111/j.1551-6709.2011.01210.x;10.1126/science.1238041;10.1145/3173574.3174188;10.1145/3290605.3300469;10.1177/0093650215609676;10.1177/0146167207309195;10.1177/0956797611428079;10.1177/0956797611434540;10.1177/0956797613494853;10.1177/0956797614547705;10.1177/0956797614553009;10.1177/0956797614563108;10.1177/0956797615572231;10.1177/0956797615608267;10.1177/0956797616640705;10.1177/0956797616669947;10.1177/0956797618779061;10.1177/0956797618788882;10.1177/0956797618806296;10.1177/0956797619854706;10.1177/09567976221082637;10.1287/mnsc.2019.3362;10.1287/orsc.2021.1456;10.3758/s13428-021-01694-3",
+  "ext": "",
+  "contains": false,
+  "rows": [],
+  "tier": "xml",
+  "chars": 51923,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1111--j.1540-6261.2012.01744.x",
+  "doi": "10.1111/j.1540-6261.2012.01744.x",
+  "sets": "main_gt_human",
+  "gt": "10.2139/ssrn.901642",
+  "ext": "10.1111/j.1540-6261.2008.01433.x",
+  "contains": true,
+  "rows": [
+   [
+    "CEO compensation and board structure",
+    "Chhaochharia, Vidhi; Grinstein, Yaniv",
+    "2009",
+    "https://doi.org/10.1111/j.1540-6261.2008.01433.x"
+   ],
+   [
+    "CEO compensation and board structure",
+    "Chhaochharia, Vidhi; Grinstein, Yaniv",
+    "2009",
+    "https://doi.org/10.1111/j.1540-6261.2008.01433.x"
+   ],
+   [
+    "CEO compensation and board structure",
+    "Chhaochharia, Vidhi; Grinstein, Yaniv",
+    "2009",
+    "https://doi.org/10.1111/j.1540-6261.2008.01433.x"
+   ],
+   [
+    "CEO compensation and board structure",
+    "Chhaochharia, Vidhi; Grinstein, Yaniv",
+    "2009",
+    "https://doi.org/10.1111/j.1540-6261.2008.01433.x"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 56797,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1111--spc3.12557",
+  "doi": "10.1111/spc3.12557",
+  "sets": "main_gt_fred_api",
+  "gt": "10.1037/0022-3514.80.6.861",
+  "ext": "",
+  "contains": false,
+  "rows": [],
+  "tier": "grobid",
+  "chars": 50080,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1167--iovs.10-6497",
+  "doi": "10.1167/iovs.10-6497",
+  "sets": "flora",
+  "gt": "10.1056/nejmoa1007064",
+  "ext": "10.1056/nejmoa1001251",
+  "contains": true,
+  "rows": [
+   [
+    "E2-2 protein and Fuchs's corneal dystrophy",
+    "Baratz, Keith; Tosakulwong, Nirubol; Ryu",
+    "2010",
+    "https://doi.org/10.1056/nejmoa1001251"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 18461,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1176--appi.ajp.2015.14070896",
+  "doi": "10.1176/appi.ajp.2015.14070896",
+  "sets": "flora",
+  "gt": "10.17816/nb100176",
+  "ext": "10.1126/science.1083968",
+  "contains": true,
+  "rows": [
+   [
+    "Influence of life stress on depression: Moderation by a polymorphism in the 5-HTT gene",
+    "Caspi, Avshalom; Sugden, Karen; Moffitt,",
+    "2003",
+    "https://doi.org/10.1126/science.1083968"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 12404,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": [
+   "  +  Entry 0: found DOI 10.1126/science.1083968 from title (0 field(s) enriched)"
+  ]
+ },
+ {
+  "folder": "10.1177--0022219419897268",
+  "doi": "10.1177/0022219419897268",
+  "sets": "flora",
+  "gt": "10.1002/acp.2881",
+  "ext": "",
+  "contains": false,
+  "rows": [],
+  "tier": "grobid",
+  "chars": 49575,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1177--0956797619831612",
+  "doi": "10.1177/0956797619831612",
+  "sets": "fred_v242",
+  "gt": "10.1016/j.paid.2010.07.033;10.1111/1467-6494.t01-1-00094",
+  "ext": "10.1146/annurev.psych.57.102904.190127",
+  "contains": true,
+  "rows": [
+   [
+    "Personality and the prediction of consequential outcomes",
+    "Daniel J. Ozer; Ver\u00f3nica Benet-Mart\u00ednez",
+    "2006",
+    "https://doi.org/10.1146/annurev.psych.57.102904.190127"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 42640,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": [
+   "  +  Entry 0: found DOI 10.1146/annurev.psych.57.102904.190127 from title (2 field(s) enriched)"
+  ]
+ },
+ {
+  "folder": "10.1177--1091142114537892",
+  "doi": "10.1177/1091142114537892",
+  "sets": "flora",
+  "gt": "10.3386/w6614",
+  "ext": "10.1016/s0047-2727(99)00036-5",
+  "contains": true,
+  "rows": [
+   [
+    "Coveting thy neighbor's manufacturing: The dilemma of state income apportionment",
+    "Goolsbee, Austan; Maydew, Edward",
+    "2000",
+    "https://doi.org/10.1016/s0047-2727(99)00036-5"
+   ],
+   [
+    "Coveting thy neighbor's manufacturing: The dilemma of state income apportionment",
+    "Goolsbee, Austan; Maydew, Edward",
+    "2000",
+    "https://doi.org/10.1016/s0047-2727(99)00036-5"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 45264,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": [
+   "  +  Entry 0: found DOI 10.1016/s0047-2727(99)00036-5 from title (1 field(s) enriched)",
+   "  +  Entry 1: found DOI 10.1016/s0047-2727(99)00036-5 from title (1 field(s) enriched)"
+  ]
+ },
+ {
+  "folder": "10.1177--25152459211018187",
+  "doi": "10.1177/25152459211018187",
+  "sets": "flora",
+  "gt": "10.1111/j.1467-8624.1966.tb05387.x",
+  "ext": "10.2307/1126804",
+  "contains": true,
+  "rows": [
+   [
+    "Spontaneous verbal rehearsal in a memory task as a function of age",
+    "Flavell, John H.; Beach, David R.; Chins",
+    "1966",
+    "https://doi.org/10.2307/1126804"
+   ],
+   [
+    "Spontaneous verbal rehearsal in a memory task as a function of age",
+    "Flavell, John H.; Beach, David R.; Chins",
+    "1966",
+    "https://doi.org/10.2307/1126804"
+   ],
+   [
+    "Spontaneous verbal rehearsal in a memory task as a function of age",
+    "Flavell, John H.; Beach, David R.; Chins",
+    "1966",
+    "https://doi.org/10.2307/1126804"
+   ],
+   [
+    "Spontaneous verbal rehearsal in a memory task as a function of age",
+    "Flavell, John H.; Beach, David R.; Chins",
+    "1966",
+    "https://doi.org/10.2307/1126804"
+   ],
+   [
+    "Spontaneous verbal rehearsal in a memory task as a function of age",
+    "Flavell, John H.; Beach, David R.; Chins",
+    "1966",
+    "https://doi.org/10.2307/1126804"
+   ]
+  ],
+  "tier": "xml",
+  "chars": 69663,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1257--mac.6.3.1",
+  "doi": "10.1257/mac.6.3.1",
+  "sets": "main_gt_human",
+  "gt": "10.3386/w8460",
+  "ext": "10.1162/003355302320935025",
+  "contains": true,
+  "rows": [
+   [
+    "Reversal of fortune: Geography and institutions in the making of the modern world income distribution",
+    "Acemoglu, Daron; Johnson, Simon; Robinso",
+    "2002",
+    "https://doi.org/10.1162/003355302320935025"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 19093,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.1371--journal.pone.0018044",
+  "doi": "10.1371/journal.pone.0018044",
+  "sets": "flora",
+  "gt": "10.1056/nejmoa1007064",
+  "ext": "10.1056/nejmoa1001371",
+  "contains": true,
+  "rows": [
+   [
+    "E2-2 protein and Fuchs's corneal dystrophy",
+    "Baratz, Keith; Tosakulwong, Nirubol; Ryu",
+    "2010",
+    "https://doi.org/10.1056/nejmoa1001371"
+   ],
+   [
+    "E2-2 protein and Fuchs's corneal dystrophy",
+    "Baratz, Keith; Tosakulwong, Nirubol; Ryu",
+    "2010",
+    "https://doi.org/10.1056/nejmoa1001371"
+   ]
+  ],
+  "tier": "xml",
+  "chars": 42600,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.15626--mp.2019.2134",
+  "doi": "10.15626/mp.2019.2134",
+  "sets": "main_gt_fred_api",
+  "gt": "10.1023/a:1019923923537",
+  "ext": "10.1023/a:1020273614118",
+  "contains": true,
+  "rows": [
+   [
+    "The preference for indirect harm",
+    "Royzman, Edward B.; Baron, Jonathan",
+    "2002",
+    "https://doi.org/10.1023/a:1020273614118"
+   ],
+   [
+    "The preference for indirect harm",
+    "Royzman, Edward B.; Baron, Jonathan",
+    "2002",
+    "https://doi.org/10.1023/a:1020273614118"
+   ],
+   [
+    "The preference for indirect harm",
+    "Royzman, Edward B.; Baron, Jonathan",
+    "2002",
+    "https://doi.org/10.1023/a:1020273614118"
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 43317,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.17605--osf.io--ehjdm",
+  "doi": "10.17605/osf.io/ehjdm",
+  "sets": "flora",
+  "gt": "10.1111/j.1467-9280.2008.02057.x",
+  "ext": "",
+  "contains": true,
+  "rows": [
+   [
+    "Anchor precision influences the amount of adjustment",
+    "Janiszewski, Chris; Uy, Dan",
+    "2008",
+    ""
+   ],
+   [
+    "Anchor precision influences the amount of adjustment",
+    "Janiszewski, Chris; Uy, Dan",
+    "2008",
+    ""
+   ],
+   [
+    "Anchor precision influences the amount of adjustment",
+    "Janiszewski, Chris; Uy, Dan",
+    "2008",
+    ""
+   ]
+  ],
+  "tier": "grobid",
+  "chars": 8334,
+  "trunc": false,
+  "refs": "10.17605--osf.io--ehjdm.pdf (tail pages)",
+  "replay": []
+ },
+ {
+  "folder": "10.23846--rps0002",
+  "doi": "10.23846/rps0002",
+  "sets": "main_gt_human",
+  "gt": "10.1162/qjec.2009.124.3.1057",
+  "ext": "",
+  "contains": false,
+  "rows": [],
+  "tier": "grobid",
+  "chars": 5257,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.3109--0142159x.2014.890702",
+  "doi": "10.3109/0142159x.2014.890702",
+  "sets": "flora",
+  "gt": "10.3109/0142159x.2012.714884",
+  "ext": "10.3109/0142159x.2013.827323",
+  "contains": true,
+  "rows": [
+   [
+    "Optimal learning in a virtual patient simulation of cranial nerve palsies: The interaction between social learning context and student aptitude",
+    "Johnson, T.; Lyons, R.; Chuah, J.; Koppe",
+    "2013",
+    "https://doi.org/10.3109/0142159x.2013.827323"
+   ],
+   [
+    "Optimal learning in a virtual patient simulation of cranial nerve palsies: The interaction between social learning context and student aptitude",
+    "Johnson, T.; Lyons, R.; Chuah, J.; Koppe",
+    "2013",
+    "https://doi.org/10.3109/0142159x.2013.827323"
+   ]
+  ],
+  "tier": "xml",
+  "chars": 28220,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.3389--fnins.2012.00115",
+  "doi": "10.3389/fnins.2012.00115",
+  "sets": "flora",
+  "gt": "10.1016/j.neuroimage.2010.02.068",
+  "ext": "",
+  "contains": false,
+  "rows": [],
+  "tier": "xml",
+  "chars": 72301,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ },
+ {
+  "folder": "10.3389--fpsyg.2018.00540",
+  "doi": "10.3389/fpsyg.2018.00540",
+  "sets": "flora",
+  "gt": "10.1016/s0005-7967(00)00036-x",
+  "ext": "",
+  "contains": false,
+  "rows": [],
+  "tier": "xml",
+  "chars": 36609,
+  "trunc": false,
+  "refs": "references.json",
+  "replay": []
+ }
+]
