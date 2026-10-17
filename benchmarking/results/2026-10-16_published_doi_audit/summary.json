@@ -1,0 +1,21 @@
+{
+  "database": "replications_database_2026_10_01_130503.csv",
+  "rows": 8881,
+  "distinct_original_dois": 5874,
+  "rows_by_status": {
+    "crossref": 8576,
+    "suspect:title_mismatch": 7,
+    "nonexistent": 38,
+    "suspect:nonexistent": 38,
+    "registered_elsewhere": 13
+  },
+  "suspect_rows": 45,
+  "suspect_distinct_dois": 33,
+  "with_proposal": 25,
+  "by_ai_version": {
+    "(blank)": 28,
+    "8.0": 1,
+    "8.1": 2,
+    "8.5": 14
+  }
+}
