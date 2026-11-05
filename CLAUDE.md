@@ -51,7 +51,7 @@ Stage 6 is the external `pdf4llm` binary, not part of this package. The argv bui
 | 5 | Download | `python -m mo_pipeline.discover.download_all_confirmed [--doi-csv F] [--type T] [--include-published] [--limit N] [--workers N] [--legalonly] [--no-download-xml] [--no-to-markdown] [--download-si] [--refresh-si] [--max-si-mb N] [--delay S] [--backfill-structured] [--backfill-pdf] [--cookies F] [--no-cookies] [--cookies-only] [--cookies-max N]` |
 | 6 | Convert | `pdf4llm batch <inbox> -o <papers> --mode full-grobid --workers 4 --movepdf --resume` |
 | 7 | Extract | `python -m mo_pipeline.extract.extract <papers_dir> --batch --level full [--tag T] [--workers N] [--include-list F] [--model M] [--usecodex] [--dontcheck] [--collate-only]` |
-| 7b | Extract (core, no statistics) | `python -m mo_pipeline.extract.extract_core <papers_dir> [--tag T] [--workers N] [--include-list F] [--provider claude_cli\|openrouter] [--model M] [--dontcheck] [--collate-only] [--show-prompt]` |
+| 7b | Extract (core, no statistics) | `python -m mo_pipeline.extract.extract_core <papers_dir> [--tag T] [--workers N] [--include-list F] [--provider claude_cli\|openrouter] [--model M] [--dontcheck] [--no-escalate] [--collate-only] [--show-prompt]` |
 
 After stage 7's collate, ingest the collated CSV manually:
 `cd ../metascience_observatory_website/data_ingestor && python data_ingestor.py <collated.csv> --no-gui`,
@@ -257,7 +257,14 @@ Do not duplicate these definitions elsewhere.
   Python assembles abstract + full text + reference list (references.json →
   references.md → raw XML bibliography → PDF tail pages) and makes ONE no-tools call
   via `discover/screening_backend.py` (`claude_cli` default, `openrouter` optional), then
-  reuses extract.py's validators, DOI enrichment and collate. It writes
+  reuses extract.py's validators, DOI enrichment and collate. Before the call it
+  refuses a wrong document on disk (`extract.document_identity`: a supplement, a
+  disclosure form, or none of the replication DOI's registered title words in the
+  text; the agentic extractor runs the same check), and it hands papers whose
+  tables exist only as images, or whose input had to be truncated, to the
+  agentic `extract.py --level base` (`escalation_reason`; `--no-escalate` opts
+  out). The [ABSTRACT] section is included on every tier, from `abstract.md` or
+  the publisher XML: renditions carry the body, not the front matter. It writes
   `{folder}_result_core.json` with `ai_version` `<version>-core`; the 14 statistical
   fields are stripped even if the model emits them, so the collated CSV keeps its
   shape with blank stat columns. `extract.py --level base` is the agentic extractor

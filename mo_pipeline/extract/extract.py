@@ -352,6 +352,119 @@ def _husk_reason(paper_dir: Path, art: dict) -> str:
     return ""
 
 
+def _distinctive(text: str) -> set:
+    """Content words of a title, long enough to be worth matching on."""
+    return {w for w in re.findall(r"[a-z0-9]+", (text or "").lower()) if len(w) > 4}
+
+
+# Headings of files that sit beside an article but are not it. Matched only on
+# the document's title and on markdown heading lines at its very start: a real
+# article's running text says "Electronic supplementary material ..." too.
+_NOT_THE_ARTICLE = re.compile(
+    r"\b(supplementa(?:l|ry)\s+(?:online\s+)?materials?|supporting\s+information|"
+    r"online\s+supplement|open\s+practices\s+disclosure)\b|^\s*SM:", re.IGNORECASE)
+# APA's open-practices disclosure form, which is sometimes filed as the article.
+_DISCLOSURE_FORM = re.compile(
+    r"permanent\s+path\s+for\s+accessing\s+the\s+specified\s+information|"
+    r"eligible\s+to\s+earn\s+badges", re.IGNORECASE)
+# Registries whose DOI titles are often project or record names, not the paper's.
+_TITLE_UNRELIABLE_PREFIXES = ("10.17605/", "10.31234/", "10.31219/", "10.31235/", "10.31236/", "10.5281/")
+
+
+def _opening_text(paper_dir: Path, art: dict) -> tuple[str, str]:
+    """(first heading, first ~5000 characters) of the document on disk."""
+    heading = ""
+    abstract = Path(paper_dir) / "abstract.md"
+    if abstract.exists():
+        try:
+            for line in abstract.read_text(errors="replace").splitlines():
+                line = line.strip().lstrip("#").strip()
+                if line and line != Path(paper_dir).name and not line.startswith("<!--"):
+                    heading = line
+                    break
+        except OSError:
+            pass
+    head = ""
+    for f in (art.get("primary"), Path(paper_dir) / "body.md"):
+        if f and Path(f).is_file() and Path(f).suffix != ".pdf":
+            try:
+                head = Path(f).read_text(errors="replace")[:5000]
+                break
+            except OSError:
+                pass
+    return heading, head
+
+
+_REPLICATION_META_CACHE: dict[str, dict | None] = {}
+_REPLICATION_META_LOCK = threading.Lock()
+
+
+def replication_metadata(doi: str) -> dict | None:
+    """The replication paper's registered metadata, or None; fetched once per DOI
+    per process (the identity pre-flight and enrichment both need it).
+    Best-effort: a failed lookup only means the identity check runs on headings."""
+    if not doi:
+        return None
+    with _REPLICATION_META_LOCK:
+        if doi in _REPLICATION_META_CACHE:
+            hit = _REPLICATION_META_CACHE[doi]
+            return dict(hit) if hit else None
+    try:
+        meta = fetch_metadata_from_doi(doi, delay=0.1)
+    except Exception:
+        meta = None
+    if meta and meta.get("title"):
+        if meta.get("authors"):
+            meta["authors"] = format_authors_string(meta["authors"])
+    else:
+        meta = None
+    with _REPLICATION_META_LOCK:
+        _REPLICATION_META_CACHE[doi] = meta
+    return dict(meta) if meta else None
+
+
+def document_identity(paper_dir: Path, art: dict, expected_title: str,
+                      replication_doi: str = "") -> tuple[str, str]:
+    """("refuse" | "warn" | "", reason): is the document on disk the paper it is filed under?
+
+    Stage 5 has stored the wrong file under a DOI -- supplementary material, an
+    APA disclosure form, a permissions page, a policy document, a citing thesis,
+    another paper. Extraction then reads it and finds nothing, or something
+    wrong. On the 500 folders of the 2026-10 evaluation:
+
+      refuse  a supplement/disclosure heading, or NONE of >= 4 content words of
+              the DOI's registered title in the document's opening. Caught 11
+              wrong files and refused no real paper.
+      warn    under 40% of the title's content words present. Every remaining
+              wrong file sat here (25%, 38%), but so did one real paper whose
+              registered title is wrong, so this only warns and extraction runs.
+
+    The title tests are skipped for OSF/preprint/Zenodo DOIs, whose registered
+    titles are often project names.
+    """
+    heading, head = _opening_text(paper_dir, art)
+    start_headings = "\n".join(ln for ln in head[:400].splitlines() if ln.lstrip().startswith("#"))
+    m = _NOT_THE_ARTICLE.search(heading) or _NOT_THE_ARTICLE.search(start_headings)
+    if m:
+        return "refuse", (f"the file on disk is {m.group(0).strip()!r} material, not the article "
+                          f"(starts {(heading or head[:70]).strip()[:70]!r})")
+    if _DISCLOSURE_FORM.search(heading + "\n" + head[:1500]):
+        return "refuse", "the file on disk is a journal's open-practices disclosure form, not the article"
+    if replication_doi.lower().startswith(_TITLE_UNRELIABLE_PREFIXES):
+        return "", ""
+    want = _distinctive(expected_title)
+    if len(want) >= 2:
+        share = len(want & (_distinctive(heading) | _distinctive(head))) / len(want)
+        where = (heading or head[:70]).strip()[:70]
+        if share == 0 and len(want) >= 4:
+            return "refuse", (f"none of the title words of {expected_title[:70]!r} appear in the "
+                              f"text on disk, which starts {where!r}")
+        if share < 0.4:
+            return "warn", (f"only {share:.0%} of the title words of {expected_title[:70]!r} appear "
+                            f"in the text on disk, which starts {where!r}")
+    return "", ""
+
+
 def _describe_artifacts(paper_dir: Path, art: dict) -> str:
     """The file inventory the agent is handed, primary first, fallbacks gated.
 
@@ -1017,10 +1130,8 @@ def enrich_metadata(
     # A. Fetch replication paper metadata (shared across all entries in this paper)
     if replication_doi:
         try:
-            rep_meta = fetch_metadata_from_doi(replication_doi, email=email, delay=0.1)
+            rep_meta = replication_metadata(replication_doi)
             if rep_meta:
-                if rep_meta.get("authors"):
-                    rep_meta["authors"] = format_authors_string(rep_meta["authors"])
                 data["replication_metadata"] = rep_meta
                 title_snippet = (rep_meta.get("title") or "?")[:60]
                 year = rep_meta.get("year", "?")
@@ -1235,6 +1346,16 @@ def _first_pass_prompt(paper_dir: Path, output_dir: Path, *, html_mode: bool, pd
         # replications, and that confident negative is indistinguishable
         # downstream from a real paper that has none.
         raise FileNotFoundError(f"No article text in {paper_dir}: {husk}")
+    # The same pre-flight as extract_core: refuse a supplement, a disclosure
+    # form or another paper filed under this DOI (document_identity).
+    rep_doi = _extract_doi_from_url(folder_to_doi_url(paper_dir.name)) or ""
+    rep_meta = replication_metadata(rep_doi)
+    identity, identity_why = document_identity(paper_dir, artifacts,
+                                               (rep_meta or {}).get("title") or "", rep_doi)
+    if identity == "refuse":
+        raise FileNotFoundError(f"Wrong document on disk in {paper_dir}: {identity_why}")
+    if identity == "warn":
+        logger.warning(f"{paper_dir.name}: document may not be this paper: {identity_why}")
     # The folder holds up to three renditions of the same paper. Naming one
     # primary and gating the rest is what keeps the agent from reading all of
     # them; the prompt file explains the ladder, this says which rungs THIS

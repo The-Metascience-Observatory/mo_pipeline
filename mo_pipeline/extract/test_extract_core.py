@@ -160,7 +160,7 @@ def test_reference_ladder(tmp_path, monkeypatch):
 def _grobid_folder(tmp_path, body="INTRO " * 100 + "\n\n## Discussion\nWe failed to replicate."):
     d = tmp_path / FOLDER
     d.mkdir()
-    (d / "abstract.md").write_text("# T\n\nAn abstract.")
+    (d / "abstract.md").write_text("# T\n\nWe replicate the original study's main effect with a larger sample.")
     (d / "body.md").write_text(body)
     (d / "references.json").write_text(json.dumps(GROBID_REFS[:1]))
     return d
@@ -170,7 +170,7 @@ def test_assemble_input_grobid_sections(tmp_path):
     d = _grobid_folder(tmp_path)
     prompt, info = core.assemble_input(d, ex.paper_artifacts(d), 350_000)
     assert info == {"tier": "grobid", "primary_file": "body.md", "refs_source": "references.json",
-                    "chars": len(prompt), "truncated": False}
+                    "abstract_source": "abstract.md", "chars": len(prompt), "truncated": False}
     for section in ("[PAPER DOI]\nhttps://doi.org/10.1234/test.2020.1", "[ABSTRACT]\n# T",
                     "[FULL TEXT: grobid]\nINTRO", "[REFERENCE LIST: references.json]\n[1] Smith J"):
         assert section in prompt
@@ -191,7 +191,10 @@ def test_assemble_input_xml_rendition_outranks_body(tmp_path):
     (d / f"{FOLDER}_from_xml.md").write_text("XML RENDITION BODY")
     prompt, info = core.assemble_input(d, ex.paper_artifacts(d), 350_000)
     assert info["tier"] == "xml" and "[FULL TEXT: xml]\nXML RENDITION BODY" in prompt
-    assert "[ABSTRACT]" not in prompt  # abstract only accompanies the GROBID tier
+    # A publisher rendition carries the body, not the front matter, so the
+    # abstract rides along on every tier now (101 of 103 XML/HTML renditions in
+    # the 2026-10 evaluation had none).
+    assert "[ABSTRACT]\n# T" in prompt and info["abstract_source"] == "abstract.md"
 
 
 def _fitz(monkeypatch, pages):
@@ -339,6 +342,7 @@ class _FakeBackend:
 def _no_network(monkeypatch):
     monkeypatch.setattr(core, "validate_original_dois", lambda data: ([], {}))
     monkeypatch.setattr(core, "enrich_metadata", lambda data, **kw: (data, ["  📖  Replication: fake"]))
+    monkeypatch.setattr(core, "replication_metadata", lambda doi: None)   # no network in tests
     monkeypatch.setattr(core, "_write_provenance", lambda output_dir, **kw: (output_dir / "provenance.json").write_text("{}"))
 
 
@@ -708,3 +712,131 @@ def test_a_neighbouring_bibliography_entry_is_not_matched():
     assert ex._reference_for({"original_title": "When ignorance is no excuse: Different roles for intent "
                                                  "across moral domains"}, refs) is None
     assert ex._reference_for({"original_title": "Numeracy and wealth"}, refs) is refs[0]
+
+
+
+# ── document identity (2026-10): the file on disk must be the paper ───────────
+
+def _doc(tmp_path, abstract, body):
+    d = tmp_path / "10.1037--x0000001"
+    d.mkdir()
+    (d / "abstract.md").write_text(abstract)
+    (d / "body.md").write_text(body)
+    return d
+
+
+def test_a_supplement_or_disclosure_form_is_refused(tmp_path):
+    d = _doc(tmp_path, "# Making Connections Supplemental Online Materials\n\nSupplemental analyses.", "x" * 3000)
+    assert ex.document_identity(d, ex.paper_artifacts(d), "Making connections", "10.1037/x")[0] == "refuse"
+    (tmp_path / "b").mkdir()
+    d2 = _doc(tmp_path / "b", "# \n\na URL, doi, or other permanent path for accessing the specified information", "y" * 3000)
+    assert ex.document_identity(d2, ex.paper_artifacts(d2), "What it takes to tutor", "10.1037/y")[0] == "refuse"
+
+
+def test_a_footnote_mentioning_supplementary_material_is_not_a_supplement(tmp_path):
+    body = ("# Body\n\n## Introduction\n\nMoral dilemmas pit utilitarian against deontological views. "
+            "Electronic supplementary material The online version of this article contains it.\n" + "z " * 2000)
+    d = _doc(tmp_path, "# Alcohol, empathy, and morality: acute effects of alcohol consumption", body)
+    title = "Alcohol, empathy, and morality: acute effects of alcohol consumption on affective empathy"
+    assert ex.document_identity(d, ex.paper_artifacts(d), title, "10.1007/s00213") == ("", "")
+
+
+def test_title_overlap_refuses_at_zero_and_only_warns_when_low(tmp_path):
+    d = _doc(tmp_path, "# Lippincott Journal Portfolio\n\nAuthor permission guidelines.", "Reuse requests " * 300)
+    sev, why = ex.document_identity(d, ex.paper_artifacts(d), "Replication of NTNG1 association in schizophrenia", "10.1097/y")
+    assert sev == "refuse" and "none of the title words" in why
+    d2 = tmp_path / "w"; d2.mkdir()
+    (d2 / "abstract.md").write_text("# An investigation of abstract construal on impression formation")
+    (d2 / "body.md").write_text("Impression formation studies " * 300)
+    assert ex.document_identity(d2, ex.paper_artifacts(d2), "Forming impressions of personality", "10.1027/z")[0] == "warn"
+    # OSF / preprint DOIs: registered titles are often project names, so no title test
+    assert ex.document_identity(d, ex.paper_artifacts(d), "Gilad Feldman: Theses by guided thesis students",
+                                "10.17605/osf.io/qswe3") == ("", "")
+
+
+
+# ── abstract on every tier (2026-10-20) ────────────────────────────────────────
+
+def _xml_folder(tmp_path, abstract_md, xml_abstract, rendition_head="# Title\n\n## INTRODUCTION\n\nText."):
+    d = tmp_path / "10.1002--pros.21320"
+    d.mkdir()
+    (d / "10.1002--pros.21320_from_xml.md").write_text(rendition_head + "\n" + "Body prose. " * 400)
+    (d / "10.1002--pros.21320.xml").write_text(f"<article><front>{xml_abstract}</front><body/></article>")
+    if abstract_md is not None:
+        (d / "abstract.md").write_text(abstract_md)
+    return d
+
+
+def test_xml_tier_gets_the_abstract_from_abstract_md(tmp_path):
+    d = _xml_folder(tmp_path, "# T\n\nThe replication of the 8q24 association in men of African ancestry.", "")
+    prompt, info = core.assemble_input(d, ex.paper_artifacts(d), 350_000)
+    assert info["tier"] == "xml" and info["abstract_source"] == "abstract.md"
+    assert "[ABSTRACT]\n# T\n\nThe replication of the 8q24" in prompt
+
+
+def test_a_header_only_abstract_md_falls_back_to_the_publisher_xml(tmp_path):
+    xml_abs = ('<abstract abstract-type="graphical"><p>Graphical abstract only</p></abstract>'
+               '<abstract><p>BACKGROUND. However, the successful replication of genome-wide association '
+               'findings implicating 8q24 &amp; prostate cancer risk.</p></abstract>')
+    d = _xml_folder(tmp_path, "# The Prostate 71:1054^1063 (2011)", xml_abs)
+    prompt, info = core.assemble_input(d, ex.paper_artifacts(d), 350_000)
+    assert info["abstract_source"] == "publisher XML"
+    assert "successful replication of genome-wide association findings implicating 8q24 & prostate" in prompt
+    assert "Graphical abstract only" not in prompt
+
+
+def test_a_rendition_that_already_has_an_abstract_is_not_given_a_second(tmp_path):
+    d = _xml_folder(tmp_path, "# T\n\nAn abstract long enough to count as one, about a replication.", "",
+                    rendition_head="# Title\n\n## Abstract\n\nThe rendition's own abstract.\n\n## INTRODUCTION")
+    prompt, info = core.assemble_input(d, ex.paper_artifacts(d), 350_000)
+    assert info["abstract_source"] == "" and "[ABSTRACT]" not in prompt
+
+
+# ── escalation to the agentic extractor (2026-10-20) ───────────────────────────
+
+_IMAGE_TABLE_XML = ('<article><body><table-wrap id="Tab1"><label>Table 1</label><caption><p>Outcomes</p>'
+                    '</caption><graphic xlink:href="Tab1_HTML.jpg"/></table-wrap>'
+                    '<table-wrap id="Tab2"><table><tr><td>1</td></tr></table></table-wrap></body></article>')
+
+
+def test_image_only_tables_counts_graphic_wraps_but_not_real_tables(tmp_path):
+    (tmp_path / "x.xml").write_text(_IMAGE_TABLE_XML)
+    assert core.image_only_tables(tmp_path) == 1     # Tab2 holds a <table>; "<table-wrap" alone is not one
+
+
+def test_escalation_reason(tmp_path):
+    assert core.escalation_reason(tmp_path, "[table not machine-readable — published as an image]", {}) \
+        == "the rendition marks tables published as images"
+    assert core.escalation_reason(tmp_path, "text", {"truncated": True}).startswith("the paper had to be truncated")
+    assert core.escalation_reason(tmp_path, "text", {"truncated": False}) == ""
+    (tmp_path / "x.xml").write_text(_IMAGE_TABLE_XML)
+    assert core.escalation_reason(tmp_path, "text", {}).startswith("1 table(s) are published only as images")
+
+
+def test_a_paper_with_image_tables_is_handed_to_the_agentic_extractor(tmp_path, monkeypatch):
+    _no_network(monkeypatch)
+    d = _grobid_folder(tmp_path)
+    (d / f"{FOLDER}.xml").write_text(_IMAGE_TABLE_XML)
+    calls = []
+
+    def agentic(paper_dir, model, level, existing_urls, tag):
+        calls.append((model, level, tag))
+        (paper_dir / tag).mkdir(exist_ok=True)
+        (paper_dir / tag / "provenance.json").write_text("{}")
+        return {"contains_replications": False, "replications": []}, {"cost_usd": 1.0}, ["agentic ran"]
+    monkeypatch.setattr(ex, "extract_paper", agentic)
+
+    class Claude(_FakeBackend):
+        name, model = "claude_cli", "sonnet"
+    backend = Claude([])
+    data, usage, log = core.extract_paper_core(d, backend, "SYS", None, "t1", None)
+    assert calls == [("sonnet", "base", "t1")] and backend.prompts == []      # no single-shot call
+    assert usage["escalated"].startswith("1 table(s)") and "agentic ran" in log
+    assert json.loads((d / "t1" / "provenance.json").read_text())["escalated_from_core"].startswith("1 table(s)")
+
+    # --no-escalate, or a backend the agentic extractor cannot use: stay single-shot
+    good = json.dumps({"contains_replications": False, "replications": []})
+    for backend, kw in ((Claude([good]), {"escalate": False}), (_FakeBackend([good]), {})):
+        calls.clear()
+        core.extract_paper_core(d, backend, "SYS", None, f"t{len(kw) + 2}", None, **kw)
+        assert calls == [] and len(backend.prompts) == 1

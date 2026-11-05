@@ -59,7 +59,7 @@ sys.path.insert(0, str(BENCH_DIR.parent))
 sys.path.insert(1, str(BENCH_DIR))
 
 from mo_pipeline import config  # noqa: E402
-from mo_pipeline.corpus.models import RESULT_SUFFIXES, doi_to_folder, normalize_doi  # noqa: E402
+from mo_pipeline.corpus.models import RESULT_SUFFIXES, doi_to_folder, folder_to_doi, normalize_doi  # noqa: E402
 from mo_pipeline.discover.doi_runs import load_dois, run_status  # noqa: E402
 from mo_pipeline.label_centrality.collate import cohen_kappa  # noqa: E402
 
@@ -90,7 +90,7 @@ csv.field_size_limit(sys.maxsize)
 # claimed that", "<author> et al. (year) reported that") before comparing, so a
 # coder that writes the frame and one that writes the bare finding can pair.
 # Thresholds and margin unchanged. Agreement numbers differ from 1.4.
-HARNESS_VERSION = "1.7"
+HARNESS_VERSION = "1.8"
 GOLD_DIR = config.BENCH_GOLD_DIR
 SILVER_DIR = config.BENCH_SILVER_DIR
 RESULTS_DIR = config.BENCH_RESULTS_DIR
@@ -482,11 +482,6 @@ def _primary_model(model_usage, fallback: str) -> str:
                key=lambda kv: (kv[1].get("outputTokens", 0) if isinstance(kv[1], dict) else 0))[0]
 
 
-def _distinctive(text: str) -> set:
-    """Content words of a title, long enough to be worth matching on."""
-    return {w for w in re.findall(r"[a-z0-9]+", (text or "").lower()) if len(w) > 4}
-
-
 def _document_identity(paper_dir: Path, data: dict, gt_title: str = "") -> str:
     """Why the document on disk is not the paper it is filed under, or "".
 
@@ -498,29 +493,13 @@ def _document_identity(paper_dir: Path, data: dict, gt_title: str = "") -> str:
     be overridden by it.
     """
     expected = ((data.get("replication_metadata") or {}).get("title") or gt_title or "").strip()
-    body_path, abstract_path = paper_dir / "body.md", paper_dir / "abstract.md"
-    body_head = ""
-    if body_path.exists():
-        try:
-            body_head = body_path.read_text(errors="replace")[:5000]
-        except OSError:
-            pass
-    heading = ""
-    if abstract_path.exists():
-        try:
-            for line in abstract_path.read_text(errors="replace").splitlines():
-                line = line.strip().lstrip("#").strip()
-                if line and line != paper_dir.name and not line.startswith("<!--"):
-                    heading = line
-                    break
-        except OSError:
-            pass
-    want = _distinctive(expected)
-    if want:
-        seen = _distinctive(heading) | _distinctive(body_head)
-        if len(want & seen) < min(2, len(want)):
-            return (f"expected {expected[:70]!r} but the text on disk starts "
-                    f"{(heading or body_head[:70]).strip()[:70]!r}")
+    # The extractor's own pre-flight (extract.document_identity) refuses clear
+    # cases before extraction; here, for a negative result, a "warn" counts too.
+    from mo_pipeline.extract.extract import document_identity, paper_artifacts
+    verdict, why = document_identity(paper_dir, paper_artifacts(paper_dir), expected,
+                                     folder_to_doi(paper_dir.name) or "")
+    if verdict:
+        return why
     pages = None
     pdfs = sorted(paper_dir.glob("*.pdf"))
     if pdfs:
@@ -530,6 +509,7 @@ def _document_identity(paper_dir: Path, data: dict, gt_title: str = "") -> str:
                 pages = doc.page_count
         except Exception:
             pages = None
+    body_path = paper_dir / "body.md"
     body_size = body_path.stat().st_size if body_path.exists() else 0
     if pages is not None and pages <= 1 and body_size < 2000:
         return f"a {pages}-page PDF and a {body_size}-byte body.md: no article text on disk"
@@ -1497,9 +1477,18 @@ def cmd_run(args) -> None:
     include = config.DOI_RUNS_DIR / args.run / ("include_list_remaining.txt" if args.remaining else "include_list.txt")
     if not include.exists():
         sys.exit(f"ERROR: {include} not found (create the run first: harness.py sample, or doi_runs.create_run)")
-    cmd = [sys.executable, "-m", "mo_pipeline.extract.extract", str(papers_dir), "--batch", "--level", args.level,
-           "--dontcheck", "--model", args.model, "--workers", str(args.workers), "--tag", args.tag,
-           "--include-list", str(include)]
+    if args.level == "core":
+        # The single-shot stat-free extractor (extract_core.py). It escalates
+        # image-table and truncated papers to the agentic extractor on its own.
+        if args.force_tier or args.usecodex:
+            sys.exit("ERROR: --force-tier and --usecodex apply to the agentic extractor, not --level core")
+        cmd = [sys.executable, "-m", "mo_pipeline.extract.extract_core", str(papers_dir), "--batch",
+               "--dontcheck", "--model", args.model, "--workers", str(args.workers), "--tag", args.tag,
+               "--include-list", str(include)]
+    else:
+        cmd = [sys.executable, "-m", "mo_pipeline.extract.extract", str(papers_dir), "--batch", "--level", args.level,
+               "--dontcheck", "--model", args.model, "--workers", str(args.workers), "--tag", args.tag,
+               "--include-list", str(include)]
     if args.limit:
         cmd += ["--limit", str(args.limit)]
     if args.force_tier:
@@ -1581,8 +1570,9 @@ def main() -> None:
     s.add_argument("--run", required=True); s.add_argument("--tag", required=True); s.add_argument("--model", default="sonnet")
     s.add_argument("--workers", type=int, default=4); s.add_argument("--limit", type=int, default=None)
     s.add_argument("--force-tier", choices=["xml", "html", "grobid", "pdf"], default=None)
-    s.add_argument("--level", choices=["full", "base"], default="full",
-                   help="extract.py --level: full (normal) or base (same agent, statistics stripped from the prompt)")
+    s.add_argument("--level", choices=["full", "base", "core"], default="full",
+                   help="full / base: extract.py --level (base = same agent, statistics stripped); "
+                        "core: the single-shot stat-free extractor, extract_core.py")
     s.add_argument("--remaining", action="store_true", help="use include_list_remaining.txt from `status`")
     s.add_argument("--usecodex", action="store_true",
                    help="extract with the Codex CLI (pass the OpenAI model id via --model, e.g. gpt-5.6-luna)")

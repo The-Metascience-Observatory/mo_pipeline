@@ -41,7 +41,7 @@ from mo_pipeline.discover.screening_backend import (BACKENDS, BackendUnavailable
                                                     parse_json_reply)
 from mo_pipeline.extract.extract import (
     STAT_FIELDS, SkipPaper, discover_papers, _extract_doi_from_url, _format_duration, _husk_reason,
-    _load_references,
+    _load_references, document_identity, replication_metadata,
     _write_provenance, collate_results, enrich_metadata, is_usage_limit_error,
     load_existing_replication_urls, load_system_prompt, load_version_number,
     normalize_doi_url, paper_artifacts, wait_for_session,
@@ -218,18 +218,56 @@ def _truncate_middle(text: str, budget: int) -> tuple[str, bool]:
     return text[:head] + marker + text[-tail:], True
 
 
+_ABSTRACT_HEADING = re.compile(r"^#+\s*(abstract|summary)\b", re.IGNORECASE | re.MULTILINE)
+_XML_ABSTRACT = re.compile(r"<(ce:)?abstract\b([^>]*)>(.*?)</(?:ce:)?abstract>", re.DOTALL | re.IGNORECASE)
+ABSTRACT_MIN_CHARS = 40       # prose under the heading; a running header alone has none
+
+
+def _abstract_text(paper_dir: Path) -> tuple[str, str]:
+    """(abstract, source) for the [ABSTRACT] section, or ("", "").
+
+    abstract.md when it holds real text; GROBID sometimes leaves only a running
+    header there ("# The Prostate 71:1054^1063 (2011)"). Otherwise the publisher
+    XML's <abstract> (the longest one: Elsevier also ships graphical abstracts
+    and highlights).
+    """
+    am = paper_dir / "abstract.md"
+    if am.exists():
+        text = _read(am).strip()
+        prose = "\n".join(ln for ln in text.splitlines() if not ln.lstrip().startswith("#")).strip()
+        if len(prose) >= ABSTRACT_MIN_CHARS:
+            return text, "abstract.md"
+    best = ""
+    for xml in sorted(paper_dir.glob("*.xml")):
+        for m in _XML_ABSTRACT.finditer(_read(xml)):
+            if re.search(r"graphical|highlight|teaser", m.group(2), re.IGNORECASE):
+                continue
+            plain = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", m.group(3)))).strip()
+            if len(plain) > len(best):
+                best = plain
+    if len(best) >= ABSTRACT_MIN_CHARS:
+        return best[:6000], "publisher XML"
+    return "", ""
+
+
 def assemble_input(paper_dir: Path, art: dict, max_chars: int) -> tuple[str, dict]:
-    """The user message: [PAPER DOI], [ABSTRACT] (grobid tier only),
-    [FULL TEXT: tier], [REFERENCE LIST: source]. Returns (prompt, info)."""
+    """The user message: [PAPER DOI], [ABSTRACT], [FULL TEXT: tier],
+    [REFERENCE LIST: source]. Returns (prompt, info).
+
+    [ABSTRACT] is added whenever the full text does not open with one. Until
+    2026-10-20 it was added on the GROBID tier only, so 101 of 103 papers read
+    from a publisher XML/HTML rendition (which renders the article body, not
+    its front matter) reached the model with no abstract -- where a paper most
+    often says what it replicates."""
     tier = art["primary_tier"] or "pdf"
     sections = ["Extract replication data from the paper below.",
                 f"[PAPER DOI]\n{folder_to_doi_url(paper_dir.name)}"]
     if art["primary"] is not None:
         body = _read(art["primary"])
-        if tier == "grobid":
-            abstract = _read(paper_dir / "abstract.md").strip()
-            if abstract:
-                sections.append(f"[ABSTRACT]\n{abstract}")
+        abstract, abstract_source = ("", "") if _ABSTRACT_HEADING.search(body[:8000]) \
+            else _abstract_text(paper_dir)
+        if abstract:
+            sections.append(f"[ABSTRACT]\n{abstract}")
         refs_text, refs_source = reference_block(paper_dir, art)
         primary_name = art["primary"].name
     else:
@@ -252,6 +290,7 @@ def assemble_input(paper_dir: Path, art: dict, max_chars: int) -> tuple[str, dic
     sections.append("Reply with the JSON object only.")
     prompt = "\n\n".join(sections)
     info = {"tier": tier, "primary_file": primary_name, "refs_source": refs_source,
+            "abstract_source": abstract_source if art["primary"] is not None else "",
             "chars": len(prompt), "truncated": truncated}
     return prompt, info
 
@@ -306,8 +345,42 @@ def _grobid_refs(paper_dir: Path) -> list[dict] | None:
 
 # ── one paper ───────────────────────────────────────────────────────────────
 
+_TABLE_WRAP = re.compile(r"<table-wrap\b.*?</table-wrap>", re.DOTALL | re.IGNORECASE)
+
+
+def image_only_tables(paper_dir: Path) -> int:
+    """Tables the publisher XML ships only as an image: a <table-wrap> holding a
+    <graphic> and no <table>. The XML-to-Markdown renderer does not always mark
+    these (Springer's do not get the not-machine-readable marker), so this
+    reads the XML itself."""
+    n = 0
+    for xml in sorted(paper_dir.glob("*.xml")):
+        for wrap in _TABLE_WRAP.findall(_read(xml)):
+            if "<graphic" in wrap and not re.search(r"<table[\s>]", wrap):
+                n += 1
+    return n
+
+
+def escalation_reason(paper_dir: Path, prompt: str, info: dict) -> str:
+    """Why a single text-only call cannot read this paper well, or "".
+
+    The 2026-10 evaluation: one paper whose 25 outcomes sit in image-only
+    tables caused 23 of the 31 outcome errors -- core found every effect and
+    could not see a single result. The agentic extractor reads the PDF.
+    """
+    if "table not machine-readable" in prompt:
+        return "the rendition marks tables published as images"
+    n = image_only_tables(paper_dir)
+    if n:
+        return f"{n} table(s) are published only as images in the publisher XML"
+    if info.get("truncated"):
+        return "the paper had to be truncated to fit one call"
+    return ""
+
+
 def extract_paper_core(paper_dir: Path, backend, system_prompt: str, existing_urls=None,
                        tag: str | None = None, max_chars: int | None = None,
+                       escalate: bool = True,
                        ) -> tuple[dict, dict, list[str]]:
     """One no-tools call for one paper. Returns (data, usage, log_messages).
     Raises SkipPaper (already done / already in the DB) or RuntimeError."""
@@ -332,9 +405,38 @@ def extract_paper_core(paper_dir: Path, backend, system_prompt: str, existing_ur
     husk = _husk_reason(paper_dir, art)
     if husk:
         raise FileNotFoundError(f"No article text in {paper_dir}: {husk}")
+    # Is the document on disk the paper this DOI names? The registered title
+    # fetched here is reused for enrichment below, so this costs no extra call.
+    rep_doi = _extract_doi_from_url(doi_url) or ""
+    rep_meta = replication_metadata(rep_doi)
+    identity, identity_why = document_identity(paper_dir, art, (rep_meta or {}).get("title") or "", rep_doi)
+    if identity == "refuse":
+        raise FileNotFoundError(f"Wrong document on disk in {paper_dir}: {identity_why}")
+    if identity == "warn":
+        log.append(f"  ⚠️  Document may not be this paper: {identity_why}")
     user_prompt, info = assemble_input(paper_dir, art, max_chars)
     log.append(f"  tier: {info['tier']}; refs: {info['refs_source']}; "
                f"{info['chars']:,} chars{' (truncated)' if info['truncated'] else ''}")
+
+    # Hand papers a single text-only call cannot read to the agentic extractor
+    # (extract.py --level base: the same stat-free prompt, and it can open the PDF).
+    reason = escalation_reason(paper_dir, user_prompt, info) if escalate else ""
+    if reason and backend.name != "claude_cli":
+        log.append(f"  ⚠️  Would escalate ({reason}), but the agentic extractor needs the "
+                   f"claude_cli backend; extracting single-shot")
+    elif reason:
+        log.append(f"  ↗  Escalating to the agentic extractor: {reason}")
+        from mo_pipeline.extract import extract as ex
+        data, usage, msgs = ex.extract_paper(paper_dir, model=backend.model, level="base",
+                                             existing_urls=existing_urls, tag=tag)
+        prov_path = output_dir / "provenance.json"
+        if prov_path.exists():
+            prov = json.loads(prov_path.read_text())
+            prov["escalated_from_core"] = reason
+            prov_path.write_text(json.dumps(prov, indent=2))
+        usage = dict(usage, tier=info["tier"], refs_source=info["refs_source"],
+                     truncated=info["truncated"], escalated=reason)
+        return data, usage, log + msgs
 
     output_dir.mkdir(exist_ok=True)
     start = time.monotonic()
@@ -413,14 +515,20 @@ def extract_paper_core(paper_dir: Path, backend, system_prompt: str, existing_ur
             # memory and is re-resolved from the title.
             data, enrich_msgs = enrich_metadata(
                 data,
-                replication_doi=_extract_doi_from_url(folder_to_doi_url(paper_dir.name)) or "",
+                replication_doi="" if rep_meta else rep_doi,
                 original_doi_cache=doi_cache, source_text=user_prompt,
                 references=_load_references(paper_dir), doi_sources=doi_sources)
+            if rep_meta:
+                data["replication_metadata"] = rep_meta
+                log.append(f"  📖  Replication: \"{(rep_meta.get('title') or '?')[:60]}\" "
+                           f"({rep_meta.get('year', '?')})")
             log.extend(enrich_msgs)
         except Exception as e:
             log.append(f"  !  Metadata enrichment failed: {e}")
         # Where each entry's final DOI came from, for evaluation by source.
         debug["doi_sources"] = {str(k): v for k, v in doi_sources.items()}
+        if identity:
+            debug["document_identity"] = {"verdict": identity, "reason": identity_why}
         (output_dir / "debug_log.json").write_text(json.dumps(debug, indent=2, default=str))
 
     _write_provenance(output_dir, model_id=usage["model"], prompt_level=LEVEL, artifacts=art,
@@ -452,7 +560,8 @@ def looks_like_batch(path: Path) -> bool:
 
 def extract_core_batch(papers_dir: Path, backend, *, workers: int = 4, tag: str | None = None,
                        include_papers: set[str] | None = None, limit: int | None = None,
-                       skip_check: bool = False, max_chars: int | None = None) -> dict:
+                       skip_check: bool = False, max_chars: int | None = None,
+                       escalate: bool = True) -> dict:
     paper_dirs = discover_papers(papers_dir, include_papers, limit)
     if not paper_dirs:
         print(f"No paper directories found in {papers_dir}", file=sys.stderr)
@@ -475,7 +584,7 @@ def extract_core_batch(papers_dir: Path, backend, *, workers: int = 4, tag: str 
             return pd, "skip", None, "Shutdown requested", []
         try:
             data, usage, log = extract_paper_core(pd, backend, system_prompt, existing_urls,
-                                                  tag, max_chars)
+                                                  tag, max_chars, escalate=escalate)
             return pd, data, usage, None, log
         except SkipPaper as e:
             return pd, "skip", None, str(e), []
@@ -591,6 +700,9 @@ def main() -> int:
     ap.add_argument("--model", default=None,
                     help="claude_cli alias (default config.EXTRACT_CORE_MODEL) or an "
                          "OpenRouter slug (required with --provider openrouter)")
+    ap.add_argument("--no-escalate", action="store_true",
+                    help="never hand a paper to the agentic extractor (default: papers with "
+                         "image-only tables or a truncated input are escalated)")
     ap.add_argument("--max-input-chars", type=int, default=None,
                     help=f"default config.EXTRACT_CORE_MAX_INPUT_CHARS ({config.EXTRACT_CORE_MAX_INPUT_CHARS})")
     ap.add_argument("--collate-only", action="store_true",
@@ -629,7 +741,8 @@ def main() -> int:
         existing = None if args.dontcheck else load_existing_replication_urls()
         try:
             data, usage, log = extract_paper_core(args.path, backend, load_system_prompt(LEVEL),
-                                                  existing, args.tag, args.max_input_chars)
+                                                  existing, args.tag, args.max_input_chars,
+                                                  escalate=not args.no_escalate)
             for m in log:
                 print(m, file=sys.stderr)
             print(f"OK: {len(data.get('replications', []))} replication(s); "
@@ -641,7 +754,8 @@ def main() -> int:
     else:
         extract_core_batch(args.path, backend, workers=args.workers, tag=args.tag,
                            include_papers=include, limit=args.limit,
-                           skip_check=args.dontcheck, max_chars=args.max_input_chars)
+                           skip_check=args.dontcheck, max_chars=args.max_input_chars,
+                           escalate=not args.no_escalate)
     print(f"Runtime: {_format_duration(time.monotonic() - start)}", file=sys.stderr)
     return 0
 

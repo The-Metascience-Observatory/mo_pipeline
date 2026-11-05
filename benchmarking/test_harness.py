@@ -225,7 +225,7 @@ def test_document_identity_flags_the_wrong_paper_but_not_a_real_one(tmp_path):
     (wrong / "abstract.md").write_text("# PERFORMANCE HETEROGENEITY UNDER UNCERTAINTY: SIX EMPIRICAL STUDIES\n\nThis thesis explores...")
     (wrong / "body.md").write_text("This thesis explores the strategy process. " * 200)
     why = harness._document_identity(wrong, {}, gt_title="Friends or strangers? A replication and extension of Beckman")
-    assert "does not match" not in why and "expected" in why
+    assert "Friends or strangers" in why and "PERFORMANCE HETEROGENEITY" in why
 
     # with nothing to compare against, never guess
     assert harness._document_identity(wrong, {}) == ""
@@ -563,3 +563,19 @@ def test_entry_metrics_count_missing_output_and_negative_paper_rows(tmp_path, mo
     assert e["recall"] == pytest.approx(1 / 3) and e["precision"] == pytest.approx(1 / 11)
     assert e["recall_given_output"] == 1.0 and e["precision_positive_papers"] == 1.0
     assert "entry.recall" in m["ci95"]
+
+
+def test_run_level_core_launches_the_single_shot_extractor(tmp_path, monkeypatch, capsys):
+    run = tmp_path / "myrun"
+    run.mkdir()
+    (run / "include_list.txt").write_text("10.1--x\n")
+    monkeypatch.setattr(harness.config, "DOI_RUNS_DIR", tmp_path)
+    monkeypatch.setattr(harness, "claude_usage", lambda: {})
+    args = argparse.Namespace(run="myrun", tag="t", model="sonnet", workers=4, limit=None, force_tier=None,
+                              level="core", remaining=False, usecodex=False, papers_dir=str(tmp_path), dry_run=True)
+    harness.cmd_run(args)
+    argv = [ln for ln in capsys.readouterr().out.splitlines() if ln.startswith("argv:")][0]
+    assert "mo_pipeline.extract.extract_core" in argv and "--dontcheck" in argv and "--level" not in argv
+    args.usecodex = True
+    with pytest.raises(SystemExit):
+        harness.cmd_run(args)

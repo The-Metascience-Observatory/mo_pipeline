@@ -51,6 +51,7 @@ def test_base_codex_writes_stat_free_result_without_claude_review(tmp_path, monk
     monkeypatch.setattr(ex, "validate_original_dois", lambda d: ([], {}))
     monkeypatch.setattr(ex, "validate_citation_sentences", lambda *a: [])
     monkeypatch.setattr(ex, "enrich_metadata", lambda d, **kw: (d, []))
+    monkeypatch.setattr(ex, "replication_metadata", lambda doi: None)   # no network in tests
     monkeypatch.setattr(ex, "_write_provenance", lambda *a, **kw: None)
     data, usage, messages = ex.extract_paper(paper, model="gpt-5.6-luna", level="base", tag="test", use_codex=True)
     assert len(commands) == 1
